@@ -1,0 +1,77 @@
+import assert from 'node:assert/strict';
+import { mkdtemp, readFile, rename, writeFile, readdir } from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import { createHash } from 'node:crypto';
+import * as ops from './daily-operations.mjs';
+import { preflightChannel } from './daily-preflight.mjs';
+import { makeReadyFixture, writeJson } from './state-evidence-fixtures.mjs';
+const base = await mkdtemp(path.join(os.tmpdir(),'springhues-b-preflight-'));
+console.log('保留隔离夹具：'+base);
+let passed = 0;
+for (const channel of ['minsheng','game']) {
+  const f = await makeReadyFixture(base,channel);
+  const {root,date,now} = f;
+  const before = await treeHashes(root);
+  const check = await preflightChannel(root,f);
+  assert.equal(check.ok,true,JSON.stringify(check.reasons));
+  assert.deepEqual(await treeHashes(root),before,'preflight must be read-only');
+  passed++;
+  const missingVisual = await preflightChannel(root,{...f,visualEvidence:path.join(path.dirname(f.visualEvidence),'missing.json')});
+  assert.equal(missingVisual.ok,false); assert.equal(missingVisual.gates.visual.ok,false);
+  await assert.rejects(ops.createReadyProof(root,{...f,visualEvidence:path.join(path.dirname(f.visualEvidence),'missing.json')}),{code:'PRECHECK_FAILED'});
+  passed++;
+  const proof = await ops.createReadyProof(root,f);
+  assert.equal(proof.apiVersion,ops.STATE_EVIDENCE_API_VERSION);
+  await ops.assertReadyProof(root,date,channel,{now});
+  passed++;
+  const otherBefore=(await ops.queryRunState(root,date,{now})).channels[channel==='game'?'minsheng':'game'].stored;
+  const view=await ops.queryRunState(root,date,{channel,now});
+  assert.equal(view.channels[channel].readiness.valid,true);assert.equal(view.channels[channel].archive.valid,false);
+  const savedState=await readFile(ops.operationPaths(root,date).state);
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'intruder',channel,status:'ready',now}),{code:'LEASE_MISMATCH'});
+  assert.deepEqual(await readFile(ops.operationPaths(root,date).state),savedState);
+  passed++;
+  const pngBefore=await readFile(f.png);
+  await writeFile(f.png,Buffer.concat([pngBefore,Buffer.from('changed')]));
+  await assert.rejects(ops.assertReadyProof(root,date,channel,{now}),{code:'PRECHECK_FAILED'});
+  const conflicted=await ops.reconcileRunState(root,date,{runId:f.runId,channel,now});
+  assert.equal(conflicted.ok,false);assert.deepEqual(await readFile(ops.operationPaths(root,date).state),savedState);
+  await writeFile(f.png,pngBefore);passed++;
+  const publication={date,channel,runId:f.runId,transactionId:'fixture-transaction',candidateSha256:f.candidateSha256,pngSha256:f.pngSha256,now};
+  await assert.rejects(ops.updatePublicationState(root,{...publication,step:'complete'}),{code:'PUBLICATION_CONFLICT'});
+  await ops.updatePublicationState(root,{...publication,step:'prepared',candidate:f.candidate});
+  assert.equal((await ops.updatePublicationState(root,{...publication,step:'prepared',candidate:f.candidate})).unchanged,true);
+  await assert.rejects(ops.updatePublicationState(root,{...publication,transactionId:'conflict',step:'prepared',candidate:f.candidate}),{code:'PUBLICATION_CONFLICT'});
+  passed++;
+  const target=ops.archiveContentPath(root,date,channel);
+  await rename(f.candidate,target);
+  await ops.assertReadyProof(root,date,channel,{now,recovery:true,candidate:target});
+  await ops.updatePublicationState(root,{...publication,step:'content-written',candidate:target});
+  await assert.rejects(ops.updatePublicationState(root,{...publication,step:'complete',candidate:target}),{code:'PUBLICATION_CONFLICT'});
+  const indexPath=path.join(path.dirname(target),'index.json');
+  await writeJson(indexPath,{timezone:'Asia/Shanghai',publishAt:'11:00',editions:[{date,issue:1,publishAt:date+'T11:00:00+08:00',file:path.relative(root,target).replaceAll('\\','/')}]});
+  await ops.updatePublicationState(root,{...publication,step:'index-written',candidate:target});
+  await ops.updatePublicationState(root,{...publication,step:'complete',candidate:target});
+  const final=await ops.queryRunState(root,date,{channel,now});
+  assert.equal(final.channels[channel].archive.valid,true);assert.equal(final.channels[channel].online.valid,false);
+  assert.equal(final.channels[channel].publication.step,'complete');
+  const afterState=JSON.parse(await readFile(ops.operationPaths(root,date).state,'utf8'));
+  assert.deepEqual(afterState.channels[channel==='game'?'minsheng':'game'],otherBefore);
+  passed++;
+  await assert.rejects(ops.createReadyProof(root,f),{code:'STATE_CONFLICT'});passed++;
+  // Old state with valid artifacts can be restored; no trust in a stored status.
+  afterState.channels[channel].published=false;afterState.channels[channel].status='researching';
+  await writeJson(ops.operationPaths(root,date).state,afterState);
+  const reconciled=await ops.reconcileRunState(root,date,{channel,runId:f.runId,now});
+  assert.equal(reconciled.ok,true);assert.equal(reconciled.state.channels[channel].published,true);passed++;
+  const visual=JSON.parse(await readFile(f.visualEvidence,'utf8'));visual.inspector='changed';
+  await writeJson(f.visualEvidence,visual);
+  await assert.rejects(ops.assertReadyProof(root,date,channel,{candidate:target,recovery:true,now}),{code:'PRECHECK_FAILED'});passed++;
+}
+console.log(`集中预检与状态恢复 ${passed} 项检查通过（模拟来源/渲染/视觉证据，不代表生产验收）。`);
+async function treeHashes(root) {
+  const entries=await readdir(root,{withFileTypes:true});const result={};
+  for (const entry of entries) { const file=path.join(root,entry.name); if(entry.isDirectory()) result[entry.name]=await treeHashes(file); else result[entry.name]=createHash('sha256').update(await readFile(file)).digest('hex'); }
+  return result;
+}

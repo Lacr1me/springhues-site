@@ -1,0 +1,46 @@
+/* 开场加载器 + 碎片擦除层。首帧即为蓝底，不依赖任何脚本。 */
+html.is-loading { overflow: hidden; }
+html.js-failed.is-loading { overflow: auto; }
+.loader {
+  position: fixed; inset: 0; z-index: 900; display: none; overflow: hidden;
+  background: var(--sh-klein-500); color: var(--sh-white);
+}
+html.is-loading .loader { display: block; }
+html.js-failed .loader { display: none; }
+.loader::before {
+  content: ""; position: absolute; inset: -20% -10%; opacity: .5;
+  background:
+    linear-gradient(115deg, transparent 0 38%, var(--sh-klein-700) 38% 52%, transparent 52% 100%),
+    linear-gradient(115deg, transparent 0 66%, var(--sh-klein-900) 66% 74%, transparent 74% 100%);
+}
+.loader-skip {
+  position: absolute; z-index: 3; top: max(18px, env(safe-area-inset-top)); right: max(18px, env(safe-area-inset-right));
+  display: inline-flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 22px 0 26px;
+  background: var(--sh-white); color: var(--sh-klein-500); font-weight: 800; letter-spacing: .08em;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  transition: transform .2s var(--ease-out), background-color .2s;
+}
+.loader-skip span { font-family: var(--font-display); font-weight: 400; letter-spacing: .12em; color: var(--sh-burgundy); }
+.loader-skip:hover { transform: scale(1.05); }
+.loader-skip:active { transform: scale(.96); }
+.loader-skip:focus-visible { outline-color: var(--sh-white); outline-offset: 4px; }
+.loader-word {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font: 400 min(15.5vw, 24svh)/1 var(--font-display); letter-spacing: .01em;
+}
+.loader-word .lt { position: relative; display: inline-block; will-change: transform; }
+.loader-word .lt .ghost { visibility: hidden; }
+.loader-word .f { position: absolute; inset: 0; display: block; font-weight: 400; will-change: transform; }
+.loader-word .f1 { color: var(--sh-white); clip-path: polygon(0 0, 100% 0, 100% 46%, 0 62%); }
+.loader-word .f2 { color: var(--sh-white); clip-path: polygon(0 62%, 100% 46%, 100% 100%, 0 100%); }
+.loader-word .f3 { color: var(--sh-klein-950); clip-path: polygon(0 40%, 100% 30%, 100% 36%, 0 46%); }
+.loader-word .lt.hot .f3 { color: var(--sh-burgundy); }
+.loader-count {
+  position: absolute; left: max(22px, env(safe-area-inset-left)); bottom: max(18px, env(safe-area-inset-bottom));
+  font: 400 clamp(28px, 6vw, 72px)/1 var(--font-display); letter-spacing: .04em;
+}
+.loader-count i { font-style: normal; font-size: .5em; margin-left: .15em; opacity: .7; }
+.loader-blade {
+  position: absolute; left: 0; right: 0; top: 50%; height: 3px; background: var(--sh-burgundy);
+  transform: scaleX(0); transform-origin: left center;
+}

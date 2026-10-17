@@ -1,0 +1,27 @@
+:root { --paper:#f5f2ef; --ink:#29252b; --muted:#746b74; --red:#783b49; --blue:#783b49; --line:#e4dcde; --white:#fffdfb; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:95px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif; }
+button,input,textarea { font:inherit; }
+button,a { -webkit-tap-highlight-color:transparent; }
+a { color:inherit; }
+.shell { width:min(1180px,calc(100% - 40px)); margin:auto; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.honeypot { position:absolute!important; left:-10000px!important; width:1px!important; height:1px!important; overflow:hidden!important; }
+.turnstile-slot { width:1px; height:1px; overflow:hidden; }
+.form-status { min-height:18px; margin:9px 0 0; color:var(--muted); font-size:12px; }
+.form-status[data-state="success"] { color:#386a52; }
+.form-status[data-state="error"] { color:#aa354a; }
+.portal-header { min-height:78px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.portal-brand { display:flex; gap:13px; align-items:center; color:inherit; text-decoration:none; }
+.portal-brand b { font-size:18px; }
+.portal-brand small { display:block; color:var(--muted); font-size:10px; letter-spacing:.12em; }
+.header-actions { display:flex; align-items:center; gap:20px; color:var(--muted); }
+.message-nav { font-size:12px; text-decoration:none; }
+.eyebrow,.form-eyebrow { color:var(--blue); font-size:10px; letter-spacing:.14em; }
+.live-dot { display:inline-block; width:6px; height:6px; margin-right:8px; border-radius:50%; background:var(--blue); }
+footer.shell { display:flex; align-items:center; justify-content:space-between; gap:20px; color:var(--muted); font-size:12px; }
+.footer-link { color:inherit; text-underline-offset:3px; }
+[hidden] { display:none!important; }
+@media(max-width:700px) { footer.shell { align-items:flex-start; flex-direction:column; gap:8px; } footer.shell p { margin:0; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

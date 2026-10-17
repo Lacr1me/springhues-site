@@ -1,0 +1,109 @@
+/* 作品墙：参差不齐的碎片，不是整齐的卡片网格。 */
+.works { position: relative; padding: clamp(72px, 9vw, 150px) 0 clamp(90px, 10vw, 170px); isolation: isolate; }
+.wall-bg { position: absolute; inset: clamp(400px, 34vw, 560px) 0 0 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.wall-slab { position: absolute; display: block; background: var(--sh-klein-500); will-change: transform; }
+.wall-slab.s1 { left: -6%; top: 0; width: 82%; height: 34%; clip-path: polygon(0 20%, 100% 0, 92% 100%, 5% 84%); }
+.wall-slab.s2 { right: -8%; top: 30%; width: 72%; height: 28%; clip-path: polygon(8% 0, 100% 14%, 100% 90%, 0 100%); }
+.wall-slab.s3 { left: 6%; top: 68%; width: 64%; height: 20%; clip-path: polygon(0 12%, 100% 0, 95% 100%, 4% 90%); }
+:root[data-theme="night"] .wall-slab { background: var(--sh-klein-700); }
+.wall-slab::after { content: ""; position: absolute; inset: 0; opacity: .22; background: radial-gradient(circle, #fff 1.2px, transparent 1.7px) 0 0 / 9px 9px; -webkit-mask-image: linear-gradient(100deg, #000, transparent 70%); mask-image: linear-gradient(100deg, #000, transparent 70%); }
+.onomato {
+  position: absolute; font: 900 clamp(70px, 12vw, 190px) / 1 var(--font-cn); color: transparent; -webkit-text-stroke: 2px var(--sh-klein-500); opacity: .38; white-space: nowrap; user-select: none;
+}
+:root[data-theme="night"] .onomato { -webkit-text-stroke-color: var(--sh-white); opacity: .22; }
+.onomato.o1 { right: 6%; top: 3%; transform: rotate(-6deg); }
+.onomato.o2 { left: 2%; top: 40%; transform: rotate(5deg); -webkit-text-stroke-color: var(--sh-white); opacity: .5; }
+.onomato.o3 { right: 3%; bottom: 3%; transform: rotate(-4deg); -webkit-text-stroke-color: var(--sh-white); opacity: .45; }
+.tape {
+  position: absolute; right: clamp(14px, 4vw, 64px); top: 14px; padding: 5px 16px; transform: rotate(-3deg);
+  font: 400 13px/1.4 var(--font-display); letter-spacing: .24em; color: var(--sh-klein-500); background: rgba(244, 246, 255, .85);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 50%, 100% 100%, 0 100%, 6px 50%); box-shadow: 0 0 0 1px var(--sh-klein-500);
+}
+
+.works-head, .wall { max-width: 1500px; margin-inline: auto; }
+.works-head { position: relative; padding: 0 clamp(14px, 4vw, 64px); margin-bottom: clamp(30px, 4vw, 60px); }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font: 400 15px/1 var(--font-display); letter-spacing: .3em; }
+.eyebrow i { width: 44px; height: 4px; background: var(--sh-burgundy); transform: skewX(-30deg); }
+.works-head h2 { position: relative; display: inline-block; line-height: 1; }
+.works-head .h-cn {
+  position: relative; z-index: 1; display: inline-block; padding: .08em .4em .1em .3em; font-size: clamp(54px, 9vw, 140px);
+  background: var(--sh-klein-500); color: var(--sh-white); clip-path: polygon(0 0, 100% 0, calc(100% - .22em) 100%, 0 100%);
+}
+.works-head .h-en {
+  position: absolute; left: .45em; top: -.34em; z-index: 0; font-size: clamp(90px, 16vw, 250px); line-height: 1; color: transparent;
+  -webkit-text-stroke: 2px var(--fg); opacity: .32; letter-spacing: .02em; pointer-events: none; white-space: nowrap;
+}
+.works-lead { max-width: 34em; margin-top: 22px; font-weight: 600; color: var(--fg); }
+.filters { display: flex; gap: 8px; margin-top: 26px; overflow-x: auto; padding: 4px 4px 12px; scrollbar-width: none; }
+.filters::-webkit-scrollbar { display: none; }
+.filters button {
+  position: relative; flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 24px 0 20px; font-weight: 800; letter-spacing: .08em;
+  background: var(--sh-white); color: var(--sh-klein-500); box-shadow: inset 0 0 0 2px var(--sh-klein-500);
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  transition: transform .25s var(--ease-out), background-color .2s, color .2s;
+}
+:root[data-theme="night"] .filters button { background: var(--sh-klein-900); color: var(--sh-white); box-shadow: inset 0 0 0 2px rgba(244, 246, 255, .6); }
+.filters button small { font: 400 12px/1 var(--font-display); letter-spacing: .14em; opacity: .7; }
+.filters button:hover { transform: translateY(-3px) scale(1.04); }
+.filters button:active { transform: scale(.95); }
+.filters button[aria-pressed="true"] { background: var(--sh-klein-500); color: var(--sh-white); box-shadow: inset 0 -4px 0 var(--sh-burgundy); }
+:root[data-theme="night"] .filters button[aria-pressed="true"] { background: var(--sh-white); color: var(--sh-klein-500); }
+.filters button:focus-visible { outline: 0; background: var(--sh-burgundy); color: var(--sh-white); box-shadow: none; }
+
+.wall {
+  --G: 12;
+  display: grid; grid-template-columns: repeat(var(--G), minmax(0, 1fr)); grid-auto-rows: clamp(48px, 6vw, 88px); grid-auto-flow: dense; gap: 16px;
+  padding: 0 clamp(14px, 4vw, 64px);
+  overflow-anchor: none; /* 高度补间期间不让浏览器的滚动锚定二次调整 scrollY */
+}
+/* 高度补间期间，进出场的卡会压到墙底以外（盖住字幕条与「关于」），把下沿收回到墙底；四周留出投影余量。 */
+.wall.is-morphing { position: relative; clip-path: inset(-80px -80px -16px -80px); }
+.slot {
+  position: relative; grid-column: span var(--cols, 4); grid-row: span var(--rows, 4); perspective: 900px;
+  filter: drop-shadow(7px 9px 0 rgba(13, 24, 80, .32));
+}
+/* 卡片在格子里留 6px 内边距：倾斜后卡角不会压到相邻卡片。 */
+.slot > .face { inset: 6px; }
+/* 视差：wall/parallax.js 按滚动写 --py；位移走 transform，FLIP 用独立的 translate / scale 属性叠加，互不覆盖。 */
+html.has-parallax .slot { transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
+:root[data-theme="night"] .slot { filter: drop-shadow(7px 9px 0 rgba(0, 0, 0, .38)); }
+.slot[hidden] { display: none !important; }
+/* 离场卡脱离网格流，停在起点矩形上淡出（left / top / width / height 由 morph.js 内联写入）。 */
+.slot.is-leaving { position: absolute; margin: 0; transform: none; transform-origin: 50% 50%; z-index: 2; pointer-events: none; }
+html.has-parallax .slot.is-leaving { transform: none; }
+.slot.is-entering { transform-origin: 50% 50%; }
+/* 空分类占位：切角蓝色块，和卡片的切角语言一致。 */
+.wall-empty {
+  grid-column: 1 / -1; grid-row: span 2; display: grid; place-items: center start;
+  justify-self: start; width: min(560px, 100%); margin: 0;
+  padding: clamp(18px, 2.4vw, 30px) clamp(20px, 3vw, 44px);
+  font-weight: 800; letter-spacing: .08em; color: var(--sh-klein-500); background: var(--sh-white);
+  clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+  box-shadow: inset 0 0 0 4px var(--sh-klein-500), inset 0 -8px 0 var(--sh-burgundy);
+}
+:root[data-theme="night"] .wall-empty { color: var(--sh-white); background: var(--sh-klein-900); box-shadow: inset 0 0 0 2px rgba(244, 246, 255, .6), inset 0 -6px 0 var(--sh-burgundy); }
+.wall-empty[hidden] { display: none !important; }
+.static-links { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 clamp(14px, 4vw, 64px); margin-top: 40px; }
+.static-links a {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; font-weight: 800; letter-spacing: .1em; text-decoration: none; background: var(--sh-klein-500); color: var(--sh-white);
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+}
+.static-links a:hover { background: var(--sh-burgundy); }
+.wall-note { grid-column: 1 / -1; padding: 40px 0; font-weight: 700; }
+.wall-fallback { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; padding: 30px 28px; background: var(--sh-klein-500); color: var(--sh-white); font-weight: 700; clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px); }
+.wall-fallback button, .card-retry {
+  min-height: 44px; padding: 0 22px; background: var(--sh-burgundy); color: var(--sh-white); font-weight: 800; letter-spacing: .1em;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); transition: transform .2s var(--ease-out);
+}
+.wall-fallback button:hover, .card-retry:hover { transform: scale(1.05); }
+
+@media (max-width: 1099px) { .wall { --G: 8; gap: 12px; } }
+@media (max-width: 699px) { .wall { --G: 6; gap: 8px; grid-auto-rows: clamp(40px, 11vw, 64px); } .works-head .h-en { left: .1em; } .slot { filter: drop-shadow(4px 6px 0 rgba(13, 24, 80, .3)); } }
+
+.head-slab { position: absolute; z-index: -1; right: -4%; top: clamp(50px, 6vw, 110px); width: 52%; height: clamp(300px, 24vw, 420px); background: var(--sh-klein-500); clip-path: polygon(14% 0, 100% 8%, 100% 100%, 0 88%); pointer-events: none; }
+.head-slab::after { content: ""; position: absolute; inset: 0; opacity: .22; background: radial-gradient(circle, #fff 1.2px, transparent 1.7px) 0 0 / 9px 9px; -webkit-mask-image: linear-gradient(260deg, #000, transparent 70%); mask-image: linear-gradient(260deg, #000, transparent 70%); }
+:root[data-theme="night"] .head-slab { background: var(--sh-klein-700); }
+.works > .onomato.o1 { z-index: -1; right: 8%; top: clamp(70px, 7vw, 130px); -webkit-text-stroke-color: var(--sh-white); opacity: .65; }
+@media (min-width: 900px) and (max-width: 1199px) { .head-slab { width: 44%; } }
+/* 窄屏（≤899px）：蓝块只落在标题行右侧（不进入眉题与说明文字的纵向范围），拟声词右移避开眉题。 */
+@media (max-width: 899px) { .head-slab { width: 38%; height: 112px; top: clamp(62px, 14vw, 84px); right: -6%; } .works > .onomato.o1 { top: 70px; right: 2%; font-size: 76px; } }

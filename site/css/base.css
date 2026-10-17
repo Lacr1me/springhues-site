@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Anton";
+  src: url("../../assets/fonts/anton-latin.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: auto; overflow-x: clip; background: var(--bg); }
+body {
+  margin: 0; min-height: 100vh; overflow-x: clip;
+  background: var(--bg); color: var(--fg);
+  font: 400 16px/1.7 var(--font-cn);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .6s var(--ease-wipe), color .6s var(--ease-wipe);
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; padding: 0; }
+h1, h2, h3, p, ul, dl, dd { margin: 0; padding: 0; }
+ul { list-style: none; }
+kbd { font: 600 11px/1 var(--font-display); letter-spacing: .08em; }
+.icon-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ic { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; flex: none; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip-link {
+  position: fixed; left: 12px; top: -80px; z-index: 1000; padding: 12px 18px;
+  background: var(--sh-white); color: var(--sh-klein-500); font-weight: 700; text-decoration: none;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: top .2s var(--ease-out);
+}
+.skip-link:focus { top: 12px; }
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+#main:focus { outline: none; }
+.noscript { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 14px 20px; background: var(--sh-klein-500); color: var(--sh-white); text-align: center; }
+::selection { background: var(--sh-burgundy); color: var(--sh-white); }
+
+/* 章节标题：中文系统粗体 + 英文 Anton 装饰 */
+.h-cn { font-weight: 900; letter-spacing: .04em; }
+.h-en { font-family: var(--font-display); letter-spacing: .02em; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+@media (forced-colors: active) {
+  :focus-visible { outline-color: Highlight; }
+  .corner, .act, .filters button { border: 1px solid CanvasText; }
+}

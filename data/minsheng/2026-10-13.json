@@ -1,0 +1,461 @@
+{
+  "date": "2026-10-13",
+  "issue": 53,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历九月初四",
+  "cutoff": "2026-10-13 13:02（北京时间）",
+  "productionTime": "2026-10-13 13:02（北京时间）",
+  "metricsCutoff": "2026-10-13 13:02（北京时间）",
+  "topStoryIds": [
+    "domestic-07",
+    "international-06",
+    "tech-01"
+  ],
+  "observation": "今天的消息把便利与核验放在一起：就业活动、村级金融站和社区托育都在缩短居民获取服务的距离，教室照明与校园餐改善则把健康要求落到日常场景。科技与AI进展需要同样清晰的边界：论文成果、试验平台和商业发布代表不同成熟阶段，不能直接等同于可用效果。查看报价和通知时，也应辨明币种、数据日期与实施日期；把这些细节核准，信息才更有用。",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms-20261013-d01",
+        "title": "北京警方提醒本地来电也可能藏有远程控机诈骗",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 12:05",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-13/10713622.shtml",
+        "summary": "北京房山警方查获为境外电诈提供语音转接服务的团伙，7名主要嫌疑人被刑拘。国家反诈中心民警演示陌生链接与屏幕共享风险，提醒市民勿凭本地号码信任来电，也勿办理出售电话卡。"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms-20261013-d02",
+        "title": "重庆巴南就业活动周提供线下3400余个岗位",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 15:47",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-12/10712071.shtml",
+        "summary": "重庆巴南10月12日启动民营企业促就业活动周，80余家企业线下提供3400余个岗位，线上另有100余家企业发布400余个岗位、4000余个名额，并设置政策咨询和职业指导公益服务。"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms-20261013-d03",
+        "title": "浙江龙港90余家共富工坊提供家门口就业岗位",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 02:25",
+        "url": "https://news.gmw.cn/2026-10/13/content_39042037.htm",
+        "summary": "光明日报走访浙江龙港共富工坊，渔获加工、物流与包装提供灵活就业岗位。当地已建90余家工坊，提供2000余个就近岗位，今年累计帮助364名低收入群体就业。"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms-20261013-d04",
+        "title": "西藏那曲村级金融服务站帮助牧民就近申办贷款",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 02:25",
+        "url": "https://news.gmw.cn/2026-10/13/content_39042058.htm",
+        "summary": "光明日报记者在那曲色尼区路堆村走访发现，村里的金融综合服务站可指导牧民在线申办贷款。牧民边巴在站点核对材料、申报后约十多分钟获受理提示，减少往返数十公里办理的负担。"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms-20261013-d05",
+        "title": "北京戏剧展演季将在10月至12月推出120部大戏",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 02:25",
+        "url": "https://news.gmw.cn/2026-10/13/content_39041958.htm",
+        "summary": "北京国际戏剧展演季将在10月至12月推出来自20多个国家和地区的120部剧目，以及城市戏剧嘉年华等活动。首钢园10月17日、18日、24日、25日将举办沙龙、工作坊、巡游和光影秀。"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms-20261013-d06",
+        "title": "哈尔滨冰雪大世界拟将今冬园区扩大至125万平方米",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 09:00",
+        "url": "https://cn.chinadaily.com.cn/a/202610/13/WS6acd829de4b09a165c78ee78.html",
+        "summary": "哈尔滨冰雪大世界在10月12日冰雪季推介会上介绍，第二十八届园区拟扩大至125万平方米，用冰用雪量达40万立方米，并新增超级冰滑梯群组。上述内容为今冬规划，园区尚未开园。"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms-20261013-d07",
+        "title": "中小学校教室采光照明新国标11月1日起实施",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 10:27",
+        "url": "https://www.chinanews.com.cn/edu/2026/10-13/10713571.shtml",
+        "summary": "强制性国标GB7793—2025将于11月1日实施，适用范围扩至中等职业学校，新增采光均匀度、蓝光危害和频闪等要求。国家疾控局公布的完整标准与国家标准公开记录均确认实施日期。"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms-20261013-d08",
+        "title": "上海虹口公布三类托育服务与社区宝宝屋预约方式",
+        "source": "上海市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13",
+        "url": "https://www.shanghai.gov.cn/nw17239/20261013/8a99c42d5824406391edd72e4e854565.html",
+        "summary": "虹口区10月13日公布托育资源：幼儿园和托儿所托班提供全日托，8个街道的18个社区宝宝屋提供1至3岁幼儿临时托、计时托；另有3家社会托育机构，并向0至6岁家庭提供免费育儿指导。"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms-20261013-d09",
+        "title": "甘肃多所学校升级食堂并引入家长监督",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 02:10",
+        "url": "https://news.gmw.cn/2026-10/13/content_39042003.htm",
+        "summary": "光明日报记者走访甘肃校园餐服务，凉州黄羊实验小学新食堂提供热饭热菜，定西黑山初中更新冷冻和消毒设备；永登部分学校选聘学生家长任厨师，凉州家长可查阅采购、留样和消毒台账。"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms-20261013-d10",
+        "title": "银川兴庆区更新老旧管网，改善街巷排水与路面",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 02:20",
+        "url": "https://news.gmw.cn/2026-10/13/content_39041960.htm",
+        "summary": "光明日报走访银川兴庆区城市更新，书苑巷更换老化排水管线并翻修破损路面，居民反映出行改善。当地分批推进老旧管网改造，并统筹老旧小区、老旧电梯更新等项目，改善老城区居住环境。"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms-20261013-i01",
+        "title": "巴黎国际车展开幕，中国品牌参展规模创新高",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 10:34",
+        "url": "https://world.people.com.cn/n1/2026/1013/c1002-40813738.html",
+        "summary": "巴黎国际车展12日开幕，为期一周，吸引全球100多家参展商。新华社记者现场采访主办方，确认16家中国车企携25个品牌参展，展会提供自动驾驶体验及多种动力车型试驾。"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms-20261013-i02",
+        "title": "马迪塞宣誓就任爱沙尼亚总统",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 09:01",
+        "url": "https://world.people.com.cn/n1/2026/1013/c1002-40813634.html",
+        "summary": "于勒·马迪塞12日下午在塔林宣誓就任爱沙尼亚总统，成为该国第二位女性总统。总统府同日公布其在议会的首次演讲，谈及教育、家庭、公共服务与社会信任。"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms-20261013-i03",
+        "title": "德国持续资助高校创业，连接科研与市场",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 06:12",
+        "url": "https://world.people.com.cn/n1/2026/1013/c1002-40813285.html",
+        "summary": "人民日报柏林记者报道德国青年创业扶持机制，介绍EXIST项目、创新机构和高校孵化服务。EXIST官网确认，其为学生、毕业生和研究人员提供资金、导师及高校网络支持。"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms-20261013-i04",
+        "title": "欧佩克秘书长称下调今年石油需求增长预期",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 19:35",
+        "url": "https://cn.chinadaily.com.cn/a/202610/12/WS6accc818e4b09a165c78ee3a.html",
+        "summary": "据总台记者现场报道，欧佩克秘书长盖斯12日在利雅得表示，2026年全球日均石油需求增长预期已由年初140万桶下调至40万桶；他称此前推迟的需求将在2027年逐步显现。"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms-20261013-i05",
+        "title": "厦门大学马来西亚分校迎十周年毕业季",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 18:48",
+        "url": "https://www.news.cn/world/20261012/b32cef52b8204a668ab7bbbd4c868617/c.html",
+        "summary": "厦门大学马来西亚分校10日至11日举行六场毕业典礼，1677名学生获得学位，其中978人为马来西亚籍。新华社现场通讯采访毕业生与校方，记录海外办学十周年的教育和文化交流。"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms-20261013-i06",
+        "title": "霍尔和伍德福德获诺贝尔经济学奖",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 17:58",
+        "url": "https://www.news.cn/world/20261012/326c1c98ffe14c4b94a860414687b9f9/c.html",
+        "summary": "瑞典皇家科学院12日宣布，将2026年诺贝尔经济学奖授予美国经济学家罗伯特·霍尔和迈克尔·伍德福德，表彰他们对宏观经济稳定政策的微观经济学基础研究所作的贡献。"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms-20261013-i07",
+        "title": "中韩青少年历史探访团启程",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 16:43",
+        "url": "https://world.people.com.cn/n1/2026/1012/c1002-40813116.html",
+        "summary": "中韩青少年历史探访团11日在中国驻韩国使馆举行启程仪式，将于12日至16日访问吉林、黑龙江。人民网记者现场报道，行程包括吉林大学及中韩抗日历史相关纪念场所。"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms-20261013-i08",
+        "title": "纽约动漫展闭幕，迎来举办二十周年",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 14:42",
+        "url": "https://www.chinanews.com.cn/gj/shipin/cns-d/2026/10-12/news1071574.shtml",
+        "summary": "纽约动漫展于当地时间11日落下帷幕，今年迎来举办二十周年。中新网记者在现场制作视频报道，介绍为期四天的流行文化展会；据该报道，累计到场人数超过20万。"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms-20261013-i09",
+        "title": "外交部对伯利兹外长丰塞卡采取反制措施",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 11:29",
+        "url": "https://world.gmw.cn/2026-10/12/content_39040990.htm",
+        "summary": "外交部12日公布第22号令，对伯利兹外长丰塞卡采取冻结在华财产、禁止境内组织和个人与其交易合作、不予签证及入境等措施。决定自当日起施行，入境限制包括香港、澳门。"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms-20261013-i10",
+        "title": "肯尼亚举行野生动物保护艺术公益活动",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 09:26",
+        "url": "https://world.people.com.cn/n1/2026/1012/c1002-40812825.html",
+        "summary": "肯尼亚内罗毕8日举行野生动物保护艺术交流公益活动，16名中国摄影师和2名画家携作品参加。人民网记者报道，中方捐赠生态影像与绘画用于科普、公益宣传和展陈。"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms-20261013-t01",
+        "title": "变量作业处方图在玉米田间测产中实现增产减肥",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 19:52",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594793.html",
+        "summary": "东北农业大学“千金方”团队以机器学习生成变量作业处方图。10月9日玉米田间测产显示，变量区较定量区增产6.9%、尿素用量降低5.7%，技术仍处田间示范验证阶段。"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms-20261013-t02",
+        "title": "晶态与非晶异质结构提升氧氯化物固态电解质性能",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 09:58",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572775.shtm",
+        "summary": "东莞材料所等团队构建晶态与非晶异质结构氧氯化物电解质，室温离子电导率达0.822毫西门子/厘米。实验电池循环1000次后容量保持86.02%，成果发表于《储能材料》。"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms-20261013-t03",
+        "title": "锂硫同位素揭示柴达木深层卤水差异化富集机制",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 16:01",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572797.shtm",
+        "summary": "中科院地球环境所利用锂、硫同位素比较柴达木两类深层卤水，揭示深部热液补给与黏土吸附的差异作用。机构近日介绍这项研究；论文9月30日在线发表，并非新发现锂矿储量。"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms-20261013-t04",
+        "title": "仿生非膨胀超材料探索椎间盘力学匹配",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-11 22:54",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572758.shtm",
+        "summary": "昆明理工大学团队组合六边形与内凹六边形结构，设计压缩和拉伸时横向内缩的超材料。三维打印样件经力学及细胞相容性测试，探索椎间盘力学匹配，尚属实验室研究。"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms-20261013-t05",
+        "title": "古籍极光记录用于重建1770年超级地磁暴",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 15:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594514.html",
+        "summary": "哈工大深圳团队利用中国古籍极光记录重建1770年地磁暴，估算极光边界和强度。研究已获《天文与空间科学前沿》接收，最终排版版本待发布。"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms-20261013-t06",
+        "title": "大功率燃料电池发动机与兆瓦级热电联供产品亮相",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 10:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594377.html",
+        "summary": "燃料电池国创中心10月9日在山东展示“氢进万家”进展，包括大功率燃料电池发动机。潍柴原文确认新系列发动机和兆瓦级热电联供产品亮相，面向重载运输及分布式能源场景。"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms-20261013-t07",
+        "title": "星云二号5米级不锈钢共底贮箱完成制造交付",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 17:46",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594741.html",
+        "summary": "深蓝航天完成星云二号5米级不锈钢共底贮箱制造并交付。共底结构用于连接液氧和煤油贮箱，推进型号工程研制；后续热试车仍是计划，报道未宣布火箭已发射或回收成功。"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms-20261013-t08",
+        "title": "农田生态服务评估国标明确15项技术指标",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 19:58",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594843.html",
+        "summary": "科技日报12日介绍农田生态服务评估国标的15项指标及九类区域划分，为生态效益核算提供计算方法。标准9月28日发布，2027年4月1日实施；本期报道解释其技术体系。"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms-20261013-t09",
+        "title": "500米级智能综采成套装备启动地面联合试运转",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 09:41",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594347.html",
+        "summary": "小纪汗煤矿10月10日启动500米级综采成套装备地面联合试运转。系统协同采煤机、液压支架、供液及通信装置，进入工程联试；井下联合试运转和正式生产仍待后续推进。"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms-20261013-t10",
+        "title": "飞蝗母传共生菌研究探索精准防控路径",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 15:59",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572793.shtm",
+        "summary": "中国科学报12日采访农科院团队，介绍母传共生菌协调飞蝗聚集产卵与卵防御的研究及当前应用探索。相关Cell论文9月23日发表，防控策略仍在探索，尚未成为成熟产品。"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms-20261013-a01",
+        "title": "AlphaProof Nexus用形式化校验探索开放数学问题",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 02:02",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/12/content_593883.html",
+        "summary": "AlphaProof Nexus结合大模型与Lean证明助手，在353个开放厄多斯问题中解决9个，并证明44个数列猜想。成果据报刊于Science；早期预印本及证明代码已公开。"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms-20261013-a02",
+        "title": "VELLINK数字地铁搭载多模态感知与车载AI平台",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 09:03",
+        "url": "https://www.news.cn/tech/20261012/fda64e27935c493ebcda60f7a8219599/c.html",
+        "summary": "新华网12日报道，VELLINK列车利用雷达、摄像头和传感器感知路况，结合车载边缘算力与斫轮大模型制定行车策略。中车官网已有9月海外发布记录，此次报道补充技术细节。"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms-20261013-a03",
+        "title": "湖南日报与360发布智眸可信GEO业务",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-12 21:43",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594878.html",
+        "summary": "湖南日报社联合360于12日在长沙发布智眸可信GEO业务，将党媒内容与事实核验能力接入大模型信息供给，并签署合作协议。项目处于产品发布与应用推进阶段，传播效果仍需验证。"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms-20261013-a04",
+        "title": "袁稻思源平台上线，辅助杂交水稻育种决策",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13 08:05",
+        "url": "https://www.cnr.cn/hunan/gstjhunan/20261013/t20261013_527840253.shtml",
+        "summary": "湖南省农科院、自动化所与中科闻歌研发的“袁稻思源”平台10月11日上线，集成问答助手、育种资源库、知识图谱和文献库。平台为初级版本，已开展第三代杂交水稻育种应用示范。"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms-20261013-a05",
+        "title": "CNNIC报告呈现生成式AI问答与办公应用情况",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-13",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202610/13/content_30185247.html",
+        "summary": "人民日报13日报道CNNIC报告：截至今年上半年，生成式AI用户超7亿，76%的用户用于问答，办公类应用次数同比增长超100%。报告于9月29日发布，数据为上半年口径。"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "ms53-m-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "899.19元/克",
+      "note": "2026-10-13 上海金早盘基准价；非金饰价",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/"
+    },
+    {
+      "id": "ms53-m-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号 8.57元/升",
+      "note": "2026-09-24 生效的福建最高零售价；10-13复核仍为最新通告",
+      "source": "福建省发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm"
+    },
+    {
+      "id": "ms53-m-international-oil",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "布油106.12美元/桶",
+      "note": "2026-10-13晨报主力合约报价；美油93.16美元/桶",
+      "source": "新华财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.cnfin.com/yw-lb/detail/20261013/4479852_1.html"
+    },
+    {
+      "id": "ms53-m-usd-cny",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7298人民币",
+      "note": "2026-10-13 中间价；100美元672.98元折算",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do"
+    },
+    {
+      "id": "ms53-m-eur-cny",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.4935人民币",
+      "note": "2026-10-13 中间价；100欧元749.35元折算",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do"
+    },
+    {
+      "id": "ms53-m-jpy-cny",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2411人民币",
+      "note": "2026-10-13 中间价；采用100日元口径",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do"
+    }
+  ],
+  "sources": [
+    "中国新闻网",
+    "光明网",
+    "中国日报中文网",
+    "上海市人民政府",
+    "人民网",
+    "新华网",
+    "中国科技网",
+    "科学网",
+    "央广网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "新华财经",
+    "国家外汇管理局"
+  ]
+}

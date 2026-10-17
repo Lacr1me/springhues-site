@@ -1,0 +1,57 @@
+/* 留言页（messages/）专属样式。依赖 shard-theme.css。
+   安全相关规则（honeypot 离屏、Turnstile 挂载点、[hidden]、状态色）与旧 portal.css 等价，不可删。
+   含 Turnstile 的元素（.message-compose / .message-form / .turnstile-slot 的任一祖先）不得设置 clip-path 或 overflow:hidden。 */
+.honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+.turnstile-slot { width: 1px; height: 1px; overflow: hidden; }
+[hidden] { display: none !important; }
+
+html.shard-live .hero-date { display: inline-flex; align-items: center; gap: 10px; margin: 22px 0 0; padding: 4px 16px 4px 14px; background: var(--sh-klein-950); color: var(--sh-white); font: 700 14px/1.6 var(--font-cn); letter-spacing: .06em; clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+html.shard-live .form-eyebrow { margin: 0 0 8px; color: var(--muted); font: 400 14px/1 var(--font-display); letter-spacing: .2em; }
+html.shard-live .message-compose { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: clamp(24px, 5vw, 60px); margin-top: 28px; }
+html.shard-live .compose-copy > p:last-child { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.85; }
+html.shard-live .message-form { display: grid; gap: 18px; }
+html.shard-live .form-submit-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+/* 状态文字：墨/白色正文 + 左侧色刃。错误用勃艮第刃而不是红字，避免红字压在任何蓝面上。 */
+html.shard-live .form-status { flex: 1; min-height: 24px; margin: 0; padding-left: 0; color: var(--sd-text); font-size: 14px; line-height: 1.6; }
+html.shard-live .form-status:not(:empty) { padding-left: 14px; border-left: 6px solid var(--sh-klein-500); }
+html.shard-live .form-status[data-state="success"] { border-left-color: var(--sh-klein-700); }
+html.shard-live .form-status[data-state="error"] { border-left-color: var(--blade); }
+html.shard-live .form-status[data-state="loading"] { border-left-color: var(--muted); }
+html.shard-live[data-theme="night"] .form-status:not(:empty) { border-left-color: var(--sh-white); }
+html.shard-live[data-theme="night"] .form-status[data-state="error"] { border-left-color: var(--blade); }
+html.shard-live .message-feed { margin-top: 56px; }
+html.shard-live .feed-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 4px solid var(--sh-klein-500); }
+html.shard-live[data-theme="night"] .feed-heading { border-bottom-color: var(--sh-white); }
+html.shard-live .feed-heading .sd-h2 { margin: 0; }
+html.shard-live .feed-heading > p { margin: 0; color: var(--muted); font-size: 14px; }
+html.shard-live .feed-state { margin: 0 0 18px; }
+html.shard-live .message-list { grid-template-columns: 1fr 1fr; gap: 18px; }
+/* app.js 生成的 DOM（纯文本节点）：与 .sd-item 同款外观 */
+html.shard-live .message-item {
+  position: relative; min-width: 0; padding: 22px 24px 22px 28px; background: var(--sd-panel); color: var(--sd-text); box-shadow: inset 0 0 0 2px var(--sd-line);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+html.shard-live .message-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--sh-klein-500); transition: background-color .2s; }
+html.shard-live[data-theme="night"] .message-item::before { background: var(--sh-white); }
+html.shard-live .message-item:hover::before { background: var(--blade); }
+html.shard-live .message-item header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+html.shard-live .message-item h3 { margin: 0; font: 900 19px/1.4 var(--font-cn); overflow-wrap: anywhere; }
+html.shard-live .message-item time { flex: 0 0 auto; color: var(--muted); font: 13px Consolas, monospace; }
+html.shard-live .message-item > .message-content { margin: 14px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; line-height: 1.85; }
+html.shard-live .owner-reply { margin-top: 18px; padding: 14px 18px; border-left: 6px solid var(--blade); background: var(--bg); color: var(--fg); }
+html.shard-live[data-theme="day"] .owner-reply { color: var(--sh-klein-950); }
+html.shard-live .owner-reply header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+html.shard-live .owner-reply strong { font-size: 14px; letter-spacing: .08em; }
+html.shard-live .owner-reply time { font-size: 12px; }
+html.shard-live .owner-reply p { margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.8; }
+html.shard-live .load-more { display: flex; margin: 28px auto 0; }
+@media (max-width: 800px) {
+  html.shard-live .message-compose { grid-template-columns: 1fr; gap: 24px; }
+  html.shard-live .message-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+  html.shard-live .form-submit-row { align-items: stretch; flex-direction: column; }
+  html.shard-live .form-submit-row .sd-btn { width: 100%; }
+  html.shard-live .feed-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+  html.shard-live .message-item header { align-items: flex-start; flex-direction: column; gap: 6px; }
+}

@@ -1,0 +1,20 @@
+.header-message-link {
+  margin-left: auto;
+  padding: 10px 18px;
+  border-radius: 3px;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+}
+.header-message-link:hover { background: #a40f15; }
+.header-message-link + .archive-trigger { margin-left: 0; }
+
+@media (max-width: 720px) {
+  .site-bar { gap: 12px; }
+  .site-bar nav { gap: 12px; }
+  .header-message-link { padding: 8px 11px; font-size: 11px; }
+}
+
+@media print { .header-message-link { display: none; } }

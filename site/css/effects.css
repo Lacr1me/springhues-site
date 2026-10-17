@@ -1,0 +1,42 @@
+/* 光标、toast、彩蛋、开场后的 reveal 初始态 */
+.toast { position: fixed; z-index: 120; left: 50%; bottom: max(70px, env(safe-area-inset-bottom)); transform: translateX(-50%); display: grid; gap: 8px; justify-items: center; pointer-events: none; }
+.toast .t {
+  padding: 12px 26px; background: var(--sh-klein-950); color: var(--sh-white); font-weight: 700; border-left: 5px solid var(--sh-burgundy);
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); animation: toast-in .4s var(--ease-out) both;
+}
+.toast .t.out { animation: toast-out .3s ease-in both; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(16px) skewX(-6deg); } to { opacity: 1; transform: none; } }
+@keyframes toast-out { to { opacity: 0; transform: translateY(8px); } }
+
+/* 自定义光标：仅 full 档 + 精细指针。创建失败时不会加 html.has-cursor，原生光标保留。 */
+.cursor { position: fixed; z-index: 999; left: 0; top: 0; width: 0; height: 0; pointer-events: none; display: none; }
+html.has-cursor .cursor { display: block; }
+.cursor.is-native { display: none !important; }
+html.has-cursor, html.has-cursor a, html.has-cursor button { cursor: none; }
+html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditable] { cursor: text; }
+html.native-cursor, html.native-cursor a, html.native-cursor button { cursor: auto; }
+.cursor i { position: absolute; display: block; left: -9px; top: -9px; width: 18px; height: 18px; will-change: transform; transition: transform .18s var(--ease-out); }
+.cursor .c-blue { background: var(--sh-klein-500); clip-path: polygon(0 0, 100% 30%, 40% 100%); box-shadow: none; }
+.cursor .c-white { background: var(--sh-white); clip-path: polygon(8% 0, 100% 36%, 42% 100%); transform: translate(2px, 2px) scale(1.28); z-index: -1; }
+.cursor .c-red { background: var(--sh-burgundy); clip-path: polygon(0 0, 46% 20%, 14% 52%); transform: translate(-3px, -3px); }
+.cursor .c-label { left: 18px; top: 10px; width: auto; height: auto; padding: 3px 10px; font: 400 12px/1.4 var(--font-display); letter-spacing: .2em; color: var(--sh-white); background: var(--sh-burgundy); opacity: 0; transform: scale(.6); transform-origin: left top; transition: opacity .2s, transform .3s var(--ease-out); clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+.cursor.is-hot .c-blue { transform: scale(1.9) rotate(-8deg); }
+.cursor.is-hot .c-label { opacity: 1; transform: none; }
+.cursor.is-down .c-blue { transform: scale(.7); }
+
+/* 彩蛋：标题碎裂重组（字符 span 由 split.js 生成） */
+.hero-title.is-egg .ch-in { animation: egg-shake .5s var(--ease-wipe) both; }
+@keyframes egg-shake { 0% { transform: translateY(0) skewX(0); } 30% { transform: translateY(-.06em) skewX(-8deg); } 100% { transform: none; } }
+.egg-blade { position: absolute; z-index: 6; left: 0; right: 0; top: 40%; height: 3px; background: var(--sh-burgundy); transform: scaleX(0); transform-origin: left; pointer-events: none; }
+
+/* 进场初始态：仅 JS 就绪后（html.js-ready）才隐藏，避免无 JS/失败时看不到内容 */
+html.js-ready .reveal { opacity: 0; transform: translateY(26px); }
+html.js-ready .reveal.in { opacity: 1; transform: none; transition: opacity .7s var(--ease-out), transform .8s var(--ease-out); }
+html.js-failed .reveal, html[data-intro="calm"] .reveal { opacity: 1 !important; transform: none !important; }
+.hero-title .ch { clip-path: inset(-.1em -.1em -.1em -.1em); }
+html.title-prep .hero-title .ch-in { transform: translateY(130%); }
+html.title-prep .hero-sub span, html.title-prep .scroll-cue, html.title-prep .counters { opacity: 0; }
+html.title-prep .chrome .corner { opacity: 0; }
+.chrome .corner-actions, .chrome .corner-index, .chrome .corner-progress { transition: opacity .6s var(--ease-out); }
+.chrome .corner-logo { transition: opacity .6s var(--ease-out), transform .3s var(--ease-out); }
+@media (hover: none), (pointer: coarse) { .cursor { display: none !important; } }

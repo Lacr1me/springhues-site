@@ -1,0 +1,26 @@
+你是 Springhues 站点的前端协作者。请把我指定的页面改成 SHARD 风格（克莱因蓝 + 冷白 + 勃艮第红“刃”，切角造型，无圆角矩形）。动手前先完整阅读两份文件：
+1. docs/shard-style.md（风格规范：原则、token、字体、切角、组件与最小 HTML、动效、无障碍、新页面模板、日报页约束、自检清单）
+2. site/css/shard-theme.css（跨页面共享样式，文件头有索引）
+
+执行方式：
+- 新页面从 docs/shard-style.md 第 9 节的“新页面最小模板”复制；只引入 site/css/shard-theme.css、site/css/wipe.css、site/boot.js、site/js/shell/shell.js（版本戳统一用 scripts/check-shard-style.mjs 导出的 SHARD_VERSION，当前为 20261018-shard-v4），页面专属样式放 site/css/pages-<名字>.css，选择器建议以 html.shard-live 开头（shard-theme.css 与 pages-daily.css 必须，脚本强制；留言 / 隐私等非日报页不强制，但新增规则请照做）。
+- 只使用 .sd-* 组件类和 --sh-* / 语义 token（--bg --fg --surface --on-surface --blade --focus-ring --edge --muted --sd-*），不要写十六进制色值替代 token，不要复制粘贴 token 值。
+- 新页面在 site/js/shell/links.js 登记后，菜单和页脚会自动出现；页首、页脚、主题切换、擦屏过渡由外壳脚本提供，不要自己再写。
+- 主题键沿用 localStorage 的 springhues.home.theme（day / night），默认跟随系统；不要新增存储键。
+
+硬约束（违反即返工）：
+1. 禁止圆角矩形：border-radius 只能是 0；仅状态点 .sd-dot 与头像 .sd-avatar 允许 50%。
+2. 配色比例：蓝约 60%、冷白约 30%、勃艮第红 ≤10% 且只当“刃”（新内容角标、关键按钮、强调线、悬停描边、焦点底色）。红字只能放在白 / 冷白底上；红底或蓝底上不放对方颜色的小字。不要滥用渐变。
+3. 不引入任何 CDN、第三方动画库、字体或图标库；动效只用 WAAPI 和 site/js/core/tween.js，必须尊重 prefers-reduced-motion，失败时退化为普通跳转 / 静态显示。
+4. 无障碍：正文对比度 ≥4.5:1，所有可交互元素有可见焦点（切角元素用内描边 outline-offset:-6px 加底色翻转），触控目标 ≥44px，键盘可达，各宽度无横向滚动。
+5. 不得链接 admin/ 下任何页面；不得改 message-config.js、message-client.js、supabase/、data/、downloads/、config/、.github/。
+6. 日报页（game/、minsheng/）的 HTML / PNG 由导出器同源渲染：不得修改 styles.css、brand.css、site-shell.js、两个 app.js、minsheng/*.css 和两个日报 HTML 的正文；线上外壳只能通过 site/css/pages-daily.css（全部以 html.shard-live 开头）叠加，只改颜色 / 边框颜色 / 圆角 / 切角，不改字号、行高、padding、网格和 .story 的高度；改完必须运行 node scripts/check-export-parity.mjs。
+7. 不要 commit、push，不要运行日报生产、渲染写入 artifacts/、获取租约或发布。
+
+完成后依次运行并把结果贴给我（任何一项失败先修复再汇报）：
+  node scripts/check-shard-style.mjs                     （样式检查：圆角、日报共享样式未门控、未定义 token、命名色 / 十六进制色值、版本戳、未引用主题）
+  node scripts/test-site.mjs                            （站点单测，含首页与子页面静态检查）
+  node scripts/verify-home-redesign.mjs --section=pages （浏览器验收，需要本机 Edge）
+  node scripts/check-export-parity.mjs --channel=both   （仅当改动涉及日报页）
+  git diff --check
+最后逐条对照 docs/shard-style.md 第 12 节的自检清单，说明哪些项已验证、哪些未验证。

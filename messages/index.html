@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN" class="shard-live" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
+  <meta name="theme-color" content="#F4F6FF">
+  <meta name="description" content="Springhues 每日简报留言簿。">
+  <title>留言簿 · Springhues</title>
+  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
+  <script src="site/boot.js?v=20261018-shard-v4"></script>
+  <link rel="stylesheet" href="site/css/shard-theme.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/wipe.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/pages-messages.css?v=20261018-shard-v4">
+  <script type="module" src="site/js/shell/shell.js?v=20261018-shard-v4"></script>
+</head>
+<body data-site-page="messages">
+  <main id="main" class="sd-page" tabindex="-1">
+    <header class="sd-hero">
+      <div class="sd-wrap">
+        <p class="sd-eyebrow" data-sd-reveal="0">SPRINGHUES · MESSAGE BOARD</p>
+        <h1 class="sd-h1" data-sd-reveal="1"><span class="en" aria-hidden="true">Messages</span><span class="cn">留言簿</span></h1>
+        <p class="sd-lead" data-sd-reveal="2">写下你想说的话。所有留言都会先经过人工审核，批准后才会公开显示。</p>
+        <p class="hero-date" data-sd-reveal="3"><span class="sd-dot" aria-hidden="true"></span><time id="beijingDate">北京时间</time></p>
+      </div>
+    </header>
+    <div class="sd-wrap">
+      <section class="sd-plate sd-plate--layer sd-plate--blade message-compose" aria-labelledby="composeTitle">
+        <div class="compose-copy">
+          <p class="form-eyebrow">LEAVE A NOTE</p>
+          <h2 id="composeTitle" class="sd-h2">留下一句话</h2>
+          <p>昵称与正文均会公开；请勿填写电话号码、邮箱等私人信息。</p>
+        </div>
+        <form class="message-form" data-message-form novalidate>
+          <label class="sd-field">昵称 <span>1—20 字</span><input class="sd-input" name="nickname" type="text" maxlength="20" autocomplete="nickname" required></label>
+          <label class="sd-field">留言 <span data-message-counter>0/300</span><textarea class="sd-input" name="content" maxlength="300" rows="5" required></textarea></label>
+          <label class="honeypot" aria-hidden="true">网站<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+          <div class="turnstile-slot" data-turnstile aria-hidden="true"></div>
+          <div class="form-submit-row">
+            <p class="form-status" data-message-status role="status" aria-live="polite"></p>
+            <button class="sd-btn sd-btn--blade" type="submit">提交留言 <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </section>
+      <section class="message-feed" aria-labelledby="feedTitle">
+        <div class="feed-heading">
+          <div><p class="form-eyebrow">APPROVED MESSAGES</p><h2 id="feedTitle" class="sd-h2">已公开留言</h2></div>
+          <p>仅展示审核通过的内容</p>
+        </div>
+        <p class="feed-state sd-note" id="messageState" role="status" aria-live="polite">正在读取留言…</p>
+        <div class="message-list sd-list" id="messageList"></div>
+        <button class="load-more sd-btn" id="loadMore" type="button" hidden>加载更多</button>
+      </section>
+    </div>
+    <noscript><p class="sd-note">当前浏览器未启用 JavaScript，留言表单不可用。<a href="./">返回首页</a> · <a href="privacy/">隐私说明</a></p></noscript>
+  </main>
+  <script type="module" src="messages/app.js?v=20260825-replies-v1"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-24",
+  "issue": 3,
+  "cutoff": "2026-08-24 17:10（北京时间）",
+  "dataWindow": "2026-08-23 00:00 — 2026-08-24 17:10",
+  "sources": ["游民星空", "MC百科", "MineBBS", "Steam", "SteamDB", "3DM", "游侠网"],
+  "features": [
+    {"title":"超50家中国游戏厂商参展科隆","summary":"2026科隆游戏展将于8月26日至30日举行，报道统计参展中国游戏企业超过50家，腾讯、网易、米哈游等厂商均有产品亮相。","source":"游民星空／展会公开信息","date":"2026-08-24","image":"game-brief-assets/2026-08-24-feature-game.jpg","url":"https://www.gamersky.com/news/202608/2194765.shtml"},
+    {"title":"《畅游自然》保持中文整合包热度","summary":"MC百科页面昨日指数468，高于站内昨日平均值；整合包面向中低配置，以自然探索、种田烹饪和轻量冒险为主要体验。","source":"MC百科","date":"2026-08-24","image":"game-brief-assets/2026-08-24-feature-mc.jpg","url":"https://www.mcmod.cn/modpack/1171.html"}
+  ],
+  "news": [
+    {"title":"超50家中国游戏厂商参展科隆","summary":"2026科隆展将于8月26日至30日举行，报道统计中国参展企业超过50家。","source":"游民星空／展会公开信息","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-01.jpg","url":"https://www.gamersky.com/news/202608/2194765.shtml"},
+    {"title":"《只狗：路边一条》团队谈独立游戏宣发","summary":"9人团队制作人表示曝光与传播决定作品能否触达玩家，并计划年底开启封闭测试。","source":"游民星空／Parry Frames","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-02.jpg","url":"https://www.gamersky.com/news/202608/2194786.shtml"},
+    {"title":"《The Duskbloods》网测内容为正式版子集","summary":"宫崎英高称测试仅开放一张地图和六名角色，正式版将提供更多故事与自定义内容。","source":"游民星空／FromSoftware","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-03.jpg","url":"https://www.gamersky.com/news/202608/2194784.shtml"},
+    {"title":"《现代战争4》测试在线人数回落","summary":"测试首日峰值超过11.5万后24小时内明显下滑，Steam阶段评价为多半差评；测试表现不等同正式版。","source":"游民星空／Steam","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-04.jpg","url":"https://www.gamersky.com/news/202608/2194652.shtml"},
+    {"title":"微软确认Win11更新与部分游戏冲突原因","summary":"KB5121003可能触发RGB外设内核驱动与反作弊冲突，用户反馈包括卡死、崩溃和蓝屏。","source":"游民星空／快科技／微软","date":"2026-08-23","image":"game-brief-assets/2026-08-24-news-05.jpg","url":"https://www.gamersky.com/news/202608/2194551.shtml"},
+    {"title":"部分格斗赛事考虑由PS5转向Xbox","summary":"赛事组织方讨论过热、输入延迟和USB接口稳定性，并计划在部分比赛采用Xbox Series X。","source":"游民星空／赛事组织方","date":"2026-08-23","image":"game-brief-assets/2026-08-24-news-06.jpg","url":"https://www.gamersky.com/news/202608/2194371.shtml"},
+    {"title":"英伟达DLSS 4.5光线重建定档8月25日","summary":"报道显示新版本覆盖RTX 20至50系列，并将以免费更新方式提供光线重建改进。","source":"游民星空／英伟达","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-07.jpg","url":"https://www.gamersky.com/hardware/202608/2194662.shtml"},
+    {"title":"《轮回之兽》A卡性能测试发布","summary":"测试覆盖RX 9000与7000系列，在最高画质、光追以及FSR 3或4组合下比较表现。","source":"游民星空硬件评测","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-08.jpg","url":"https://www.gamersky.com/hardware/202608/2194573.shtml"},
+    {"title":"Moon Studios否认《奥日3》开发传闻","summary":"工作室负责人表示未听说微软正复活系列，相关说法目前没有官方项目证据。","source":"游民星空／Moon Studios","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-09.jpg","url":"https://www.gamersky.com/news/202608/2194695.shtml"},
+    {"title":"实体游戏支持组织发起无限期PS抵制","summary":"民间组织Does It Play?把原定七天行动改为无限期；参与规模与实际影响仍待观察。","source":"游民星空／Does It Play?","date":"2026-08-24","image":"game-brief-assets/2026-08-24-news-10.jpg","url":"https://www.gamersky.com/news/202608/2194704.shtml"}
+  ],
+  "packs": [
+    {"name":"畅游自然","summary":"面向中低配置的轻量养老包，主打自然探索、种田烹饪和轻冒险。","category":"休闲／冒险／轻量","heat":94,"source":"MC百科·昨日指数468","image":"game-brief-assets/2026-08-24-pack-01.jpg","url":"https://www.mcmod.cn/modpack/1171.html"},
+    {"name":"DayOfMind","summary":"以Fabric为基础扩展景观、音效、视觉和生活质量功能，兼顾内容与性能。","category":"科技／冒险／休闲","heat":71,"source":"MC百科·昨日指数29","image":"game-brief-assets/2026-08-24-pack-02.jpg","url":"https://www.mcmod.cn/modpack/1341.html"},
+    {"name":"末日余晖：独自一人","summary":"围绕城市搜刮、枪械制作、尸潮防御和安全据点展开末日生存流程。","category":"末日／任务／建筑","heat":91,"source":"MC百科·昨日指数751","image":"game-brief-assets/2026-08-24-pack-03.jpg","url":"https://www.mcmod.cn/modpack/969.html"},
+    {"name":"最后那些天","summary":"僵尸会随天数进化并逐步获得破坏与搭建能力，强调阶段性生存压力。","category":"冒险／硬核／国创","heat":77,"source":"MC百科·昨日指数67","image":"game-brief-assets/2026-08-24-pack-04.jpg","url":"https://www.mcmod.cn/modpack/1088.html"},
+    {"name":"工匠：技艺革新","summary":"以匠魂3为核心串联科技、冒险与任务流程，强调材料加工和装备构筑。","category":"科技／冒险／硬核","heat":97,"source":"MC百科·昨日指数1056","image":"game-brief-assets/2026-08-24-pack-05.jpg","url":"https://www.mcmod.cn/modpack/989.html"},
+    {"name":"勇者之章 III","summary":"多路线职业、枪魔战斗和高难Boss构成持续活跃的攻略讨论。","category":"冒险／RPG","heat":96,"source":"MC百科·B站","image":"game-brief-assets/2026-08-24-pack-06.jpg","url":"https://www.mcmod.cn/modpack/1054.html"},
+    {"name":"香草纪元：食旅纪行","summary":"种田、美食、收集与异界冒险并行，适合偏好休闲成长的玩家。","category":"休闲／农业","heat":92,"source":"MC百科·B站","image":"game-brief-assets/2026-08-24-pack-07.jpg","url":"https://www.mcmod.cn/modpack/1095.html"},
+    {"name":"脆骨症","summary":"围绕胸腔与器官改造展开轻克系冒险，并提供鲜明的生存构筑。","category":"冒险／魔改","heat":88,"source":"MC百科·BBSMC","image":"game-brief-assets/2026-08-24-pack-08.jpg","url":"https://www.mcmod.cn/modpack/722.html"},
+    {"name":"宁然一隅","summary":"慢节奏种田、烹饪、建筑与轻冒险组合成多人养老体验。","category":"休闲／建筑","heat":85,"source":"MC百科·B站","image":"game-brief-assets/2026-08-24-pack-09.jpg","url":"https://www.mcmod.cn/modpack/837.html"},
+    {"name":"诡厄：使徒","summary":"巫术晋升、被动技能和拔刀剑构筑并行，偏向战斗与探索。","category":"冒险／巫术","heat":82,"source":"MC百科·BBSMC","image":"game-brief-assets/2026-08-24-pack-10.jpg","url":"https://www.mcmod.cn/modpack/1241.html"}
+  ],
+  "mods": [
+    {"name":"Caustica 2026-08-15","summary":"以Vulkan接管世界渲染，实验性支持DLSS光线重建、帧生成、HDR与硬件路径追踪。","version":"26.x","loader":"Fabric","date":"2026-08-23","source":"MineBBS／GitHub","url":"https://www.minebbs.com/resources/caustica-dlss-mod.17826/"},
+    {"name":"网络包优化 NEB 2026-07-25","summary":"通过包头优化、数据聚合压缩与延迟区块缓存降低客户端和服务端网络流量。","version":"1.21.x／26.x","loader":"NeoForge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/tags/neoforge/"},
+    {"name":"中式甲兵 v1.1.6","summary":"加入多套中式盔甲与传统兵器，并修复甲兵锻造台无法合成的问题。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/resources/forge-chinese-weapons.17475/"},
+    {"name":"Verity JE-CN 6.0.0 beta4","summary":"强化中文体验、动画、物品管理和性能，并调整原版模组的使用体验。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/forums/jemods/"},
+    {"name":"Sparkle's Morpher 1.2.0","summary":"支持加载自定义玩家模型、动画与音效，并提供Fabric和NeoForge构建。","version":"26.x／1.21","loader":"Fabric／NeoForge","date":"2026-08-18","source":"MineBBS","url":"https://www.minebbs.com/resources/sparkle-s-morpher.17739/"},
+    {"name":"自动消息 1.0","summary":"通过中文图形界面定时发送聊天或服务器命令，离开世界后自动停止。","version":"1.21.8","loader":"Fabric","date":"2026-08-17","source":"MineBBS","url":"https://www.minebbs.com/tags/mod/"}
+  ],
+  "deals": [
+    {"name":"僵尸部队 4","discount":"-95%","original":"¥168","price":"¥8.4","label":"新史低","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-01.jpg","url":"https://store.steampowered.com/app/694280/?l=schinese"},
+    {"name":"全面战争：战锤 3","discount":"-85%","original":"¥298","price":"¥44.7","label":"平史低","ends":"截至 08-27","image":"game-brief-assets/2026-08-24-steam-02.jpg","url":"https://store.steampowered.com/app/1142710/?l=schinese"},
+    {"name":"黑神话：悟空","discount":"-30%","original":"¥268","price":"¥187.6","label":"新史低","ends":"截至 08-26","image":"game-brief-assets/2026-08-24-steam-03.jpg","url":"https://store.steampowered.com/app/2358720/?l=schinese"},
+    {"name":"女神异闻录 4 黄金版","discount":"-50%","original":"¥125","price":"¥62.5","label":"平史低","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-04.jpg","url":"https://store.steampowered.com/app/1113000/?l=schinese"},
+    {"name":"女神异闻录 3 Reload","discount":"-65%","original":"¥268","price":"¥93.8","label":"平史低","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-05.jpg","url":"https://store.steampowered.com/app/2161700/?l=schinese"},
+    {"name":"女神异闻录 5 皇家版","discount":"-70%","original":"¥268","price":"¥80.4","label":"今日特惠","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-06.jpg","url":"https://store.steampowered.com/app/1687950/?l=schinese"},
+    {"name":"潜水员戴夫","discount":"-50%","original":"¥80","price":"¥40","label":"今日特惠","ends":"截至 08-30","image":"game-brief-assets/2026-08-24-steam-07.jpg","url":"https://store.steampowered.com/app/1868140/?l=schinese"},
+    {"name":"渔帆暗涌","discount":"-60%","original":"¥110","price":"¥44","label":"今日特惠","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-08.jpg","url":"https://store.steampowered.com/app/1562430/?l=schinese"},
+    {"name":"咩咩启示录","discount":"-60%","original":"¥118","price":"¥47.2","label":"今日特惠","ends":"截至 08-26","image":"game-brief-assets/2026-08-24-steam-09.jpg","url":"https://store.steampowered.com/app/1313140/?l=schinese"},
+    {"name":"雨中冒险 2","discount":"-67%","original":"¥80","price":"¥26.4","label":"今日特惠","ends":"截至 09-03","image":"game-brief-assets/2026-08-24-steam-10.jpg","url":"https://store.steampowered.com/app/632360/?l=schinese"},
+    {"name":"天国：拯救 2","discount":"-60%","original":"¥228","price":"¥91.2","label":"今日特惠","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-11.jpg","url":"https://store.steampowered.com/app/1771300/?l=schinese"},
+    {"name":"欧洲卡车模拟 2","discount":"-75%","original":"¥88","price":"¥22","label":"今日特惠","ends":"截至 08-26","image":"game-brief-assets/2026-08-24-steam-12.jpg","url":"https://store.steampowered.com/app/227300/?l=schinese"},
+    {"name":"Stray","discount":"-50%","original":"¥98","price":"¥49","label":"今日特惠","ends":"截至 09-05","image":"game-brief-assets/2026-08-24-steam-13.jpg","url":"https://store.steampowered.com/app/1332010/?l=schinese"},
+    {"name":"美洲卡车模拟","discount":"-75%","original":"¥88","price":"¥22","label":"今日特惠","ends":"截至 08-26","image":"game-brief-assets/2026-08-24-steam-14.jpg","url":"https://store.steampowered.com/app/270880/?l=schinese"},
+    {"name":"Outer Wilds","discount":"-40%","original":"¥95","price":"¥57","label":"今日特惠","ends":"截至 09-05","image":"game-brief-assets/2026-08-24-steam-15.jpg","url":"https://store.steampowered.com/app/753640/?l=schinese"},
+    {"name":"全面战争：战锤 2","discount":"-75%","original":"¥268","price":"¥67","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-24-steam-16.jpg","url":"https://store.steampowered.com/app/594570/?l=schinese"},
+    {"name":"暗黑地牢","discount":"-85%","original":"¥88","price":"¥13.2","label":"今日特惠","ends":"截至 09-01","image":"game-brief-assets/2026-08-24-steam-17.jpg","url":"https://store.steampowered.com/app/262060/?l=schinese"},
+    {"name":"十字军之王 3","discount":"-70%","original":"¥198","price":"¥59.4","label":"今日特惠","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-18.jpg","url":"https://store.steampowered.com/app/1158310/?l=schinese"},
+    {"name":"潜行者 2：切尔诺贝利之心","discount":"-30%","original":"¥268","price":"¥187.6","label":"今日特惠","ends":"截至 08-31","image":"game-brief-assets/2026-08-24-steam-19.jpg","url":"https://store.steampowered.com/app/1643320/?l=schinese"},
+    {"name":"Teardown","discount":"-50%","original":"¥119","price":"¥59.5","label":"今日特惠","ends":"截至 08-25","image":"game-brief-assets/2026-08-24-steam-20.jpg","url":"https://store.steampowered.com/app/1167630/?l=schinese"},
+    {"name":"恶魔轮盘","discount":"-50%","original":"¥12","price":"¥6","label":"今日特惠","ends":"截至 08-31","image":"game-brief-assets/2026-08-24-steam-21.jpg","url":"https://store.steampowered.com/app/2835570/?l=schinese"},
+    {"name":"双点博物馆","discount":"-33%","original":"¥158","price":"¥105.86","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-24-steam-22.jpg","url":"https://store.steampowered.com/app/2185060/?l=schinese"},
+    {"name":"都市：天际线","discount":"-70%","original":"¥138","price":"¥41.4","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-24-steam-23.jpg","url":"https://store.steampowered.com/app/255710/?l=schinese"},
+    {"name":"铁拳 8","discount":"-40%","original":"¥168","price":"¥100.8","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-24-steam-24.jpg","url":"https://store.steampowered.com/app/1778820/?l=schinese"}
+  ],
+  "trends": [
+    "科隆游戏展临近，中国厂商参展规模和重点产品成为国内玩家关注主线。",
+    "新作测试反馈、PC兼容性与图形技术更新共同影响玩家的近期游玩安排。",
+    "Minecraft中文社区今日兼有轻量养老、末日生存和高难科技整合包热度。",
+    "Steam 热门促销池扩展为 24 款；其中 5 款经价格历史交叉核验后标记为新史低或平史低。"
+  ]
+}

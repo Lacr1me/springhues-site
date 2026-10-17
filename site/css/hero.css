@@ -1,0 +1,107 @@
+/* 首屏：参考图铺满，巨型标题，手描 occluder，底部斜切蓝带。 */
+.hero {
+  position: relative; height: 100svh; overflow: hidden; container-type: inline-size;
+  background: var(--sh-klein-500) var(--hero-lqip, none) center / cover no-repeat;
+}
+.hero-inner {
+  --hero-w: 100vw;
+  --stage-w: max(var(--hero-w), calc(100svh * 4096 / 2336));
+  --stage-h: calc(var(--stage-w) * 2336 / 4096);
+  --focus-x: .47;
+  --stage-left: calc((var(--hero-w) - var(--stage-w)) * var(--focus-x));
+  --title-size: min(calc(var(--stage-w) * .15), 24svh);
+  --cross-x: .511;
+  position: absolute; inset: 0;
+}
+@supports (width: 1cqw) { .hero-inner { --hero-w: 100cqw; } }
+@media (max-aspect-ratio: 9/10) {
+  .hero-inner {
+    --stage-w: max(var(--hero-w), calc(100svh * 1638 / 2336));
+    --stage-h: calc(var(--stage-w) * 2336 / 1638);
+    --focus-x: .475;
+    --title-size: min(17vw, 14svh);
+    --cross-x: .5775;
+  }
+}
+.hero-stage { position: absolute; left: var(--stage-left); top: 0; width: var(--stage-w); height: var(--stage-h); background: var(--sh-klein-500); }
+.hero-stage picture, .hero-stage img { display: block; width: 100%; height: 100%; }
+.hero-stage img { object-fit: cover; transform-origin: 50% 40%; }
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .3s linear; pointer-events: none; }
+html.gl-on .hero-canvas { opacity: 1; }
+/* 静态/降级路径的“呼吸”：只在 html.hero-breathe 时启用（WebGL 开启时关闭，避免重复动效） */
+html.hero-breathe:not(.gl-on) .hero-stage img { animation: breathe 14s ease-in-out infinite alternate; }
+@keyframes breathe { from { transform: scale(1.02); } to { transform: scale(1.05); } }
+.hero-stage::after { /* CSS 径向刀光：降级路径由 --mx/--my 驱动 */
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(circle at var(--mx, 60%) var(--my, 40%), rgba(144, 7, 42, .38), transparent 22%);
+}
+html.hero-breathe:not(.gl-on) .hero-stage::after { opacity: 1; }
+.hero-shade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: var(--sh-klein-950); opacity: 0; transition: opacity .6s var(--ease-wipe); }
+:root[data-theme="night"] .hero-shade { opacity: .34; }
+html.gl-on .hero-shade { display: none; }
+
+.hero-title-layer {
+  position: absolute; z-index: 2; left: calc(var(--stage-left) + var(--stage-w) / 2); top: calc(var(--stage-h) * .4);
+  transform: translate(-50%, -50%); text-align: center; pointer-events: none;
+}
+@media (max-aspect-ratio: 9/10) { .hero-title-layer { left: 50%; top: 66%; } }
+.hero-title {
+  position: relative; margin: 0; font: 400 var(--title-size) / 1 var(--font-display); letter-spacing: .01em; white-space: nowrap;
+  color: var(--sh-white); -webkit-text-stroke: max(2px, calc(var(--title-size) * .04)) var(--sh-klein-950); paint-order: stroke fill;
+  text-shadow: 0 .02em 0 rgba(13, 24, 80, .5);
+}
+.hero-title .ch { display: inline-block; will-change: transform; }
+.hero-title .ch-in { display: inline-block; }
+.hero-sub { position: absolute; top: calc(100% + .6vw); left: 50%; transform: translateX(-50%); white-space: nowrap; }
+.hero-sub span {
+  display: inline-block; padding: .55em 1.6em .55em 1.4em; background: var(--sh-klein-500); color: var(--sh-white);
+  font: 800 clamp(14px, 1.5vw, 22px) / 1.2 var(--font-cn); letter-spacing: .34em;
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  box-shadow: inset 0 -3px 0 var(--sh-burgundy);
+}
+.hero-sub .line { display: block; overflow: hidden; }
+.hero-occ { position: absolute; z-index: 3; left: var(--stage-left); top: 0; width: var(--stage-w); height: var(--stage-h); pointer-events: none; display: none; }
+html.has-occ .hero-occ { display: block; }
+.hero-occ img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; }
+
+.egg-hit {
+  position: absolute; z-index: 4; width: 48px; height: 48px; border: 0; background: transparent;
+  left: calc(var(--stage-left) + var(--stage-w) * var(--cross-x) - 24px); top: calc(var(--stage-h) * .361 - 24px);
+}
+.egg-hit:focus { outline: none; }
+.egg-hit:active { transform: scale(.9); }
+
+.hero-band {
+  position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; height: max(92px, 13svh); background: var(--sh-klein-500); color: var(--sh-white);
+  clip-path: polygon(0 38%, 100% 0, 100% 100%, 0 100%);
+}
+.hero-band::before { content: ""; position: absolute; inset: 0; background: var(--sh-burgundy); clip-path: polygon(0 38%, 100% 0, 100% 3.6%, 0 41.6%); }
+.band-in {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 62%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 clamp(170px, 14vw, 240px) 4px clamp(140px, 11vw, 200px);
+}
+.scroll-cue { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: .2em; font-size: 14px; }
+.scroll-cue b { font: 400 13px/1 var(--font-display); letter-spacing: .24em; opacity: .75; margin-left: 4px; }
+.scroll-cue .ic { animation: cue 1.6s var(--ease-wipe) infinite; }
+@keyframes cue { 0%, 100% { transform: translateY(-3px); } 50% { transform: translateY(5px); } }
+.scroll-cue:hover { color: var(--sh-white); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; text-decoration-color: var(--sh-burgundy); }
+.counters { display: flex; gap: clamp(14px, 3vw, 44px); }
+.counters div { display: grid; justify-items: center; gap: 2px; }
+.counters dt { font-size: 12px; font-weight: 700; letter-spacing: .18em; opacity: .85; order: 2; }
+.counters dd { font: 400 clamp(24px, 2.8vw, 38px) / 1 var(--font-display); letter-spacing: .04em; overflow: hidden; height: 1em; }
+.counters .num { display: inline-flex; }
+.counters .col { display: inline-block; height: 1em; overflow: hidden; }
+.counters .col > span { display: block; will-change: transform; }
+.counters .col i { display: block; height: 1em; font-style: normal; line-height: 1; }
+
+@media (max-width: 899px) {
+  .scroll-cue span { display: none; }
+  .band-in { padding-left: 124px; padding-right: 128px; gap: 6px; }
+}
+@media (max-width: 599px) {
+  .scroll-cue { display: none; }
+  .band-in { padding-left: 112px; padding-right: 112px; justify-content: center; }
+  .counters { gap: 14px; }
+  .counters dt { font-size: 11px; letter-spacing: .1em; }
+}
+.hero-sweep { position: absolute; z-index: 6; top: -10%; bottom: -10%; left: 0; width: 7vw; background: var(--sh-burgundy); pointer-events: none; }

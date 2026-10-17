@@ -1,0 +1,181 @@
+/* ==========================================================================
+   日报线上页（game/、minsheng/）的 SHARD 外壳层。依赖 shard-theme.css。
+
+   导出同源约束（违反即驳回，见 docs/shard-style.md §11）：
+     - 日报 HTML/PNG 由 render.mjs 打开这两个页面截图，并内联 styles.css / minsheng/styles.css / brand.css / mobile-fix.css。
+       导出运行时页面不带 html.shard-live（site/boot.js 在 Date 被冻结时直接返回），所以本文件所有规则都以
+       “html.shard-live” 开头（@keyframes / @font-face / @view-transition 之外无例外；@view-transition 只影响线上导航，对截图无任何视觉作用）——导出时一条都不生效，PNG 与改版前逐像素一致。
+     - 本文件只改：颜色、背景、边框颜色、border-radius→0、切角 clip-path、页首/页脚/外壳。
+       不改字体、字号、行高、padding、列宽、网格、.story 的任何高度相关属性；
+       因此 alignStoryRows()（桌面逐行对齐）与 mobile-fix.css 的 height:auto !important 重置在线上继续同时有效。
+   ========================================================================== */
+
+/* ---- 调色：把旧站的“月影”变量整体映射到 SHARD 色板 ---- */
+html.shard-live body[data-site-page] {
+  --paper: var(--sh-white); --canvas: var(--sh-white); --white: #FFFFFF;
+  --ink: var(--sh-klein-950); --muted: #3a4f9a; --line: #C3CCEE;
+  --red: var(--sh-klein-500); --blue: var(--sh-klein-500); --blue-deep: var(--sh-klein-700); --blue-highlight: #5675D8;
+  --game: var(--sh-klein-500); --game-deep: var(--sh-klein-700); --game-highlight: #5675D8;
+  --green: var(--sh-klein-700); --purple: var(--sh-klein-900); --orange: var(--sh-klein-700); --navy: var(--sh-klein-950); --yellow: #DCE3FF;
+  --panel-border: var(--sh-klein-950); --row-divider: #C3CCEE; --accent: var(--sh-klein-500);
+  background: var(--bg); color: var(--ink); color-scheme: light;
+  padding-top: var(--sd-top-h); padding-left: 0;
+}
+
+/* ---- 旧外壳退场：侧栏、面包屑、旧跳转链接；频道页头只留“归档/日期”触发器 ---- */
+html.shard-live body[data-site-page] :is(.site-rail, .ui-skip, .ui-breadcrumb) { display: none !important; }
+html.shard-live body[data-site-page].has-site-rail { padding-left: 0; }
+html.shard-live body[data-site-page] > .site-bar {
+  view-transition-name: none; position: static; z-index: auto; height: auto; min-height: 0; width: min(1600px, calc(100% - 72px)); margin: 10px auto 0; padding: 0;
+  display: flex; justify-content: flex-end; border: 0; background: transparent; backdrop-filter: none;
+}
+html.shard-live body[data-site-page] > .site-bar > :is(.mini-brand, nav, .header-message-link) { display: none !important; }
+html.shard-live body[data-site-page] .archive-trigger {
+  margin-left: 0; min-height: 48px; padding: 7px 18px 7px 16px; border: 0; background: var(--sh-klein-500); color: var(--sh-white); cursor: pointer;
+  box-shadow: inset 6px 0 0 var(--sh-burgundy); clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  transition: background-color .2s, transform .25s var(--ease-out);
+}
+html.shard-live body[data-site-page] .archive-trigger > span:first-child { color: var(--sh-white); background: none; border: 0; }
+html.shard-live body[data-site-page] .archive-trigger small { color: #DCE3FF; }
+html.shard-live body[data-site-page] .archive-trigger b { color: var(--sh-white); }
+html.shard-live body[data-site-page] .archive-trigger i { color: var(--sh-white); }
+html.shard-live body[data-site-page] .archive-trigger:hover { background: var(--sh-klein-700); transform: translateY(-2px); border-color: transparent; }
+html.shard-live body[data-site-page] .archive-trigger:focus-visible { outline: 3px solid var(--sh-white); outline-offset: -6px; background: var(--sh-burgundy); box-shadow: none; }
+
+/* ---- 通用：直角 + 切角 ---- */
+/* 全部元素直角（状态点与加载转圈是必须圆的例外，规范里已列出） */
+html.shard-live body[data-site-page] *:not(.live-dot, .loading > span),
+html.shard-live body[data-site-page] *::before,
+html.shard-live body[data-site-page] *::after { border-radius: 0; }
+html.shard-live body[data-site-page] :focus-visible { outline: 3px solid var(--sh-burgundy); outline-offset: 2px; }
+html.shard-live body[data-site-page] ::selection { background: var(--sh-burgundy); color: var(--sh-white); }
+html.shard-live body[data-site-page] :is(main > section, .message-item) { animation: none; }
+html.shard-live body[data-site-page] .noise { display: none; }
+/* 旧站的跨文档淡入淡出（brand.css）与擦屏过渡叠加会双重动画：线上禁用（伪元素选择器可以按 html.shard-live 门控，at-rule 不行） */
+/* 整站不使用跨文档 View Transition（切页动画由碎片擦屏负责）。brand.css（被导出消费，不可改）声明了 navigation:auto，
+   而首页与留言 / 隐私页没有声明，一端声明一端没有时 Chrome 会抛 'ViewTransition opt-in disabled'。
+   本文件在 brand.css 之后加载，最后一条 @view-transition 生效，用 none 覆盖。 */
+@view-transition { navigation: none; }
+html.shard-live::view-transition-old(root), html.shard-live::view-transition-new(root) { animation: none; }
+
+/* ---- 夜间：日报正文保持冷白纸面（0.4）。纸面画在伪元素上，不改变任何盒子尺寸，两个主题几何完全一致 ---- */
+html.shard-live body[data-site-page] > main { position: relative; isolation: isolate; }
+html.shard-live body[data-site-page] > main::before {
+  content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: max(10px, calc((100% - 1700px) / 2)); right: max(10px, calc((100% - 1700px) / 2));
+  background: var(--sh-white);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
+}
+/* 民生的 main 本身就是内容宽度（.newspaper），纸面向四周多铺一圈，让栏目与切角之外也是冷白 */
+html.shard-live body[data-site-page="minsheng"] > main::before { left: -18px; right: -18px; top: -14px; bottom: -14px; }
+html.shard-live body[data-site-page] > footer:not(.sd-foot) { background: var(--sh-white); color: var(--ink); }
+
+/* ---- 游戏日报 ---- */
+html.shard-live body[data-site-page="game"] .hero {
+  position: relative; background: var(--sd-hero); color: var(--sh-white); border: 0;
+  clip-path: polygon(var(--sd-cut) 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%, 0 var(--sd-cut));
+  --sd-cut: 24px; --ink: var(--sh-white); --muted: #DCE3FF;
+}
+html.shard-live body[data-site-page="game"] .hero h1,
+html.shard-live body[data-site-page="game"] .hero h1 em { color: var(--sh-white); -webkit-text-fill-color: currentColor; background: none; }
+html.shard-live body[data-site-page="game"] .hero-copy > p { color: #DCE3FF; }
+html.shard-live body[data-site-page="game"] .hero .eyebrow { color: #DCE3FF; }
+html.shard-live body[data-site-page="game"] .hero .live-dot { background: var(--sh-white); box-shadow: 0 0 0 4px rgba(244, 246, 255, .25); }
+html.shard-live body[data-site-page="game"] .hero :focus-visible { outline-color: var(--sh-white); }
+html.shard-live body[data-site-page="game"] .hero-logo-stage { padding: 14px; background: var(--sh-white); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+html.shard-live body[data-site-page="game"] .platform-link {
+  border: 0; background: var(--sh-white); color: var(--sh-klein-950); box-shadow: none;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+}
+html.shard-live body[data-site-page="game"] .platform-link:hover { box-shadow: inset 5px 0 0 var(--sh-burgundy); }
+html.shard-live body[data-site-page="game"] .feature-card { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%); }
+html.shard-live body[data-site-page="game"] .feature-content .tag,
+html.shard-live body[data-site-page="game"] .tag { background: var(--sh-burgundy); color: var(--sh-white); border: 0; }
+html.shard-live body[data-site-page="game"] :is(.news-column, .minecraft-column, .panel) {
+  border: 0; border-top: 5px solid var(--sh-klein-500); background: #FFFFFF;
+  box-shadow: inset 0 0 0 1px var(--line);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+html.shard-live body[data-site-page="game"] .compact-heading { border-bottom-color: var(--sh-klein-500); color: var(--ink); }
+html.shard-live body[data-site-page="game"] .compact-heading b { background: var(--sh-klein-500); color: var(--sh-white); }
+html.shard-live body[data-site-page="game"] .rank,
+html.shard-live body[data-site-page="game"] .pack-rank,
+html.shard-live body[data-site-page="game"] .game-main-section .rank,
+html.shard-live body[data-site-page="game"] .game-main-section .pack-rank { background: #E3E9FF; color: var(--sh-klein-500); border-color: transparent; }
+html.shard-live body[data-site-page="game"] :is(.news-row, .pack-row, .mod-row, .deal-row) { border-color: var(--line); }
+html.shard-live body[data-site-page="game"] :is(.news-row, .pack-row):hover { background: #EEF1FF; }
+html.shard-live body[data-site-page="game"] :is(.mod-row, .deal-row):hover { background: #EEF1FF; }
+html.shard-live body[data-site-page="game"] .notes-section { border: 0; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--line); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%); }
+html.shard-live body[data-site-page="game"] .source-card { border: 0; background: #EEF1FF; box-shadow: inset 5px 0 0 var(--sh-klein-500); }
+html.shard-live body[data-site-page="game"] .method-note { color: var(--muted); }
+html.shard-live body[data-site-page="game"] > footer { border-top: 4px solid var(--sh-klein-500); }
+
+/* ---- 民生日报 ---- */
+html.shard-live body[data-site-page="minsheng"] .masthead {
+  position: relative; background: var(--sd-hero); color: var(--sh-white); border: 0; border-bottom-color: transparent;
+  clip-path: polygon(var(--sd-cut) 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%, 0 var(--sd-cut));
+  --sd-cut: 24px; --ink: var(--sh-white); --muted: #DCE3FF; --red: #DCE3FF; --line: rgba(244, 246, 255, .35);
+}
+html.shard-live body[data-site-page="minsheng"] .masthead :is(.title-block p, .section-kicker) { color: #DCE3FF; }
+html.shard-live body[data-site-page="minsheng"] .masthead .title-block h1 { color: var(--sh-white); }
+html.shard-live body[data-site-page="minsheng"] .masthead .title-block > div { color: #DCE3FF; }
+html.shard-live body[data-site-page="minsheng"] .masthead .title-block i { background: var(--sh-burgundy); }
+html.shard-live body[data-site-page="minsheng"] .masthead :is(.date-block, .top-stories) { border-color: rgba(244, 246, 255, .35); }
+html.shard-live body[data-site-page="minsheng"] .masthead .calendar { background: var(--sh-white); padding: 6px; border: 0; }
+html.shard-live body[data-site-page="minsheng"] .masthead :is(.date-block time, .date-block b, .top-stories h2, .top-stories a) { color: var(--sh-white); }
+html.shard-live body[data-site-page="minsheng"] .masthead .date-block p { color: #DCE3FF; }
+html.shard-live body[data-site-page="minsheng"] .masthead .top-stories li span { background: var(--sh-white); color: var(--sh-klein-500); }
+html.shard-live body[data-site-page="minsheng"] .masthead :focus-visible { outline-color: var(--sh-white); }
+html.shard-live body[data-site-page="minsheng"] :is(.news-column, .metrics-card) {
+  --accent: var(--sh-klein-500); border: 0; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--panel-border);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
+}
+html.shard-live body[data-site-page="minsheng"] :is(.news-column, .metrics-card) > header {
+  background: var(--sh-klein-500); color: var(--sh-white); border-bottom-color: transparent; box-shadow: inset 0 -4px 0 var(--sh-burgundy);
+}
+html.shard-live body[data-site-page="minsheng"] :is(.news-column, .metrics-card) > header > span { border-color: rgba(244, 246, 255, .6); color: var(--sh-white); }
+html.shard-live body[data-site-page="minsheng"] :is(.news-column, .metrics-card) > header :is(small, h2, b) { color: var(--sh-white); }
+html.shard-live body[data-site-page="minsheng"] .story-number { background: #E3E9FF; color: var(--sh-klein-500); }
+html.shard-live body[data-site-page="minsheng"] .story-summary { color: var(--muted); }
+html.shard-live body[data-site-page="minsheng"] .story-meta a { color: var(--sh-klein-500); }
+html.shard-live body[data-site-page="minsheng"] .metric-icon { color: var(--sh-klein-700); }
+html.shard-live body[data-site-page="minsheng"] .metrics-cutoff { background: #EEF1FF; }
+html.shard-live body[data-site-page="minsheng"] .observation { border: 0; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--line), inset 8px 0 0 var(--sh-burgundy); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%); }
+html.shard-live body[data-site-page="minsheng"] .observation > span { background: #E3E9FF; color: var(--sh-klein-500); }
+html.shard-live body[data-site-page="minsheng"] .observation :is(p, h2) { color: var(--sh-klein-500); }
+html.shard-live body[data-site-page="minsheng"] .observation h2 { color: var(--ink); }
+html.shard-live body[data-site-page="minsheng"] .edition-footer { border-top-color: var(--sh-klein-500); }
+html.shard-live body[data-site-page="minsheng"] .loading { inset: var(--sd-top-h) 0 0 0; background: rgba(244, 246, 255, .96); }
+html.shard-live body[data-site-page="minsheng"] .loading span { border-color: #C3CCEE; border-top-color: var(--sh-klein-500); }
+
+/* ---- 共用：下载按钮（关键按钮 = 刃）、归档弹窗、提示条 ---- */
+html.shard-live body[data-site-page] .download-button {
+  border: 0; background: var(--sh-burgundy); color: var(--sh-white);
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+html.shard-live body[data-site-page] .download-button:hover { background: var(--sh-burgundy-deep); color: var(--sh-white); }
+html.shard-live body[data-site-page] .download-button:focus-visible { outline: 3px solid var(--sh-white); outline-offset: -7px; background: var(--sh-klein-950); }
+html.shard-live body[data-site-page] .archive-dialog {
+  border: 0; border-top: 6px solid var(--sh-klein-500); background: #FFFFFF; color: var(--sh-klein-950);
+  clip-path: polygon(22px 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%, 0 22px);
+}
+html.shard-live body[data-site-page] .archive-dialog::backdrop { background: rgba(13, 24, 80, .72); backdrop-filter: none; }
+html.shard-live body[data-site-page] .dialog-head small { color: var(--sh-klein-500); }
+html.shard-live body[data-site-page] .dialog-head button { color: var(--sh-klein-500); background: transparent; }
+html.shard-live body[data-site-page] .dialog-head button:hover { background: var(--sh-klein-500); color: var(--sh-white); }
+html.shard-live body[data-site-page] .archive-dialog input { border: 2px solid var(--sh-klein-500); border-left-width: 6px; background: #FFFFFF; color: var(--sh-klein-950); }
+html.shard-live body[data-site-page] .archive-item { border-color: var(--line); background: #FFFFFF; color: var(--sh-klein-950); }
+html.shard-live body[data-site-page] .archive-item:hover { background: #EEF1FF; }
+html.shard-live body[data-site-page] .archive-item.active { background: #E3E9FF; box-shadow: inset 5px 0 0 var(--sh-burgundy); }
+html.shard-live body[data-site-page] .archive-item time { color: var(--sh-klein-500); }
+html.shard-live body[data-site-page] .toast { background: var(--sh-klein-950); color: var(--sh-white); box-shadow: none; border-left: 6px solid var(--sh-burgundy); }
+
+@media (max-width: 1024px) {
+  html.shard-live body[data-site-page] > .site-bar { width: calc(100% - 40px); }
+}
+@media (max-width: 720px) {
+  html.shard-live body[data-site-page] > .site-bar { width: calc(100% - 36px); }
+  html.shard-live body[data-site-page] > main::before, html.shard-live body[data-site-page="minsheng"] > main::before { left: 0; right: 0; }
+}
+@media (forced-colors: active) {
+  html.shard-live body[data-site-page] .archive-trigger, html.shard-live body[data-site-page] .download-button { border: 1px solid CanvasText; }
+}

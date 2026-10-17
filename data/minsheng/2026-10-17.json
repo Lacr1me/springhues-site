@@ -1,0 +1,465 @@
+{
+  "date": "2026-10-17",
+  "issue": 57,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历九月初八",
+  "cutoff": "2026-10-17 07:29（北京时间）",
+  "productionTime": "2026-10-17 07:29（北京时间）",
+  "metricsCutoff": "2026-10-17 07:29（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "市场监管部门持续严查加油机作弊",
+        "summary": "市场监管总局介绍，加油机作弊出现更换主板、加装模块和植入软件等隐蔽手段，将推动执法指引、电子数据取证规范及跨部门数据共享，维护车主权益。",
+        "publishedAt": "2026-10-16 20:00",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-16/10715886.shtml",
+        "kind": "ms57-dom-gas-cheat"
+      },
+      {
+        "id": "domestic-02",
+        "title": "六部门启动城镇供热温暖工程三年行动",
+        "summary": "六部门启动城镇供热温暖工程三年行动，提出到2028年底前推动老化管网改造，并要求先体检后更新、完善供暖诉求处理机制，提升供热保障与服务水平。",
+        "publishedAt": "2026-10-16 16:08",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715729.shtml",
+        "kind": "ms57-dom-heating"
+      },
+      {
+        "id": "domestic-03",
+        "title": "三部门分类完善养老服务收费政策",
+        "summary": "三部门明确兜底保障型、普惠支持型和完全市场型养老机构范围，分类实行政府指导价或市场调节价，并要求收费项目纳入目录清单，清单外不得收费。",
+        "publishedAt": "2026-10-16 14:40",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-16/10715657.shtml",
+        "kind": "ms57-dom-pension-price"
+      },
+      {
+        "id": "domestic-04",
+        "title": "成都危旧房改造结合社区生活配套",
+        "summary": "四川日报走访成都危旧房改造案例，居民通过自治小组参与原址重建，工人村社区则在更新后增设菜市、停车场等配套，探索以持续运营收入反哺社区服务。",
+        "publishedAt": "2026-10-16 13:32",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-16/10715589.shtml",
+        "kind": "ms57-dom-chengdu"
+      },
+      {
+        "id": "domestic-05",
+        "title": "最高检发布九件老年人权益保护案例",
+        "summary": "最高检发布九件维护老年人合法权益典型案例，覆盖电信网络诈骗、赡养费追索、私域直播整治、养老机构监管和社会保险权益，提示涉老权益保护的重点领域。",
+        "publishedAt": "2026-10-16 11:16",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715532.shtml",
+        "kind": "ms57-dom-elder-cases"
+      },
+      {
+        "id": "domestic-06",
+        "title": "甘肃白银公益慢火车服务山区日常出行",
+        "summary": "记者随车走访白银西至长征站的7515/6次公益性慢火车，沿线七站串联乡村，服务求学、赶集与走亲访友，列车长介绍全程票价11.5元、最低4元。",
+        "publishedAt": "2026-10-16 09:20",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-16/10715420.shtml",
+        "kind": "ms57-dom-slowtrain"
+      },
+      {
+        "id": "domestic-07",
+        "title": "北京多家医院改造院前交通便利就医",
+        "summary": "北京多家医院联动属地部门改造院前交通空间，北大医院启用即停即走落客区并增设轮椅坡道；顺义妇儿医院周边新增非机动车泊位，相关微改造仍在推进。",
+        "publishedAt": "2026-10-16 08:47",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202610/t20261016_4904524.html",
+        "kind": "ms57-dom-hospital-access"
+      },
+      {
+        "id": "domestic-08",
+        "title": "天津城市更新改善老旧小区与公共服务",
+        "summary": "天津将老旧电梯更新纳入超长期特别国债支持清单，并在社区改造中收集居民需求、增设无障碍设施和充电车棚，结合老厂房活化利用完善居民休闲与创业空间。",
+        "publishedAt": "2026-10-16 02:30",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "url": "https://news.gmw.cn/2026-10/16/content_39049022.htm",
+        "kind": "ms57-dom-tianjin"
+      },
+      {
+        "id": "domestic-09",
+        "title": "新疆社区家政服务点连接培训与就近就业",
+        "summary": "新疆乌鲁木齐社区家政服务点把免费技能培训与居民助洁、助浴、陪护等需求对接。人民日报记者走访发现，服务点帮助妇女就近接单兼顾家庭，并为行动不便老人提供公益保洁服务。",
+        "publishedAt": "2026-10-16",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202610/16/content_30186023.html",
+        "kind": "ms57-dom-xj-jobs"
+      },
+      {
+        "id": "domestic-10",
+        "title": "河湖生态修复改善沿岸居民生活环境",
+        "summary": "新华社记者走访河北沧州、山西平陆等地发现，河流复苏带动沿岸农文旅发展，坡耕地治理和淤地坝建设改善了植被与种植条件。报道从居民生活和农业生产侧面呈现水生态保护的实际变化。",
+        "publishedAt": "2026-10-12 20:21",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "url": "https://www.news.cn/politics/20261012/d54263f784644a7491813f34fd350c4a/c.html",
+        "kind": "ms57-dom-water-field"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "中国农情遥感平台获粮农组织成就奖",
+        "summary": "联合国粮农组织在罗马世界粮食论坛闭幕式颁发成就奖，中国科学院空天信息创新研究院凭借全球农情遥感监测平台获奖。平台将农情监测转为开放云服务，帮助多国开展粮食安全决策。",
+        "publishedAt": "2026-10-16 23:42",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "url": "https://world.people.com.cn/n1/2026/1016/c1002-40816328.html",
+        "kind": "ms57-int-fao-cropwatch"
+      },
+      {
+        "id": "international-02",
+        "title": "日本气象厅解释紧急地震预警误报",
+        "summary": "日本气象厅承认，16日紧急地震预警曾把震级高估为9.9级，并将震源判定在千岛列岛。相关警报已取消，原因仍在调查，机构后续解释震源位置推定错误可能导致规模被高估。",
+        "publishedAt": "2026-10-16 19:51",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "url": "https://world.people.com.cn/n1/2026/1016/c1002-40816293.html",
+        "kind": "ms57-int-jma-error"
+      },
+      {
+        "id": "international-03",
+        "title": "杂交水稻技术助力马达加斯加农户增产",
+        "summary": "新华社记者走访马达加斯加稻农与农业专家，记录杂交水稻推广、田间培训和本土育种合作的进展；相关技术帮助农户提高单产与收入，并逐步形成育种到销售的产业链。",
+        "publishedAt": "2026-10-16 16:31",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "url": "https://world.people.com.cn/n1/2026/1016/c1002-40816241.html",
+        "kind": "ms57-int-mg-rice"
+      },
+      {
+        "id": "international-04",
+        "title": "国际能源署成员国同意加快释放石油储备",
+        "summary": "国际能源署理事会同意加快完成此前紧急石油储备释放行动，成员国将推动剩余货物交付，包括超过两千万桶柴油，以应对能源供应紧张，具体实施按各国情况推进。",
+        "publishedAt": "2026-10-16 11:14",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-16/10715508.shtml",
+        "kind": "ms57-int-iea-release"
+      },
+      {
+        "id": "international-05",
+        "title": "美国九月零售销售额环比增长0.8%",
+        "summary": "美国人口普查局公布9月零售和餐饮销售初值，销售额经季节等因素调整后环比增长0.8%、同比增长6.3%。数据未经价格调整，不能直接等同实际消费量增长，后续仍可能修订。",
+        "publishedAt": "2026-10-16 08:55",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-16/10715390.shtml",
+        "kind": "ms57-int-us-retail"
+      },
+      {
+        "id": "international-06",
+        "title": "世卫组织与国际刑警组织加强卫生安全合作",
+        "summary": "世卫组织与国际刑警组织签署合作协议，将公共卫生专业能力与执法协作相结合，重点应对假劣医疗产品、非法人体器官交易及异常生物事件等风险，推动跨境预防、识别和应急协调。",
+        "publishedAt": "2026-10-16",
+        "source": "世界卫生组织",
+        "sourceOrigin": "external",
+        "url": "https://www.who.int/news/item/16-10-2026-interpol-and-who-sign-agreement-to-strengthen-global-health-and-security-protection",
+        "kind": "ms57-int-who-interpol"
+      },
+      {
+        "id": "international-07",
+        "title": "刚果共和国学生与难民将获新增粮食援助",
+        "summary": "世界粮食计划署宣布，日本提供3亿日元捐款，支持刚果共和国5.7万名学生的校园供餐及2.5万名难民和寻求庇护者的粮食援助。项目将提供大米、鱼罐头等食品，减轻脆弱家庭的食物开支。",
+        "publishedAt": "2026-10-16",
+        "source": "世界粮食计划署",
+        "sourceOrigin": "external",
+        "url": "https://www.wfp.org/news/japan-supports-school-meals-and-food-assistance-refugees-republic-congo",
+        "kind": "ms57-int-congo-meals"
+      },
+      {
+        "id": "international-08",
+        "title": "斯瓦尔巴全球种子库新增种质备份",
+        "summary": "来自四大洲的21家基因库向斯瓦尔巴全球种子库送存种子备份，其中包括乌克兰的773份样本。这一设施免费保存独特作物种质的安全副本，为农业多样性和未来粮食安全提供保障。",
+        "publishedAt": "2026-10-15 13:37",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "url": "https://world.people.com.cn/n1/2026/1015/c1002-40815412.html",
+        "kind": "ms57-int-seedvault"
+      },
+      {
+        "id": "international-09",
+        "title": "国际计量大会决定从2027年实行连续UTC",
+        "summary": "国际计量大会通过决议，连续协调世界时将于2027年5月20日生效，世界时与协调世界时的最大允许差值放宽至一小时。改革旨在减少闰秒对交通、能源和通信等连续对时系统的干扰。",
+        "publishedAt": "2026-10-15",
+        "source": "国际计量局",
+        "sourceOrigin": "external",
+        "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
+        "kind": "ms57-int-leapsecond"
+      },
+      {
+        "id": "international-10",
+        "title": "多维贫困指数报告凸显儿童与农村群体压力",
+        "summary": "联合国开发计划署的统计更新覆盖108个国家，其中约12亿人处于严重多维贫困。贫困人口中超过半数是儿童，八成以上生活在农村；部分国家在改善教育、健康和生活条件方面取得持续进展。",
+        "publishedAt": "2026-10-12",
+        "source": "联合国开发计划署",
+        "sourceOrigin": "external",
+        "url": "https://hdr.undp.org/content/2026-global-multidimensional-poverty-index",
+        "kind": "ms57-int-mpi"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "树突与胞体分工参与小鼠灵活决策",
+        "summary": "中国科学院徐宁龙团队结合小鼠行为训练、双光子成像和光遗传学干预，发现神经元树突编码推断规则、胞体更多表征感觉信息，两者整合形成决策输出，为理解认知灵活性提供细胞层面证据。",
+        "publishedAt": "2026-10-16 15:39",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715702.shtml",
+        "kind": "ms57-tech-dendrite"
+      },
+      {
+        "id": "tech-02",
+        "title": "通用理论框架澄清高压冰物相争议",
+        "summary": "香港科技大学与东京大学团队建立自旋冰模型的通用相分类框架，解释高压冰不同状态间的关系，并提出自旋为3/2时有限温度相变的例外，为受挫磁体等系统研究提供理论工具。",
+        "publishedAt": "2026-10-16 12:03",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/573011.shtm",
+        "kind": "ms57-tech-ice"
+      },
+      {
+        "id": "tech-03",
+        "title": "混合量子芯片实现多模式声子纠缠态传输",
+        "summary": "合肥国家实验室与深圳国际量子研究院等团队在二维混合量子芯片上制备两、四、六模式真纠缠声子态，并实现两个独立声学振子节点之间的传输，为模块化声子量子网络提供实验基础。",
+        "publishedAt": "2026-10-16 10:26",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/16/content_597191.html",
+        "kind": "ms57-tech-phonon"
+      },
+      {
+        "id": "tech-04",
+        "title": "单芯片深紫外激光阵列实现波长可编程",
+        "summary": "北京大学等团队通过调节脊形波导宽度，在同一芯片上实现252至259纳米波长可编程的深紫外激光阵列。实验采用室温光泵浦，仍属概念验证，不能等同于电驱动量产光源。",
+        "publishedAt": "2026-10-15",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag636/8917824",
+        "kind": "ms57-tech-duv"
+      },
+      {
+        "id": "tech-05",
+        "title": "细尺度海洋涡旋对表层叶绿素呈净增强效应",
+        "summary": "中国海洋大学等团队结合海洋观测与SWOT卫星数据分析发现，细尺度气旋涡旋带来的叶绿素增加超过反气旋涡旋的减少，在全球范围呈现净增强效应。结果帮助理解小尺度海洋过程对生态系统的影响。",
+        "publishedAt": "2026-10-15",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag649/8917827",
+        "kind": "ms57-tech-eddy"
+      },
+      {
+        "id": "tech-06",
+        "title": "铋基横向热电制冷研究取得实验进展",
+        "summary": "同济大学团队研究铋的横向热电制冷效应，在8特斯拉强磁场条件下演示了从300开尔文起始的84开尔文温降。论文展示宽温区材料潜力，但强磁场要求意味着它尚不能直接替代日常制冷设备。",
+        "publishedAt": "2026-10-15",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag621/8917828",
+        "kind": "ms57-tech-bismuth"
+      },
+      {
+        "id": "tech-07",
+        "title": "研究发现二叠纪地磁异常与生态危机时间相关",
+        "summary": "中国科学院地质与地球物理研究所等团队重建华南一段跨375万年的地磁记录，发现高频磁极反转与瓜德鲁普世末生态危机在时间上相近。论文提出潜在深地影响路径，但明确表示因果关系尚未证实。",
+        "publishedAt": "2026-10-15",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag647/8917822",
+        "kind": "ms57-tech-geomag"
+      },
+      {
+        "id": "tech-08",
+        "title": "可重构软体机器人演示多种稳定构型",
+        "summary": "中国科学院深圳先进技术研究院、上海交通大学等团队提出可调能量景观的双稳态结构，让软体机器人获得传统双稳态之外的中间稳定形态。原型演示四种构型和九类功能，为减少专用硬件提供设计思路。",
+        "publishedAt": "2026-10-15",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag643/8917835",
+        "kind": "ms57-tech-eltrabot"
+      },
+      {
+        "id": "tech-09",
+        "title": "太赫兹超表面以对称设计提高抗缺陷能力",
+        "summary": "天津大学等团队利用双层结构的四重旋转反演对称性设计太赫兹超表面，在理论分析和实验中验证稳健的准连续域束缚态。研究面向抗加工误差的高性能光子器件，相关性能仍需在具体应用中验证。",
+        "publishedAt": "2026-10-14",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag640/8916485",
+        "kind": "ms57-tech-qbic"
+      },
+      {
+        "id": "tech-10",
+        "title": "研究在室温溴化铋纳米线中探测到边缘导电",
+        "summary": "清华大学、北京理工大学等团队利用微波阻抗显微技术，在室温溴化铋纳米线中探测到导电边缘通道。测量与结构及模拟结果支持量子自旋霍尔态解释，为低能耗电子学提供研究线索，尚非商用无损芯片。",
+        "publishedAt": "2026-10-14",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag644/8916489",
+        "kind": "ms57-tech-qsh"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "香港具身智能国际应用训练场开幕",
+        "summary": "香港工业人工智能及机械人研发中心设立的具身智能国际应用训练场开幕，联结技术与场景伙伴，覆盖制造、物流、零售和公共服务，提供研发、模型训练、系统验证及场景测试环境。",
+        "publishedAt": "2026-10-16 09:04",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "url": "https://www.news.cn/tech/20261016/1418535055b245939cc084fb9e327976/c.html",
+        "kind": "ms57-ai-hk-training"
+      },
+      {
+        "id": "ai-02",
+        "title": "单目视觉AI无人机研究发表于科学机器人",
+        "summary": "代尔夫特理工大学的MonoRace系统仅用单目相机和惯性测量导航，小型神经网络直接控制电机。新论文介绍其在2025年竞赛中达到时速100公里的方案，尚不代表开放环境普遍可靠。",
+        "publishedAt": "2026-10-15 01:45",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/15/content_596056.html",
+        "kind": "ms57-ai-monorace"
+      },
+      {
+        "id": "ai-03",
+        "title": "Google更新AI搜索的原始网页入口",
+        "summary": "Google宣布增加AI搜索回答中的行内链接，并向更多地区和语言扩展报道入口。官方网页专用展示区和创作者资料链接仍在测试；这些入口有助追溯来源，但不意味着生成回答已全面核实。",
+        "publishedAt": "2026-10-15",
+        "source": "Google",
+        "sourceOrigin": "external",
+        "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
+        "kind": "ms57-ai-searchlinks"
+      },
+      {
+        "id": "ai-04",
+        "title": "Google通用购物车开始向美国用户推出",
+        "summary": "Google开始在美国搜索和Gemini应用中推出通用购物车，支持跨商户保存商品、跟踪降价及补货，推荐优惠或支付方式。用户可经Google Pay或商家网站购买，商家仍负责售后。",
+        "publishedAt": "2026-10-15",
+        "source": "Google",
+        "sourceOrigin": "external",
+        "url": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+        "kind": "ms57-ai-universalcart"
+      },
+      {
+        "id": "ai-05",
+        "title": "STIfuse模型研究急性肾损伤恶化预警",
+        "summary": "华南理工大学、上海交通大学等团队融合深度学习表征与动态信号，研究急性肾损伤患者未来72小时的恶化风险。模型经多组重症监护数据验证，属于回顾性研究，尚需前瞻性临床验证。",
+        "publishedAt": "2026-10-14",
+        "source": "National Science Review",
+        "sourceOrigin": "external",
+        "url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag639/8916483",
+        "kind": "ms57-ai-stifuse"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "ms57-metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "899.52元/克",
+      "note": "10月16日上海金午盘基准价 最近交易日",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/h",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "ms57-metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "note": "福建92号最高零售价 9月24日24时起执行 10月15日本轮不调整",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "ms57-metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7220人民币",
+      "note": "10月16日人民币汇率中间价 最近交易日",
+      "source": "中国人民银行",
+      "sourceUrl": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026101608573783820/index.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "ms57-metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5228人民币",
+      "note": "10月16日人民币汇率中间价 最近交易日",
+      "source": "中国人民银行",
+      "sourceUrl": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026101608573783820/index.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "ms57-metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2439人民币",
+      "note": "10月16日人民币汇率中间价 最近交易日",
+      "source": "中国人民银行",
+      "sourceUrl": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026101608573783820/index.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "ms57-metric-oil-int",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 101.41美元/桶",
+      "note": "10月16日结算 WTI11月合约 布伦特12月合约109.86美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20261017/9f8e443564d547628f2bc1fe044bf85f/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "topStoryIds": [
+    "domestic-02",
+    "international-01",
+    "tech-01"
+  ],
+  "observation": "今天的公共服务消息，连接养老收费、城市供热、社区就业与老年人权益保护。国际报道呈现粮食援助、公共卫生协作和多维贫困等民生议题，理解数据仍需注意地区、口径与调查时间。中国科技既有量子声学和神经元研究，也有材料、海洋与机器人实验；论文结论、概念验证和实际应用之间应保留必要距离。AI搜索增加来源入口，购物工具提供交易协助，能否追溯原文、明确责任和保留人的判断，同样影响使用体验。",
+  "sources": [
+    "中国新闻网",
+    "北京市人民政府",
+    "光明网",
+    "人民网",
+    "新华网",
+    "世界卫生组织",
+    "世界粮食计划署",
+    "国际计量局",
+    "联合国开发计划署",
+    "科学网",
+    "中国科技网",
+    "National Science Review",
+    "Google"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "中国人民银行",
+    "新华网"
+  ]
+}

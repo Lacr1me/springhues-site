@@ -1,0 +1,18 @@
+# Local previews and generated artifacts
+artifacts/
+dist/
+.tools/
+data/.pending/
+supabase/.temp/
+supabase/.env
+supabase/.env.local
+supabase/.cli.env
+*.url
+
+# Retained source exports are not part of the public website
+*-游戏简报-工作版.html
+????-??-??-游戏简报.html
+????-??-??-游戏简报.png
+# Source hero art stays local; only generated assets/hero/web/ ships
+/assets/hero/*.jpeg
+/assets/hero/*.jpg

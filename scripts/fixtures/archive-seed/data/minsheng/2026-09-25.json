@@ -1,0 +1,429 @@
+{
+  "date": "2026-09-25",
+  "issue": 35,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "农历丙午年八月十五",
+  "cutoff": "2026-09-25 09:55（北京时间）",
+  "productionTime": "2026-09-25 10:04（北京时间）",
+  "metricsCutoff": "2026-09-25 09:55（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "“十五五”民政事业将完善养老服务与社会救助",
+        "summary": "国务院新闻办介绍“十五五”民政事业安排，提出到规划期末村和社区养老服务设施覆盖率达到70%、养老机构护理型床位占比达到73%，并完善低收入人口动态监测与社会救助办理机制。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 08:24",
+        "url": "https://cpc.people.com.cn/BIG5/n1/2026/0924/c64387-40804865.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "江苏社会组织助高校毕业生就业，扬州提供6200余岗位",
+        "summary": "江苏启动社会组织助力高校毕业生就业专项行动，扬州专场有260家社会组织及会员企业提供6200余个岗位。行动将持续至12月中旬，并通过国家大学生就业服务平台等渠道开展线上线下对接。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 20:44",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-24/10703367.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "1至8月服务零售额同比增长4.9%",
+        "summary": "新华社圆桌会结合多地场景讨论消费提质，并援引国家统计局数据：2026年1至8月社会消费商品和服务零售总额同比增长2.5%，服务零售额增长4.9%，商品零售额增长1.0%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 17:38",
+        "url": "https://www.news.cn/fortune/20260924/bd05fdfaeaca48c9bd870778928ccc57/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "商务部门部署中秋国庆生活必需品保供",
+        "summary": "商务部部署中秋国庆生活必需品保供，并出库中央储备冻牛羊肉5100吨。监测显示，9月14日至20日大型超市肉蛋菜奶库存较月初增加3%至8%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 19:05",
+        "url": "https://www.news.cn/fortune/20260924/e089caffc9ad4de7990a0de6307331a5/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "教育部部署2027届高校毕业生校园招聘月",
+        "summary": "教育部部署9月至11月开展2027届高校毕业生校园招聘月，围绕拓展岗位、精准对接、访企拓岗、就业指导、重点群体帮扶和实习就业转化推进六项行动。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 11:28",
+        "url": "https://edu.cnr.cn/dj/20260924/t20260924_527823798.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "夏粮产量首次突破3000亿斤，秋粮收获过一成",
+        "summary": "光明日报报道农民丰收节全国活动及农业生产进展：夏粮产量达3014.9亿斤，早稻连续6年稳定在560亿斤以上，全国秋粮收获过一成。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 03:00",
+        "url": "https://news.gmw.cn/2026-09/24/content_39017794.htm"
+      },
+      {
+        "id": "domestic-07",
+        "title": "中秋国庆假期多地口岸预计迎来客流高峰",
+        "summary": "国家移民管理局预计中秋国庆假期口岸出入境客流上升；珠海边检总站预计港珠澳大桥、拱北等口岸出入境743万人次，深圳各口岸日均约98万人次。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 23:31",
+        "url": "https://news.cri.cn/20260924/6e40ce43-2451-49c7-b4b0-43b840811744.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "北京铁路警方部署双节安保措施",
+        "summary": "北京铁路公安局针对9月23日至10月8日共16天的双节运输，部署重点列车和车站巡防、客流疏导、安检演练、隐患排查及反诈宣传，保障旅客平安出行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 16:46",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-24/10703016.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "中秋假期预计跨区域人员流动量达6.5亿人次",
+        "summary": "国新办9月24日交通运输服务保障发布会预计，中秋假期全社会跨区域人员流动量达6.5亿人次、日均约2.2亿人次，主要为返乡探亲、走亲访友及近郊乡村游。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 17:00",
+        "url": "https://cn.chinadaily.com.cn/a/202609/24/WS6ab4e6bce4b09a165c78c9c6.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "上海发布中秋国庆交通安全提示",
+        "summary": "上海发布依据近三年数据提醒，双节假期末日交通事故占假期总量21.6%，9时至12时占23.4%；进出沪多条高速路段风险较集中，并给出错峰与安全驾驶提示。",
+        "source": "上海发布",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24",
+        "url": "https://www.shanghai.gov.cn/nw17239/20260924/bdbfd63031a84ecb9f0115fc1ba5f362.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "中方呼吁俄乌早日实现停火止战",
+        "summary": "中国常驻联合国代表傅聪在安理会乌克兰问题高级别会议上呼吁停火止战、遵守国际人道法并保护平民，主张通过对话谈判推动政治解决。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 06:00",
+        "url": "https://www.xinhuanet.com/world/20260924/6d0c2c8a4e2945e48701e6a84b463506/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "联大辩论中多国领导人呼吁捍卫多边主义",
+        "summary": "第81届联合国大会一般性辩论9月23日继续，多国领导人呼吁维护联合国权威、国际法和多边主义，并讨论规则一致适用与安理会改革。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 19:01",
+        "url": "https://www.news.cn/world/20260924/b204398f93f4441b8f45b79b02b156fc/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "英国向中国返还12件流失文物艺术品",
+        "summary": "英国于9月23日在中国驻英使馆举行交接仪式，向中方返还12件流失文物艺术品。文物由伦敦警察局办案查获，双方在联合国教科文组织相关公约框架下协作完成返还。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 10:46",
+        "url": "https://www.news.cn/20260924/119bcd0836d54e958516411716122ad7/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "北京香山论坛举行，多国代表讨论安全治理",
+        "summary": "第十三届北京香山论坛于9月24日举行，来自100多个国家和国际组织的代表约2000人参会，围绕安全治理开展对话。",
+        "source": "人民日报",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202609/24/content_30117659.html"
+      },
+      {
+        "id": "international-05",
+        "title": "习近平抵达华盛顿，开始对美国进行国事访问",
+        "summary": "央视新闻9月24日23:04报道，习近平应美国总统邀请，于当地时间9月23日下午抵达华盛顿安德鲁斯空军基地，开始对美国进行国事访问。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 23:04",
+        "url": "https://news.cctv.com/2026/09/24/ARTIDEePf4UCmilqtuXlDplk260924.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "中方呼吁美伊相关方通过对话谈判化解争端",
+        "summary": "中国外交部9月24日例行记者会上回应伊朗总统涉霍尔木兹海峡表态，称美伊战事延宕不符合各方共同利益，呼吁相关方通过对话谈判恢复中东海湾地区和平。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 16:17",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-24/10703082.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "中国女排击败日本队，第十次夺得亚运会冠军",
+        "summary": "中国女排在爱知·名古屋亚运会女子排球决赛中以3:0战胜东道主日本队，队史第十次夺得亚运会冠军。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 21:56",
+        "url": "https://cn.chinadaily.com.cn/a/202609/22/WS6ab288fbe4b09a165c78c024.html"
+      },
+      {
+        "id": "international-08",
+        "title": "以色列总理称将在联大发言为以军辩护",
+        "summary": "国际在线报道，以色列总理内塔尼亚胡称将在联合国大会发言为以方及以军行为辩护；报道同时列出巴勒斯坦总统阿巴斯的视频发言安排。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 17:04",
+        "url": "https://news.cri.cn/20260924/3875c1c4-e69a-48b4-a201-833b45d23abd.html"
+      },
+      {
+        "id": "international-09",
+        "title": "中国经济网刊文关注中美经贸关系预期",
+        "summary": "中国经济网刊发经贸观察，记载中美团队9月20日起在纽约磋商并就人工智能问题对话；文章讨论高层交往与经贸合作对全球市场预期的影响。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 06:22",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260924_3232948.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "强厄尔尼诺或加剧亚洲干旱并推高全球粮价",
+        "summary": "美联社9月22日报道，专家称厄尔尼诺可能加剧亚洲干旱及全球极端天气，影响东南亚农业和渔业；世界粮食计划署估计，到2027年底或新增4900万人面临急性粮食不安全。",
+        "source": "AP",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22 12:07",
+        "url": "https://apnews.com/article/asia-el-nino-drought-rice-palm-oil-31c88df9ce8f67bcbfe3ea7f39431d57"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "18兆瓦海上风机规模化应用项目全容量投运",
+        "summary": "中广核广东阳江帆石200万千瓦海上风电项目全容量投运，131台机组中有33台18兆瓦风机，并建成海上风电场500千伏中间无功补偿站。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 16:10",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-24/10703009.shtml"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国成功发射卫星互联网低轨26组卫星",
+        "summary": "我国9月23日21时32分在海南商业航天发射场使用长征八号甲运载火箭，将卫星互联网低轨26组卫星送入预定轨道。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 23:07",
+        "url": "https://www1.xinhuanet.com/politics/20260923/53272bcd6b7d414faee867a2368d654c/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "我国成功发射遥感四十号04组卫星",
+        "summary": "我国于9月24日16时46分在太原卫星发射中心使用长征六号改运载火箭发射遥感四十号04组卫星，卫星进入预定轨道，主要开展电磁环境探测及相关技术试验。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 17:59",
+        "url": "https://news.cctv.com/2026/09/24/ARTIs9jkJSAzsYSqox3OB7BJ260924.shtml"
+      },
+      {
+        "id": "tech-04",
+        "title": "果蝇Lsp2因子影响寿命的机制研究发表于《自然》",
+        "summary": "湖南师范大学、湖南大学和中科院上海营养与健康研究所团队发现，果蝇Lsp2因子会增强核糖体蛋白翻译；关闭Lsp2可延长果蝇寿命，相关研究9月23日发表于《自然》。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:41",
+        "url": "https://tech.gmw.cn/2026-09/24/content_39018234.htm"
+      },
+      {
+        "id": "tech-05",
+        "title": "研究发现全球陆地热浪季节明显延长",
+        "summary": "中科院华南植物园团队基于1979至2023年全球气候数据发现，陆地热浪季节平均每十年延长约8.7天，过去45年总体延长约39天；相关成果9月23日发表于《自然·气候变化》。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:44",
+        "url": "https://tech.gmw.cn/2026-09/24/content_39018325.htm"
+      },
+      {
+        "id": "tech-06",
+        "title": "国产13.01米级双护盾隧道掘进机正式下线",
+        "summary": "蜀道集团与中铁工程装备集团联合研制的“越喜号”双护盾隧道掘进机在成都下线，开挖直径13.01米、整机长220米，采用工序并行和自动激光导向，将测量误差控制在3毫米以内。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 19:06",
+        "url": "https://www.news.cn/fortune/20260924/0ca51ea9fa49497595ffeb098259726e/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "天关与拉索联合观测发现脉冲星X射线尾迹",
+        "summary": "中科院高能物理研究所与南京大学团队利用天关卫星和拉索联合观测，在距地约4600光年的脉冲星周围发现约42光年长的X射线尾迹；成果发表于《中国科学：物理学 力学 天文学》（英文版）。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 17:24",
+        "url": "https://tech.gmw.cn/2026-09/21/content_39013145.htm"
+      },
+      {
+        "id": "tech-08",
+        "title": "地下大空间自主定位导航技术通过国家验收",
+        "summary": "人民网报道，地下大空间定位导航与控制项目通过国家科技部验收，研制出自主可控“探界100”脉冲定位芯片；系统实测定位节点容量达69894个，并已在雄安地下空间和特大型煤矿应用验证。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 16:22",
+        "url": "https://finance.people.com.cn/n1/2026/0921/c1004-40802925.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "FAST十年成果回顾并披露二期样机进展",
+        "summary": "科技日报梳理FAST十年成果：累计发现脉冲星超过1300颗，氢巡天第二期数据集探测到15.6万个星系，并披露FAST二期已有两台样机与主镜完成联合观测。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 23:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/24/content_587810.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "建筑机器人与模块化建造进入多个施工项目",
+        "summary": "中国经济网报道深圳、上海、济南等项目使用模块化建造、碳监测和施工机器人；济南项目用机器人安装500斤ALC墙板，现场称一名远程操作员可替代4至5名工人。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:57",
+        "url": "https://www.ce.cn/cysc/newmain/yc/jsxw/202609/t20260924_3234015.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "园林机器人在北京通州开展40天实景检验",
+        "summary": "北京通州展示41家企业的69款园林机器人产品，17台设备在景区驻场40天，参与巡检、清洁和养护；现场AI作品涉及林区火险识别、病虫害判断和机器人作业。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 20:37",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/24/content_587697.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "中方在安理会呼吁推动人工智能向善发展",
+        "summary": "中国常驻联合国代表傅聪在安理会人工智能与国际安全公开会上倡议加强国际合作与风险治理，反对滥用人工智能，并支持形成具有广泛共识的全球治理框架。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 13:55",
+        "url": "https://www.news.cn/20260924/7a43c93ad5bd4292aa0e74859e632af8/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "诺因发布GLOW具身智能技术报告",
+        "summary": "央广网报道诺因发布GLOW具身智能技术报告，整合视觉理解、空间推理、规划与动作生成，并披露多项评测成绩；相关指标来自公司报告。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 16:48",
+        "url": "https://tech.cnr.cn/techgd/20260924/t20260924_527824091.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI模型用于深部金矿靶区预测与工程验证",
+        "summary": "山东省煤田地质规划勘察研究院联合高校和矿企，将多源地质资料用于机器学习模型，开展深部金矿靶区预测；报道说已完成30余处工程验证、多个靶区见矿。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 13:00",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-24/10702903.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "中国经济网报道人工智能安全治理框架3.0",
+        "summary": "中国经济网9月25日报道人工智能安全治理框架3.0，梳理智能体自主规划、工具调用等新风险，以及按风险分类施策、以技术应对风险并贯穿研发部署应用全周期的治理思路。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 09:06",
+        "url": "https://www.ce.cn/cysc/newmain/yc/jsxw/202609/t20260925_3235410.shtml"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-10",
+    "tech-10"
+  ],
+  "observation": "临近中秋假期，出行与消费保障进入集中落实期：国新办预计假期跨区域人员流动量6.5亿人次，多地交通部门已发布安保和错峰提示，口岸客流也预计抬升。商务部门已部署生活必需品保供，监测显示超市肉蛋菜奶库存较月初增加3%至8%。与此同时，养老服务覆盖目标、毕业生招聘和施工机器人应用分别呈现中长期公共服务安排与技术落地进展；各项统计均按来源报道口径呈现，预计值不代表最终结果。",
+  "metrics": [
+    {
+      "id": "20260925-metric-gold-au9999",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "926.01元/克",
+      "note": "2026-09-24收盘价，较前日下跌7.99元，跌幅0.86%。",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-24&start_date=2026-09-24"
+    },
+    {
+      "id": "20260925-metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7489人民币",
+      "note": "2026-09-24人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "20260925-metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.6631人民币",
+      "note": "2026-09-24人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "20260925-metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2590人民币",
+      "note": "2026-09-24人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "20260925-metric-domestic-oil-beijing92",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "北京92号汽油8.61元/升",
+      "note": "2026-09-25起执行，比此前上调0.32元/升。",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "20260925-metric-international-oil",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "国际油价",
+      "value": "布伦特106.60美元/桶",
+      "note": "2026-09-24期货结算价，较前一结算价上涨3.52美元，涨幅3.41%。",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20260925/f93e4b918e934e6882bef68be54e6ac0/c.html"
+    }
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "国家外汇管理局",
+    "北京市发展和改革委员会",
+    "新华网"
+  ],
+  "sources": [
+    "人民网",
+    "中国新闻网",
+    "新华网",
+    "央广网",
+    "光明网",
+    "国际在线",
+    "中国日报中文网",
+    "央视网",
+    "中国经济网",
+    "人民日报",
+    "AP",
+    "中国科技网"
+  ]
+}

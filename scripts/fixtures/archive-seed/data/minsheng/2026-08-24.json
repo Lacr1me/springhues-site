@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-24",
+  "issue": 3,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年七月十二",
+  "cutoff": "2026-08-24 15:05（北京时间）",
+  "productionTime": "2026-08-24 15:05（北京时间）",
+  "sections": {
+    "domestic": [
+      {"id":"domestic-01","title":"广西防汛救灾工作组赴重点地区指导","summary":"应急管理部针对广西近期强降雨和洪涝风险派出工作组，要求强化隐患排查、人员转移避险和救灾安置，严防次生灾害。","source":"应急管理部","publishedAt":"2026-08-24","url":"https://www.mem.gov.cn/xw/yjglbgzdt/202608/t20260824_708284.shtml"},
+      {"id":"domestic-02","title":"中央救灾物资继续调拨受灾地区","summary":"国家防灾减灾救灾委员会办公室会同有关部门调拨约两万件中央救灾物资，用于支持受灾群众临时安置和基本生活保障。","source":"应急管理部","publishedAt":"2026-08-23","url":"https://www.mem.gov.cn/xw/yjglbgzdt/"},
+      {"id":"domestic-03","title":"云南强降雨防范应对持续加强","summary":"针对局地强降雨可能引发的山洪、地质灾害和中小河流洪水，有关部门要求压实预警叫应、巡查防守和转移避险责任。","source":"应急管理部","publishedAt":"2026-08-23","url":"https://www.mem.gov.cn/xw/yjglbgzdt/"},
+      {"id":"domestic-04","title":"甲醛泡发蔬菜传言被权威辟谣","summary":"有关部门和专家指出，网传以甲醛处理蔬菜的说法缺乏事实依据，并提醒公众通过正规渠道核查食品安全信息，避免误传。","source":"新华社","publishedAt":"2026-08-23","url":"https://www.news.cn/politics/20260823/f3e011979e944fc29c1d3af8ab408468/c.html"},
+      {"id":"domestic-05","title":"农村寄递物流体系加快补短板","summary":"多地完善县乡村三级寄递网络，推动客货邮融合和共同配送，让农产品出村、消费品下乡更加高效，降低末端物流成本。","source":"新华社","publishedAt":"2026-08-20","url":"https://www.news.cn/politics/20260820/941268895451496eb2f49315fd028b8e/c.html"},
+      {"id":"domestic-06","title":"检验检测机构监管进一步规范","summary":"有关部门围绕检验检测机构资质、数据真实性和行业秩序加强监管，推动提升公共安全、产品质量和消费者权益保障水平。","source":"新华社","publishedAt":"2026-08-20","url":"https://www.news.cn/politics/20260820/d5362c6ca1614576b4d9c496ea4b38bf/c.html"},
+      {"id":"domestic-07","title":"社会救助向服务救助加快拓展","summary":"各地在保障基本生活基础上，探索照护、康复、心理支持和就业帮扶等服务，提升困难群众救助的精准度与可持续性。","source":"新华社","publishedAt":"2026-08-20","url":"https://www.news.cn/politics/20260820/f71c353383ab4019b546ca270a3ffe0f/c.html"},
+      {"id":"domestic-08","title":"全国早稻生产保持总体稳定","summary":"农业部门通过稳面积、提单产和强化防灾减灾保障早稻生产，粮食收储、烘干和产销衔接也在主产区同步推进。","source":"新华社","publishedAt":"2026-08-21","url":"https://www.news.cn/politics/20260821/3bf36b077c9d4e76bf19fc721d2fd78c/c.html"},
+      {"id":"domestic-09","title":"家政服务职业化建设持续推进","summary":"家政行业加强技能培训、信用体系和劳动权益保障，推动服务标准化与职业发展通道建设，更好匹配养老育幼等家庭需求。","source":"新华社","publishedAt":"2026-08-17","url":"https://www.news.cn/fortune/20260817/56992d8d663b4b8baf46257791128810/c.html"},
+      {"id":"domestic-10","title":"住房发展更重质量和宜居导向","summary":"城市住房工作加快从增量扩张转向存量提质，老旧小区改造、公共配套完善和居住安全成为提升群众获得感的重要抓手。","source":"新华社","publishedAt":"2026-08-21","url":"https://www.news.cn/politics/20260821/b5f097254bb040d0a5f4deacf6ded4a3/c.html"}
+    ],
+    "international": [
+      {"id":"international-01","title":"伊朗议会通过反制制裁相关法案","summary":"伊朗议会通过涉及制裁反制的法案，地区紧张局势与能源运输安全再受关注；后续执行范围和外交影响仍待观察。","source":"美联社","publishedAt":"2026-08-23","url":"https://apnews.com/article/a3fff9eba47a5510060e8014b82d794f"},
+      {"id":"international-02","title":"近乎全食月吸引多地公众观测","summary":"一次覆盖范围广的月食在多地可见，天文机构发布观测建议并提醒避免混淆月食与日食防护要求，带动公众科普活动。","source":"美联社","publishedAt":"2026-08-22","url":"https://apnews.com/article/3c47d7a9f1a7f1a5e6c96456e44395b8"},
+      {"id":"international-03","title":"尼日利亚清真寺发生大规模绑架","summary":"尼日利亚警方称武装人员从一座清真寺绑走六十余名礼拜者，安全部门开展搜救，事件再次凸显当地社区面临的治安风险。","source":"路透社","publishedAt":"2026-08-22","url":"https://www.internazionale.it/ultime-notizie-reuters/2026/08/22/gunmen-abduct-over-60-worshippers-from-nigeria-mosque-police-say"},
+      {"id":"international-04","title":"印度东海岸展开沉船救援行动","summary":"一艘散货船在印度东海岸附近遇险下沉，海岸警卫队和救援力量搜救船员并评估燃油泄漏等环境风险。","source":"路透社","publishedAt":"2026-08-22","url":"https://gcaptain.com/india-launches-rescue-operation-as-bulk-carrier-sinks-off-east-coast/"},
+      {"id":"international-05","title":"加拿大宣布回应美国新增关税","summary":"美加贸易磋商未能化解分歧后，加拿大准备采取报复性措施，跨境供应链、企业成本与消费者价格面临新的不确定性。","source":"路透社","publishedAt":"2026-08-22","url":"https://www.streetinsider.com/Reuters/Canada%2Bto%2Bretaliate%2Bfor%2BUS%2Btariffs%2C%2Bworsening%2Bties%2Bafter%2Btalks%2Bfail/26963004.html"},
+      {"id":"international-06","title":"欧盟向塞尔维亚增派山火援助","summary":"塞尔维亚多地山火持续，欧盟调派直升机和消防人员参与扑救；高温、干燥与强风令火场控制和居民疏散更具挑战。","source":"路透社","publishedAt":"2026-08-22","url":"https://au.marketscreener.com/news/eu-sends-helicopters-firefighters-to-serbia-to-tackle-wildfires-ce7858dade80f721"},
+      {"id":"international-07","title":"世卫组织加强卫生应急协作","summary":"世界卫生组织与合作机构推进公共卫生能力建设和专业交流，重点涵盖传染病监测、应急响应及基层卫生服务韧性。","source":"世界卫生组织","publishedAt":"2026-08-21","url":"https://www.who.int/news-room"},
+      {"id":"international-08","title":"埃博拉疫苗接种覆盖继续扩大","summary":"国际卫生机构继续向风险地区部署埃博拉疫苗并强化接触者追踪，力求在病例增加前切断传播链并保护一线医务人员。","source":"联合国新闻／世卫组织","publishedAt":"2026-08-20","url":"https://news.un.org/en/"},
+      {"id":"international-09","title":"南苏丹冲突造成平民伤亡加剧","summary":"联合国机构警告南苏丹局部战事和针对平民的暴力行为增加，人道通道受阻，粮食、医疗和庇护需求继续上升。","source":"联合国新闻","publishedAt":"2026-08-20","url":"https://www.un.org/ruleoflaw/from-the-field/"},
+      {"id":"international-10","title":"苏丹战事与洪灾加剧流离失所","summary":"联合国称战斗升级叠加季节性洪灾，已造成大量居民新增流离失所，安置点的饮水、卫生和医疗资源承受更大压力。","source":"联合国新闻","publishedAt":"2026-08-19","url":"https://www.un.org/ruleoflaw/from-the-field/"}
+    ],
+    "tech": [
+      {"id":"tech-01","title":"心脏毛细血管调控机制研究获进展","summary":"中国科学院团队围绕心脏微血管形成和功能调控取得新发现，为理解心血管稳态、损伤修复及相关疾病机制提供线索。","source":"中国科学院","publishedAt":"2026-08-24","url":"https://www.cas.cn/syky/202608/t20260821_5118785.shtml"},
+      {"id":"tech-02","title":"液态金属电池关键材料研究推进","summary":"研究团队在液态金属电池界面稳定和电化学性能方面取得进展，为面向大规模储能的长寿命、低成本技术提供实验依据。","source":"中国科学院","publishedAt":"2026-08-24","url":"https://www.cas.cn/syky/202608/t20260818_5118511.shtml"},
+      {"id":"tech-03","title":"暗腔超导体系新现象获揭示","summary":"科研人员在暗腔耦合条件下研究超导体系的新行为，成果有助于理解光与物质相互作用对量子材料性质的调控机制。","source":"中国科学院","publishedAt":"2026-08-21","url":"https://www.cas.cn/syky/202608/t20260821_5118765.shtml"},
+      {"id":"tech-04","title":"热带暖池影响南极气候机制获解析","summary":"研究团队揭示热带暖池变化与南极气候响应之间的遥相关机制，为改进极地气候预测和全球气候系统评估提供依据。","source":"中国科学院","publishedAt":"2026-08-21","url":"https://www.cas.cn/syky/202608/t20260820_5118741.shtml"},
+      {"id":"tech-05","title":"高熵反钙钛矿电极性能实现提升","summary":"科研人员通过高熵设计改善反钙钛矿电极材料的结构稳定和储能表现，为新型电池电极的设计与应用提供新路径。","source":"中国科学院","publishedAt":"2026-08-21","url":"https://www.cas.cn/syky/202608/t20260820_5118744.shtml"},
+      {"id":"tech-06","title":"大脑全新神经调控环路被发现","summary":"团队发现伏隔核不同类型神经元可双向调控杏仁核乙酰胆碱释放，为理解显著性加工异常和相关疾病干预提供潜在靶点。","source":"中国科学院","publishedAt":"2026-08-20","url":"https://www.cas.cn/syky/202608/t20260820_5118673.shtml"},
+      {"id":"tech-07","title":"我国森林碳汇形成机制进一步厘清","summary":"科研人员系统分析三十余年森林碳汇变化，阐明气候、植被恢复和生态工程的共同作用，为提升生态系统碳汇管理提供支撑。","source":"中国科学院","publishedAt":"2026-08-18","url":"https://www.cas.cn/syky/202608/t20260818_5118526.shtml"},
+      {"id":"tech-08","title":"TOPCon电池金属化工艺研究获进展","summary":"研究团队优化TOPCon太阳能电池材料与金属化工艺，为减少银耗、提升转换效率和降低规模化制造成本提供新思路。","source":"中国科学院","publishedAt":"2026-08-18","url":"https://www.cas.cn/syky/202608/t20260818_5118523.shtml"},
+      {"id":"tech-09","title":"棕榈酸加剧肥胖炎症机制获揭示","summary":"研究发现棕榈酸可扰动内脏脂肪免疫稳态并放大肥胖相关炎症，为代谢疾病的机制研究和精准干预提供新线索。","source":"中国科学院","publishedAt":"2026-08-19","url":"https://www.cas.cn/syky/202608/t20260819_5118566.shtml"},
+      {"id":"tech-10","title":"一价离子高效分离技术取得进展","summary":"科研人员提升一价离子的选择性分离效率，相关成果有望用于盐湖资源提取、水处理和低能耗膜分离等应用场景。","source":"中国科学院","publishedAt":"2026-08-18","url":"https://www.cas.cn/syky/202608/t20260818_5118525.shtml"}
+    ],
+    "ai": [
+      {"id":"ai-01","title":"美国发布课堂技术负责任使用指南","summary":"美国教育部要求教育技术以教学价值和独立证据为依据，强调教师主导、透明实施、数据保护以及对学生学习结果的持续评估。","source":"美国教育部","publishedAt":"2026-08-20","url":"https://www.ed.gov/about/news/press-release/us-department-of-education-releases-guidance-responsible-use-of-education-technology-classroom"},
+      {"id":"ai-02","title":"TanStack AI进入候选发布阶段","summary":"TanStack发布AI工具候选版本，继续完善跨模型接口、流式响应和类型安全能力，面向前端与全栈开发者收集正式版前反馈。","source":"TanStack","publishedAt":"2026-08-21","url":"https://tanstack.com/blog/tanstack-ai-rc"},
+      {"id":"ai-03","title":"英特尔调查显示机器人准备度存在缺口","summary":"英特尔委托调查显示六成受访领导者预计五年内运营机器人群，但当前仅四成组织建立正式的人机协作战略。","source":"英特尔","publishedAt":"2026-08-20","url":"https://newsroom.intel.com/artificial-intelligence/6-in-10-leaders-bet-big-on-robots-only-4-in-10-are-ready"},
+      {"id":"ai-04","title":"Cerebras与Callosum合作智能体推理","summary":"双方将晶圆级推理硬件接入异构智能体编排平台，面向长时程、多智能体工作负载提供更低延迟的欧洲算力服务。","source":"Cerebras","publishedAt":"2026-08-20","url":"https://investors.cerebras.ai/news-releases/news-release-details/cerebras-and-callosum-partner-deliver-ultra-low-latency"},
+      {"id":"ai-05","title":"Arc Institute启动虚拟细胞挑战赛","summary":"新一届挑战要求模型在未见过扰动的六种细胞系上零样本预测基因敲低响应，以检验虚拟细胞模型的泛化和科研实用性。","source":"Arc Institute","publishedAt":"2026-08-20","url":"https://arcinstitute.org/news"}
+    ]
+  },
+  "topStoryIds": ["domestic-01", "international-03", "tech-01"],
+  "metrics": [
+    {"kind":"gold","icon":"🥇","name":"国内金价","value":"Au99.99：997.21元/克","note":"8月24日延时最新价；上海黄金交易所"},
+    {"kind":"domestic_oil","icon":"⛽","name":"北京油价","value":"92号7.78元/升；95号8.29元/升","note":"8月14日24时起最高零售价；北京市发改委"},
+    {"kind":"international_oil","icon":"🛢️","name":"布伦特原油","value":"90.79美元/桶","note":"8月24日09:05期货盘中价；第一财经"},
+    {"kind":"international_oil_wti","icon":"🛢️","name":"WTI原油","value":"85.42美元/桶","note":"8月24日09:05期货盘中价；第一财经"},
+    {"kind":"usd_cny","icon":"💵","name":"人民币兑美元","value":"1美元＝6.7841元人民币","note":"8月24日中间价；中国外汇交易中心"},
+    {"kind":"eur_cny","icon":"💶","name":"人民币兑欧元","value":"1欧元＝7.8863元人民币","note":"8月24日中间价；中国外汇交易中心"},
+    {"kind":"jpy_cny","icon":"💴","name":"人民币兑日元","value":"100日元＝4.2541元人民币","note":"8月24日中间价；中国外汇交易中心"}
+  ],
+  "metricsCutoff": "2026-08-24 15:05（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发改委", "中国外汇交易中心", "第一财经"],
+  "observation": "今天的公共议题由防汛救灾、生活保障与科技转化共同牵引。强降雨地区继续把预警叫应、转移避险和物资安置放在前面；食品安全辟谣、农村寄递、社会救助与家政职业化则回应日常生活中的信任、便利和照护需求。国际上，绑架、山火、沉船和贸易摩擦叠加，安全与供应链韧性承压。科研和人工智能栏目一面展示生命科学、储能与材料突破，一面把教育数据保护、人机协作准备度和推理基础设施推向更具体的治理场景。",
+  "sources": ["应急管理部", "新华社", "美联社", "路透社", "联合国", "世界卫生组织", "中国科学院", "美国教育部", "英特尔", "Cerebras", "Arc Institute"]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2ef">
+  <meta name="description" content="每日35条中国时政与民生、全球国际、中国科技与AI科技精选新闻。">
+  <title>民生日报</title>
+  <link rel="icon" type="image/png" href="../brand-assets/springhues-logo.png">
+  <link rel="stylesheet" href="styles.css?v=20260824-download-png">
+  <link rel="stylesheet" href="../brand.css?v=20261017-moon-v1">
+  <link rel="stylesheet" href="mobile-fix.css?v=20260824-download-png">
+  <link rel="stylesheet" href="message-link.css?v=20260825-message-link">
+  <link rel="stylesheet" href="aligned-layout.css?v=20260825-aligned-layout">
+  <script defer src="../site-shell.js?v=20261017-unified"></script><script src="../site/boot.js?v=20261018-shard-v4"></script><link rel="stylesheet" href="../site/css/shard-theme.css?v=20261018-shard-v4"><link rel="stylesheet" href="../site/css/wipe.css?v=20261018-shard-v4"><link rel="stylesheet" href="../site/css/pages-daily.css?v=20261018-shard-v4"><script type="module" src="../site/js/shell/shell.js?v=20261018-shard-v4"></script>
+</head>
+<body data-site-page="minsheng">
+  <header class="site-bar">
+      <a class="mini-brand" href="../" aria-label="Springhues 每日简报"><span class="brand-logo" aria-hidden="true"><img src="../brand-assets/springhues-logo.png" alt=""></span><b>每日简报</b></a>
+    <nav aria-label="频道导航"><a href="../">首页</a><a class="active" href="./">民生日报</a><a href="../game/">游戏日报</a></nav>
+    <a class="header-message-link" href="../messages/">留言</a>
+    <button class="archive-trigger" id="archiveTrigger" type="button"><span aria-hidden="true">▦</span><span><small>正在阅读</small><b id="navDate">加载中</b></span><i>⌄</i></button>
+  </header>
+
+  <main class="newspaper" id="top" aria-busy="true">
+    <section class="masthead">
+      <div class="title-block"><p>DAILY PUBLIC BRIEF</p><h1>民生日报</h1><div><i></i><span>简简单单，读懂世界</span></div></div>
+      <div class="date-block"><span class="calendar" aria-hidden="true"><img src="../brand-assets/springhues-logo.png" alt=""></span><div><time id="editionDate">—</time><b id="weekday">—</b><p id="lunarDate">—</p></div></div>
+      <div class="top-stories"><p class="section-kicker">TODAY'S TOP 3</p><h2>今日3件大事</h2><ol id="topStories"></ol></div>
+    </section>
+
+    <section class="columns aligned-columns" aria-label="日报正文">
+      <article class="news-column domestic"><header><span>01</span><div><small>CHINA & PUBLIC LIFE</small><h2>中国时政与民生</h2></div><b>10</b></header><div class="story-list" id="domesticStories"></div></article>
+      <article class="news-column international"><header><span>02</span><div><small>GLOBAL AFFAIRS</small><h2>全球国际</h2></div><b>10</b></header><div class="story-list" id="internationalStories"></div></article>
+      <article class="news-column tech"><header><span>03</span><div><small>SCIENCE & INNOVATION</small><h2>中国科技</h2></div><b>10</b></header><div class="story-list" id="techStories"></div></article>
+      <div class="side-column">
+        <article class="news-column ai"><header><span>04</span><div><small>ARTIFICIAL INTELLIGENCE</small><h2>AI科技</h2></div><b>5</b></header><div class="story-list" id="aiStories"></div></article>
+        <article class="metrics-card"><header><span>05</span><div><small>MARKET SNAPSHOT</small><h2>数据速览</h2></div></header><div id="metrics" class="metrics"></div><p class="metrics-cutoff" id="metricsCutoff">—</p></article>
+      </div>
+    </section>
+
+    <section class="observation"><span aria-hidden="true">察</span><div><p>TODAY'S OBSERVATION</p><h2>今日观察</h2><div id="observation">—</div></div></section>
+    <footer class="edition-footer"><p id="sourceLine">数据来源：—</p><div><span id="cutoffLine">检索截止：—</span><b id="productionTime">制作时间：—</b></div></footer>
+    <section class="download-section" aria-label="日报原图下载"><a class="download-button" id="downloadPng" href="../downloads/minsheng/2026-08-24.png" download><span>下载当天 PNG 原图</span><small>3840px · PNG</small></a></section>
+  </main>
+
+  <dialog class="archive-dialog" id="archiveDialog">
+    <div class="dialog-head"><div><small>ARCHIVE</small><h2>选择一期民生日报</h2></div><button id="closeArchive" type="button" aria-label="关闭">×</button></div>
+    <label class="date-input-label" for="archiveDate">按日期选择</label><input id="archiveDate" type="date">
+    <div class="archive-list" id="archiveList"></div>
+  </dialog>
+  <div class="loading" id="loading"><span></span><p>正在读取今日简报</p></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script defer src="app.js?v=20261017-unified"></script>
+</body>
+</html>

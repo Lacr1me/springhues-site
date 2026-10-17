@@ -1,0 +1,14 @@
+/* 隐私页（privacy/）专属样式。依赖 shard-theme.css。正文文字不在样式里改动。 */
+html.shard-live .privacy-body { display: grid; gap: 16px; margin-top: -8px; justify-items: stretch; }
+html.shard-live .privacy-lead { max-width: 44em; }
+html.shard-live .privacy-body .sd-plate { padding: clamp(22px, 3vw, 34px) clamp(22px, 3vw, 36px) clamp(22px, 3vw, 34px) clamp(26px, 3vw, 40px); }
+html.shard-live .privacy-body .sd-plate p { margin: 0 0 12px; font-size: 16px; line-height: 1.9; }
+html.shard-live .privacy-body .sd-plate p:last-child { margin-bottom: 0; }
+html.shard-live .privacy-body .sd-plate a { color: var(--sh-klein-500); font-weight: 700; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+html.shard-live .privacy-body .sd-plate a:hover { color: var(--sh-burgundy); }
+html.shard-live[data-theme="night"] .privacy-body .sd-plate a { color: var(--sh-white); }
+html.shard-live[data-theme="night"] .privacy-body .sd-plate a:hover { color: var(--sh-white); text-decoration-color: var(--blade); }
+html.shard-live .privacy-return { justify-self: start; margin-top: 12px; }
+@media (max-width: 699px) {
+  html.shard-live .privacy-body .sd-plate p { font-size: 15px; }
+}

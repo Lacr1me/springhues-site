@@ -1,0 +1,39 @@
+{
+  "timezone": "Asia/Shanghai",
+  "generateAt": "09:30",
+  "publishAt": "11:00",
+  "editions": [
+    {
+      "date": "2026-09-25",
+      "issue": 35,
+      "publishAt": "2026-09-25T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "“十五五”民政事业将完善养老服务与社会救助",
+      "file": "data/minsheng/2026-09-25.json"
+    },
+    {
+      "date": "2026-09-10",
+      "issue": 20,
+      "publishAt": "2026-09-10T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "11个新职业和23个新工种拓展就业空间",
+      "file": "data/minsheng/2026-09-10.json"
+    },
+    {
+      "date": "2026-08-24",
+      "issue": 3,
+      "publishAt": "2026-08-24T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "广西防汛救灾工作组赴重点地区指导",
+      "file": "data/minsheng/2026-08-24.json"
+    },
+    {
+      "date": "2026-08-23",
+      "issue": 2,
+      "publishAt": "2026-08-23T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "北京发布暴雨蓝色与雷电黄色预警",
+      "file": "data/minsheng/2026-08-23.json"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
+  <meta name="theme-color" content="#f5f2ef">
+  <meta name="description" content="每日 11:00 更新的中国游戏、Minecraft 社区与 Steam 特惠简报。">
+  <title>游戏方块日报</title>
+  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
+  <link rel="stylesheet" href="styles.css?v=20260825-steam-25">
+  <link rel="stylesheet" href="brand.css?v=20261017-moon-v1">
+  <script defer src="site-shell.js?v=20261017-unified"></script><script src="site/boot.js?v=20261018-shard-v4"></script><link rel="stylesheet" href="site/css/shard-theme.css?v=20261018-shard-v4"><link rel="stylesheet" href="site/css/wipe.css?v=20261018-shard-v4"><link rel="stylesheet" href="site/css/pages-daily.css?v=20261018-shard-v4"><script type="module" src="site/js/shell/shell.js?v=20261018-shard-v4"></script>
+</head>
+<body data-site-page="game">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-bar">
+      <a class="mini-brand" href="./" aria-label="Springhues 每日简报"><span class="brand-logo" aria-hidden="true"><img src="brand-assets/springhues-logo.png" alt=""></span><b>每日简报</b></a>
+    <nav aria-label="频道导航"><a href="./">首页</a><a href="minsheng/">民生日报</a><a class="active" href="game/">游戏日报</a></nav>
+    <a class="header-message-link" href="messages/">留言</a>
+    <button class="archive-trigger" id="archiveButton" type="button"><span aria-hidden="true">▦</span><span><small>正在阅读</small><b id="navDate">加载中</b></span><i>⌄</i></button>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span><span id="editionLabel">今日刊 · 加载中</span></div>
+        <h1>每天十一点，<br><em>把游戏世界讲明白。</em></h1>
+        <p>中国游戏资讯、Minecraft 社区热度、Mod 更新与值得看的 Steam 特惠。一杯咖啡的时间，读完今天。</p>
+        <div class="hero-actions" aria-label="游戏平台快捷入口">
+          <a class="platform-link" href="https://store.steampowered.com/?l=schinese" target="_blank" rel="noopener noreferrer"><b>Steam 官网</b><span aria-hidden="true">↗</span></a>
+          <a class="platform-link" href="https://store.epicgames.com/zh-CN/" target="_blank" rel="noopener noreferrer"><b>Epic 官网</b><span aria-hidden="true">↗</span></a>
+          <a class="platform-link" href="https://www.mcmod.cn/" target="_blank" rel="noopener noreferrer"><b>MC百科 官网</b><span aria-hidden="true">↗</span></a>
+          <a class="platform-link" href="https://www.minebbs.com/" target="_blank" rel="noopener noreferrer"><b>MineBBS 官网</b><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-logo-stage" aria-label="Springhues 品牌标志"><img src="brand-assets/springhues-logo.png" alt="Springhues"></div>
+    </section>
+    <section id="features" class="content shell feature-grid" aria-label="今日焦点"></section>
+    <section class="content shell split-section game-main-section"><div class="news-column"><div class="compact-heading"><span><b>01</b> 中国玩家关注</span><small>10 STORIES</small></div><div class="news-list" id="newsList"></div></div><aside class="minecraft-column" id="minecraft"><div class="compact-heading green"><span><b>02</b> Minecraft 热门整合包</span><small>10 PICKS</small></div><div class="pack-list" id="packList"></div><p class="method-note">热度指数综合中国社区页面曝光、近期攻略与讨论信号计算，并非单一网站官方排名。</p></aside></section>
+    <section class="content shell utility-grid"><article class="panel mods-panel"><div class="compact-heading blue"><span><b>03</b> 新出 / 更新 Mod</span><small>JAVA EDITION</small></div><div class="mods-list" id="modsList"></div></article><article class="panel deal-panel" id="deals"><div class="compact-heading navy"><span><b>05</b> Steam 今日优惠</span><small>CN STORE</small></div><div class="deal-summary"><span id="dealSummary">加载优惠</span><span class="deal-scroll-hint">上下滚动浏览全部 <i aria-hidden="true">↓</i></span></div><div class="deal-list-shell"><div class="deal-list" id="dealList" tabindex="0" aria-label="Steam 当日全部已核验热门优惠，可上下滚动浏览"></div><span class="deal-scrollbar" id="dealScrollbar" aria-hidden="true"><i id="dealScrollThumb"></i></span></div></article></section>
+    <section class="content shell notes-section"><div><span class="section-no dark">06</span><p class="mini-label">EDITOR'S NOTES</p><h2>今天，我们看到这些趋势</h2></div><ol id="trendList"></ol><div class="source-card"><span>数据窗口</span><b id="dataWindow">—</b><p id="sourceSummary">—</p></div></section>
+    <section class="download-section shell" aria-label="日报原图下载"><a class="download-button" id="downloadPng" href="downloads/game/2026-08-24.png?v=20260824-large-cobalt" download><span>下载当天 PNG 原图</span><small>3840px · PNG</small></a></section>
+  </main>
+
+  <footer><div class="shell footer-inner"><div class="brand footer-brand"><span class="brand-logo"><img src="brand-assets/springhues-logo.png" alt=""></span><span><b>游戏方块</b><small>DAILY PLAY / 每日简报</small></span></div><p>每日 10:30 制作 · 10:50 核验 · 11:00 发布<br>北京时间 Asia/Shanghai</p><p class="disclaimer">热度指数仅供参考；优惠价格可能变化，请以平台实时页面为准。</p></div></footer>
+  <dialog id="archiveDialog" class="archive-dialog"><div class="dialog-head"><div><small>ARCHIVE</small><h2>选择一期游戏日报</h2></div><button id="closeArchive" type="button" aria-label="关闭">×</button></div><label class="date-input-label" for="archiveDate">按日期选择</label><input id="archiveDate" type="date"><div id="archiveList" class="archive-list"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data/embedded.js?v=20260825-steam-25"></script><script defer src="app.js?v=20261017-unified"></script>
+</body>
+</html>

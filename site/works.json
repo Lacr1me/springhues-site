@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    { "id": "software", "name": "软件工具", "en": "SOFTWARE", "carrier": "window", "accent": { "surface": "klein-700", "blade": ["tag", "outline", "sweep", "button"] }, "parallax": 1, "order": 10 },
+    { "id": "game", "name": "游戏资源", "en": "GAME", "carrier": "shard", "accent": { "surface": "klein-900", "blade": ["tag", "outline", "sweep"] }, "parallax": 1.25, "order": 30 },
+    { "id": "web", "name": "网页设计", "en": "WEB", "carrier": "browser", "accent": { "surface": "klein-900", "blade": ["tag", "outline", "sweep"] }, "parallax": 0.9, "order": 35 },
+    { "id": "daily", "name": "每日简报", "en": "DAILY", "carrier": "page", "accent": { "surface": "white", "blade": ["tag", "outline", "sweep", "button"] }, "parallax": 1, "order": 40 }
+  ],
+  "works": [
+    {
+      "slug": "simple-download-windows",
+      "category": "software",
+      "name": "简单下载 Windows 版",
+      "carrier": "window",
+      "platform": "Windows",
+      "intro": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具，支持抖音、哔哩哔哩、小红书等平台公开内容。",
+      "details": [
+        { "h": "", "p": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具。支持抖音、哔哩哔哩、小红书等平台公开内容解析，可保存视频、音频、图片、图集及网页中的文档、压缩包等资源。" },
+        { "h": "", "p": "内置多标签浏览器，支持浏览时嗅探资源、多选及批量加入下载队列；提供可配置的多线程分段下载、暂停续传和真实阶段进度展示，下载成品按类型与日期自动整理。" },
+        { "h": "", "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。" }
+      ],
+      "tags": ["Windows", "下载工具", "资源嗅探", "批量下载"],
+      "version": "0.2.0",
+      "updatedAt": "2026-10-16",
+      "isNew": true,
+      "links": [
+        { "kind": "download", "label": "下载安装包（262 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.0/SimpleDownload-0.2.0-Windows-Setup.exe" },
+        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.0" }
+      ],
+      "cover": { "kind": "placeholder", "label": "WINDOWS" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "simple-download-android",
+      "category": "software",
+      "name": "简单下载 Android 版",
+      "carrier": "phone",
+      "platform": "Android",
+      "intro": "手机端多媒体解析与保存工具，粘贴链接或系统分享即可保存视频、音频、图片和图集，解析与下载均在本地完成。",
+      "details": [
+        { "h": "", "p": "面向手机使用的多媒体解析与保存工具，支持通过粘贴链接或系统分享接收抖音、小红书、今日头条等平台的公开内容，保存视频、音频、图片及图集，并在适配设备上提供实况照片保存能力。" },
+        { "h": "", "p": "支持后台解析与下载队列管理，可查看下载、处理、保存各阶段的实际进度，对失败任务进行重试；内置网页浏览与资源嗅探，方便发现和保存页面中的媒体资源。" },
+        { "h": "", "p": "作品库支持图片与视频预览、分类筛选、日期分组、多选、全选和批量删除，并提供日期快速滚动、GIF 动态预览及实况配对展示。解析、下载与媒体处理均在本地完成，无需提交平台账号密码。" }
+      ],
+      "tags": ["Android", "下载工具", "实况照片", "本地处理"],
+      "version": "2.3.4",
+      "updatedAt": "2026-10-03",
+      "isNew": true,
+      "links": [
+        { "kind": "download", "label": "下载 APK（28 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.4/SimpleDownload-2.3.4-Android.apk" },
+        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.4" }
+      ],
+      "cover": { "kind": "placeholder", "label": "ANDROID" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "n1ten",
+      "category": "game",
+      "name": "N1ten（十重天）",
+      "platform": "Forge 1.20.1",
+      "intro": "面向 Minecraft Java 版的难度与战斗拓展模组：十档个人难度、成长奖励、神权装备与白金视觉特效。",
+      "details": [
+        { "h": "", "p": "N1ten（十重天）是一款面向 Minecraft Java 版的难度与战斗拓展模组，将十档个人难度、成长奖励、神权装备和白金视觉特效结合起来，带来从常规生存到高强度挑战，再到执掌神权的完整体验。" },
+        { "h": "十重难度，自由选择挑战", "p": "提供「废物、菜鸟、如常、骇人、噩梦、绝望、虚无、大恐怖、阿鼻地狱、无尽的死亡」十档难度。通过难度调节器即可前后切换，并查看生命、攻击和掉落倍率。常规敌对与友善生物会在生成时记录附近玩家对应的难度，之后切档不会反复改变已有生物的属性。矿物资源与符合规则的生物掉落、Boss 战利品箱也接入奖励倍率，让挑战与收益相互对应。" },
+        { "h": "神权核心，开启终局装备", "p": "挑战最高难度下符合条件的 Boss，有机会获得神权核心，用于制作神权剑与神权冠冕。核心显现搭配暗色天幕、白金光柱、日晕与扩散波纹，让稀有战利品的出现具有鲜明的仪式感。" },
+        { "h": "神权剑，多种裁决与百倍收割", "p": "拥有认主机制与永恒耐久，提供锁链裁决、范围斩杀、天眼裁决和百倍收割四种操作。既能以虫洞与锁链牵引目标，也能召唤天眼与巨剑完成浮空贯地的范围攻击。不同操作区分正常掉落、无掉落斩杀及百倍掉落与经验，击杀归属于使用者，可接入相应的击杀统计与进度机制。" },
+        { "h": "掉落自动收纳，减少整理负担", "p": "支持超越维度、精妙背包与精致存储的对应存储接入。主手持剑时可通过 Shift＋滚轮切换可用的物品去向，选择会随玩家保存。收纳保留物品数据、容量及权限限制，无法存入的余量回落地面；未安装对应模组时隐藏相关选项。超越维度还支持对应的经验入库。" },
+        { "h": "神权冠冕，兼顾生存与自由行动", "p": "提供强力生命与防御保护、抗性与饱和等增益，以及经验免耗和多项创造式能力；支持头盔佩戴与 Curios 专属槽位。独立面板可调整奔跑、飞行速度，开启神速、穿墙与无惯性飞行，并获得夜视式亮度增强。高速移动配有神环、速度线、音障与彗星拖尾。有效佩戴期间，还能拒绝已支持的 Forge 原生封禁入口。" },
+        { "h": "多模组兼容，扩展神权能力", "p": "针对 Iron’s Spells、Goety、Ars Nouveau、Botania、Blood Magic 等多个魔法体系接入对应的资源免耗、冷却处理或免吟唱能力，并支持部分归属设备的资源授权。兼容功能按模组及接口检测启用，具体能力随体系而异，配方材料、研究和解锁条件仍按相应规则执行。兼容层与本体合并为单个 JAR，无需额外安装本模组的兼容附属包。" },
+        { "h": "统一白金特效与动态物品介绍", "p": "围绕神权主题制作冷白金战斗特效，覆盖核心显现、锁链攻击、天眼落剑、冲击波及冠冕高速移动。物品名称与介绍支持动态文字效果，并配有中英文资源和文字动效工作台，可调整文本与表现。1.5.2 最新版进一步修复了天眼巨剑被实体剔除隐藏的问题，并完善存储兼容、多人交互和冠冕操作体验。" }
+      ],
+      "tags": ["Minecraft", "Mod", "Forge 1.20.1", "难度拓展"],
+      "version": "1.5.2",
+      "updatedAt": "2026-10-09",
+      "isNew": true,
+      "links": [
+        { "kind": "download", "label": "下载模组 JAR（12.5 MB）", "href": "https://github.com/Lacr1me/springhues-games/releases/download/n1ten-v1.5.2/N1ten-1.5.2-Forge-1.20.1.jar" },
+        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-games/releases/tag/n1ten-v1.5.2" }
+      ],
+      "cover": { "kind": "placeholder", "label": "N1TEN" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "asterion",
+      "category": "web",
+      "name": "ASTERION · 阿斯忒里昂星港",
+      "intro": "纯体素构建的轨道工业巨构，可旋转、缩放并逐模块查看的三维观测网页。",
+      "details": [
+        { "h": "", "p": "一个真实三维、纯体素的轨道工业巨构观测网页。全部建筑、舰船、发光实体和星光由轴对齐盒体批量绘制，离线打开即可运行。" },
+        { "h": "操作", "p": "左键拖动旋转，滚轮缩放，右键拖动平移；点击三维实体或使用模块下拉框聚焦。数字键 1–5 切换总览、主核、泊位、舰队和下层镜头，空格开始巡航。" }
+      ],
+      "tags": ["网页", "三维", "体素", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 Astra MAX",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-17",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开作品", "href": "works/asterion/" }
+      ],
+      "prompt": "works/asterion/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "ASTERION" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {"slug":"daily-game","category":"daily","name":"游戏日报","intro":"每天 11:00 更新的游戏资讯、整合包、Mod 与 Steam 优惠。","tags":["日报","游戏"],"isNew":false,"links":[{"kind":"channel","label":"进入频道","href":"game/"}],"cover":{"kind":"placeholder","label":"DAILY NO."},"layout":{"size":"m"},"source":{"type":"daily-archive","manifest":"data/index.json","base":"game/","fallbackTitle":"游戏日报"}},
+    {"slug":"daily-minsheng","category":"daily","name":"民生日报","intro":"每天 11:00 更新的国内外要闻、科技、AI 与行情。","tags":["日报","民生"],"isNew":false,"links":[{"kind":"channel","label":"进入频道","href":"minsheng/"}],"cover":{"kind":"placeholder","label":"DAILY NO."},"layout":{"size":"m"},"source":{"type":"daily-archive","manifest":"data/minsheng/index.json","base":"minsheng/","fallbackTitle":"民生日报"}}
+  ]
+}

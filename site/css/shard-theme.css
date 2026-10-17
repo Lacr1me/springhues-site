@@ -1,0 +1,337 @@
+/* ==========================================================================
+   SHARD 主题：跨页面核心样式（子页面与任何新页面 <link> 引入即用）
+   规范文档：docs/shard-style.md　检查脚本：node scripts/check-shard-style.mjs
+
+   索引
+     1. Tokens        --sh-* 调色板、语义变量（日/夜）、切角 --cut、字体、缓动、间距
+     2. Font          Anton（自托管）
+     3. Base          reset、[hidden]、body、焦点、选区、sr-only、reduced-motion、forced-colors
+     4. Cut tools     .sd-cut-* 切角工具类
+     5. Shell         .sd-skip .sd-top .sd-corner .sd-title .sd-act .sd-menu .sd-foot
+     6. Layout        .sd-page .sd-wrap .sd-hero .sd-eyebrow .sd-h1 .sd-h2 .sd-lead
+     7. Components    .sd-plate .sd-btn .sd-chip .sd-tag .sd-field .sd-list/.sd-item .sd-table .sd-note .sd-rule .sd-ticker .sd-dot .sd-avatar
+     8. Reveal        [data-sd-reveal]（与 core 动效同缓动，reduced-motion 下不隐藏）
+
+   规则
+     - 所有规则都门控在 html.shard-live 之下：日报导出器截图时页面不带该类（见 site/boot.js），因此导出视觉不受影响。
+     - 数值与 site/css/tokens.css 逐项相同（check-shard-style.mjs 会比对）；新增的 --sd-* 只在本文件定义。
+     - 零圆角：border-radius 只能是 0；仅 .sd-dot / .sd-avatar 允许 50%。
+     - 蓝约 60%、冷白约 30%、勃艮第红 ≤10% 且只当“刃”（角标、关键按钮、强调线、悬停描边、焦点底色）。
+     - 红字只放白/冷白底；蓝字不放红底；红不做蓝底上的小字。
+   ========================================================================== */
+
+/* 1. Tokens ---------------------------------------------------------------- */
+html.shard-live {
+  --sh-klein-500: #0537B4;
+  --sh-klein-700: #0C2B92;
+  --sh-klein-900: #0A1D6C;
+  --sh-klein-950: #0D1850;
+  --sh-white: #F4F6FF;
+  --sh-ink: #08060A;
+  --sh-burgundy: #90072A;
+  --sh-burgundy-deep: #7A1022;
+
+  --font-display: "Anton", Impact, "Arial Narrow Bold", sans-serif;
+  --font-cn: "Noto Sans SC", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-wipe: cubic-bezier(.7, 0, .2, 1);
+  --cut: 14px;
+
+  --sd-top-h: 84px;      /* 固定页首占位高度 */
+  --sd-gap: 24px;        /* 组件间默认间距 */
+  --sd-cut: var(--cut);  /* 组件切角（可在局部覆盖：.sd-cut-lg 为 24px） */
+  --sd-wrap: 1100px;     /* 内容最大宽度 */
+}
+html.shard-live[data-theme="day"] {
+  color-scheme: light;
+  --bg: var(--sh-white);
+  --fg: var(--sh-klein-500);
+  --surface: var(--sh-klein-500);
+  --on-surface: var(--sh-white);
+  --blade: var(--sh-burgundy);
+  --focus-ring: var(--sh-burgundy);
+  --edge: var(--sh-klein-950);
+  --muted: #3a4f9a;
+
+  --sd-panel: #FFFFFF;       /* 卡片/表单底：纯白，与冷白页面底拉开层次 */
+  --sd-text: var(--sh-klein-950);
+  --sd-line: #C3CCEE;        /* 卡片内分隔线、输入框描边 */
+  --sd-hero: var(--sh-klein-500);
+  --sd-hero-shard: var(--sh-klein-700);
+  --sd-foot: var(--sh-klein-500);
+}
+html.shard-live[data-theme="night"] {
+  color-scheme: dark;
+  --bg: var(--sh-klein-950);
+  --fg: var(--sh-white);
+  --surface: var(--sh-klein-900);
+  --on-surface: var(--sh-white);
+  --blade: var(--sh-burgundy);
+  --focus-ring: var(--sh-white);
+  --edge: var(--sh-white);
+  --muted: #b9c4ee;
+
+  --sd-panel: var(--sh-klein-900);
+  --sd-text: var(--sh-white);
+  --sd-line: #2C3FA0;
+  --sd-hero: var(--sh-klein-900);
+  --sd-hero-shard: var(--sh-klein-700);
+  --sd-foot: var(--sh-klein-900);
+}
+
+/* 2. Font ------------------------------------------------------------------ */
+@font-face {
+  font-family: "Anton";
+  src: url("../../assets/fonts/anton-latin.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+/* 3. Base ------------------------------------------------------------------ */
+html.shard-live { -webkit-text-size-adjust: 100%; overflow-x: clip; background: var(--bg); }
+html.shard-live *, html.shard-live *::before, html.shard-live *::after { box-sizing: border-box; }
+html.shard-live [hidden] { display: none !important; }
+html.shard-live body {
+  margin: 0; min-height: 100vh; overflow-x: clip;
+  background: var(--bg); color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .6s var(--ease-wipe), color .6s var(--ease-wipe);
+}
+html.shard-live a { color: inherit; }
+html.shard-live :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+html.shard-live ::selection { background: var(--sh-burgundy); color: var(--sh-white); }
+html.shard-live .sd-sr { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+html.shard-live .sd-ic { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; flex: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.shard-live *, html.shard-live *::before, html.shard-live *::after {
+    animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important;
+  }
+}
+@media (forced-colors: active) {
+  html.shard-live :focus-visible { outline-color: Highlight; }
+  html.shard-live .sd-act, html.shard-live .sd-btn, html.shard-live .sd-chip, html.shard-live .sd-corner, html.shard-live .sd-plate { border: 1px solid CanvasText; }
+}
+
+/* 4. Cut tools ------------------------------------------------------------- */
+/* 容器内含需要完整可见的外描边/溢出内容（例如 Turnstile 挂载点）时，不要对该容器加 clip-path。 */
+html.shard-live .sd-cut-br { clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%); }
+html.shard-live .sd-cut-tl-br { clip-path: polygon(var(--sd-cut) 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%, 0 var(--sd-cut)); }
+html.shard-live .sd-cut-tr-bl { clip-path: polygon(0 0, calc(100% - var(--sd-cut)) 0, 100% var(--sd-cut), 100% 100%, var(--sd-cut) 100%, 0 calc(100% - var(--sd-cut))); }
+html.shard-live .sd-cut-slash { clip-path: polygon(0 0, 100% 0, calc(100% - var(--sd-cut)) 100%, 0 100%); }
+html.shard-live .sd-cut-slash-l { clip-path: polygon(var(--sd-cut) 0, 100% 0, 100% 100%, 0 100%); }
+html.shard-live .sd-cut-lg { --sd-cut: 24px; }
+html.shard-live .sd-cut-sm { --sd-cut: 8px; }
+
+/* 5. Shell ----------------------------------------------------------------- */
+html.shard-live .sd-skip {
+  position: fixed; left: 12px; top: -80px; z-index: 1000; padding: 12px 18px;
+  background: var(--sh-white); color: var(--sh-klein-500); font-weight: 700; text-decoration: none;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: top .2s var(--ease-out);
+}
+html.shard-live .sd-skip:focus { top: 12px; outline: 3px solid var(--sh-burgundy); outline-offset: -6px; }
+html.shard-live .sd-top {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; pointer-events: none;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: 10px;
+  padding: max(14px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) 0 max(14px, env(safe-area-inset-left));
+}
+html.shard-live .sd-top > * { pointer-events: auto; }
+html.shard-live .sd-corner {
+  display: grid; place-items: center; width: 62px; height: 62px; background: var(--sh-white) url("../../brand-assets/springhues-logo.png") center / 35px 43px no-repeat;
+  box-shadow: inset 0 0 0 2px var(--sh-klein-500); text-decoration: none;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+  transition: transform .3s var(--ease-out);
+}
+html.shard-live .sd-corner:focus-visible { outline: 3px solid var(--sh-burgundy); outline-offset: -6px; transform: scale(1.06); }
+html.shard-live .sd-title {
+  justify-self: center; align-self: start; display: inline-flex; align-items: center; gap: 12px; max-width: 100%; min-height: 48px; margin-top: 7px; padding: 0 30px 0 26px;
+  background: var(--sh-klein-950); color: var(--sh-white); pointer-events: none; position: relative;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 14px 100%);
+}
+html.shard-live .sd-title::before { content: ""; position: absolute; left: 14px; right: 14px; bottom: 0; height: 3px; background: var(--blade); }
+html.shard-live .sd-title b { font: 900 16px/1.2 var(--font-cn); letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html.shard-live .sd-title i { font: 400 14px/1 var(--font-display); font-style: normal; letter-spacing: .14em; opacity: .85; white-space: nowrap; }
+html.shard-live .sd-actions { display: flex; gap: 6px; }
+html.shard-live .sd-act {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 48px; height: 48px; padding: 0 13px;
+  background: var(--sh-klein-500); color: var(--sh-white); border: 0; font: inherit; cursor: pointer;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: transform .25s var(--ease-out), background-color .2s;
+}
+html.shard-live .sd-act:nth-child(2) { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
+html.shard-live .sd-act:hover { background: var(--sh-klein-700); transform: translateY(-2px) scale(1.04); }
+html.shard-live .sd-act:active { transform: scale(.94); background: var(--sh-burgundy); }
+html.shard-live .sd-act:focus-visible { outline: 0; background: var(--sh-burgundy); transform: scale(1.08); }
+html.shard-live .sd-act { box-shadow: inset 0 0 0 2px var(--sh-white); }
+html.shard-live .sd-act:focus-visible { box-shadow: none; }
+html.shard-live[data-theme="night"] .sd-act:focus-visible { background: var(--sh-white); color: var(--sh-klein-500); }
+html.shard-live .sd-ic-moon { display: none; }
+html.shard-live[data-theme="night"] .sd-ic-sun { display: none; }
+html.shard-live[data-theme="night"] .sd-ic-moon { display: block; }
+/* 全屏菜单 */
+html.shard-live .sd-menu {
+  position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: var(--sh-klein-500); color: var(--sh-white); overflow: auto;
+}
+html.shard-live .sd-menu::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: var(--sh-klein-700); clip-path: polygon(62% 0, 78% 0, 54% 100%, 38% 100%); }
+html.shard-live .sd-menu::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: var(--sh-klein-950); clip-path: polygon(84% 0, 88% 0, 64% 100%, 60% 100%); }
+html.shard-live .sd-menu-nav { position: relative; z-index: 1; display: grid; gap: 4px; width: min(920px, 92vw); padding: 80px 0; }
+html.shard-live .sd-menu-nav a {
+  position: relative; display: flex; align-items: baseline; gap: 20px; padding: 8px 24px; text-decoration: none; overflow: hidden; isolation: isolate;
+  transition: transform .4s var(--ease-out), color .2s;
+}
+html.shard-live .sd-menu-nav a::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; background: var(--sh-white);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 28px) 100%, 0 100%); transform: translateX(-101%); transition: transform .45s var(--ease-wipe);
+}
+html.shard-live .sd-menu-nav a:hover, html.shard-live .sd-menu-nav a:focus-visible { color: var(--sh-klein-500); transform: translateX(14px); outline: 0; }
+html.shard-live .sd-menu-nav a:hover::before, html.shard-live .sd-menu-nav a:focus-visible::before { transform: none; }
+html.shard-live .sd-menu-nav a:focus-visible::after, html.shard-live .sd-menu-nav a[aria-current="page"]::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--sh-burgundy); }
+html.shard-live .sd-menu-nav .no { font: 400 18px/1 var(--font-display); opacity: .8; letter-spacing: .1em; }
+html.shard-live .sd-menu-nav .cn { font: 900 clamp(30px, 6vw, 64px)/1.15 var(--font-cn); letter-spacing: .06em; }
+html.shard-live .sd-menu-nav .en { margin-left: auto; font: 400 clamp(14px, 2vw, 24px)/1 var(--font-display); letter-spacing: .12em; opacity: .8; }
+html.shard-live .sd-menu-close {
+  position: absolute; z-index: 2; top: max(14px, env(safe-area-inset-top)); right: max(14px, env(safe-area-inset-right));
+  width: 48px; height: 48px; display: grid; place-items: center; border: 0; background: var(--sh-white); color: var(--sh-klein-500); cursor: pointer;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px); transition: transform .25s var(--ease-out), background-color .2s, color .2s;
+}
+html.shard-live .sd-menu-close:hover { transform: rotate(90deg) scale(1.06); }
+html.shard-live .sd-menu-close:focus-visible { outline: 0; background: var(--sh-burgundy); color: var(--sh-white); }
+html.shard-live .sd-menu :focus-visible { outline-color: var(--sh-white); }
+/* 页脚：斜切顶边的蓝带 */
+html.shard-live .sd-foot {
+  position: relative; margin-top: 64px; padding: 56px max(20px, env(safe-area-inset-right)) max(26px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background: var(--sd-foot); color: var(--sh-white); clip-path: polygon(0 36px, 100% 0, 100% 100%, 0 100%);
+}
+html.shard-live .sd-foot::before { content: ""; position: absolute; left: 0; width: min(220px, 40%); top: 18px; height: 4px; background: var(--blade); transform-origin: left; transform: skewY(-1.8deg); }
+html.shard-live .sd-foot-inner { max-width: var(--sd-wrap); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 28px; }
+html.shard-live .sd-foot nav { display: flex; flex-wrap: wrap; gap: 8px; }
+html.shard-live .sd-foot nav a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px 0 18px; background: var(--sh-klein-700); color: var(--sh-white); font-weight: 700; text-decoration: none;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%); transition: background-color .2s, transform .25s var(--ease-out);
+}
+html.shard-live .sd-foot nav a:hover { background: var(--sh-white); color: var(--sh-klein-500); transform: translateY(-2px); }
+html.shard-live .sd-foot nav a[aria-current="page"] { box-shadow: inset 4px 0 0 var(--sh-burgundy); }
+html.shard-live .sd-foot nav a:focus-visible { outline: 3px solid var(--sh-white); outline-offset: -6px; background: var(--sh-burgundy); }
+html.shard-live .sd-foot p { margin: 0; font: 400 14px/1.6 var(--font-cn); opacity: .9; }
+
+/* 6. Layout ---------------------------------------------------------------- */
+html.shard-live .sd-page { display: block; color: var(--fg); font: 400 16px/1.7 var(--font-cn); }
+html.shard-live .sd-page:focus { outline: none; }
+html.shard-live .sd-wrap { width: min(var(--sd-wrap), 100% - 2 * clamp(16px, 4vw, 40px)); margin-inline: auto; }
+html.shard-live .sd-hero {
+  position: relative; isolation: isolate; padding: calc(var(--sd-top-h) + 36px) 0 96px; background: var(--sd-hero); color: var(--sh-white);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 56px), 0 100%);
+}
+html.shard-live .sd-hero::before { content: ""; position: absolute; z-index: -1; inset: 0 0 0 auto; width: 38%; background: var(--sd-hero-shard); clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%); }
+html.shard-live .sd-hero::after { content: ""; position: absolute; z-index: -1; right: 12%; top: 0; width: 9%; height: 100%; background: var(--sh-klein-950); opacity: .55; clip-path: polygon(40% 0, 100% 0, 60% 100%, 0 100%); }
+html.shard-live .sd-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 14px; font: 400 15px/1 var(--font-display); letter-spacing: .22em; text-transform: uppercase; }
+html.shard-live .sd-eyebrow::before { content: ""; width: 34px; height: 4px; background: var(--blade); flex: none; }
+html.shard-live .sd-h1 { margin: 0; display: grid; gap: 4px; }
+html.shard-live .sd-h1 .en { font: 400 clamp(46px, 11vw, 132px)/.95 var(--font-display); letter-spacing: .02em; text-transform: uppercase; }
+html.shard-live .sd-h1 .cn { font: 900 clamp(26px, 5vw, 52px)/1.25 var(--font-cn); letter-spacing: .06em; }
+html.shard-live .sd-lead { max-width: 40em; margin: 22px 0 0; font-size: clamp(15px, 1.6vw, 18px); line-height: 1.9; opacity: .95; }
+html.shard-live .sd-h2 { margin: 0 0 14px; font: 900 clamp(22px, 3vw, 30px)/1.35 var(--font-cn); letter-spacing: .04em; color: var(--sd-text); }
+html.shard-live .sd-h2 .en { display: block; margin-top: 2px; font: 400 14px/1 var(--font-display); letter-spacing: .2em; color: var(--muted); }
+html.shard-live .sd-section { padding: 36px 0; }
+
+/* 7. Components ------------------------------------------------------------ */
+/* 卡片外框：纯白（夜间深蓝）底，切角；.sd-plate--blade 在左缘加一条红刃。 */
+html.shard-live .sd-plate {
+  position: relative; padding: clamp(20px, 3vw, 34px); background: var(--sd-panel); color: var(--sd-text);
+  box-shadow: inset 0 0 0 2px var(--sd-line);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%);
+}
+html.shard-live .sd-plate--blade::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--blade); }
+/* 内含 Turnstile 等不能被裁切的子元素时用 --layer：背景与切角画在 ::before 上，容器本身不设 clip-path / overflow。 */
+html.shard-live .sd-plate--layer { background: none; box-shadow: none; clip-path: none; isolation: isolate; }
+html.shard-live .sd-plate--layer::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; background: var(--sd-panel); box-shadow: inset 0 0 0 2px var(--sd-line);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%);
+}
+html.shard-live .sd-plate--top { border-top: 6px solid var(--sh-klein-500); }
+html.shard-live[data-theme="night"] .sd-plate--top { border-top-color: var(--sh-white); }
+html.shard-live .sd-btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 0 26px; border: 0;
+  background: var(--sh-klein-500); color: var(--sh-white); font: 800 15px/1.2 var(--font-cn); letter-spacing: .06em; text-decoration: none; cursor: pointer;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: transform .25s var(--ease-out), background-color .2s;
+}
+html.shard-live[data-theme="night"] .sd-btn { box-shadow: inset 0 0 0 2px var(--sh-white); }
+html.shard-live .sd-btn:hover { background: var(--sh-klein-700); transform: translateY(-2px); }
+html.shard-live .sd-btn:active { transform: scale(.97); }
+html.shard-live .sd-btn:focus-visible { outline: 3px solid var(--sh-white); outline-offset: -6px; background: var(--sh-burgundy); }
+html.shard-live .sd-btn--blade { background: var(--sh-burgundy); }
+html.shard-live .sd-btn--blade:hover { background: var(--sh-burgundy-deep); }
+html.shard-live .sd-btn--blade:focus-visible { background: var(--sh-klein-950); }
+html.shard-live .sd-btn:disabled, html.shard-live .sd-btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; transform: none; }
+html.shard-live .sd-chip {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px 0 20px; border: 0; background: transparent; color: var(--sd-text); font: 700 14px/1 var(--font-cn); cursor: pointer;
+  box-shadow: inset 0 0 0 2px var(--sh-klein-500); clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  transition: background-color .2s, color .2s;
+}
+html.shard-live[data-theme="night"] .sd-chip { color: var(--sh-white); box-shadow: inset 0 0 0 2px var(--sh-white); }
+html.shard-live .sd-chip:hover { background: var(--sh-klein-500); color: var(--sh-white); }
+html.shard-live .sd-chip[aria-pressed="true"], html.shard-live .sd-chip[aria-current="true"] { background: var(--sh-klein-500); color: var(--sh-white); box-shadow: inset 5px 0 0 var(--sh-burgundy); }
+html.shard-live .sd-chip:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: -6px; }
+html.shard-live .sd-tag { display: inline-block; padding: 2px 10px 2px 8px; background: var(--sh-klein-500); color: var(--sh-white); font: 700 12px/1.6 var(--font-cn); letter-spacing: .08em; clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+html.shard-live .sd-tag--new { background: var(--sh-burgundy); }
+/* 标签文字在左、提示/计数 span 在右（同一行），控件独占下一行 */
+html.shard-live .sd-field { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 8px 12px; color: var(--sd-text); font-weight: 700; font-size: 15px; }
+html.shard-live .sd-field > span { justify-self: end; color: var(--muted); font-size: 13px; font-weight: 400; }
+html.shard-live .sd-field > .sd-input { grid-column: 1 / -1; }
+html.shard-live .sd-input {
+  display: block; width: 100%; min-height: 48px; padding: 11px 14px; border: 2px solid var(--sh-klein-500); border-left-width: 6px; border-radius: 0; resize: vertical;
+  background: var(--sd-panel); color: var(--sd-text); font: 400 16px/1.7 var(--font-cn);
+}
+html.shard-live[data-theme="night"] .sd-input { border-color: var(--sh-white); }
+html.shard-live .sd-input::placeholder { color: var(--muted); }
+html.shard-live .sd-input:hover { background: var(--bg); }
+html.shard-live .sd-input:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; border-left-color: var(--blade); }
+html.shard-live .sd-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+html.shard-live .sd-item {
+  position: relative; min-width: 0; padding: 20px 22px 20px 26px; background: var(--sd-panel); color: var(--sd-text); box-shadow: inset 0 0 0 2px var(--sd-line);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+}
+html.shard-live .sd-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--sh-klein-500); transition: background-color .2s; }
+html.shard-live[data-theme="night"] .sd-item::before { background: var(--sh-white); }
+html.shard-live .sd-item:hover::before { background: var(--blade); }
+html.shard-live .sd-table { width: 100%; border-collapse: collapse; color: var(--sd-text); }
+html.shard-live .sd-table th, html.shard-live .sd-table td { padding: 12px 14px; text-align: left; border-bottom: 2px solid var(--sd-line); }
+html.shard-live .sd-table th { background: var(--sh-klein-500); color: var(--sh-white); font-weight: 800; letter-spacing: .06em; border-bottom: 0; }
+html.shard-live .sd-note { position: relative; margin: 0; padding: 12px 16px 12px 22px; background: var(--sd-panel); color: var(--sd-text); font-size: 15px; box-shadow: inset 0 0 0 2px var(--sd-line); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%); }
+html.shard-live .sd-note::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--sh-klein-500); }
+html.shard-live .sd-note[data-state="error"]::before { background: var(--blade); }
+html.shard-live .sd-note[data-state="success"]::before { background: var(--sh-klein-700); }
+html.shard-live[data-theme="night"] .sd-note::before { background: var(--sh-white); }
+html.shard-live[data-theme="night"] .sd-note[data-state="error"]::before { background: var(--blade); }
+html.shard-live .sd-note:empty { display: none; }
+html.shard-live .sd-rule { height: 22px; margin: 36px 0; background: var(--sh-klein-500); clip-path: polygon(0 0, 100% 0, calc(100% - 28px) 100%, 0 100%); position: relative; }
+html.shard-live .sd-rule::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 18%; background: var(--blade); clip-path: polygon(0 0, 100% 0, calc(100% - 22px) 100%, 0 100%); }
+html.shard-live .sd-ticker { overflow: hidden; background: var(--sh-klein-500); color: var(--sh-white); padding: 10px 0; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10px)); }
+html.shard-live .sd-ticker > div { display: flex; width: max-content; font: 400 clamp(22px, 4vw, 44px)/1 var(--font-display); letter-spacing: .08em; white-space: nowrap; animation: sd-marquee 28s linear infinite; }
+html.shard-live .sd-ticker span { padding-right: .6em; }
+@keyframes sd-marquee { to { transform: translateX(-33.3333%); } }
+html.shard-live .sd-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--blade); }
+html.shard-live .sd-avatar { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--sh-klein-500); color: var(--sh-white); font-weight: 800; }
+
+/* 8. Reveal ---------------------------------------------------------------- */
+/* html.sd-reveal 由 boot.js 在非 reduced-motion 时添加；shell.js 逐个添加 .is-in 并用 WAAPI 播放。
+   纯 CSS 兜底：2.4s 后无论脚本是否成功都显示，内容不会被永久隐藏。 */
+html.shard-live.sd-reveal [data-sd-reveal]:not(.is-in) { opacity: 0; transform: translateY(18px); animation: sd-reveal-failsafe .01s linear 2.4s forwards; }
+@keyframes sd-reveal-failsafe { to { opacity: 1; transform: none; } }
+
+/* Responsive：断点 1099 / 699 与首页一致 */
+@media (max-width: 1099px) {
+  html.shard-live .sd-hero { padding-bottom: 80px; }
+}
+@media (max-width: 699px) {
+  html.shard-live { --sd-top-h: 76px; }
+  html.shard-live .sd-corner { width: 54px; height: 54px; background-size: 30px 37px; }
+  html.shard-live .sd-act { min-width: 46px; height: 46px; padding: 0 11px; }
+  html.shard-live .sd-title { min-height: 44px; padding: 0 22px 0 18px; }
+  html.shard-live .sd-title i { display: none; }
+  html.shard-live .sd-title b { font-size: 14px; }
+  html.shard-live .sd-hero { padding-bottom: 72px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0 100%); }
+  html.shard-live .sd-hero::before { width: 52%; }
+  html.shard-live .sd-menu-nav a { padding: 6px 16px; gap: 14px; }
+  html.shard-live .sd-foot { clip-path: polygon(0 24px, 100% 0, 100% 100%, 0 100%); padding-top: 44px; }
+}

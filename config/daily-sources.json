@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "sourcePolicyVersion": 2,
+  "terminalStatuses": ["accepted", "rejected", "exhausted", "unavailable"],
+  "minimumUnavailableAttempts": 2,
+  "sources": {
+    "xinhua": { "label": "新华网", "aliases": ["新华社", "新华社／新华网", "新华网科技"] },
+    "people": { "label": "人民网", "aliases": ["人民日报", "人民日报／人民网", "人民网科技"] },
+    "cctv": { "label": "央视网", "aliases": ["央视新闻", "央视新闻／央视网", "央视网科技"] },
+    "chinanews": { "label": "中国新闻网", "aliases": ["中国新闻网科技"] },
+    "cnr": { "label": "央广网", "aliases": [] },
+    "gmw": { "label": "光明网", "aliases": [] },
+    "ce": { "label": "中国经济网", "aliases": [] },
+    "chinaorg": { "label": "中国网", "aliases": [] },
+    "chinadaily-cn": { "label": "中国日报中文网", "aliases": ["中国日报网中文网"] },
+    "cri": { "label": "国际在线", "aliases": [] },
+    "provincial-authority": { "label": "省级党媒／政府新闻发布平台", "aliases": ["省级党媒/政府新闻发布平台"] },
+    "stdaily": { "label": "中国科技网", "aliases": ["科技日报", "科技日报／中国科技网"] },
+    "sciencenet": { "label": "科学网", "aliases": ["中国科学报"] },
+    "official-market": { "label": "国内官方机构或交易所", "aliases": ["国内官方机构及交易所"] },
+    "china-finance-media": { "label": "国内权威财经媒体", "aliases": [] },
+    "china-game-media": { "label": "国内游戏媒体", "aliases": ["中国游戏媒体"] },
+    "china-game-official": { "label": "中国大陆官方游戏渠道", "aliases": ["国内官方游戏渠道", "游戏在中国大陆的官方账号或公告渠道"] },
+    "china-player-forum": { "label": "国内玩家论坛", "aliases": [] },
+    "china-video-platform": { "label": "国内视频网站", "aliases": [] },
+    "china-minecraft-site": { "label": "中国Minecraft网站", "aliases": ["国内Minecraft网站", "中国 Minecraft 网站"] },
+    "china-minecraft-mod-site": { "label": "中国Minecraft Mod网站", "aliases": ["国内Minecraft Mod网站", "中国的 Minecraft Mod 网站"] },
+    "steam-cn": { "label": "Steam国区", "aliases": ["Steam", "Steam国区实时页面"] },
+    "steam-price-history": { "label": "Steam价格历史核验", "aliases": ["SteamDB", "价格历史"] },
+    "external-news-authority": { "label": "外网权威新闻／机构来源", "aliases": ["Reuters", "AP", "AFP", "BBC", "联合国", "国际组织／外媒"] },
+    "external-primary-technology": { "label": "外网原始科技／AI来源", "aliases": ["论文／科研机构／公司官网"] },
+    "external-market": { "label": "境外交易所／数据服务", "aliases": [] }
+  },
+  "requirements": {
+    "minsheng": {
+      "domestic": ["xinhua", "people", "cctv", "chinanews", "cnr", "gmw", "ce", "chinaorg", "chinadaily-cn", "cri", "provincial-authority"],
+      "international": ["xinhua", "people", "cctv", "chinanews", "cnr", "gmw", "ce", "chinaorg", "chinadaily-cn", "cri"],
+      "tech": ["stdaily", "xinhua", "people", "cctv", "chinanews", "gmw", "cnr", "ce"],
+      "ai": ["stdaily", "xinhua", "people", "cctv", "chinanews", "gmw", "cnr", "ce"],
+      "metrics": ["official-market", "china-finance-media"]
+    },
+    "game": {
+      "features": ["china-game-media", "china-game-official", "china-player-forum", "china-video-platform", "china-minecraft-site"],
+      "news": ["china-game-media", "china-game-official", "china-player-forum", "china-video-platform"],
+      "packs": ["china-minecraft-site", "china-player-forum", "china-video-platform"],
+      "mods": ["china-minecraft-mod-site"],
+      "deals": ["steam-cn", "steam-price-history"],
+      "trends": ["china-game-media", "china-minecraft-site", "steam-cn"]
+    }
+  },
+  "optionalRequirements": {
+    "minsheng": {
+      "domestic": ["external-news-authority"],
+      "international": ["external-news-authority"],
+      "tech": ["sciencenet", "external-news-authority", "external-primary-technology"],
+      "ai": ["external-news-authority", "external-primary-technology"],
+      "metrics": ["external-market"]
+    }
+  }
+}

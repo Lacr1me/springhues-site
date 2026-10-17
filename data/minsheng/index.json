@@ -1,0 +1,63 @@
+{
+  "timezone": "Asia/Shanghai",
+  "generateAt": "09:30",
+  "publishAt": "11:00",
+  "editions": [
+    {
+      "date": "2026-10-17",
+      "issue": 57,
+      "publishAt": "2026-10-17T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "六部门启动城镇供热温暖工程三年行动",
+      "file": "data/minsheng/2026-10-17.json"
+    },
+    {
+      "date": "2026-10-16",
+      "issue": 56,
+      "publishAt": "2026-10-16T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "四部门公布纸尿裤甲酰胺问题调查结果",
+      "file": "data/minsheng/2026-10-16.json"
+    },
+    {
+      "date": "2026-10-15",
+      "issue": 55,
+      "publishAt": "2026-10-15T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "9月份居民消费价格同比上涨0.9%",
+      "file": "data/minsheng/2026-10-15.json"
+    },
+    {
+      "date": "2026-10-14",
+      "issue": 54,
+      "publishAt": "2026-10-14T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "2027年国考报名新增实名实人认证",
+      "file": "data/minsheng/2026-10-14.json"
+    },
+    {
+      "date": "2026-10-13",
+      "issue": 53,
+      "publishAt": "2026-10-13T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "中小学校教室采光照明新国标11月1日起实施",
+      "file": "data/minsheng/2026-10-13.json"
+    },
+    {
+      "date": "2026-10-12",
+      "issue": 52,
+      "publishAt": "2026-10-12T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "新皇岗口岸12日6时30分开通，提供24小时通关",
+      "file": "data/minsheng/2026-10-12.json"
+    },
+    {
+      "date": "2026-10-11",
+      "issue": 51,
+      "publishAt": "2026-10-11T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "食品安全法修订草案公开征求意见",
+      "file": "data/minsheng/2026-10-11.json"
+    }
+  ]
+}

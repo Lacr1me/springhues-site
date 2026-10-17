@@ -1,0 +1,23 @@
+/* 碎片擦除层 + 页面到达遮罩。首页与子页面共用；由 core/wipe.js、core/page-transition.js 驱动。
+   依赖 --sh-* / --bg（首页来自 tokens.css，子页面来自 shard-theme.css）。 */
+.wipe { position: fixed; inset: 0; z-index: 950; pointer-events: none; overflow: hidden; }
+.wipe i { position: absolute; inset: 0; display: block; clip-path: polygon(-60% 0, -36% 0, -60% 100%, -84% 100%); will-change: clip-path; }
+.wipe i.w-red { background: var(--sh-burgundy); }
+.wipe i.w-blue { background: var(--sh-klein-500); }
+.wipe i.w-white { background: var(--sh-white); }
+.wipe.is-calm i { clip-path: none; opacity: 0; }
+/* 到达遮罩：由内联脚本 / boot.js 在首帧前加 html.shard-arrive；脚本就绪后由 playArrival() 擦出。
+   纯 CSS 兜底：脚本失败时 1.6s 后自行淡出，页面永远不会被它卡住。 */
+html.shard-arrive::before {
+  content: ""; position: fixed; inset: 0; z-index: 940; background: var(--bg, #F4F6FF); pointer-events: none;
+  animation: shard-arrive-out .24s linear 1.6s forwards;
+}
+/* 从站内其它页面到达的首页不再重播加载器（shard-arrival 整页保留，shard-arrive 在擦出时移除） */
+html.shard-arrival .loader { display: none !important; }
+@keyframes shard-arrive-out { to { opacity: 0; visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { html.shard-arrive::before { display: none; } }
+/* 跨文档 View Transition：整站不使用（切页动画由本文件的碎片擦屏负责）。
+   首页和子页面都不声明 @view-transition；日报页因 brand.css（被导出消费，不可改）声明了 navigation:auto，
+   由 pages-daily.css 在其后用 navigation:none 覆盖。只要有一端声明另一端没有，Chrome 就会在导航时抛
+   'Transition was aborted because of invalid state / ViewTransition opt-in disabled'（实测还会因样式表加载时序偶发）。
+   首页自己的详情开合用的是同文档 startViewTransition，不受影响。 */

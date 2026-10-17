@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#F4F6FF">
+  <meta name="description" content="Springhues 的个人作品站：软件、网页、游戏与每日简报">
+  <title>Springhues · 切开颜色，留下作品</title>
+  <link rel="icon" href="brand-assets/springhues-logo.png" type="image/png">
+  <link rel="canonical" href="https://springhues.com/">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/anton-latin.woff2">
+  <link rel="preload" as="image" type="image/webp" media="not (max-aspect-ratio: 9/10)" imagesrcset="assets/hero/web/hero-960.webp 960w, assets/hero/web/hero-1600.webp 1600w, assets/hero/web/hero-2560.webp 2560w" imagesizes="max(100vw, 178vh)">
+  <link rel="preload" as="image" type="image/webp" media="(max-aspect-ratio: 9/10)" imagesrcset="assets/hero/web/hero-p-720.webp 720w, assets/hero/web/hero-p-1080.webp 1080w, assets/hero/web/hero-p-1638.webp 1638w" imagesizes="150vw">
+  <script>
+    /* 首帧前只做三件事：主题、开场模式、8 秒看门狗。与模块图无关，模块失败时仍能兜底。 */
+    (function () {
+      var d = document.documentElement, theme = null, seen = null, at = 0;
+      try { theme = localStorage.getItem('springhues.home.theme'); } catch (e) {}
+      if (theme !== 'day' && theme !== 'night') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+      d.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'night' ? '#0D1850' : '#F4F6FF');
+      try { seen = sessionStorage.getItem('springhues.home.introSeen'); } catch (e) {}
+      try { at = Number(localStorage.getItem('springhues.home.introAt')) || 0; } catch (e) {}
+      var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var mode = reduced ? 'calm' : (/^#work=/.test(location.hash) || seen) ? 'skip' : (at && Date.now() - at < 6048e5) ? 'short' : 'full';
+      /* 从站内子页面经擦屏过渡到达：同源 referrer + 导航类型为 navigate + 非 reduced-motion。不重播开场，由 playArrival() 擦出。 */
+      try {
+        var nav = performance.getEntriesByType('navigation')[0], ref = document.referrer && new URL(document.referrer);
+        if (!reduced && ref && ref.origin === location.origin && nav && nav.type === 'navigate') { d.classList.add('shard-arrive', 'shard-arrival'); mode = 'skip'; }
+      } catch (e) {}
+      d.setAttribute('data-intro', mode);
+      d.classList.add('is-loading');
+      setTimeout(function () {
+        var c = d.classList;
+        if (c.contains('is-loading')) {
+          c.add('js-failed');
+          Array.prototype.forEach.call(document.querySelectorAll('[inert]'), function (n) { n.removeAttribute('inert'); });
+        }
+      }, 8000);
+    })();
+  </script>
+  <link rel="stylesheet" href="site/css/tokens.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/hero-lqip.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/base.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/loader.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/chrome.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/hero.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/wall.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/carriers.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/detail.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/about.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/effects.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/wipe.css?v=20261018-shard-v4">
+  <script defer src="portal-data.js?v=20261017-shard-v1"></script>
+  <script type="module" src="site/js/main.js?v=20261018-shard-v4" onerror="document.documentElement.classList.add('js-failed')"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h12M3 17h18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a3 3 0 0 1-3 3H8l-5 4V5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3zM7 8h10M7 12h7"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v16h-6a3 3 0 0 0-3 2 3 3 0 0 0-3-2H3z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M5.6 18.4 18.4 5.6"/></symbol>
+  </svg>
+
+  <!-- 开场加载器：仅 html.is-loading 时显示；无 JS 时内联脚本不会运行，因此不会出现。 -->
+  <div class="loader" id="loader">
+    <button class="loader-skip" id="loaderSkip" type="button" data-cursor="skip">跳过 <span aria-hidden="true">SKIP</span></button>
+    <div class="loader-word" id="loaderWord" aria-hidden="true">SPRINGHUES</div>
+    <div class="loader-count" aria-hidden="true"><span id="loaderNum">000</span><i>%</i></div>
+    <i class="loader-blade" aria-hidden="true"></i>
+  </div>
+
+  <header class="chrome" id="chrome">
+    <a class="corner corner-logo" href="./" aria-label="Springhues 首页" data-magnetic>
+      <img src="brand-assets/springhues-logo.png" alt="" width="35" height="43">
+    </a>
+    <div class="corner corner-actions" role="group" aria-label="快捷操作">
+      <button class="act" id="btnSearch" type="button" aria-haspopup="dialog" aria-controls="palette" aria-label="搜索作品与页面（Ctrl K）" data-magnetic data-cursor="open">
+        <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><kbd aria-hidden="true">Ctrl K</kbd>
+      </button>
+      <button class="act" id="btnTheme" type="button" aria-label="切换昼夜主题" data-magnetic>
+        <svg class="ic ic-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="ic ic-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="act act-menu" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu" aria-label="打开菜单" data-magnetic>
+        <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+    <div class="corner corner-index" aria-live="polite"><span class="sr-only">当前章节</span><b id="secNow">01</b><span aria-hidden="true"> / 03</span><span class="sr-only">，共三节</span></div>
+    <div class="corner corner-progress" id="progress" role="progressbar" aria-label="页面滚动进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="progressBar"></i><b id="progressNum" aria-hidden="true">0%</b></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" aria-label="首屏" data-section="1">
+      <div class="hero-inner" id="heroInner">
+        <div class="hero-stage" id="heroStage">
+          <picture>
+            <source media="(max-aspect-ratio: 9/10)" type="image/webp" srcset="assets/hero/web/hero-p-720.webp 720w, assets/hero/web/hero-p-1080.webp 1080w, assets/hero/web/hero-p-1638.webp 1638w" sizes="150vw">
+            <source media="(max-aspect-ratio: 9/10)" type="image/jpeg" srcset="assets/hero/web/hero-p-720.jpg 720w, assets/hero/web/hero-p-1080.jpg 1080w, assets/hero/web/hero-p-1638.jpg 1638w" sizes="150vw">
+            <source type="image/webp" srcset="assets/hero/web/hero-960.webp 960w, assets/hero/web/hero-1600.webp 1600w, assets/hero/web/hero-2560.webp 2560w" sizes="max(100vw, 178vh)">
+            <img id="heroImg" src="assets/hero/web/hero-1600.jpg" srcset="assets/hero/web/hero-960.jpg 960w, assets/hero/web/hero-1600.jpg 1600w, assets/hero/web/hero-2560.jpg 2560w" sizes="max(100vw, 178vh)" width="1600" height="913" alt="蓝、白、红三色插画：一个人躺在布料褶皱之间，用一本书盖住脸" fetchpriority="high" decoding="async">
+          </picture>
+          <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-title-layer">
+          <h1 class="hero-title" id="heroTitle">SPRINGHUES</h1>
+          <p class="hero-sub" id="heroSub"><span>切开颜色，留下作品</span></p>
+        </div>
+        <div class="hero-occ" id="heroOcc" aria-hidden="true"></div>
+        <button class="egg-hit" id="eggHit" type="button" tabindex="-1" aria-label="十字架"></button>
+        <div class="hero-band" id="heroBand">
+          <div class="band-in">
+            <a class="scroll-cue" href="#works" data-cursor="open"><svg class="ic" aria-hidden="true"><use href="#i-down"/></svg><span>向下 <b aria-hidden="true">SCROLL</b></span></a>
+            <dl class="counters" id="counters">
+              <div><dt>作品</dt><dd data-count="works"><span class="num">—</span></dd></div>
+              <div><dt>分类</dt><dd data-count="cats"><span class="num">—</span></dd></div>
+              <div><dt>近期简报</dt><dd data-count="issues"><span class="num">—</span></dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works" aria-labelledby="worksTitle" data-section="2">
+      <div class="wall-bg" aria-hidden="true">
+        <i class="wall-slab s1"></i><i class="wall-slab s2"></i><i class="wall-slab s3"></i>
+        <span class="onomato o2">ヒュッ</span><span class="onomato o3">カッ</span>
+        <span class="tape t1">NO.00 — ARCHIVE</span>
+      </div>
+      <i class="head-slab" aria-hidden="true"></i><span class="onomato o1" aria-hidden="true">ザッ</span>
+      <div class="works-head">
+        <p class="eyebrow" aria-hidden="true"><i></i>02 — WORKS</p>
+        <h2 id="worksTitle"><span class="h-cn">作品</span><span class="h-en" aria-hidden="true">WORKS</span></h2>
+        <p class="works-lead">软件、网页、游戏资源，还有每天 11:00 更新的每日简报。做完的东西，都放在这里。</p>
+        <div class="filters" id="filters" role="group" aria-label="按分类筛选作品"></div>
+      </div>
+      <ul class="wall" id="worksWall" aria-label="作品墙"></ul>
+      <ul class="static-links" aria-label="每日简报入口">
+        <li><a id="gameLink" data-latest="game" href="game/">游戏日报</a></li>
+        <li><a id="civicLink" data-latest="minsheng" href="minsheng/">民生日报</a></li>
+      </ul>
+    </section>
+
+    <div class="band-marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee"><span>SPRINGHUES · 作品 · 简报 · SOFTWARE · WEB · GAME · DAILY · </span><span>SPRINGHUES · 作品 · 简报 · SOFTWARE · WEB · GAME · DAILY · </span><span>SPRINGHUES · 作品 · 简报 · SOFTWARE · WEB · GAME · DAILY · </span></div>
+    </div>
+
+    <section class="about" id="about" aria-labelledby="aboutTitle" data-section="3">
+      <div class="about-grid">
+        <div class="about-copy">
+          <h2 id="aboutTitle"><span class="h-cn">关于</span><span class="h-en" aria-hidden="true">ABOUT</span></h2>
+          <p>我是 Springhues，做软件、网页和游戏相关的东西，也维护一份每天 11:00 更新的每日简报。</p>
+          <p>目前的软件都以本地处理为先：解析、下载和保存在你自己的设备上完成，不需要交出平台账号和密码。</p>
+          <p>这里的颜色只有三种，克莱因蓝、勃艮第红和白，其余都是它们切出来的形状。想法、反馈或合作，都可以去留言簿说一声。</p>
+        </div>
+        <div class="about-shards" aria-hidden="true">
+          <i class="shard sh-a"></i><i class="shard sh-b"></i><i class="blade-line"></i>
+        </div>
+      </div>
+      <nav class="about-links" aria-label="站内入口">
+        <a data-latest="game" href="game/" data-magnetic data-cursor="open"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>游戏日报</a>
+        <a data-latest="minsheng" href="minsheng/" data-magnetic data-cursor="open"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>民生日报</a>
+        <a class="quick-message-link" href="messages/" data-magnetic data-cursor="open"><svg class="ic" aria-hidden="true"><use href="#i-message"/></svg>留言簿</a>
+        <a href="privacy/" data-magnetic data-cursor="open"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>隐私说明</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>© 2026 Springhues</p>
+    <button class="to-top" id="toTop" type="button" data-magnetic><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>回到顶部</button>
+  </footer>
+
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="菜单" hidden>
+    <nav class="menu-nav" aria-label="菜单">
+      <a href="#works" data-go="works"><span class="mi-no" aria-hidden="true">01</span><span class="mi-cn">作品</span><span class="mi-en" aria-hidden="true">WORKS</span></a>
+      <a href="#cat=daily" data-go="daily"><span class="mi-no" aria-hidden="true">02</span><span class="mi-cn">每日简报</span><span class="mi-en" aria-hidden="true">DAILY</span></a>
+      <a href="#about" data-go="about"><span class="mi-no" aria-hidden="true">03</span><span class="mi-cn">关于</span><span class="mi-en" aria-hidden="true">ABOUT</span></a>
+      <a href="messages/"><span class="mi-no" aria-hidden="true">04</span><span class="mi-cn">留言</span><span class="mi-en" aria-hidden="true">MESSAGE</span></a>
+      <a href="privacy/"><span class="mi-no" aria-hidden="true">05</span><span class="mi-cn">隐私</span><span class="mi-en" aria-hidden="true">PRIVACY</span></a>
+    </nav>
+    <button class="menu-close" id="menuClose" type="button" aria-label="关闭菜单"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="搜索与命令" hidden>
+    <div class="palette-box">
+      <div class="palette-input">
+        <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="paletteInput" type="text" role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list" aria-label="搜索作品、页面或命令" placeholder="搜索作品、页面或命令" autocomplete="off" spellcheck="false">
+        <kbd aria-hidden="true">Esc</kbd>
+      </div>
+      <ul class="palette-list" id="paletteList" role="listbox" aria-label="搜索结果"></ul>
+      <p class="palette-empty" id="paletteEmpty" role="status" hidden>没有匹配项</p>
+    </div>
+  </div>
+
+  <div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="detailTitle" hidden>
+    <div class="detail-scrim" data-detail-close></div>
+    <div class="detail-panel" id="detailPanel" data-lenis-prevent>
+      <div class="detail-stage" id="detailStage"></div>
+      <div class="detail-body" id="detailBody"></div>
+      <button class="detail-close" id="detailClose" type="button" aria-label="关闭详情"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="noscript">当前浏览器未启用 JavaScript，作品墙与动效不可用。游戏日报、民生日报和留言簿的入口在页面下方，可以直接点击。</p>
+  </noscript>
+</body>
+</html>

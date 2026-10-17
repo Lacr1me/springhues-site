@@ -1,0 +1,120 @@
+:root {
+  --panel-border: #242424;
+  --row-divider: #a8a8a8;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.calendar {
+  width: 58px;
+  height: 58px;
+  border: 0;
+  background: transparent;
+}
+
+.calendar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.aligned-columns {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+}
+
+.aligned-columns .news-column,
+.aligned-columns .metrics-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 9px 9px 4px 4px;
+}
+
+.aligned-columns .news-column > header,
+.aligned-columns .metrics-card > header {
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.aligned-columns > .news-column .story {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--row-divider);
+}
+
+.aligned-columns > .news-column .story:last-child,
+.aligned-columns .ai .story:last-child,
+.aligned-columns .metric:last-child {
+  border-bottom: 0;
+}
+
+.aligned-columns .side-column {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 16px;
+}
+
+.aligned-columns .ai .story-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.aligned-columns .ai .story {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--row-divider);
+}
+
+.aligned-columns .metrics-card {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: 74px minmax(0, 1fr) auto;
+}
+
+.aligned-columns .metrics {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.aligned-columns .metric {
+  align-content: center;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--row-divider);
+}
+
+.aligned-columns .metrics-cutoff {
+  border-top: 1px solid var(--panel-border);
+}
+
+@media (max-width: 1180px) {
+  .aligned-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aligned-columns > .news-column .story {
+    height: auto !important;
+  }
+
+  .aligned-columns .side-column {
+    display: grid;
+    height: auto !important;
+    grid-template-rows: auto auto;
+  }
+
+  .aligned-columns .metrics-card,
+  .aligned-columns .metrics {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .aligned-columns {
+    grid-template-columns: 1fr;
+  }
+}
