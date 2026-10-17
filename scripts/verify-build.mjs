@@ -11,11 +11,7 @@ await import("../portal-data.js");
 const root = process.cwd();
 const output = path.join(root, "dist");
 for (const file of ["brand.css", "portal.css", "site-shell.js"]) await access(path.join(output, file));
-const adminIndex = path.join(output, "admin", "messages", "index.html");
-const hasAdmin = await access(adminIndex).then(() => true, () => false);
-const required = ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/app.js", "privacy/index.html", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"];
-if (hasAdmin) required.push("admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js");
-for (const file of required) {
+for (const file of ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/app.js", "admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js", "privacy/index.html", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"]) {
   await access(path.join(output, file));
 }
 await access(path.join(output, "data", ".pending")).then(
@@ -50,12 +46,12 @@ for (const edition of civicManifest.editions) {
 }
 const portalHtml = await readFile(path.join(output, "index.html"), "utf8");
 const messageHtml = await readFile(path.join(output, "messages", "index.html"), "utf8");
-const adminHtml = hasAdmin ? await readFile(adminIndex, "utf8") : "";
+const adminHtml = await readFile(path.join(output, "admin", "messages", "index.html"), "utf8");
 const gameHtml = await readFile(path.join(output, "game", "index.html"), "utf8");
 const minshengHtml = await readFile(path.join(output, "minsheng", "index.html"), "utf8");
 const privacyHtml = await readFile(path.join(output, "privacy", "index.html"), "utf8");
 // 日报页与后台仍用旧外壳（日报导出器消费它们）；留言 / 隐私页换成 SHARD 外壳。
-for (const html of [gameHtml, minshengHtml, ...(hasAdmin ? [adminHtml] : [])]) {
+for (const html of [gameHtml, minshengHtml, adminHtml]) {
   if (!html.includes("data-site-page=") || !html.includes("site-shell.js?v=20261017-unified") || !html.includes("brand.css?v=20261017-moon-v1")) throw new Error("构建页面缺少统一主题或导航");
 }
 for (const html of [gameHtml, minshengHtml, messageHtml, privacyHtml]) {
@@ -66,15 +62,15 @@ for (const html of [gameHtml, minshengHtml, messageHtml, privacyHtml]) {
 for (const html of [messageHtml, privacyHtml]) {
   if (!html.includes("data-site-page=") || /site-shell\.js|brand\.css|portal\.css|site-rail/.test(html) || /href=["'](?:\.\.?\/)?admin\//.test(html)) throw new Error("留言 / 隐私页不得引用旧外壳，也不得公开后台入口");
 }
-if (hasAdmin && adminHtml.includes("shard")) throw new Error("后台页不得引入 SHARD 外壳");
+if (adminHtml.includes("shard")) throw new Error("后台页不得引入 SHARD 外壳");
 if (!portalHtml.includes('class="quick-message-link"') || portalHtml.includes("data-message-form") || /href=["'](?:\.\/)?admin\//.test(portalHtml)) throw new Error("首页须保留独立留言入口，不得内嵌表单或公开后台导航");
 for (const id of ["worksWall", "civicLink", "gameLink"]) {
   if (!portalHtml.includes(`id="${id}"`)) throw new Error(`首页缺少入口 ${id}`);
 }
 globalThis.SpringhuesPortalData.parseCatalog(await readJson(path.join(output, "data", "resources.json")), { includeUnpublished: true });
 if (!messageHtml.includes('id="messageList"') || !messageHtml.includes("data-message-form")) throw new Error("构建产物缺少完整留言页");
-if (hasAdmin && (!adminHtml.includes('name="robots" content="noindex,nofollow,noarchive"') || !adminHtml.includes('http-equiv="Cache-Control" content="no-store') || !adminHtml.includes('id="loginForm"'))) throw new Error("构建产物缺少受保护且禁缓存的留言后台登录页");
-if (hasAdmin && (!adminHtml.includes('role="tablist"') || !adminHtml.includes('id="websiteChangesPanel"') || !adminHtml.includes('id="maintenancePanel"') || !adminHtml.includes('id="websiteChangesTab" class="active"'))) throw new Error("构建产物缺少默认日志页的管理员三标签页");
+if (!adminHtml.includes('name="robots" content="noindex,nofollow,noarchive"') || !adminHtml.includes('http-equiv="Cache-Control" content="no-store') || !adminHtml.includes('id="loginForm"')) throw new Error("构建产物缺少受保护且禁缓存的留言后台登录页");
+if (!adminHtml.includes('role="tablist"') || !adminHtml.includes('id="websiteChangesPanel"') || !adminHtml.includes('id="maintenancePanel"') || !adminHtml.includes('id="websiteChangesTab" class="active"')) throw new Error("构建产物缺少默认日志页的管理员三标签页");
 if (!gameHtml.includes('class="header-message-link" href="messages/"') || !minshengHtml.includes('class="header-message-link" href="../messages/"')) throw new Error("两个日报页头必须包含频道色留言按钮");
 if (!privacyHtml.includes("Turnstile Privacy Addendum") || !privacyHtml.includes("来源哈希")) throw new Error("构建产物缺少留言隐私说明");
 for (const file of ["site/works.json", "site/js/main.js", "site/js/core/tween.js", "site/js/core/flip.js", "site/js/core/page-transition.js", "site/js/wall/parallax.js", "site/boot.js", "site/css/shard-theme.css", "site/css/wipe.css", "site/css/pages-daily.css", "site/css/pages-messages.css", "site/css/pages-privacy.css", "site/js/shell/shell.js", "site/js/shell/links.js", "vendor/lenis/lenis.min.js", "assets/hero/web/hero-1600.webp", "assets/hero/web/hero-p-1080.webp", "assets/fonts/anton-latin.woff2"]) {
@@ -107,7 +103,7 @@ for (const rel of ["brand.css", "styles.css", "site-shell.js", "app.js", "minshe
 }
 const builtWorks = parseWorks(await readJson(path.join(output, "site", "works.json")));
 if (!builtWorks.works.length) throw new Error("作品清单不能为空");
-console.log("构建产物验证通过：公开文件完整，草稿已排除，双频道入口与留言回复有效" + (hasAdmin ? "，管理后台有效。" : "。"));
+console.log("构建产物验证通过：公开文件完整，草稿已排除，双频道入口、留言回复与管理后台有效。");
 
 async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }
 async function listFiles(target) {
