@@ -14,7 +14,8 @@ for (const file of ["index.html", "home.css", "portal-data.js", "portal.css", "p
   await cp(path.join(root, file), path.join(output, file));
 }
 await cp(path.join(root, "messages"), path.join(output, "messages"), { recursive: true });
-await cp(path.join(root, "admin"), path.join(output, "admin"), { recursive: true });
+// 公开前端仓库不含后台目录；私有仓库有则照常复制。
+await cp(path.join(root, "admin"), path.join(output, "admin"), { recursive: true }).catch(() => {});
 await cp(path.join(root, "privacy"), path.join(output, "privacy"), { recursive: true });
 await cp(path.join(root, "game"), path.join(output, "game"), { recursive: true });
 await cp(path.join(root, "minsheng"), path.join(output, "minsheng"), { recursive: true });

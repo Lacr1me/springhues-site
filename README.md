@@ -1,6 +1,9 @@
 # Springhues
 
-[springhues.com](https://springhues.com/) 的公开前端仓库：作品墙、每日简报页面与 SHARD 视觉系统。
+[springhues.com](https://springhues.com/) 的**公开前端源码镜像**：作品墙、每日简报页面与 SHARD 视觉系统。
+
+> 这是源码镜像，不是线上发布仓库。线上站点由主仓库发布，本仓库不运行部署、也没有启用 Pages。
+> 默认分支叫 `site`，只是发布流程的平台限制；这里不区分 main / site。
 
 纯静态站点：HTML、CSS、原生 JavaScript。不使用前端框架，也没有包管理器；Node.js 脚本只负责构建、校验和本地预览。
 
@@ -36,7 +39,7 @@ node scripts/build-site.mjs
 node scripts/verify-build.mjs
 ```
 
-产物在 `dist/`。推送到 `main` 后由 GitHub Actions 构建并发布。
+产物在 `dist/`，可以直接用 `node scripts/serve.mjs` 预览。本仓库只提供源码，发布由主仓库完成。
 
 ## 许可
 

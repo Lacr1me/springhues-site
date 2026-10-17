@@ -16,3 +16,4 @@ supabase/.cli.env
 # Source hero art stays local; only generated assets/hero/web/ ships
 /assets/hero/*.jpeg
 /assets/hero/*.jpg
+.mirror/
