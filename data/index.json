@@ -4,12 +4,30 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-18",
+      "issue": 57,
+      "publishAt": "2026-10-18T11:00:00+08:00",
+      "backfilledAt": "2026-10-18T10:00:13.593Z",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《影之刃零》PS5版10月27日开启预载",
+      "file": "data/2026-10-18.json"
+    },
+    {
       "date": "2026-10-17",
       "issue": 55,
       "publishAt": "2026-10-17T11:00:00+08:00",
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《霜港迷城》PC 1.0正式版上线",
       "file": "data/2026-10-17.json"
+    },
+    {
+      "date": "2026-10-16",
+      "issue": 56,
+      "publishAt": "2026-10-16T11:00:00+08:00",
+      "backfilledAt": "2026-10-18T08:43:34.333Z",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《GTA6》发布第三支预告片",
+      "file": "data/2026-10-16.json"
     },
     {
       "date": "2026-10-15",
@@ -42,22 +60,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "艾希续众筹热度与开发预期管理",
       "file": "data/2026-10-12.json"
-    },
-    {
-      "date": "2026-10-11",
-      "issue": 50,
-      "publishAt": "2026-10-11T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "黑神话钟馗入围金摇杆期待奖",
-      "file": "data/2026-10-11.json"
-    },
-    {
-      "date": "2026-10-10",
-      "issue": 49,
-      "publishAt": "2026-10-10T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "战地风云6新赛季联动死亡空间",
-      "file": "data/2026-10-10.json"
     }
   ]
 }
