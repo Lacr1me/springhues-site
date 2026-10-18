@@ -123,6 +123,7 @@
       ],
       "tags": ["网页", "实时", "天体", "交互"],
       "platform": "Web",
+      "model": "GPT-6 Astra MAX",
       "version": "1.0.0",
       "updatedAt": "2026-10-18",
       "isNew": true,
