@@ -17,3 +17,9 @@ supabase/.cli.env
 /assets/hero/*.jpeg
 /assets/hero/*.jpg
 .mirror/
+
+# Local tool caches and outputs
+.codex/
+.graphflow-cache/
+.playwright-cli/
+output/

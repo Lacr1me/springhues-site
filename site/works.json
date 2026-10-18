@@ -20,12 +20,12 @@
         { "h": "", "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。" }
       ],
       "tags": ["Windows", "下载工具", "资源嗅探", "批量下载"],
-      "version": "0.2.0",
-      "updatedAt": "2026-10-16",
+      "version": "0.2.1",
+      "updatedAt": "2026-10-19",
       "isNew": true,
       "links": [
-        { "kind": "download", "label": "下载安装包（262 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.0/SimpleDownload-0.2.0-Windows-Setup.exe" },
-        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.0" }
+        { "kind": "download", "label": "下载安装包（201 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e/SimpleDownload-0.2.1-Windows-Setup.exe" },
+        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e" }
       ],
       "cover": { "kind": "placeholder", "label": "WINDOWS" },
       "shots": [],

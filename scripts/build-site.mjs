@@ -23,7 +23,7 @@ await cp(path.join(root, "game-brief-assets"), path.join(output, "game-brief-ass
 await cp(path.join(root, "brand-assets"), path.join(output, "brand-assets"), { recursive: true });
 await cp(path.join(root, "data"), path.join(output, "data"), { recursive: true });
 await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursive: true });
-for (const dir of ["site", "vendor", "works", "assets/hero/web", "assets/fonts"]) {
+for (const dir of ["site", "vendor", "works", "updates", "assets/hero/web", "assets/fonts"]) {
   await cp(path.join(root, dir), path.join(output, dir), { recursive: true });
 }
 // 模块地址带构建版本：每次部署都换 URL，避免浏览器沿用旧脚本。

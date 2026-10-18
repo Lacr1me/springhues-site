@@ -4,6 +4,10 @@
   --row-divider: #a8a8a8;
 }
 
+.title-block h1 {
+  transform: translateZ(0);
+}
+
 .masthead {
   border-bottom: 1px solid var(--panel-border);
 }

@@ -1,3 +1,4 @@
+import { verifySoftwareUpdates } from "./test-software-updates.mjs";
 import { access, readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
@@ -10,6 +11,7 @@ await import("../portal-data.js");
 
 const root = process.cwd();
 const output = path.join(root, "dist");
+await verifySoftwareUpdates(output, { sourceRoot: root });
 for (const file of ["brand.css", "portal.css", "site-shell.js"]) await access(path.join(output, file));
 const adminIndex = path.join(output, "admin", "messages", "index.html");
 const hasAdmin = await access(adminIndex).then(() => true, () => false);
