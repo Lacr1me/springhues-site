@@ -2,9 +2,8 @@
    只做：主题（与首页共用 localStorage 键 springhues.home.theme，缺省跟随系统）→ html[data-theme]、
    html.shard-live、html.sd-reveal、html.shard-arrive（站内到达）。无依赖，存储读取全部 try/catch。
 
-   日报导出器（artifact-template-*-daily-brief/scripts/render.mjs）会把 Date 换成冻结类 FixedDate 再截图；
-   这种运行绝不启用 SHARD 外壳，保证导出的 PNG / HTML 与改版前逐像素一致。
-   __SHARD_FORCE__ 仅供本地验收脚本通过 addInitScript 注入，线上不存在。 */
+   日报导出器（artifact-template-*-daily-brief/scripts/render.mjs）会把 Date 换成冻结类 FixedDate 再截图，
+   并注入 __SHARD_FORCE__ 让导出图使用线上 SHARD 外观；该标记只由导出器和本地验收脚本注入，线上不存在。 */
 (function () {
   'use strict';
   if (Date.name !== 'Date' && !globalThis.__SHARD_FORCE__) return;

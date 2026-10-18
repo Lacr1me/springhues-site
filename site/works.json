@@ -110,6 +110,31 @@
       "layout": { "size": "l" },
       "source": null
     },
+    {
+      "slug": "three-body-observatory",
+      "category": "web",
+      "name": "三体 · 星系实时观测",
+      "intro": "三颗恒星与一颗行星的实时演算：距离改变温度，温度决定纪元，文明在恒纪元与乱纪元之间求生。",
+      "details": [
+        { "h": "", "p": "以三体问题为原型的实时天体演算网页。所有代码、着色器、星点、天体与界面都在这一个文件里，离线打开即可运行。" },
+        { "h": "操作", "p": "拖动旋转视角，滚轮缩放；空格暂停或继续，T 显示真实运动轨迹，V 切换星系观测与行星天空，H 收起界面，S 打开设置，R 重置当前种子，N 生成新星系。" },
+        { "h": "参数与温度", "p": "三颗恒星的光度、四个天体的质量与初始条件都可实时调整；温度按热惯性连续响应，平均温度由距离平方反比辐射、反照率、冰雪反照率、温室增温与热惯性共同计算。" },
+        { "h": "文明与历史", "p": "连续适宜环境孕育文明，高温、低温、撕裂、碰撞和逃逸可终结文明；文明历史最多保留 500 条，可以导出或清空。" }
+      ],
+      "tags": ["网页", "实时", "天体", "交互"],
+      "platform": "Web",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-18",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开作品", "href": "works/three-body-observatory/" }
+      ],
+      "prompt": "works/three-body-observatory/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "THREE-BODY" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
     {"slug":"daily-game","category":"daily","name":"游戏日报","intro":"每天 11:00 更新的游戏资讯、整合包、Mod 与 Steam 优惠。","tags":["日报","游戏"],"isNew":false,"links":[{"kind":"channel","label":"进入频道","href":"game/"}],"cover":{"kind":"placeholder","label":"DAILY NO."},"layout":{"size":"m"},"source":{"type":"daily-archive","manifest":"data/index.json","base":"game/","fallbackTitle":"游戏日报"}},
     {"slug":"daily-minsheng","category":"daily","name":"民生日报","intro":"每天 11:00 更新的国内外要闻、科技、AI 与行情。","tags":["日报","民生"],"isNew":false,"links":[{"kind":"channel","label":"进入频道","href":"minsheng/"}],"cover":{"kind":"placeholder","label":"DAILY NO."},"layout":{"size":"m"},"source":{"type":"daily-archive","manifest":"data/minsheng/index.json","base":"minsheng/","fallbackTitle":"民生日报"}}
   ]
