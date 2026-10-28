@@ -96,7 +96,14 @@ function normalizeWork(raw, cats, slugs) {
   for (const l of (Array.isArray(raw.links) ? raw.links : []).slice(0, 6)) {
     const href = l && safeHref(l.href);
     if (!l || !isStr(l.label) || !l.label || href === null) { warn('丢弃链接', raw.slug); continue; }
-    links.push({ kind: KINDS.includes(l.kind) ? l.kind : 'visit', label: clip(l.label, 24), href });
+    const link = { kind: KINDS.includes(l.kind) ? l.kind : 'visit', label: clip(l.label, 24), href };
+    // 原生 download 仅用于站内文件；显式文件名不得包含路径或控制字符。
+    if (link.kind === 'download' && href !== '#' && !/^https:/i.test(href) &&
+        isStr(l.download) && l.download.length > 0 && l.download.length <= 120 &&
+        l.download === l.download.trim() && !/[<>:"/\\|?*\u0000-\u001f\u007f]/.test(l.download) && !l.download.endsWith('.')) {
+      link.download = l.download;
+    }
+    links.push(link);
   }
   const shots = (Array.isArray(raw.shots) ? raw.shots : []).slice(0, 6).filter(s => s && typeof s === 'object').map(s => {
     const out = { label: clip(isStr(s.label) ? s.label : '', 24), ratio: isStr(s.ratio) && /^\d{1,3}\/\d{1,3}$/.test(s.ratio) ? s.ratio : '16/9' };

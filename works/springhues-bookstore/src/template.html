@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F4F6FF">
+  <meta name="description" content="Springhues 四季书屋：用会行走的微缩人物呈现本站真实匿名访客计数，在昼夜和四季之间读一间小店。">
+  <title>四季书屋 · 访客风景 — Springhues</title>
+  <link rel="icon" href="../../brand-assets/springhues-logo.png" type="image/png">
+  <style>/* INLINE_STYLE */</style>
+  <script type="importmap">/* IMPORT_MAP */</script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6.25 6.25 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></symbol>
+    <symbol id="reset" viewBox="0 0 24 24"><path d="M3 11a9 9 0 1 1 2.5 6.3M3 4v7h7"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="expand" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="door" viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14M2 20h3m8 0h9M10 12v.01M13 20V3a1 1 0 0 0-1.242-.97l-6 1.5A1 1 0 0 0 5 4.5V20l6.758 1.69A1 1 0 0 0 13 20.72Z"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M5 12h14"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></symbol>
+  </svg>
+  <header class="masthead reveal">
+    <a class="brand" href="../../" aria-label="Springhues 首页"><img src="INLINE_LOGO" alt="" width="44" height="44"><span>SPRINGHUES<small>A SMALL WORLD TO STAY</small></span></a>
+    <a class="back-link" href="../../#works"><svg aria-hidden="true"><use href="#arrow"/></svg><span>返回作品</span></a>
+  </header>
+  <main class="experience">
+    <section class="scene-column" aria-label="四季书屋">
+      <header class="editorial reveal">
+        <div><p class="eyebrow"><i aria-hidden="true"></i> THE VISITOR LANDSCAPE</p><h1>四季书屋<span>把来过这里的人 藏进一间小店</span></h1></div>
+        <div class="season-caption"><span class="season-index">01 <i>/ 04</i></span><div><h2 id="seasonTitle">春日来信</h2><p id="seasonDescription">花瓣落在窗边<br>新故事正翻开第一页</p></div></div>
+      </header>
+      <section class="world reveal" aria-label="可交互三维书店">
+        <div class="world-stage" id="stage">
+          <canvas id="world" tabindex="0" aria-label="三维书店与匿名访客示意。拖动旋转，滚轮或双指缩放。方向键旋转，加减键缩放，R 键复位，D 键开门。"></canvas>
+          <div class="loader" id="loader" role="status"><span class="loading-mark">S</span><span>正在打开书屋</span></div>
+          <div class="fallback" id="fallback" hidden><strong>三维画面暂不可用</strong><p>访客统计仍可查看<br>可重新加载或换用支持 WebGL 的浏览器</p><button class="text-button" id="retry">重新加载</button></div>
+        </div>
+        <div class="scene-label" aria-hidden="true"><span id="sceneTime">DAYLIGHT</span><span>SPRINGHUES BOOKSTORE</span></div>
+        <div class="camera-tools" aria-label="视角控制">
+          <button class="icon-button" id="zoomIn" aria-label="放大" title="放大 +"><svg><use href="#plus"/></svg></button>
+          <button class="icon-button" id="zoomOut" aria-label="缩小" title="缩小 −"><svg><use href="#minus"/></svg></button>
+          <span class="tool-divider"></span>
+          <button class="icon-button" id="resetView" aria-label="复位视角" title="复位 R"><svg><use href="#reset"/></svg></button>
+          <button class="icon-button" id="fullscreen" aria-label="全屏查看" title="全屏"><svg><use href="#expand"/></svg></button>
+        </div>
+      </section>
+      <div class="control-dock reveal">
+        <div class="time-controls" role="group" aria-label="昼夜模式"><button class="mode active" data-time="day" aria-pressed="true"><svg><use href="#sun"/></svg><span>日间</span></button><button class="mode" data-time="night" aria-pressed="false"><svg><use href="#moon"/></svg><span>夜晚</span></button></div>
+        <span class="dock-divider"></span>
+        <div class="season-controls" role="group" aria-label="四季切换"><button class="season active" data-season="spring" aria-pressed="true"><span>春</span><small>SPR</small></button><button class="season" data-season="summer" aria-pressed="false"><span>夏</span><small>SUM</small></button><button class="season" data-season="autumn" aria-pressed="false"><span>秋</span><small>AUT</small></button><button class="season" data-season="winter" aria-pressed="false"><span>冬</span><small>WIN</small></button></div>
+        <span class="dock-divider last-divider"></span>
+        <button class="door-control" id="doorButton" aria-pressed="false"><svg><use href="#door"/></svg><span>推门看看</span></button>
+      </div>
+      <p class="scene-hint">拖动旋转 <i>·</i> 滚轮 / 双指缩放 <span>人物会散步 停留与进店</span></p>
+    </section>
+    <aside class="visitor-panel reveal" aria-labelledby="visitorTitle">
+      <div class="panel-heading"><div><p class="eyebrow">SPRINGHUES / REAL RECORDS</p><h2 id="visitorTitle">来过这里的人</h2></div><button class="icon-button refresh" id="refreshStats" aria-label="刷新访客统计" title="刷新访客统计"><svg><use href="#reset"/></svg></button></div>
+      <div class="data-state" id="dataState" data-state="loading" role="status"><i class="sd-dot" aria-hidden="true"></i><span>正在读取统计</span></div>
+      <section class="visitor-total" aria-label="累计访客计数"><span class="metric-label">累计访客计数</span><div><strong id="visitorCount">—</strong><span class="metric-unit">VISITORS</span></div><p>本站全部页面 · GoatCounter 公开统计</p></section>
+      <dl class="period-grid" id="periodStats" hidden><div><dt>近 7 日</dt><dd id="weekCount">—</dd></div><div><dt>近 30 日</dt><dd id="monthCount">—</dd></div></dl>
+      <section class="visitors-key" aria-labelledby="peopleTitle"><div class="section-heading"><h3 id="peopleTitle"><svg aria-hidden="true"><use href="#people"/></svg>小店里的身影</h3><button class="visibility-toggle" id="showVisitors" aria-pressed="true">显示人物</button></div><p id="peopleMapping">读取真实计数后 人物会出现在书屋旁</p><p class="soft-note">人物是汇总数据的场景化表达<br>不代表当前在线或可识别的个人</p></section>
+      <dl class="catalog-stats"><div><dt>在架作品</dt><dd id="workCount">—</dd></div><div><dt>近期日报归档</dt><dd id="archiveCount">—</dd></div></dl>
+      <p class="data-note" id="dataNote">正在连接本站统计服务</p>
+      <p class="source-note">公开计数可能延迟最多 4 小时</p>
+      <a class="privacy-link" href="../../privacy/"><svg aria-hidden="true"><use href="#info"/></svg>统计口径与隐私说明</a>
+    </aside>
+  </main>
+  <footer class="footnote reveal"><span>一间书屋 四种时光</span><span>BLUE · WHITE · BURGUNDY</span></footer>
+  <p id="status" class="sr-only" aria-live="polite"></p>
+  <noscript><p class="no-script">请启用 JavaScript 查看三维场景和真实访客统计 <a href="../../#works">返回作品</a></p></noscript>
+  <script type="module">import 'bookstore-runtime';</script>
+</body>
+</html>

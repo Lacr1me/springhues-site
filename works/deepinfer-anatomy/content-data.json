@@ -1,0 +1,608 @@
+{
+  "title": "DeepInfer 一份答案怎样印出来",
+  "subtitle": "把 DeepSeek 推理引擎拆开看",
+  "verifiedAt": "2026-10-22",
+  "sourceCommit": "9bd9cf243fc53ef9afbf8f04d391d989117d6ab9",
+  "scope": {
+    "openSource": [
+      "离线推理核心与模型/采样运行时",
+      "Attention DP / balanced CP",
+      "MoE EP + EPLB",
+      "DSpark 与置信度调度验证",
+      "SWA bounded replay",
+      "异步调度",
+      "批次不变性、确定性采样与结构化输出"
+    ],
+    "productionOnly": [
+      "完整 KV cache 服务",
+      "VE / Prefill / Decode 的完整分离部署系统",
+      "Prefill 与 Decode 跨 DP 副本负载均衡"
+    ],
+    "note": "机器剖面与全部交互均为教学模型 不模拟完整推理计算 不代表实测性能"
+  },
+  "chapters": [
+    {
+      "id": "overview",
+      "kicker": "01 / 先认清角色",
+      "title": "模型会什么 引擎负责怎样把它做出来",
+      "lead": "把 DeepInfer 想成一间忙碌印刷店的工作台：模型提供排版规则和能力，引擎安排机器、纸张、工位和每一轮出纸。",
+      "analogy": "你带着一本厚厚的活动资料进店，要求「帮我写一张清楚的活动海报」。优秀设计师决定海报能写多好；店长负责让设计师及时拿到资料、机器别空转、几十位顾客都有人服务。店长不会凭空替设计师增加知识，但会减少排队、搬东西和重复劳动。",
+      "mechanism": "DeepInfer 是 DeepSeek 的推理框架。所谓推理，是把已经训练好的模型用于处理新输入、生成输出。它不等于一个新模型，也不是训练模型的教程。这里采用「输入—阅读—留便笺—反复计算—校验—输出」的教学顺序；真实实现中的注意力、专家计算和采样会在多层、多轮中交替发生，并非只经过一次的直线。",
+      "steps": [
+        "用户交来消息，文本先转换成模型能处理的 token 编号。",
+        "Prefill 处理输入，建立可复用的中间状态；Decode 继续产生输出。",
+        "调度、并行、缓存和专用算子共同缩短等待，让设备承担更多有效工作。"
+      ],
+      "pitfall": "图里的纸张、卡槽、压头是解释软件的比喻，不是 DeepSeek 服务器的真实机械结构。此次开源提供离线推理核心，不能直接等同于完整线上服务。",
+      "sources": [
+        {
+          "label": "DeepInfer 官方 README",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+        },
+        {
+          "label": "离线 LLM 入口",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/entrypoints/llm.py"
+        }
+      ]
+    },
+    {
+      "id": "tokens",
+      "kicker": "02 / 进纸口",
+      "title": "一句人话 先拆成机器认识的小票",
+      "lead": "模型看到的不是屏幕上的整句话，而是一串 token ID。token 可以理解为词片，不保证一个字就对应一个。",
+      "analogy": "印刷店收到「周六下午三点在图书馆见」时，先把它转成标准工单。汉字、英文、数字和特殊记号可能被切成不同大小的小片，每片有自己的编号。就像超市扫码认的是商品编号，而不是收银员重新猜每件商品。图中切出的几张词片只是示意，不声称是该模型的真实分词结果。",
+      "mechanism": "DeepSeek 的配套项目 deepseek-recipe 负责把不同 API 的消息格式整理成统一会话、套用模型模板，并连接 tokenizer 编码和输出解析。普通用户文本与真正的控制标记需要区分：用户打出一个长得像特殊标记的字符串，不应因此取得切换角色或触发工具的权力。recipe 不是推理模型本身，实际计算、工具执行和 HTTP 传输仍由调用方提供。",
+      "steps": [
+        "整理角色、消息、图片和工具等结构，生成有明确边界的提示。",
+        "tokenizer 把普通文本映射为编号，按原顺序送进引擎。",
+        "输出端把 token 流还原成文字；半个字符或未完整的标记需要暂存，拼完整后再交给用户。"
+      ],
+      "pitfall": "token 不是固定长度的汉字，也不是 GPU 运算次数。文字数、token 数、模型内部计算量是三件事。",
+      "sources": [
+        {
+          "label": "DeepSeek Recipe 官方说明",
+          "url": "https://github.com/deepseek-ai/deepseek-recipe"
+        },
+        {
+          "label": "Recipe 分词接口",
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/main/docs/tokenizer.md"
+        }
+      ]
+    },
+    {
+      "id": "prefill",
+      "kicker": "03 / 阅读头",
+      "title": "Prefill 先把你交来的资料读进去",
+      "lead": "想回答一份长材料，先要把材料处理一遍。这段准备工作，通常就叫 Prefill。",
+      "analogy": "设计师开始写海报之前，要先看完活动时间、地点、对象和注意事项。你只交一张便签，准备很快；你交两百页手册，就需要更多阅读和整理。能一起处理的页面，会组成一批送到工作台。阅读阶段还会顺手做便笺，后面写稿时不必每句话都重新从第一页读起。",
+      "mechanism": "Prefill 处理输入 token，并建立后续生成要用的缓存和状态。一次请求内部的输入位置可以批量计算，但因果注意力仍遵守「当前位置只使用允许看见的前文」。长输入也可分块处理，避免一份超长工单独占全部资源。真实耗时不只由新 token 数决定，还受已有上下文、缓存命中、并行配置、硬件和批次影响。",
+      "steps": [
+        "确定哪些前缀已有可复用状态，以及本轮仍要计算的后缀。",
+        "将输入或输入分块送入模型，完成注意力与专家等层计算。",
+        "保存后续需要的状态，得到开始生成输出所需的信息。"
+      ],
+      "pitfall": "Prefill 不是训练，也不是先把整篇答案算好。页面中的「读完」仅表示输入阶段完成，后面仍有逐轮生成工作。",
+      "sources": [
+        {
+          "label": "引擎的请求与执行流程",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/engine/llm_engine.py"
+        },
+        {
+          "label": "Prefill 与 Decode 基准分离",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/README.md"
+        },
+        {
+          "label": "注意力算子说明",
+          "url": "https://github.com/deepseek-ai/FlashMLA"
+        }
+      ]
+    },
+    {
+      "id": "cache",
+      "kicker": "04 / 便笺卡槽",
+      "title": "KV Cache 是计算便笺 不是现成答案库",
+      "lead": "缓存省的是已经算过的中间工作。它不是把一句问题和一句答案做成搜索表。",
+      "analogy": "你连续三次请设计师改同一张海报：先改标题，再改时间，最后改配色。资料中大部分内容没有变。若保留了阅读便笺，设计师可以接着工作；若每次都扔掉便笺，就要重读整本手册。SWA 则像桌面上只放最近一小段工作记录，较远处的信息由模型的其他机制处理。",
+      "mechanism": "KV Cache 保存注意力计算中的 Key、Value 等中间信息，后续 token 可以复用。DeepInfer 的 SWA bounded replay 针对滑动窗口状态，只回放有界的尾段，避免为了恢复局部状态重算整段历史。这里要特别区分：公开问答描述的局部 SWA 重建是近似方案；README 的 compact 示例保留 140 个 token，要求覆盖窗口与最大回退余量。这两个数字层次不能混为一个万能缓存大小。",
+      "steps": [
+        "能够命中的 block KV 继续复用，不为恢复 SWA 而把它全部重算。",
+        "需要补建局部状态时，回放最近一小段，重建继续生成所需的 SWA 便笺。",
+        "把恢复成本限制在有界尾段；实际模式、窗口和余量按模型配置确定。"
+      ],
+      "pitfall": "不能把 bounded replay 讲成「模型只记得最后 128 个字」，也不能承诺与完整重算逐位完全相同。开源中有缓存相关执行能力，但完整生产 KV 存储系统未随此次发行提供。",
+      "sources": [
+        {
+          "label": "DeepInfer 官方 README",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+        },
+        {
+          "label": "官方部署问答",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+        },
+        {
+          "label": "YoCo mask 与 compact 校验边界",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/yoco/README.md"
+        }
+      ]
+    },
+    {
+      "id": "decode",
+      "kicker": "05 / 连续出纸",
+      "title": "Decode 一边接着写 一边把成品交出来",
+      "lead": "传统自回归生成每轮确定下一个 token，再把它接回上下文，继续下一轮。",
+      "analogy": "排字师已经读完资料，现在开始排「活动将在……」。排出「周六」后，下一轮就在这个基础上继续。不是从一份早已写好的完整答案里匀速揭开遮罩。多个顾客的稿件可以同批推进：甲写下一片、乙写下一片、丙写下一片，做完的人离开，新工单再进入。",
+      "mechanism": "一轮生成大致包括选出本批请求、模型前向计算、对候选 token 进行采样、处理结果和结束条件。采样不是随便抓字：模型先给出候选分数，再按 temperature、top-p 等规则决定输出。普通生成常是一轮一个新 token；开启推测解码后，一轮验证可能确认多个 token，因此「一步」与「一个输出 token」也不相等。",
+      "steps": [
+        "读取已有上下文状态和当前输入，运行下一轮模型计算。",
+        "采样器选出 token，必要时应用格式约束，更新请求状态。",
+        "遇到结束标记或输出长度限制就结束，否则把新 token 接回下一轮。"
+      ],
+      "pitfall": "更低 temperature 不等于事实一定更正确。输出突然停顿也不必然是模型「在思考」；排队、计算、调度与网络都可能影响可见节奏。",
+      "sources": [
+        {
+          "label": "采样参数定义",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/sampling_params.py"
+        },
+        {
+          "label": "LLM 批处理入口",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/entrypoints/llm.py"
+        },
+        {
+          "label": "输出处理接口",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/csrc/engine/process_output.hpp"
+        }
+      ]
+    },
+    {
+      "id": "parallel",
+      "kicker": "06 / 多张工作台",
+      "title": "DP 分工单 CP 分长稿 它们分的是不同东西",
+      "lead": "多加设备之前，先问究竟把什么分出去：不同请求、一份长上下文，还是模型里的专家。",
+      "analogy": "DP 像两位校对员各自负责不同顾客。CP 像把同一本特别长的册子分给多人协作。问题是，后面的页通常要参考更多前文，平均分「页数」未必平均分「工作量」。balanced CP 的直觉，是把较早和较晚的片段搭配给同一位工人，别让某人一直拿轻活、某人全拿重活。",
+      "mechanism": "DeepInfer 的公开能力包括 Attention DP 与 balanced CP。前者让注意力部分按不同数据并行，后者把上下文相关计算分摊到多个设备。公开 prepare_cp_mirror 实现采用镜像分段索引，能看到前后片段配对的布局。拆分之后还需要通信与结果还原，因此设备数越多，并不保证单个请求越快。实际收益取决于输入长度、硬件互联和各段工作量。",
+      "steps": [
+        "不同顾客的请求可由不同 DP 单元处理注意力。",
+        "长稿采用 CP 时，按布局拆分 token 工作，并保持逻辑上的上下文关系。",
+        "设备交换必要信息，把各处结果按正确顺序继续向下执行。"
+      ],
+      "pitfall": "DP、CP 与 TP 不是同义词。开源代码支持 CP，不代表 DeepSeek 当前线上一定启用 CP；官方部署问答明确说该线上配置暂未使用 TP 和 CP。",
+      "sources": [
+        {
+          "label": "DeepInfer 官方 README",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+        },
+        {
+          "label": "balanced CP 镜像布局内核",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/layers/tilelang_ops/cuda/prepare_cp_mirror.py"
+        },
+        {
+          "label": "官方部署问答",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+        }
+      ]
+    },
+    {
+      "id": "experts",
+      "kicker": "07 / 专家印刷模块",
+      "title": "MoE 让合适的工位干活 EPLB 让热门工位别堵住",
+      "lead": "MoE 的「专家」是模型中的计算模块。EP 把专家分散到设备，EPLB 再调整它们的实际摆放和副本。",
+      "analogy": "印刷店有切纸、压纹、装订等专用工位。一张工单不用每个工位都做一遍。某天大家都要压纹，压纹台排长队，装订台却闲着；即使整个店还有空位，最忙的那台机器仍拖慢全店。店长于是复制热门工位，把任务分给多个相同工位，并重新安排布局。",
+      "mechanism": "MoE 路由决定 token 需要哪些专家计算；Expert Parallelism 把专家权重与运算放到不同设备，token 被分发后再合并结果。EPLB 使用历史 token 负载，为热门逻辑专家增加物理副本，并把这些副本放到不同 GPU 上以降低拥塞。公开 policy.py 明确区分 logical expert 和 physical expert：复制一个专家，增加的是同一套能力的服务位置，不是训练出新知识。",
+      "steps": [
+        "路由为 token 选择专家，通信层把数据送到对应设备。",
+        "专家完成计算，再把结果带回需要它的请求。",
+        "负载统计显示热点后，重新分配冗余副本与位置，减少最忙设备的等待。"
+      ],
+      "pitfall": "「专家」不是现实中的有意识专业人士，也不能简单给每个专家贴上数学、写作等固定岗位标签。EPLB 不会把所有任务强行平均，否则会改变模型原本的路由语义。",
+      "sources": [
+        {
+          "label": "EPLB 公开分配策略",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/eplb/policy.py"
+        },
+        {
+          "label": "DeepEP 通信库",
+          "url": "https://github.com/deepseek-ai/DeepEP"
+        },
+        {
+          "label": "EPLB 策略测试",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/tests/models/test_eplb_policy.py"
+        }
+      ]
+    },
+    {
+      "id": "kernels",
+      "kicker": "08 / 机器内部",
+      "title": "算子是专用机头 把大量小动作做得更顺",
+      "lead": "引擎负责组织工作，算子负责具体计算。安排得再好，机头慢、搬纸慢，整条线仍会慢。",
+      "analogy": "制作一本册子，如果每压一条线都要拆下纸张、搬去另一张桌子、重新对齐，时间会浪费在搬运。把能连做的动作合到一个机头里，就能少搬几次。又像一口大锅炒一批菜，可以更充分利用炉子，但过大的一锅也可能让第一位顾客等得更久。",
+      "mechanism": "DeepInfer 整合 FlashMLA、DeepGEMM、DeepEP、TileKernels、DeepSelect 和定制 TileLang 内核。粗略分工是：FlashMLA 优化注意力，DeepGEMM 提供矩阵乘法与相关融合计算，DeepEP 处理专家分发和合并等通信。融合算子可以减少中间数据读写和启动开销，低精度表示可减少存储与传输负担，但都受模型、数据布局和硬件约束。",
+      "steps": [
+        "把模型运算转换成设备擅长的矩阵计算、注意力和通信操作。",
+        "通过分块、融合和合理布局，减少重复搬运与零碎启动。",
+        "将具体设备的实现接入同一推理流程，并用正确性与性能测试验证。"
+      ],
+      "pitfall": "单个算子的峰值算力不是整段回答速度。一个库支持某种硬件，也不自动代表当前 DeepInfer 组合支持所有同厂商显卡。",
+      "sources": [
+        {
+          "label": "DeepInfer 官方 README",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+        },
+        {
+          "label": "FlashMLA 说明",
+          "url": "https://github.com/deepseek-ai/FlashMLA"
+        },
+        {
+          "label": "DeepGEMM 说明",
+          "url": "https://github.com/deepseek-ai/DeepGEMM"
+        },
+        {
+          "label": "DeepEP 说明",
+          "url": "https://github.com/deepseek-ai/DeepEP"
+        }
+      ]
+    },
+    {
+      "id": "async",
+      "kicker": "09 / 调度驾驶舱",
+      "title": "机器印这一轮 店长已经在排下一轮",
+      "lead": "异步调度要消除的，是设备等 CPU 整理工单时的空档，而不是让计算凭空消失。",
+      "analogy": "低效的流程是：店长排好工单，机器印完，所有人停下来数纸、登记，然后店长才排下一批。改进后，机器印第 N 批时，店长同时准备第 N+1 批，也顺手处理上一批已经确认的记录。两个人各做各的，但关键交接点仍要对齐，不能把没印完的纸算成成品。",
+      "mechanism": "CPU 负责批次选择、元数据和结果整理，GPU/NPU 负责主要模型计算。同步流程容易在前一轮采样结果回到 CPU 后再排下一轮，于是设备空等。DeepInfer 默认启用异步调度，让 CPU 调度与设备执行重叠。源码还处理延后一轮释放资源等细节，确保重叠时数据仍然有效。所谓 zero-overhead 是这类调度优化的名称与目标，不是任何场景总开销严格为零。",
+      "steps": [
+        "设备执行当前批次的 forward 与 sample。",
+        "CPU 提前组织下一批并提交工作，同时处理已可安全处理的历史结果。",
+        "在必要的依赖处同步，维护完成状态和资源生命周期，让流水线连续推进。"
+      ],
+      "pitfall": "异步不等于乱序输出，也不表示后面的 token 可以脱离前面的结果随意生成。减少的是可被重叠掩盖的等待，仍受真实依赖限制。",
+      "sources": [
+        {
+          "label": "官方部署问答",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+        },
+        {
+          "label": "引擎异步执行与资源延迟释放",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/engine/llm_engine.py"
+        },
+        {
+          "label": "异步元数据实现",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/csrc/engine/zos.cpp"
+        }
+      ]
+    },
+    {
+      "id": "dspark",
+      "kicker": "10 / 草稿校对压头",
+      "title": "先快写草稿 再把校对时间花在最值得的地方",
+      "lead": "DSpark 用草稿加验证加速生成；confidence-scheduled verification 再决定每份草稿校对多长更划算。",
+      "analogy": "助手先写出「活动 将在 周六 下午 举行」，主编随后检查。若前几个片段可靠，一次检查就能推进好几步；某处不被接受，后面的草稿不能绕过它直接当成成稿。现在同时来了十份稿子，主编不必每份都机械检查五片，而可以把有限工时优先给预计更容易通过的前缀。",
+      "mechanism": "草稿模块提出候选 token，Confidence Head 预测每个候选被主模型接受的可能性。公开 GPU 内核把同一序列的置信度逐项累乘，以反映「走到这个位置，前面也得通过」，再按预算选择高收益前缀。CPU 结合执行代价确定总验证预算；异步调度下，最新每请求长度由 GPU 计算。最终是否接受仍由验证逻辑决定，置信度本身没有放行权。",
+      "steps": [
+        "产生候选草稿及其接受概率估计；公开配置默认最大草稿长度为 5。",
+        "综合预计收益与硬件执行成本，决定总预算及各请求验证前缀长度。",
+        "主模型验证，确认可接受前缀；遇到拒绝就按算法修正并从有效状态继续。"
+      ],
+      "pitfall": "置信度不是答案的事实正确率。不是「自信就免检」，也不是永远越多草稿越快。页面里的词片、概率和接受结果均为教学样例，不是模型实测。",
+      "sources": [
+        {
+          "label": "草稿模块与 ConfidenceHead",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/models/mtp/dflash.py"
+        },
+        {
+          "label": "置信度累乘与预算分配",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/layers/tilelang_ops/cuda/schedule_mtp_varlen.py"
+        },
+        {
+          "label": "验证预算与运行时估计",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/csrc/engine/mtp_varlen.hpp"
+        },
+        {
+          "label": "官方部署问答",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+        }
+      ]
+    },
+    {
+      "id": "repeatability",
+      "kicker": "11 / 同版复印",
+      "title": "旁边换了顾客 你的结果应该能保持一致",
+      "lead": "批次不变性与确定性采样解决两个不同的问题：谁和你一起算，以及随机选择怎样复现。",
+      "analogy": "你要求复印同一张稿子，不希望因为隔壁顾客印的是海报，自己的字就发生微小变化。另一方面，你让设计师「随机挑一个标题」，两次选择不同也正常；要重演同一次选择，就要记录那次抽签的种子和全部规则。一个解决邻桌干扰，一个解决抽签复现。",
+      "mechanism": "不同批次可能选择不同计算路径或聚合顺序，数值细微差异又可能影响后续选择。Batch-invariant 模式旨在让模型结果不随同批请求组合变化。确定性采样还需要相同输入 token、相同参数和固定 seq_seed。官方 README 给出的 NVIDIA 配置还要求关闭 MTP 变长验证。它们有助于调试、比较和回归验证，但不是模型回答真实性的证明。",
+      "steps": [
+        "开启 DEEPINFER_BATCH_INVARIANT=1，控制批次变化引起的结果差异。",
+        "需要确定性采样时，额外设置 DEEPINFER_ENABLE_MTP_VARLEN=0 并固定 seq_seed。",
+        "保持模型、输入 token 与采样参数等条件一致，再比较结果；不要只比较表面相似的自然语言提问。"
+      ],
+      "pitfall": "只固定 seed 不等于所有环境都能逐字复现；官方标注这两项能力为 NVIDIA only。稳定重复一个答案，也可能稳定重复一个错误。",
+      "sources": [
+        {
+          "label": "DeepInfer 官方 README",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+        },
+        {
+          "label": "批次不变性测试",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/tests/models/test_batch_invariant.py"
+        },
+        {
+          "label": "seq_seed 与采样参数",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/sampling_params.py"
+        }
+      ]
+    },
+    {
+      "id": "structured",
+      "kicker": "12 / 格式模具",
+      "title": "要求 JSON 就让每一步都经过格式尺",
+      "lead": "结构化输出在生成过程中限制合法 token，让输出遵循给定格式；它不是写完后再祈祷 JSON 能解析。",
+      "analogy": "店里要打印一张标准票据：编号必须是两位字母加三位数字。若只告诉排字师「尽量照格式」，他仍可能多加解释。更可靠的做法是装一副模具：该放数字的位置，字母块根本放不进去。模具限定形状，里面填的价格是否正确，仍要另外核对。",
+      "mechanism": "DeepInfer 可接收正则表达式、JSON Schema 或 EBNF 语法。格式约束先编译成可追踪状态的语法结构，运行时随已生成内容推进，产生合法 token 集合，并在采样时屏蔽不合法选择。官方例子故意给出要求自由写故事的提示，同时施加格式约束，再验证最终输出确实符合 regex、JSON 或 EBNF，并正常结束。",
+      "steps": [
+        "把目标格式转成可执行的约束状态。",
+        "每轮依据已输出内容，计算接下来哪些 token 合法。",
+        "采样只在合法范围内进行，更新语法状态，直到得到符合要求的完整结构。"
+      ],
+      "pitfall": "结构正确不代表内容真实。合法的 {\"price\":999} 仍可能报错价格；业务范围、权限和事实还需要各自验证。编译机如何独立部署属于生产系统描述，不是离线示例自动附带的整套服务。",
+      "sources": [
+        {
+          "label": "官方结构化输出检查示例",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/_structured_output.py"
+        },
+        {
+          "label": "采样参数 so_args",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/sampling_params.py"
+        },
+        {
+          "label": "官方部署问答",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "kicker": "13 / 走出工作台",
+      "title": "核心引擎开源了 整间线上工厂还需要配套",
+      "lead": "理解公开边界，才能知道哪些可以从代码研究，哪些只是官方介绍的线上架构。",
+      "analogy": "拿到一套印刷机和完整机头，并不等于拿到印刷公司的物流中心、顾客排队系统、跨店仓库和故障值班。机器可以工作，开一间能承受大量订单的门店还要接上周边系统。也不要反过来认为缺少全国物流就说明印刷机不能运行。",
+      "mechanism": "本次发布提供离线推理及核心执行能力。README 明确列出未包含的完整服务组件：KV cache system、VE/Prefill/Decode disaggregation，以及 Prefill 和 Decode 跨 DP 副本的负载均衡。官方问答介绍的线上方案会把看图、读输入、生成输出分开部署，并配有专用缓存存储与负载管理。这些属于围绕引擎搭起来的生产系统扩展。",
+      "steps": [
+        "核心层：研究模型执行、算子、并行、草稿验证、调度和输出约束。",
+        "服务层：补齐请求入口、队列、协议、缓存服务、路由与生命周期管理。",
+        "运营层：结合硬件和负载验证吞吐、延迟、故障恢复与资源利用。"
+      ],
+      "pitfall": "不能写「clone 之后就拥有 DeepSeek 全部线上基础设施」。研究时间为 2026-10-22；官方当前列出的模型是 DeepSeek-V4.1-Flash，硬件是 NVIDIA SM100 与 Huawei Ascend 950，后续支持范围以仓库更新为准。",
+      "sources": [
+        {
+          "label": "DeepInfer 官方 README",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+        },
+        {
+          "label": "官方部署问答",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+        },
+        {
+          "label": "Recipe 调用方责任",
+          "url": "https://github.com/deepseek-ai/deepseek-recipe"
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "kicker": "14 / 怎样判断更快",
+      "title": "第一张多久出来 和一小时印多少 不是一个指标",
+      "lead": "看推理性能，至少分清等待首个输出、后续输出间隔和整个系统的吞吐。",
+      "analogy": "一家店每小时能印十万张，并不意味着你交来一页纸马上能拿到。大批量装订能提高总产量，却可能让第一位顾客等待；给每位顾客单开机器，响应可能快，成本又会很高。真正的优化是在延迟目标、有效产量和资源消耗之间找合适位置。",
+      "mechanism": "TTFT 表示到第一个输出 token 的时间，TBT 表示输出 token 之间的时间；吞吐看单位时间处理多少工作。公开基准把 Prefill 与 Decode 分开测量，并在指定硬件、批次、上下文和暖机条件下报告结果。尤其要留意：examples 中 decode throughput 有按草稿全部接受计算的口径，不能直接当作用户真实收到的 token/s。所有加速收益都必须连同条件一起读。",
+      "steps": [
+        "先固定模型、设备、上下文、请求并发、缓存条件和生成配置。",
+        "同时看用户延迟与系统吞吐，区分输入处理和输出生成。",
+        "记录接受率、真实输出量和测量窗口，再判断优化是否对目标场景有用。"
+      ],
+      "pitfall": "本页面的进度、时间轴、负载条和概率均为教学示意，没有运行大模型，也没有给这台电脑做性能测试。官方某一条件下的数字，不应换成无条件的「快几倍」。",
+      "sources": [
+        {
+          "label": "基准测量口径与注意事项",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/README.md"
+        },
+        {
+          "label": "基准实现",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/benchmark.py"
+        },
+        {
+          "label": "性能曲线生成脚本",
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/sweep/plot_pareto.py"
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Token",
+      "meaning": "模型处理的小单位及其编号，不保证等于一个汉字"
+    },
+    {
+      "term": "Prefill",
+      "meaning": "处理输入并建立生成所需状态的阶段"
+    },
+    {
+      "term": "Decode",
+      "meaning": "利用已有上下文持续产生输出的阶段"
+    },
+    {
+      "term": "KV Cache",
+      "meaning": "供注意力复用的计算中间状态，不是现成答案库"
+    },
+    {
+      "term": "SWA",
+      "meaning": "滑动窗口注意力，在指定局部窗口内读取信息"
+    },
+    {
+      "term": "Bounded replay",
+      "meaning": "只回放有限尾段，以恢复特定局部状态"
+    },
+    {
+      "term": "DP",
+      "meaning": "数据并行，让不同请求或数据由不同单元处理"
+    },
+    {
+      "term": "CP",
+      "meaning": "上下文并行，把一份上下文相关工作分给多设备"
+    },
+    {
+      "term": "MoE",
+      "meaning": "混合专家模型，一次路由只调用相应专家模块"
+    },
+    {
+      "term": "EP",
+      "meaning": "专家并行，把专家计算分布到多个设备"
+    },
+    {
+      "term": "EPLB",
+      "meaning": "专家并行负载均衡，调整专家副本与设备摆放"
+    },
+    {
+      "term": "Kernel",
+      "meaning": "在设备上执行具体运算的计算内核或算子"
+    },
+    {
+      "term": "DSpark",
+      "meaning": "DeepInfer 的草稿加验证解码机制，结合置信度安排验证"
+    },
+    {
+      "term": "Confidence Head",
+      "meaning": "估计草稿 token 被接受的可能性，不判断事实真假"
+    },
+    {
+      "term": "Batch invariant",
+      "meaning": "控制同一输入的模型结果不因同批请求改变"
+    },
+    {
+      "term": "Deterministic sampling",
+      "meaning": "在指定条件下，让相同输入与参数得到可复现采样"
+    },
+    {
+      "term": "Structured output",
+      "meaning": "在生成时用语法约束可选 token，形成指定结构"
+    },
+    {
+      "term": "TTFT / TBT",
+      "meaning": "首个输出的等待时间 / 后续输出 token 之间的间隔"
+    }
+  ],
+  "sources": [
+    {
+      "label": "DeepInfer 官方 README",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/README.md"
+    },
+    {
+      "label": "LLM 批处理入口",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/entrypoints/llm.py"
+    },
+    {
+      "label": "Recipe 调用方责任",
+      "url": "https://github.com/deepseek-ai/deepseek-recipe"
+    },
+    {
+      "label": "Recipe 分词接口",
+      "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/main/docs/tokenizer.md"
+    },
+    {
+      "label": "引擎异步执行与资源延迟释放",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/engine/llm_engine.py"
+    },
+    {
+      "label": "基准测量口径与注意事项",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/README.md"
+    },
+    {
+      "label": "FlashMLA 说明",
+      "url": "https://github.com/deepseek-ai/FlashMLA"
+    },
+    {
+      "label": "官方部署问答",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/doc/inference_deployment_qa.md"
+    },
+    {
+      "label": "YoCo mask 与 compact 校验边界",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/yoco/README.md"
+    },
+    {
+      "label": "采样参数 so_args",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/sampling_params.py"
+    },
+    {
+      "label": "输出处理接口",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/csrc/engine/process_output.hpp"
+    },
+    {
+      "label": "balanced CP 镜像布局内核",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/layers/tilelang_ops/cuda/prepare_cp_mirror.py"
+    },
+    {
+      "label": "EPLB 公开分配策略",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/eplb/policy.py"
+    },
+    {
+      "label": "DeepEP 说明",
+      "url": "https://github.com/deepseek-ai/DeepEP"
+    },
+    {
+      "label": "EPLB 策略测试",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/tests/models/test_eplb_policy.py"
+    },
+    {
+      "label": "DeepGEMM 说明",
+      "url": "https://github.com/deepseek-ai/DeepGEMM"
+    },
+    {
+      "label": "异步元数据实现",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/csrc/engine/zos.cpp"
+    },
+    {
+      "label": "草稿模块与 ConfidenceHead",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/models/mtp/dflash.py"
+    },
+    {
+      "label": "置信度累乘与预算分配",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/deepinfer/model_executor/layers/tilelang_ops/cuda/schedule_mtp_varlen.py"
+    },
+    {
+      "label": "验证预算与运行时估计",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/csrc/engine/mtp_varlen.hpp"
+    },
+    {
+      "label": "批次不变性测试",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/tests/models/test_batch_invariant.py"
+    },
+    {
+      "label": "官方结构化输出检查示例",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/_structured_output.py"
+    },
+    {
+      "label": "基准实现",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/benchmark.py"
+    },
+    {
+      "label": "性能曲线生成脚本",
+      "url": "https://github.com/deepseek-ai/DeepInfer/blob/main/examples/sweep/plot_pareto.py"
+    }
+  ],
+  "teachingExample": {
+    "prompt": "请把活动安排整理成三句话",
+    "draft": [
+      "活动",
+      "将在",
+      "周六",
+      "下午",
+      "举行"
+    ],
+    "confidence": [
+      0.95,
+      0.9,
+      0.82,
+      0.6,
+      0.4
+    ],
+    "acceptedPrefix": 3,
+    "notice": "人工编写的词片与概率 仅用于说明验证前缀 不是实际分词或模型预测"
+  }
+}

@@ -22,6 +22,23 @@ await cp(path.join(root, "minsheng"), path.join(output, "minsheng"), { recursive
 await cp(path.join(root, "game-brief-assets"), path.join(output, "game-brief-assets"), { recursive: true });
 await cp(path.join(root, "brand-assets"), path.join(output, "brand-assets"), { recursive: true });
 await cp(path.join(root, "data"), path.join(output, "data"), { recursive: true });
+// 场景页的访问快照：构建时取一次最新数字；取不到就沿用仓库里的旧快照，不影响构建。
+try {
+  const response = await fetch("https://springhues.goatcounter.com/counter/TOTAL.json", {
+    signal: AbortSignal.timeout(5000)
+  });
+  if (response.ok) {
+    const raw = await response.json();
+    const snapshot = {
+      visits: Number(raw.count) || 0,
+      visitors: Number(raw.count_unique) || 0,
+      updated: new Date().toISOString().replace(/\.\d+Z$/, "Z")
+    };
+    await writeFile(path.join(output, "data", "scene-stats.json"), JSON.stringify(snapshot, null, 2) + "\n", "utf8");
+  }
+} catch {
+  // 网络不可用时保留已复制的旧快照。
+}
 await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursive: true });
 for (const dir of ["site", "vendor", "works", "updates", "assets/hero/web", "assets/fonts"]) {
   await cp(path.join(root, dir), path.join(output, dir), { recursive: true });

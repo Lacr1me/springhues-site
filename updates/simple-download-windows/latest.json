@@ -4,14 +4,14 @@
   "channel": "stable",
   "platform": "windows",
   "architecture": "x64",
-  "version": "0.2.1",
-  "releaseId": "20261018T152358Z-ede0cc5e",
-  "releaseCreatedAtUtc": "2026-10-18T15:23:58.337Z",
-  "publishedAtUtc": "2026-10-18T16:01:43.000Z",
-  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e/SimpleDownload-0.2.1-Windows-Setup.exe",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e",
-  "notes": "支持网站更新与 AI 客户端一键连接，MCP 随包；改善 HLS 并发下载、分片重试和断点续传，修复浮窗、设置、批量操作、作品库和 AI 连接反馈。",
+  "version": "0.2.12",
+  "releaseId": "20261024T002929Z-3ecf1ac2",
+  "releaseCreatedAtUtc": "2026-10-24T00:29:29.568Z",
+  "publishedAtUtc": "2026-10-24T00:43:58.000Z",
+  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2",
+  "notes": "修复位图主题下首页作品库封面预览空白及标题底色显示异常。保留启动自动检查更新、主题提醒弹窗、详情展开、精确跳过与立即更新，以及 0.2.12 的公开收藏夹、YouTube/X 视频下载、标准点播 DASH、浏览器登录保留、原生呈现和当前页解析等修复。更早版本可从设置手动检查更新。部分视频仍需登录或站点验证，X 多视频标题可能重复，实际文件分别保存。",
   "fileName": "简单下载.exe",
-  "size": 201157034,
-  "sha256": "151c898bae749a51ef6349f555054da8cfff02032dcd27abd49d8238b2fa83cb"
+  "size": 268771718,
+  "sha256": "1db442405e6755afd380acc62eb95c8ba767fee2cdd1e4bca14a58113acbd725"
 }

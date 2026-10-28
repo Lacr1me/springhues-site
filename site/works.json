@@ -8,6 +8,29 @@
   ],
   "works": [
     {
+      "slug": "ai-desktop-starter",
+      "category": "web",
+      "name": "AI 桌面入门 · 离线教程合集",
+      "intro": "从安装登录到第一次动手，学习 DeepSeek、WorkBuddy、ChatGPT 与通用 CLI，四份交互教程汇成一个可离线阅读的页面。",
+      "details": [
+        { "h": "四个入门入口", "p": "分别了解 DeepSeek、WorkBuddy、ChatGPT 桌面端与通用命令行，涵盖安装登录、首次界面、常用模式、终端命令及常见问题。" },
+        { "h": "边看边练", "p": "内置界面导览、步骤演示与离线模拟练习，支持明暗主题、大字阅读和学习完成标记。演示在浏览器内运行，不连接真实 AI 服务，也不执行本机命令。" },
+        { "h": "单文件离线阅读", "p": "点击作品详情或教程首页的「下载离线教程」，即可保存含四份教程和全部图片的完整 HTML，下载后直接打开就能离线阅读。官方资料与下载链接需要联网访问；主题与学习偏好仅保存在当前浏览器。" }
+      ],
+      "tags": ["AI", "入门", "教程", "离线"],
+      "platform": "Web",
+      "updatedAt": "2026-10-24",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开教程合集", "href": "works/ai-desktop-starter/" },
+        { "kind": "download", "label": "下载离线教程", "href": "works/ai-desktop-starter/AI-desktop-starter.html.txt", "download": "AI桌面入门-离线教程合集.html" }
+      ],
+      "cover": { "kind": "placeholder", "label": "AI STARTER" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
       "slug": "simple-download-windows",
       "category": "software",
       "name": "简单下载 Windows 版",
@@ -15,22 +38,103 @@
       "platform": "Windows",
       "intro": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具，支持抖音、哔哩哔哩、小红书等平台公开内容。",
       "details": [
-        { "h": "", "p": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具。支持抖音、哔哩哔哩、小红书等平台公开内容解析，可保存视频、音频、图片、图集及网页中的文档、压缩包等资源。" },
-        { "h": "", "p": "内置多标签浏览器，支持浏览时嗅探资源、多选及批量加入下载队列；提供可配置的多线程分段下载、暂停续传和真实阶段进度展示，下载成品按类型与日期自动整理。" },
-        { "h": "", "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。" }
+        {
+          "h": "",
+          "p": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具。支持抖音、哔哩哔哩、小红书等平台公开内容解析，可保存视频、音频、图片、图集及网页中的文档、压缩包等资源。"
+        },
+        {
+          "h": "",
+          "p": "内置多标签浏览器，支持浏览时嗅探资源、多选及批量加入下载队列；提供可配置的多线程分段下载、暂停续传和真实阶段进度展示，下载成品按类型与日期自动整理。"
+        },
+        {
+          "h": "",
+          "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。"
+        },
+        {
+          "h": "安装与卸载更新",
+          "p": "选择磁盘根目录或浏览父文件夹时，安装器会补全简单下载专属目录；已安装版本继续使用原目录。卸载界面采用统一默认风格，默认保留本地数据与图库，可按需分别选择清理并确认范围；符合归属校验的图库文件送入系统回收站。"
+        },
+        {
+          "h": "新拟物与位图主题",
+          "p": "新增可切换的新拟物和位图主题，保留既有布局与品牌配色。主题风格与浅色、深色、跟随系统分别保存；位图数字采用实际像素字体，配合矩阵图标、分档网点反馈和20格任务进度，并支持减少动画。浮窗同步主题字体和明暗菜单。"
+        },
+        {
+          "h": "0.2.12 收藏夹与视频下载",
+          "p": "新增 B站公开收藏夹、YouTube/X 视频下载与标准点播 DASH 支持。浏览器保留登录并采用原生网页呈现，修复当前页解析、视频预览和缩略图显示问题。未公开收藏夹明确显示：该收藏夹未公开。"
+        },
+        {
+          "h": "0.2.12 启动更新提醒",
+          "p": "打开软件自动检查更新，有新版时弹出跟随当前主题的提醒。中间的更新详情可展开日志，可跳过此版本或立即更新。跳过记录重启后保留，同版本后续修订仍会提醒；立即更新复用下载、校验和安全退出安装流程。"
+        },
+        {
+          "h": "0.2.12 位图作品库预览修复",
+          "p": "修复位图主题下首页作品库封面预览空白及标题底色显示异常。保留已有启动自动检查更新、主题提醒弹窗、详情展开、精确跳过和立即更新。"
+        }
       ],
-      "tags": ["Windows", "下载工具", "资源嗅探", "批量下载"],
-      "version": "0.2.1",
-      "updatedAt": "2026-10-19",
+      "tags": [
+        "Windows",
+        "下载工具",
+        "资源嗅探",
+        "批量下载"
+      ],
+      "version": "0.2.12",
+      "updatedAt": "2026-10-24",
       "isNew": true,
       "links": [
-        { "kind": "download", "label": "下载安装包（201 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e/SimpleDownload-0.2.1-Windows-Setup.exe" },
-        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e" }
+        {
+          "kind": "download",
+          "label": "简单下载-0.2.12.exe",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe"
+        },
+        {
+          "kind": "download",
+          "label": "简单下载-0.2.12.zip",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12.zip"
+        },
+        {
+          "kind": "visit",
+          "label": "发布页与校验值",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2"
+        },
+        {
+          "kind": "visit",
+          "label": "工作原理",
+          "href": "works/simple-download/?platform=windows"
+        }
       ],
-      "cover": { "kind": "placeholder", "label": "WINDOWS" },
+      "cover": {
+        "kind": "placeholder",
+        "label": "WINDOWS"
+      },
       "shots": [],
-      "layout": { "size": "l" },
-      "source": null
+      "layout": {
+        "size": "l"
+      },
+      "source": null,
+      "releaseAssets": {
+        "releaseId": "20261024T002929Z-3ecf1ac2",
+        "installer": {
+          "fileName": "SimpleDownload-0.2.12-Windows-Setup.exe",
+          "displayName": "简单下载-0.2.12.exe",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe",
+          "size": 268771718,
+          "sha256": "1db442405e6755afd380acc62eb95c8ba767fee2cdd1e4bca14a58113acbd725"
+        },
+        "legacyInstaller": {
+          "fileName": "SimpleDownload-0.2.12-Windows-Setup.exe",
+          "displayName": "简单下载-0.2.12.exe",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe",
+          "size": 268771718,
+          "sha256": "1db442405e6755afd380acc62eb95c8ba767fee2cdd1e4bca14a58113acbd725"
+        },
+        "archive": {
+          "fileName": "SimpleDownload-0.2.12.zip",
+          "displayName": "简单下载-0.2.12.zip",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12.zip",
+          "size": 262493464,
+          "sha256": "45f299d9ad8e47d54aa4d29ccacededef5bd870baa1f1f33dce59e2cef07f97b"
+        }
+      }
     },
     {
       "slug": "simple-download-android",
@@ -45,12 +149,25 @@
         { "h": "", "p": "作品库支持图片与视频预览、分类筛选、日期分组、多选、全选和批量删除，并提供日期快速滚动、GIF 动态预览及实况配对展示。解析、下载与媒体处理均在本地完成，无需提交平台账号密码。" }
       ],
       "tags": ["Android", "下载工具", "实况照片", "本地处理"],
-      "version": "2.3.4",
-      "updatedAt": "2026-10-03",
+      "version": "2.3.53",
+      "updatedAt": "2026-10-25",
       "isNew": true,
       "links": [
-        { "kind": "download", "label": "下载 APK（28 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.4/SimpleDownload-2.3.4-Android.apk" },
-        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.4" }
+        {
+          "kind": "download",
+          "label": "简单下载-2.3.53.apk",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.53/SimpleDownload-2.3.53-Android.apk"
+        },
+        {
+          "kind": "visit",
+          "label": "发布页与校验值",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.53"
+        },
+        {
+          "kind": "visit",
+          "label": "工作原理",
+          "href": "works/simple-download/?platform=android"
+        }
       ],
       "cover": { "kind": "placeholder", "label": "ANDROID" },
       "shots": [],
@@ -82,6 +199,81 @@
         { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-games/releases/tag/n1ten-v1.5.2" }
       ],
       "cover": { "kind": "placeholder", "label": "N1TEN" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "vllm-anatomy",
+      "category": "web",
+      "name": "vLLM 解剖室",
+      "intro": "把 vLLM 变成一台可操作的活页档案调度台，用图书馆里的例子讲清同一块 GPU 怎样接住更多问题。",
+      "details": [
+        { "h": "跟着请求走一遍", "p": "观察请求从接收、分词、缓存分配、调度到 Prefill、Decode 和回收的完整过程。切换单请求、连续批处理、公共前缀、长短任务和容量紧张五种情境，逐步查看请求、逻辑页表、物理页和计算记录。" },
+        { "h": "20 章详细拆解", "p": "用大白话和生活类比解释模型与引擎、KV 缓存、PagedAttention、连续批处理、分块 Prefill、前缀复用、抢占重算、编译、并行和量化。附 32 个术语、12 个常见误区及可点击的一手资料入口。" },
+        { "h": "四个动手实验", "p": "调整页块大小、任务长度、调度方式、共同前缀和 KV 精度，观察空间与工作量怎样变化。支持键盘、播放暂停、减少动态效果和手机阅读。模型中的容量、轮数与输出均为教学设定，不代表真实 GPU 性能。" }
+      ],
+      "tags": ["网页", "AI", "原理", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-22",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开解剖室", "href": "works/vllm-anatomy/" }
+      ],
+      "prompt": "works/vllm-anatomy/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "VLLM" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "agent-anatomy",
+      "category": "web",
+      "name": "Agent 解剖室",
+      "intro": "把 AI Agent 拆成一台能动的任务调度台，用一场 600 元的野餐，讲清它怎样用工具、读反馈、改计划并完成任务。",
+      "details": [
+        { "h": "跟着任务卡走一圈", "p": "从接收目标到校验交付，观察模型如何提出下一步，程序如何执行工具并带回结果。机械结构是帮助理解的教学比喻，天气、地点与报价均为预设演示数据。" },
+        { "h": "15 章大白话拆解", "p": "用生活类比讲解 Agent 循环、上下文与记忆、RAG、规划与反馈、工具调用、权限、错误恢复、成本和停止条件。附 24 个术语、10 个常见误解与可点击的一手资料。" },
+        { "h": "五种情境亲手运行", "p": "切换顺利完成、雨天调整、工具超时、网页夹带指令与越权下单被拦截，逐步查看任务状态、工具请求与回执、执行轨迹。支持播放暂停、速度调节、键盘操作与减少动态效果；不进行真实联网查询或下单。" }
+      ],
+      "tags": ["网页", "AI", "原理", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-22",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开解剖室", "href": "works/agent-anatomy/" }
+      ],
+      "prompt": "works/agent-anatomy/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "AGENT" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "deepinfer-anatomy",
+      "category": "web",
+      "name": "DeepInfer 解剖室",
+      "intro": "把 DeepSeek 的推理引擎变成一台能动的印刷工作台，用生活中的例子讲清一句回答背后的计算与协作。",
+      "details": [
+        { "h": "从一张工单出发", "p": "跟随纸票走过六个流程节点，查看阅读头、记忆抽屉、专家模块和校对机构如何配合。机械结构是帮助理解的教学比喻，不代表真实硬件配置。" },
+        { "h": "14 章详细拆解", "p": "用大白话和生活类比讲解 Token、Prefill、KV 缓存、Decode、MoE、异步调度与 DSpark，并附官方代码和文档。逐章展开真实机制，也可以翻阅随手词典。" },
+        { "h": "动手试与逐步看", "p": "切换串行和重叠排程，调整草稿验证预算，观察机制变化。使用流程按钮或左右方向键切换步骤，空格播放或暂停；支持减少动态效果。实验数值均为教学设定，不是实际性能测量。" }
+      ],
+      "tags": ["网页", "AI", "原理", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-22",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开解剖室", "href": "works/deepinfer-anatomy/" }
+      ],
+      "prompt": "works/deepinfer-anatomy/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "DEEPINFER" },
       "shots": [],
       "layout": { "size": "l" },
       "source": null
@@ -132,6 +324,58 @@
       ],
       "prompt": "works/three-body-observatory/prompt.txt",
       "cover": { "kind": "placeholder", "label": "THREE-BODY" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "slice-shop",
+      "category": "web",
+      "name": "切片小店 · 四季观测",
+      "intro": "一间真三维的微缩小店：四季、昼夜、行走的人，右侧是本站的真实访问数据。",
+      "details": [
+        { "h": "", "p": "两层街角书店：蓝色窗框、酒红饰带、两面 SPRINGHUES 招牌，二楼橱窗里排满彩色书脊，一层橱窗后是磨砂暖光；门口有立牌、壁灯和海报卡。" },
+        { "h": "操作", "p": "拖动画面转动视角；下方切换白天与夜晚、春与秋冬。春天细雨，夏天晴，秋天落叶，冬天落雪。" },
+        { "h": "人数", "p": "街上走动的人数等于本站的独立访客数：有多少访客，就有多少个人在走。" },
+        { "h": "数字来源", "p": "访问量经自建转发读取 GoatCounter 的匿名计数，不使用 Cookie；日报期数与作品数直接读取站点的归档清单。" }
+      ],
+      "tags": ["网页", "等轴测", "四季", "数据"],
+      "platform": "Web",
+      "model": "DeepSeek Flash 1017",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-19",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开作品", "href": "works/slice-shop/" }
+      ],
+      "prompt": "works/slice-shop/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "SLICE SHOP" },
+      "shots": [],
+      "layout": { "size": "m" },
+      "source": null
+    },
+    {
+      "slug": "springhues-bookstore",
+      "category": "web",
+      "name": "四季书屋 · 访客风景",
+      "intro": "从参考图重新搭建的街角书屋，在四季与昼夜之间，把本站真实匿名访问计数变成门前的访客风景。",
+      "details": [
+        { "h": "一间新书屋", "p": "独立搭建的双层街角书店：米白墙面、蓝色窗框、酒红饰带，玻璃后有书架与暖灯。旋转视角看看两面橱窗，也可以推开蓝色的门。" },
+        { "h": "四季与昼夜", "p": "春日花瓣、夏日绿荫、秋日落叶与冬日积雪随季节切换；夜幕降临时，壁灯与书店亮起。支持鼠标拖动、滚轮缩放、触屏双指缩放和键盘操作。" },
+        { "h": "访客风景", "p": "场景中的人物由本站 GoatCounter 匿名汇总计数驱动，最多展示 24 位代表人物。人物不是具体访客，不表示当前在线人数，也不能用来识别或追踪个人。" },
+        { "h": "真实统计", "p": "展示已有统计服务返回的真实计数，公开计数缓存最长约 4 小时。读取失败时显示标注时间的保存快照或不可用状态，不用演示数字替代；作品页不新增本地存储。" }
+      ],
+      "tags": ["网页", "三维", "四季", "访客"],
+      "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-19",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开书屋", "href": "works/springhues-bookstore/" }
+      ],
+      "prompt": "works/springhues-bookstore/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "BOOKSTORE" },
       "shots": [],
       "layout": { "size": "l" },
       "source": null

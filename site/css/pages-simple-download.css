@@ -1,0 +1,211 @@
+/* Simple Download principles. Geometry reuses Anatomy (MIT); all UI uses SHARD.
+   Figure shades are derived from the shared palette, so the site theme is the
+   only source of truth. The geometry itself remains the approved illustration. */
+html.shard-live .sd-principles {
+  --sd-wrap: 1400px;
+  --anatomy-weight: .7px;
+  --anatomy-mono: "Cascadia Code", Consolas, monospace;
+  --anatomy-paper: var(--sh-white);
+  --anatomy-top: var(--sd-panel);
+  --anatomy-shade-0: color-mix(in srgb, var(--sh-klein-500) 44%, var(--sh-white));
+  --anatomy-shade-1: color-mix(in srgb, var(--sh-klein-500) 28%, var(--sh-white));
+  --anatomy-shade-2: color-mix(in srgb, var(--sh-klein-500) 15%, var(--sh-white));
+  --anatomy-shade-3: color-mix(in srgb, var(--sh-klein-500) 7%, var(--sh-white));
+  --anatomy-hi: var(--sh-klein-950);
+  --anatomy-mid: color-mix(in srgb, var(--sh-klein-500) 60%, var(--sh-white));
+  --anatomy-lo: color-mix(in srgb, var(--sh-klein-500) 38%, var(--sh-white));
+  --anatomy-faint: var(--sd-line);
+  --anatomy-dot: var(--sh-klein-700);
+  --anatomy-halo-opacity: .38;
+  --sd-figure-bg: var(--sh-klein-500);
+  --sd-figure-muted: color-mix(in srgb, var(--sh-white) 78%, var(--sh-klein-500));
+  --sd-payload-base: var(--anatomy-shade-2);
+}
+html.shard-live[data-theme="night"] .sd-principles {
+  --anatomy-paper: var(--sh-klein-900);
+  --anatomy-top: color-mix(in srgb, var(--sh-white) 30%, var(--sh-klein-900));
+  --anatomy-shade-0: color-mix(in srgb, var(--sh-white) 5%, var(--sh-klein-950));
+  --anatomy-shade-1: color-mix(in srgb, var(--sh-white) 10%, var(--sh-klein-900));
+  --anatomy-shade-2: color-mix(in srgb, var(--sh-white) 17%, var(--sh-klein-900));
+  --anatomy-shade-3: color-mix(in srgb, var(--sh-white) 24%, var(--sh-klein-900));
+  --anatomy-hi: var(--sh-white);
+  --anatomy-mid: var(--muted);
+  --anatomy-lo: color-mix(in srgb, var(--sh-white) 50%, var(--sh-klein-500));
+  --anatomy-faint: color-mix(in srgb, var(--sh-white) 28%, var(--sh-klein-500));
+  --anatomy-dot: var(--sh-white);
+  --anatomy-halo-opacity: .72;
+  --sd-figure-bg: var(--sh-klein-900);
+  --sd-payload-base: var(--anatomy-lo);
+}
+html.shard-live .sd-principles button { font-family: var(--font-cn); border-radius: 0; -webkit-tap-highlight-color: transparent; }
+html.shard-live .sd-principles .icon { width: 20px; height: 20px; stroke-width: 1.8; flex: none; vertical-align: middle; }
+html.shard-live .principles-intro { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding-top: calc(var(--sd-top-h) + 42px); padding-bottom: 34px; }
+html.shard-live .principles-intro .sd-eyebrow { margin-bottom: 13px; }
+html.shard-live .principles-intro h1 { margin: 0; font: 900 clamp(30px, 4.6vw, 60px)/1.2 var(--font-cn); letter-spacing: -.04em; }
+html.shard-live .principles-intro > a { flex: none; }
+html.shard-live .workspace { background: var(--sd-panel); color: var(--sd-text); border-top: 5px solid var(--fg); }
+html.shard-live .workspace-bar { min-height: 76px; padding: 14px 26px; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: var(--sh-klein-700); color: var(--sh-white); }
+html.shard-live .section-label { display: flex; align-items: center; gap: 14px; font-size: 15px; font-weight: 800; letter-spacing: .04em; }
+html.shard-live .figure-label { font: 400 20px/1 var(--font-display); letter-spacing: .08em; }
+html.shard-live .platforms { display: flex; gap: 6px; }
+html.shard-live .platform-btn { justify-content: center; gap: 9px; color: var(--sh-white); box-shadow: inset 0 0 0 2px var(--sh-white); padding-inline: 18px 22px; }
+html.shard-live .platform-btn[aria-pressed="true"], html.shard-live .platform-btn[aria-pressed="true"]:hover { background: var(--sh-white); color: var(--sh-klein-500); box-shadow: inset 5px 0 0 var(--blade); }
+html.shard-live .platform-btn:hover { background: var(--sh-klein-950); transform: translateY(-2px); }
+html.shard-live .platform-btn:active { transform: scale(.97); }
+html.shard-live .platform-btn:focus-visible { outline-color: var(--sh-white); background: var(--sh-burgundy); color: var(--sh-white); }
+html.shard-live .machine-layout { display: grid; grid-template-columns: minmax(0, 1fr) 350px; }
+html.shard-live .drawing-pane { min-width: 0; background: var(--sd-figure-bg); position: relative; display: flex; flex-direction: column; }
+html.shard-live .iso-plate { padding: 0; border: 0; box-shadow: none; background: transparent; overflow: hidden; min-height: 460px; display: grid; place-items: center; flex: 1; }
+html.shard-live .iso-plate:focus-visible { outline-color: var(--sh-white); outline-offset: -7px; }
+html.shard-live .iso-svg { display: block; width: 100%; height: auto; min-width: 0; max-height: 520px; margin: 0; overflow: visible; transform-origin: var(--origin-x, 50%) var(--origin-y, 55%); transition: transform .7s var(--ease-out); }
+html.shard-live .iso-plate.zoomed .iso-svg { transform: scale(1.75); }
+html.shard-live .component { transition: opacity .25s var(--ease-out); }
+html.shard-live .component[data-stage]:not([data-stage="-1"]) { cursor: pointer; }
+html.shard-live .component .iso-edge, html.shard-live .component .iso-top { transition: stroke .25s var(--ease-out), fill .25s var(--ease-out); }
+html.shard-live .component.focused .iso-edge { stroke: var(--sh-klein-500); stroke-width: .9px; }
+html.shard-live .component.focused .iso-top { fill: color-mix(in srgb, var(--sh-klein-500) 12%, var(--anatomy-top)); }
+html.shard-live[data-theme="night"] .component.focused .iso-edge { stroke: var(--sh-white); }
+html.shard-live[data-theme="night"] .component.focused .iso-top { fill: color-mix(in srgb, var(--sh-white) 20%, var(--anatomy-top)); }
+html.shard-live .iso-svg path, html.shard-live .iso-svg circle { vector-effect: non-scaling-stroke; }
+html.shard-live .iso-fill { fill: var(--anatomy-paper); stroke: none; }
+html.shard-live .iso-shade, html.shard-live .iso-top { stroke: none; }
+html.shard-live .iso-shade[data-shade="0"] { fill: var(--anatomy-shade-0); }
+html.shard-live .iso-shade[data-shade="1"] { fill: var(--anatomy-shade-1); }
+html.shard-live .iso-shade[data-shade="2"] { fill: var(--anatomy-shade-2); }
+html.shard-live .iso-shade[data-shade="3"] { fill: var(--anatomy-shade-3); }
+html.shard-live .iso-top { fill: var(--anatomy-top); }
+html.shard-live .iso-halo { fill: var(--sh-klein-950); stroke: none; filter: blur(9px); opacity: var(--anatomy-halo-opacity); transform: translateY(3px); }
+html.shard-live .iso-line { fill: none; stroke: var(--anatomy-lo); stroke-width: var(--anatomy-weight); stroke-linecap: round; stroke-linejoin: round; }
+html.shard-live .iso-line[data-tone="hi"] { stroke: var(--anatomy-hi); }
+html.shard-live .iso-line[data-tone="mid"] { stroke: var(--anatomy-mid); }
+html.shard-live .iso-line[data-tone="faint"] { stroke: var(--anatomy-faint); }
+html.shard-live .iso-dots circle { fill: var(--anatomy-dot); stroke: none; opacity: .32; }
+html.shard-live .iso-dots[data-tone="hi"] circle { opacity: .85; }
+html.shard-live .iso-dots[data-tone="mid"] circle { opacity: .45; }
+html.shard-live .iso-dots[data-tone="lo"] circle { opacity: .22; }
+html.shard-live .iso-dots[data-tone="faint"] circle { opacity: .12; }
+html.shard-live .iso-face-text { fill: var(--anatomy-mid); font-family: var(--anatomy-mono); letter-spacing: .04em; }
+html.shard-live .payload .iso-top { fill: var(--sd-payload-base); }
+html.shard-live .payload[data-piece="carriage.cover"] .iso-top { fill: var(--sh-klein-500); }
+html.shard-live .payload[data-piece="carriage.cover"] .iso-edge, html.shard-live .payload[data-piece="carriage.cover"] .iso-line { stroke: var(--sh-white); }
+html.shard-live .payload[data-piece="carriage.cover"] .iso-shade { fill: var(--sh-klein-700); }
+html.shard-live .figure-top { position: absolute; z-index: 2; inset: 22px 24px auto; pointer-events: none; font: 11px/1.4 var(--anatomy-mono); color: var(--sd-figure-muted); letter-spacing: .1em; }
+html.shard-live .figure-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0 24px 20px; gap: 12px; font-size: 11px; color: var(--sd-figure-muted); }
+html.shard-live .readout { font: 11px/1.6 var(--anatomy-mono); color: var(--sh-white); text-align: right; }
+html.shard-live .figure-hint { display: flex; gap: 8px; align-items: center; }
+html.shard-live .figure-hint i { height: 7px; width: 7px; background: var(--sh-white); flex: none; }
+html.shard-live .zoom-tools { position: absolute; left: 20px; bottom: 56px; z-index: 3; }
+html.shard-live .icon-btn { width: 46px; height: 46px; padding: 0; }
+html.shard-live .zoom-tools .icon-btn { background: var(--sh-white); color: var(--sh-klein-950); box-shadow: none; }
+html.shard-live .zoom-tools .icon-btn:hover { background: var(--sh-klein-950); color: var(--sh-white); }
+html.shard-live .zoom-tools .icon-btn:focus-visible { background: var(--sh-burgundy); color: var(--sh-white); }
+html.shard-live .explanation { padding: 28px 28px 22px; display: flex; flex-direction: column; min-height: 500px; border-left: 2px solid var(--sd-line); background: var(--sd-panel); }
+html.shard-live .step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+html.shard-live .step-number { font: 400 46px/1 var(--font-display); color: var(--fg); }
+html.shard-live .step-total { font: 12px var(--anatomy-mono); color: var(--muted); margin-left: 8px; }
+html.shard-live .step-icon { color: var(--muted); }
+html.shard-live .step-icon .icon { width: 27px; height: 27px; }
+html.shard-live .copy { flex: 1; }
+html.shard-live .copy h2 { font-size: 25px; font-weight: 900; letter-spacing: -.035em; line-height: 1.35; margin: 0 0 12px; }
+html.shard-live .step-lead { font-size: 13px; font-weight: 700; line-height: 1.7; color: var(--fg); margin: 0 0 16px; }
+html.shard-live .step-body { font-size: 14px; line-height: 1.85; color: var(--sd-text); margin: 0 0 18px; }
+html.shard-live .tech-tag { display: inline-block; font: 10px/1.7 var(--anatomy-mono); color: var(--muted); border-bottom: 2px solid var(--sd-line); padding-bottom: 6px; max-width: 100%; overflow-wrap: anywhere; }
+html.shard-live .more-toggle { min-height: 44px; color: var(--fg); font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 0 2px; border: 0; background: transparent; cursor: pointer; transition: transform .25s var(--ease-out), color .2s; }
+html.shard-live .more-toggle:hover { transform: translateX(3px); }
+html.shard-live .more-toggle:active { transform: scale(.97); }
+html.shard-live .more-toggle .icon { width: 16px; height: 16px; transition: transform .25s var(--ease-out); }
+html.shard-live .more-toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }
+html.shard-live .reveal { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .36s var(--ease-out), opacity .25s var(--ease-out); }
+html.shard-live .reveal.open { grid-template-rows: 1fr; opacity: 1; }
+html.shard-live .reveal > div { min-height: 0; overflow: hidden; }
+html.shard-live .detail-text { font-size: 12px; line-height: 1.85; color: var(--muted); padding-top: 10px; margin: 0; }
+html.shard-live .step-navigation { padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+html.shard-live .navigation-caption { font: 11px var(--anatomy-mono); color: var(--muted); }
+html.shard-live .stage-nav { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 2px solid var(--sd-line); min-height: 70px; background: var(--sd-panel); }
+html.shard-live .stage-btn { position: relative; text-align: left; padding: 16px 20px; display: flex; gap: 10px; align-items: center; min-height: 60px; border: 0; border-right: 1px solid var(--sd-line); font-size: 15px; font-weight: 800; color: var(--sd-text); background: transparent; cursor: pointer; transition: background-color .25s, color .25s, transform .25s var(--ease-out); }
+html.shard-live .stage-btn:last-child { border-right: 0; }
+html.shard-live .stage-btn .num { font: 400 17px var(--font-display); }
+html.shard-live .stage-btn::before { content: ''; height: 4px; background: var(--blade); position: absolute; top: 0; left: 0; right: 0; transform: scaleX(0); transform-origin: left; transition: transform .36s var(--ease-out); }
+html.shard-live .stage-btn[aria-current="step"] { background: var(--sh-klein-500); color: var(--sh-white); }
+html.shard-live .stage-btn[aria-current="step"]::before { transform: scaleX(1); }
+html.shard-live .stage-btn:hover { background: var(--sh-klein-700); color: var(--sh-white); }
+html.shard-live .stage-btn:active { transform: scale(.97); }
+html.shard-live .stage-btn:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: -6px; }
+html.shard-live .stage-btn[aria-current="step"]:focus-visible { outline-color: var(--sh-white); }
+html.shard-live .stage-btn .icon { width: 17px; height: 17px; margin-left: auto; }
+html.shard-live .transport { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; gap: 20px; }
+html.shard-live .play-controls { display: flex; align-items: center; gap: 14px; }
+html.shard-live .play-state { font-size: 12px; color: var(--muted); }
+html.shard-live .caption { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 0; text-align: right; }
+html.shard-live .systems-section { padding-top: 76px; padding-bottom: 12px; }
+html.shard-live .section-heading { margin-bottom: 24px; }
+html.shard-live .section-heading .sd-eyebrow { margin-bottom: 12px; }
+html.shard-live .system-row { border-top: 2px solid var(--sd-line); }
+html.shard-live .system-row:last-child { border-bottom: 2px solid var(--sd-line); }
+html.shard-live .system-row > h3 { margin: 0; }
+html.shard-live .system-toggle { display: grid; grid-template-columns: 44px 190px 1fr 24px; gap: 16px; align-items: center; padding: 24px 12px; width: 100%; min-height: 76px; text-align: left; color: var(--fg); border: 0; background: transparent; cursor: pointer; transition: background-color .25s, color .25s; }
+html.shard-live .system-toggle:hover { background: var(--surface); color: var(--on-surface); }
+html.shard-live .system-toggle:focus-visible { outline-offset: -4px; }
+html.shard-live .system-number { font: 400 20px var(--font-display); }
+html.shard-live .system-title { font-size: 18px; font-weight: 900; }
+html.shard-live .system-summary { font-size: 13px; font-weight: 400; line-height: 1.6; }
+html.shard-live .system-toggle .icon { width: 20px; height: 20px; transition: transform .25s var(--ease-out); }
+html.shard-live .system-toggle[aria-expanded="true"] .icon { transform: rotate(45deg); }
+html.shard-live .system-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 4px 12px 28px 72px; }
+html.shard-live .system-columns article { padding: 16px 20px; border-left: 3px solid var(--sd-line); transition: border-color .25s, background-color .25s; }
+html.shard-live .system-columns article.selected { border-color: var(--blade); background: var(--sd-panel); }
+html.shard-live .system-columns h4 { font: 700 12px var(--anatomy-mono); display: flex; align-items: center; gap: 9px; margin: 0 0 12px; color: var(--fg); }
+html.shard-live .system-columns h4 .icon { width: 18px; height: 18px; }
+html.shard-live .system-columns p { font-size: 14px; line-height: 1.85; color: var(--sd-text); margin: 0; max-width: 470px; }
+@media (max-width: 1099px) {
+  html.shard-live .machine-layout { grid-template-columns: minmax(0, 1fr) 310px; }
+  html.shard-live .explanation { padding: 24px; }
+  html.shard-live .iso-plate { min-height: 440px; }
+  html.shard-live .stage-btn { padding: 16px 13px; gap: 8px; }
+  html.shard-live .stage-btn .icon { display: none; }
+  html.shard-live .figure-hint { font-size: 10px; }
+  html.shard-live .figure-bottom { padding-inline: 18px; }
+  html.shard-live .system-toggle { grid-template-columns: 34px 160px 1fr 24px; }
+  html.shard-live .system-columns { padding-left: 62px; gap: 16px; }
+}
+@media (max-width: 899px) {
+  html.shard-live .machine-layout { grid-template-columns: 1fr; }
+  html.shard-live .iso-plate { min-height: 390px; }
+  html.shard-live .iso-svg { max-height: 430px; }
+  html.shard-live .explanation { border-left: 0; border-top: 2px solid var(--sd-line); min-height: 0; }
+  html.shard-live .step-top { margin-bottom: 16px; }
+  html.shard-live .step-body { max-width: 650px; }
+}
+@media (max-width: 699px) {
+  html.shard-live .principles-intro { align-items: start; flex-direction: column; gap: 20px; padding-top: calc(var(--sd-top-h) + 24px); padding-bottom: 24px; }
+  html.shard-live .principles-intro h1 { font-size: clamp(29px, 7.5vw, 42px); }
+  html.shard-live .principles-intro .sd-eyebrow { font-size: 13px; }
+  html.shard-live .workspace-bar { flex-direction: column; align-items: stretch; padding: 18px; gap: 16px; }
+  html.shard-live .platform-btn { flex: 1; padding-inline: 12px 18px; }
+  html.shard-live .iso-plate { min-height: 265px; }
+  html.shard-live .iso-svg { max-height: 340px; }
+  html.shard-live .figure-top { inset: 16px 18px auto; font-size: 9px; }
+  html.shard-live .figure-bottom { align-items: start; padding: 0 16px 16px; gap: 10px; }
+  html.shard-live .figure-hint { font-size: 9px; }
+  html.shard-live .readout { font-size: 10px; }
+  html.shard-live .zoom-tools { left: 14px; bottom: 44px; }
+  html.shard-live .explanation { padding: 22px; }
+  html.shard-live .step-number { font-size: 38px; }
+  html.shard-live .copy h2 { font-size: 23px; }
+  html.shard-live .stage-nav { grid-template-columns: repeat(3, 1fr); min-height: 0; }
+  html.shard-live .stage-btn { justify-content: center; min-height: 56px; border-bottom: 1px solid var(--sd-line); font-size: 14px; gap: 10px; padding: 13px 8px; }
+  html.shard-live .stage-btn:nth-child(3) { border-right: 0; }
+  html.shard-live .stage-btn:nth-child(n+4) { border-bottom: 0; }
+  html.shard-live .transport { align-items: start; flex-wrap: wrap; gap: 12px; }
+  html.shard-live .play-state { display: none; }
+  html.shard-live .caption { text-align: left; font-size: 11px; align-self: center; }
+  html.shard-live .systems-section { padding-top: 52px; }
+  html.shard-live .system-toggle { grid-template-columns: 28px 1fr 20px; gap: 10px; padding: 22px 8px; min-height: 72px; }
+  html.shard-live .system-summary { display: none; }
+  html.shard-live .system-title { font-size: 17px; }
+  html.shard-live .system-columns { grid-template-columns: 1fr; padding: 0 8px 24px; gap: 12px; }
+  html.shard-live .system-columns article { padding: 15px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.shard-live .sd-principles button:hover, html.shard-live .sd-principles button:active { transform: none; }
+}

@@ -4,60 +4,60 @@
   "publishAt": "11:00",
   "editions": [
     {
-      "date": "2026-10-18",
-      "issue": 58,
-      "publishAt": "2026-10-18T11:00:00+08:00",
+      "date": "2026-10-28",
+      "issue": 68,
+      "publishAt": "2026-10-28T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "甘肃白银提前供暖，提前和延后时段不另收费",
-      "file": "data/minsheng/2026-10-18.json"
+      "headline": "1.6万个城镇老旧小区，完工改造！",
+      "file": "data/minsheng/2026-10-28.json"
     },
     {
-      "date": "2026-10-17",
-      "issue": 57,
-      "publishAt": "2026-10-17T11:00:00+08:00",
+      "date": "2026-10-27",
+      "issue": 67,
+      "publishAt": "2026-10-27T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "六部门启动城镇供热温暖工程三年行动",
-      "file": "data/minsheng/2026-10-17.json"
+      "headline": "民生为大 更好满足人民群众对美好生活的向往",
+      "file": "data/minsheng/2026-10-27.json"
     },
     {
-      "date": "2026-10-16",
-      "issue": 56,
-      "publishAt": "2026-10-16T11:00:00+08:00",
+      "date": "2026-10-26",
+      "issue": 66,
+      "publishAt": "2026-10-26T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "四部门公布纸尿裤甲酰胺问题调查结果",
-      "file": "data/minsheng/2026-10-16.json"
+      "headline": "全国累计完工改造城镇老旧小区1.6万个",
+      "file": "data/minsheng/2026-10-26.json"
     },
     {
-      "date": "2026-10-15",
-      "issue": 55,
-      "publishAt": "2026-10-15T11:00:00+08:00",
+      "date": "2026-10-25",
+      "issue": 65,
+      "publishAt": "2026-10-25T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "9月份居民消费价格同比上涨0.9%",
-      "file": "data/minsheng/2026-10-15.json"
+      "headline": "六部门出台意见 推进老旧街区厂区改造提升",
+      "file": "data/minsheng/2026-10-25.json"
     },
     {
-      "date": "2026-10-14",
-      "issue": 54,
-      "publishAt": "2026-10-14T11:00:00+08:00",
+      "date": "2026-10-24",
+      "issue": 64,
+      "publishAt": "2026-10-24T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "2027年国考报名新增实名实人认证",
-      "file": "data/minsheng/2026-10-14.json"
+      "headline": "国务院常务会议部署生育支持与人口发展",
+      "file": "data/minsheng/2026-10-24.json"
     },
     {
-      "date": "2026-10-13",
-      "issue": 53,
-      "publishAt": "2026-10-13T11:00:00+08:00",
+      "date": "2026-10-23",
+      "issue": 63,
+      "publishAt": "2026-10-23T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "中小学校教室采光照明新国标11月1日起实施",
-      "file": "data/minsheng/2026-10-13.json"
+      "headline": "西藏巴青7.0级地震 国家启动四级救助响应",
+      "file": "data/minsheng/2026-10-23.json"
     },
     {
-      "date": "2026-10-12",
-      "issue": 52,
-      "publishAt": "2026-10-12T11:00:00+08:00",
+      "date": "2026-10-22",
+      "issue": 62,
+      "publishAt": "2026-10-22T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
-      "headline": "新皇岗口岸12日6时30分开通，提供24小时通关",
-      "file": "data/minsheng/2026-10-12.json"
+      "headline": "前三季度医保统筹基金支出超1.7万亿元",
+      "file": "data/minsheng/2026-10-22.json"
     }
   ]
 }

@@ -1,0 +1,258 @@
+/* 场景页：左侧三维微缩街景，右侧真实数据面板。颜色只用 token。 */
+
+html.shard-live .scene-main {
+  padding: calc(var(--sd-top-h) + 44px) 0 96px;
+}
+
+html.shard-live .scene-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 48px;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+html.shard-live .scene-left {
+  min-width: 0;
+}
+
+html.shard-live .scene-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: .3em;
+  color: var(--muted);
+}
+
+html.shard-live .scene-pulse {
+  width: 7px;
+  height: 7px;
+  background: var(--blade);
+  animation: scene-pulse 2.4s var(--ease-out) infinite;
+}
+
+@keyframes scene-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .3; transform: scale(.65); }
+}
+
+html.shard-live .scene-title {
+  margin: 0;
+  line-height: .9;
+}
+
+html.shard-live .scene-title-en {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6.4vw, 92px);
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+html.shard-live .scene-title-cn {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(17px, 2vw, 24px);
+  font-weight: 900;
+  letter-spacing: .2em;
+  color: var(--fg);
+}
+
+html.shard-live .scene-lead {
+  max-width: 34em;
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+html.shard-live .scene-stage {
+  position: relative;
+  height: clamp(400px, 58vh, 660px);
+  margin-top: 18px;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+html.shard-live .scene-stage:active {
+  cursor: grabbing;
+}
+
+html.shard-live .scene-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+html.shard-live .scene-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+html.shard-live .scene-toggle,
+html.shard-live .scene-seasons {
+  display: flex;
+  gap: 6px;
+}
+
+html.shard-live .scene-toggle {
+  padding-right: 18px;
+  border-right: 1px solid var(--sd-line);
+}
+
+html.shard-live .scene-hint {
+  margin: 14px 0 0;
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+html.shard-live .scene-panel {
+  position: sticky;
+  top: calc(var(--sd-top-h) + 24px);
+  padding: 28px 26px 26px;
+  border: 1px solid var(--sd-line);
+  background: var(--sd-panel);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%);
+}
+
+html.shard-live .scene-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 72px;
+  background: var(--blade);
+}
+
+html.shard-live .scene-panel-title {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 900;
+  letter-spacing: .06em;
+  color: var(--sd-text);
+}
+
+html.shard-live .scene-panel-sub {
+  margin: 8px 0 22px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+html.shard-live .scene-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin: 0;
+  background: var(--sd-line);
+  border: 1px solid var(--sd-line);
+}
+
+html.shard-live .scene-stats > div {
+  padding: 16px 14px 14px;
+  background: var(--sd-panel);
+}
+
+html.shard-live .scene-stats dt {
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+html.shard-live .scene-stats dd {
+  margin: 8px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+html.shard-live .scene-panel-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--sd-line);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+html.shard-live .scene-panel-row strong {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--sd-text);
+}
+
+html.shard-live .scene-note {
+  margin: 14px 0 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+html.shard-live .scene-back {
+  display: inline-flex;
+  height: 44px;
+}
+
+@media (max-width: 1099px) {
+  html.shard-live .scene-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 0 28px;
+  }
+
+  html.shard-live .scene-panel {
+    position: static;
+  }
+
+  html.shard-live .scene-stage {
+    height: clamp(360px, 52vh, 560px);
+  }
+}
+
+@media (max-width: 699px) {
+  html.shard-live .scene-main {
+    padding: calc(var(--sd-top-h) + 28px) 0 64px;
+  }
+
+  html.shard-live .scene-shell {
+    padding: 0 20px;
+    gap: 26px;
+  }
+
+  html.shard-live .scene-stage {
+    height: clamp(320px, 46vh, 440px);
+    margin-top: 12px;
+  }
+
+  html.shard-live .scene-controls {
+    gap: 12px;
+  }
+
+  html.shard-live .scene-toggle {
+    padding-right: 12px;
+  }
+
+  html.shard-live .scene-panel {
+    padding: 22px 18px 20px;
+  }
+
+  html.shard-live .scene-stats dd {
+    font-size: 32px;
+  }
+}

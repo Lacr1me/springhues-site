@@ -1,0 +1,407 @@
+{
+  "date": "2026-10-23",
+  "issue": 63,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "九月十四",
+  "cutoff": "2026-10-23 05:40（北京时间）",
+  "productionTime": "2026-10-23 05:47（北京时间）",
+  "metricsCutoff": "2026-10-23 05:38（北京时间）",
+  "topStoryIds": ["domestic-01", "international-01", "tech-02"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "西藏巴青7.0级地震 国家启动四级救助响应",
+        "summary": "10月22日，西藏那曲市巴青县发生7.0级地震。国家防减救灾委、应急管理部当日启动国家自然灾害救助四级应急响应，派出工作组赶赴灾区，紧急调拨中央救灾物资5000件（套）。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 01:05",
+        "url": "https://www.news.cn/politics/20261023/fbba81de975c4cfaa5670ab0a2d01df0/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "水利部对4省份启动洪水防御Ⅳ级应急响应",
+        "summary": "受台风“蔷琵”影响，水利部10月22日对上海、江苏、浙江、福建启动洪水防御Ⅳ级应急响应，预计23日至25日江南东部、江淮东部将有较强降雨，部分中小河流可能超警。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:56",
+        "url": "https://www.news.cn/politics/20261022/eb55dafb208d440b918226c63ff837e5/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "阿勒泰迎大暴雪 气象灾害Ⅳ级应急响应启动",
+        "summary": "10月21日6时至22日10时，新疆阿勒泰哈巴河、布尔津等地出现暴雪、大暴雪，三个站点降雪量超25毫米。当地启动重大气象灾害Ⅳ级应急响应，多条道路因结冰实施交通管制。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 12:29",
+        "url": "https://www.cnr.cn/xjfw/xjfw_1/tj/20261022/t20261022_527849758.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "全国退税商店超1.8万家 比2024年底增加4倍",
+        "summary": "10月22日，国务院新闻办“开局起步‘十五五’”系列主题新闻发布会介绍，目前全国退税商店已超过1.8万家，比2024年底增加4倍。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 15:33",
+        "url": "https://news.cnr.cn/native/gd/20261022/t20261022_527849874.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "星巴克全国门店启动“消费入座”",
+        "summary": "10月22日起，星巴克全国门店启动“消费入座”并落地《第三空间倡议》，店内摆放提示牌。店员表示并非强制要求，遇降雨等特殊情况，有临时落脚需求的市民仍可进店休息。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:21",
+        "url": "https://www.cnr.cn/bj/sijh/20261022/t20261022_527850071.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "27款App涉诈突出 反诈中心发布第二批通报",
+        "summary": "信息通信行业反诈中心10月22日通报第二批27款被不法分子用于电信网络诈骗的App，提醒公众不要从非官方渠道下载应用，也不要转入小众软件通联，受骗后及时报案。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 14:10",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261022/t20261022_527849810.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "演唱会门票开票即“秒空” 抢票2万张“黄牛”落网",
+        "summary": "江苏镇江检察机关近日公布一起网络非法抢票案，犯罪团伙在18个月内利用外挂软件入侵购票平台，抢购2万多张演唱会门票，非法获利近600万元。案件线索来自消费者举报。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 14:19",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261022/t20261022_527849812.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "港珠澳大桥开通8周年 出入境旅客达1.25亿人次",
+        "summary": "截至10月22日零时，经港珠澳大桥珠海公路口岸往来粤港澳三地的旅客超过1.25亿人次，车辆超过2645万辆次；今年以来出入境客流量达2540万人次。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 13:36",
+        "url": "https://cn.chinadaily.com.cn/a/202610/22/WS6ad9a29fe4b09a165c790d72.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "中欧班列累计开行突破14万列",
+        "summary": "10月22日，X8059次中欧班列从沈阳蒲河站发车，中欧班列累计开行突破14万列，发送货值超5600亿美元，通达欧洲26个国家237个城市及12个亚洲国家。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 11:34",
+        "url": "https://www.news.cn/politics/20261022/b8c69cf100d44f8192fb486d12de7b50/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "新版《对外投资管理办法》发布 12月1日起施行",
+        "summary": "国家发展改革委10月22日公布《对外投资管理办法》，共76条，自2026年12月1日起施行，2017年《企业境外投资管理办法》同步废止，进一步保护投资者合法权益。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 17:36",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-22/10719196.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "俄方：尚未确定参与俄美乌三方会谈的代表团人选",
+        "summary": "俄罗斯总统新闻秘书佩斯科夫10月22日说，普京尚未确定参与俄美乌三方会谈的俄方代表团人选，阿布扎比可能成为会谈地点；俄方准备11月中旬重启三方会谈。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 21:35",
+        "url": "https://www.news.cn/world/20261022/abaaba888ab445d8a7c3f04a0a1854ea/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "莫斯科遭大规模无人机袭击 俄军对乌境内目标密集打击",
+        "summary": "莫斯科市长索比亚宁10月22日说，21日20时30分至22日4时共有630架无人机袭击莫斯科地区，袭击造成2人受伤。俄国防部称对乌境内军工设施实施密集打击。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 17:22",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-22/10719141.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "美媒称美国防部拟打造新的深度潜伏间谍项目",
+        "summary": "美国《华盛顿邮报》21日援引知情人士报道，美国国防部拟打造“更强有力”的深度潜伏间谍项目，安排特工伪装成商人等开展经济战，目前处于筹备阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:14",
+        "url": "https://www.news.cn/world/20261022/194c6a5265354193ba4204f0e6e82b50/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "美媒：美以军方已制定中期选举后打击伊朗的计划",
+        "summary": "据美国《纽约时报》21日报道，美以军方已制定具体计划，准备在11月美国中期选举结束后再次打击伊朗，目标可能包括能源基础设施、核设施和导弹库，特朗普是否批准仍不确定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 19:35",
+        "url": "https://www.news.cn/world/20261022/ecd8ccc115c44d4ca990873ba1e8e7c5/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "土耳其央行宣布降息100个基点",
+        "summary": "土耳其中央银行10月22日宣布，将基准利率从37%下调100个基点至36%，为今年1月以来首次降息。土耳其9月通胀率降至29.7%，连续四个月回落。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 21:56",
+        "url": "https://www.news.cn/world/20261022/7239368428fd49c78c0ab49edc29e48a/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "韩国呼吁韩朝建立和平管理军事分界线所需沟通机制",
+        "summary": "韩国统一部10月22日发布媒体说明，呼吁韩朝尽快建立和平管理军事分界线所需的沟通机制，避免重蹈相互扩音器广播的覆辙，防止紧张与冲突。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:00",
+        "url": "https://www.news.cn/world/20261022/b8f8b8ad77ad421aac33a6baee82697e/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "美国元公司因误导用户被罚250亿美元",
+        "summary": "美国新墨西哥州一名法官21日裁定，Meta应就数据隐私误导用户缴纳250亿美元罚金。案件源于剑桥分析公司未经允许获取数千万脸书用户数据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 16:18",
+        "url": "https://www.news.cn/world/20261022/6329d8ce16c841ac8aac01b71d051c27/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "加拿大宣布战略产业援助计划应对美国关税冲击",
+        "summary": "加拿大总理卡尼与安大略省省长福特21日联合宣布战略产业援助计划，总额87亿加元，聚焦钢铁、汽车和关键矿产等产业，支持受美国关税影响的工人和企业。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 07:27",
+        "url": "https://www.news.cn/20261022/c49b1e077f1144f09c7a9be609e82a6d/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "古巴指责美国施压他国 企图影响联大涉古决议表决",
+        "summary": "古巴外长罗德里格斯10月21日说，美国通过威胁加征关税、拒发签证等手段向多国施压，企图改变其在联大终止对古封锁决议上的投票立场，联大将于27日至28日审议。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 00:29",
+        "url": "https://news.cri.cn/20261022/05c09e84-26cc-4098-a510-b1c1092b02c7.html"
+      },
+      {
+        "id": "international-10",
+        "title": "法国报告全球首例人类感染沙蒙达病毒病例",
+        "summary": "法国卫生部门10月22日发布公报说，该国发现全球首例有正式记录的沙蒙达病毒人类感染病例，患者已于本月初死亡，病毒可能由吸血蠓虫叮咬传播。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 22:57",
+        "url": "https://www.news.cn/world/20261022/b42e9879cddf44b4842d22f1c81c0b17/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "超大直径泥水盾构机“中铁1659号”在杭州下线",
+        "summary": "10月22日，由中铁四局等联合研制的超大直径泥水平衡盾构机“中铁1659号”在杭州完成总装下线，开挖直径16.68米、整机长约125米，将投入合肥北二环西延项目。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 16:01",
+        "url": "https://www.news.cn/photo/20261022/bc85770046814c37a041dbc1567b959f/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "模式动物表型与遗传研究设施通过国家验收",
+        "summary": "10月22日，模式动物表型与遗传研究设施通过国家验收。设施由中科院昆明动物所和中国农业大学共建，以猪和灵长类为模型开展全尺度、全生命周期研究。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:51",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261022/t20261022_527850124.shtml"
+      },
+      {
+        "id": "tech-03",
+        "title": "疆电入川渝、陇电入川两项特高压直流工程获核准",
+        "summary": "两项特高压直流工程近日获国家发展改革委核准，总投资约543亿元，预计2027年开工、2029年建成投运，每年可向川渝输送清洁电量约720亿千瓦时。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:57",
+        "url": "https://www.news.cn/politics/20261022/1e9cf4c3be0a4dbfb609e698123301c0/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "工业和信息化部工业软件标准化技术委员会成立",
+        "summary": "工业和信息化部工业软件标准化技术委员会成立大会日前在杭州召开，主要负责关键技术、数据互操作、产品服务、融合应用及生态建设等行业标准制修订。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 14:17",
+        "url": "https://www.news.cn/20261022/39c93a71e01d4bb9b9b392028a73ab0c/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "国家数据集团在雄安揭牌成立",
+        "summary": "国家数据集团有限公司10月20日在河北雄安新区正式揭牌成立，位列央企名录第28位，以数据资源开发利用为主责主业，填补数据领域国资运营主体空白。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 18:30",
+        "url": "https://www.cnr.cn/hebei/yzkx/20261022/t20261022_527850081.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "广东脑机接口产业已位居全国“第一梯队”",
+        "summary": "10月21日发布的《广东省脑机接口产业发展白皮书（2026版）》显示，广东拥有脑机接口产品注册证或在研产品的重点企业超过100家，居全国首位。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 16:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600150.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "康振生：坚持分区防控 降低“小麦癌症”危害",
+        "summary": "中国工程院院士康振生带领团队摸清小麦条锈病流行规律，提出分区防控策略，构建覆盖全国超60%小麦种植区的防控技术推广体系，使病害发生面积减少50%以上。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 07:59",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_599780.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "推动工业节能降碳 工业和信息化部印发实施方案",
+        "summary": "工业和信息化部10月21日发布《加快构建工业和信息化领域碳排放双控工作体系实施方案（2026—2030年）》，提出到2030年建设国家级零碳工厂和零碳算力设施500个左右。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 09:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/22/content_600529.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "守护一颗“中国心” 把维修主动权攥回自己手里",
+        "summary": "30兆瓦级航改型燃气轮机是天然气长输管道的核心动力设备。国家管网集团储运技术公司攻克大修技术，实现自主检修，把“能源心脏”的维修主动权握在手中。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 19:50",
+        "url": "https://www.news.cn/tech/20261022/e38b573e00bb43498d8b182b871ea244/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国牵头制定脑机接口参考架构国际标准",
+        "summary": "国际标准组织近日发布我国牵头制定的《信息技术 脑机接口 参考架构》国际标准，由我国专家担任项目负责人，多国专家共同完成，是脑机接口国际标准化的重要成果。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 09:43",
+        "url": "https://www.cnr.cn/tech/gstj/20261022/t20261022_527849617.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "算力成底座、AI进实验室——从第23届中国计算机大会看人工智能新动向",
+        "summary": "第23届中国计算机大会10月22日在成都开幕，注册人数超1.1万人。会场内外，数据、算力、实验室成为被反复提起的三个关键词。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 23:31",
+        "url": "https://www.news.cn/tech/20261022/15a3938d60194d06a14e9252e4efc56d/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "周小川：中国现有金融工具应对AI风险仍有效",
+        "summary": "央行原行长周小川10月22日在北京表示，金融领域长期具备成熟的风险管理机制，应继续利用现有工具管控AI等技术带来的风险，这些工具当前及未来一段时间仍然有效。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 21:35",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261022_3268385.shtml"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI制药能改变创新药“三个十定律”吗",
+        "summary": "今年9月，国内首款凭借AI辅助研发获批的原创药上市，从源头发现到完成临床试验仅用三年半。AI正提高药物研发前端效率，但能否改变“三个十定律”仍待观察。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 04:35",
+        "url": "https://news.gmw.cn/2026-10/22/content_39059100.htm"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI大模型付费权益“低价共享”靠谱吗？",
+        "summary": "二手交易平台上出现豆包、DeepSeek、Kimi等AI大模型付费权益低价共享商品，有的售卖“破解教程”。记者实测未能获得会员权益，相关做法还存在账号安全风险。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 09:01",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261022/t20261022_527849518.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "工业和信息化部：稳妥有序扩大智能网联汽车场景应用",
+        "summary": "工业和信息化部副部长辛国斌10月21日表示，将稳妥有序扩大智能网联汽车场景应用，审慎推进准入和上路通行试点，加快自动驾驶重点场景规模化示范。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 17:40",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600254.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "880.30元/克",
+      "note": "10月22日收盘 Au99.99",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "note": "福建最高零售价 9月24日24时起执行 最近有效价格",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7195人民币",
+      "note": "10月22日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5244人民币",
+      "note": "10月22日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2381人民币",
+      "note": "10月22日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-int",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 99.47美元/桶",
+      "note": "10月22日收盘 WTI12月合约 布伦特12月合约113.17美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261023/72c704817b68449bbfb7ebf83e41286b/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "observation": "西藏巴青发生7.0级地震，国家启动四级救助响应；台风“蔷琵”外围影响东南沿海，水利部对四省份启动洪水防御响应。国内消费与开放政策密集落地，退税商店扩容、星巴克试行消费入座、新版对外投资管理办法发布。国际上，俄美乌酝酿重启三方会谈，莫斯科遭大规模无人机袭击，美以被曝制定打击伊朗计划。科技方面，模式动物大科学装置通过验收，两项特高压工程获批，脑机接口国际标准与产业布局同步推进。",
+  "sources": ["新华网", "央广网", "中国日报中文网", "中国新闻网", "国际在线", "中国科技网", "光明网", "中国经济网"],
+  "metricSources": ["上海黄金交易所", "福建省发展和改革委员会", "中国外汇交易中心", "新华网"]
+}

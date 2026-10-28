@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "appId": "simple-download-android",
+  "channel": "stable",
+  "version": "2.3.53",
+  "versionCode": 53,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.53/SimpleDownload-2.3.53-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.53",
+  "size": 27695848,
+  "sha256": "ea3f13bc7993a3a974faa5afab580fd1f0da80f39fb5550918479cc69566674d",
+  "publishedAtUtc": "2026-10-24T21:05:19Z",
+  "notes": "仅支持64位ARM。修复部分X链接备用解析，保留此前修复。已装2.3.53请手动覆盖。"
+}

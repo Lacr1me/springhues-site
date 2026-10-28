@@ -21,10 +21,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const SHARD_VERSION = '20261018-shard-v4';
-export const SHARD_PAGES = ['messages/index.html', 'privacy/index.html', 'game/index.html', 'minsheng/index.html'];
+export const SHARD_PAGES = ['messages/index.html', 'privacy/index.html', 'works/slice-shop/index.html', 'works/simple-download/index.html', 'game/index.html', 'minsheng/index.html'];
 export const GATED = ['site/css/shard-theme.css', 'site/css/pages-daily.css'];
 // 这些文件的颜色必须全部来自 var(--token)，不得写十六进制色值。
-export const NO_HEX = ['site/css/pages-messages.css', 'site/css/pages-privacy.css'];
+export const NO_HEX = ['site/css/pages-messages.css', 'site/css/pages-privacy.css', 'site/css/pages-scene.css', 'site/css/pages-simple-download.css'];
 const NAMED_COLORS = 'red|blue|white|black|green|yellow|orange|purple|pink|gray|grey|navy|crimson|maroon|silver|gold|brown|cyan|magenta|teal|olive|lime|aqua|fuchsia|indigo|violet|beige|ivory|coral|salmon|tomato|skyblue|royalblue|darkblue|lightblue|darkred|firebrick';
 const COLOR_PROP = /^(?:color|background(?:-color|-image)?|border(?:-(?:top|right|bottom|left|block|inline)(?:-color)?)?(?:-color)?|outline(?:-color)?|box-shadow|text-shadow|fill|stroke|caret-color|accent-color|text-decoration(?:-color)?|column-rule(?:-color)?)$/;
 const NAMED_RE = new RegExp('(?<![\\w-])(?:' + NAMED_COLORS + ')(?![\\w-])', 'i');

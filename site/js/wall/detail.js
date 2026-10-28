@@ -51,7 +51,7 @@ function linkEl(link, work) {
     return h('a', { href: '#', 'aria-disabled': 'true', 'data-kind': link.kind, 'data-cursor': cursor, 'data-placeholder': '' }, link.label);
   }
   const external = /^https:/i.test(link.href);
-  return h('a', { href: link.href, 'data-kind': link.kind, 'data-cursor': cursor, target: external ? '_blank' : null, rel: external ? 'noopener noreferrer' : null }, link.label);
+  return h('a', { href: link.href, download: link.download || null, 'data-kind': link.kind, 'data-cursor': cursor, target: external ? '_blank' : null, rel: external ? 'noopener noreferrer' : null }, link.label);
 }
 
 function buildBody(card, skipLinks) {

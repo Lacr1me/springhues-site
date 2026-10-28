@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN" class="shard-live" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <base href="../../">
+  <meta name="theme-color" content="#F4F6FF">
+  <meta name="description" content="一间会随四季与昼夜变化的三维微缩小店，右侧是 Springhues 的真实访问数据。">
+  <title>切片小店 · Springhues</title>
+  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
+  <script src="site/boot.js?v=20261018-shard-v4"></script>
+  <link rel="stylesheet" href="site/css/shard-theme.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/wipe.css?v=20261018-shard-v4">
+  <link rel="stylesheet" href="site/css/pages-scene.css?v=20261018-shard-v4">
+  <script type="module" src="site/js/shell/shell.js?v=20261018-shard-v4"></script>
+  <script data-goatcounter="https://springhues.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body data-site-page="slice-shop" data-sd-title="切片小店" data-sd-title-en="SCENE">
+  <main id="main" class="sd-page scene-main" tabindex="-1">
+    <div class="scene-shell">
+      <section class="scene-left">
+        <header class="scene-head">
+          <p class="scene-kicker"><span class="scene-pulse" aria-hidden="true"></span><span>LIVE DIORAMA</span></p>
+          <h1 class="scene-title"><span class="scene-title-en" aria-hidden="true">Slice Shop</span><span class="scene-title-cn">切片小店</span></h1>
+          <p class="scene-lead">一间会呼吸的微缩小店。四季、昼夜与走在街上的人，都在这块切口地块上。</p>
+        </header>
+
+        <div class="scene-stage" data-scene-stage>
+          <canvas data-scene-canvas role="img" aria-label="三维微缩街景：两层小店、行道树、路灯、自行车与行人，会随季节和昼夜变化"></canvas>
+        </div>
+
+        <div class="scene-controls">
+          <div class="scene-toggle" role="group" aria-label="切换昼夜">
+            <button class="sd-chip" type="button" data-daynight="day" aria-pressed="true">白天</button>
+            <button class="sd-chip" type="button" data-daynight="night" aria-pressed="false">夜晚</button>
+          </div>
+          <div class="scene-seasons" role="group" aria-label="切换季节">
+            <button class="sd-chip" type="button" data-season="spring" aria-pressed="true">春</button>
+            <button class="sd-chip" type="button" data-season="summer" aria-pressed="false">夏</button>
+            <button class="sd-chip" type="button" data-season="autumn" aria-pressed="false">秋</button>
+            <button class="sd-chip" type="button" data-season="winter" aria-pressed="false">冬</button>
+          </div>
+        </div>
+        <p class="scene-hint">拖动画面转动视角</p>
+      </section>
+
+      <aside class="scene-panel">
+        <h2 class="scene-panel-title">真实记录</h2>
+        <p class="scene-panel-sub">统计口径：匿名访客，不写入个人身份</p>
+
+        <dl class="scene-stats">
+          <div><dt>总访问</dt><dd data-stat="visits">—</dd></div>
+          <div><dt>独立访客</dt><dd data-stat="visitors">—</dd></div>
+          <div><dt>日报期数</dt><dd data-stat="issues">—</dd></div>
+          <div><dt>作品</dt><dd data-stat="works">—</dd></div>
+        </dl>
+
+        <div class="scene-panel-row">
+          <span>最近更新</span>
+          <strong data-stat="updated">—</strong>
+        </div>
+
+        <p class="scene-note" data-scene-note>正在读取数据。</p>
+
+        <a class="sd-btn scene-back" href="../../#works">返回作品墙 <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+
+    <noscript><p class="sd-note">当前浏览器未启用 JavaScript，场景与统计无法显示。<a href="../../">返回首页</a></p></noscript>
+  </main>
+  <script type="module" src="site/js/scene/main.js?v=20261018-shard-v4"></script>
+</body>
+</html>

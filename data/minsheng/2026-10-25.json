@@ -1,0 +1,422 @@
+{
+  "date": "2026-10-25",
+  "issue": 65,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "九月十六",
+  "cutoff": "2026-10-25 05:35（北京时间）",
+  "productionTime": "2026-10-25 05:38（北京时间）",
+  "metricsCutoff": "2026-10-23 15:00（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "ai-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "六部门出台意见 推进老旧街区厂区改造提升",
+        "summary": "住房城乡建设部等六部门近日联合印发指导意见，明确老旧厂区、老旧商业街区、老旧生活街区等改造任务，提出有序实施1500个重大工程项目。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 10:22",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-23/10719565.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "“小钱包”变“大钱包” 住房公积金更好用了",
+        "summary": "新修订的《住房公积金管理条例》9月20日起施行，提取情形由6种增至9种，租房、加装电梯等场景加速落地，多地提高多子女家庭贷款额度。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 09:49",
+        "url": "https://economy.gmw.cn/2026-10/23/content_39061810.htm"
+      },
+      {
+        "id": "domestic-03",
+        "title": "全国秋粮收获过八成",
+        "summary": "农业农村部最新农情调度显示，全国秋粮收获过八成；安徽宿州等地抢抓墒情推进小麦播种，新式一体机同步完成旋耕、施肥、播种等多道工序。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 13:51",
+        "url": "https://news.cnr.cn/native/gd/20261024/t20261024_527851858.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "前三季度全国快递业务量累计完成1513亿件",
+        "summary": "国家邮政局数据显示，1至9月快递业务量累计完成1513亿件，同比增长4.3%；业务收入11634.4亿元，同比增长7.2%，增速持续高于业务量。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 10:07",
+        "url": "https://food.cnr.cn/gstj/20261024/t20261024_527851706.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "全国民航10月25日起执行冬春航季航班计划",
+        "summary": "2026/2027年冬春航季自10月25日至2027年3月27日执行，216家国内外航空公司每周安排11.6万班，其中国内9.4万班、国际21812班。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 15:12",
+        "url": "https://news.cnr.cn/native/gd/kx/20261024/t20261024_527851875.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "西藏巴青7.0级地震：医疗救援队连夜驰援震区",
+        "summary": "10月22日22时33分巴青县发生7.0级地震，震源深度10公里，西藏启动地震灾害二级应急响应和三级医疗救治响应，多支医疗队连夜驰援。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 10:41",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-24/10720213.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "每人400元！山西城乡居民医保开始缴费啦！",
+        "summary": "山西明确2026年居民医保人均财政补助提高24元至724元，个人缴费每人400元；集中征缴期为10月22日至2027年1月25日。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 00:44",
+        "url": "https://www.cnr.cn/sx/gstjsx/20261025/t20261025_527852159.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "@高校毕业生 全国城市联合招聘秋季专场第二批活动启动",
+        "summary": "人社部推出第二批155场就业服务活动，包括105场线上线下招聘会、11场跨区域巡回招聘会和29场直播带岗，面向高校毕业生精准对接。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 09:47",
+        "url": "https://www.cnr.cn/jy/sy/sytjB/20261024/t20261024_527851671.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "“托幼一体”进村来，农村娃家门口有了托育班",
+        "summary": "湖南永州冷水滩区推进托幼一体惠民工程，依托乡镇公办幼儿园为2至3岁幼儿提供托育服务，今年重点向农村延伸，缓解带娃难、入托贵。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 07:06",
+        "url": "https://www.cnr.cn/hunan/gstjhunan/20261024/t20261024_527851493.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "全国超85%的二级以上公立中医医院有老年病科",
+        "summary": "国家中医药局发布会介绍，截至2025年底全国超85%的二级以上公立中医医院设置老年病科，2021至2025年累计服务老年人7.18亿人次。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 10:06",
+        "url": "https://health.gmw.cn/2026-10/23/content_39061981.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "俄乌同意局部停火 美俄乌三方会谈提上日程",
+        "summary": "俄乌23日分别证实，双方同意27日起在赫尔松地区阿列什基停火，用于人道主义走廊运送援助和撤离居民；美俄乌或两周内举行三方会谈。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 17:04",
+        "url": "https://news.cnr.cn/sq/20261024/t20261024_527851947.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "法国新一轮示威活动中135人被逮捕",
+        "summary": "法国内政部长24日说，截至当地时间13时，警方在新一轮全国性抗议示威中逮捕135人，全法公共场所约有3.5万名示威者。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 21:44",
+        "url": "https://www.news.cn/world/20261024/399ca00b09b64ff6856bec35e66dba8f/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "菲律宾空军两架教练机相撞 4名空军飞行员死亡",
+        "summary": "菲律宾空军证实，两架SF-260型教练机23日下午在八打雁省费尔南多空军基地训练时相撞，4名飞行员死亡，同型飞机暂时停飞。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 15:06",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720335.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "瓦努阿图附近海域发生7.2级地震 已触发海啸预警",
+        "summary": "据美国地质调查局地震信息网消息，瓦努阿图附近海域24日发生7.2级地震，震源深度10公里，法新社称地震已触发海啸预警。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 10:57",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720235.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "民调：中期选举两周前，特朗普支持率跌至新低",
+        "summary": "纽约时报与锡耶纳学院民调显示，距中期选举两周时仅36%潜在选民认可特朗普执政表现，59%不认可，为其在该民调中的最低纪录。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 11:13",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-23/10719603.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "最新：首尔市长吴世勋涉政治资金案二审改判无罪",
+        "summary": "首尔高等法院23日以证据不足为由推翻一审有罪判决，改判首尔市长吴世勋无罪；其被控在2021年补选前接受民调结果并由他人代付费用。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 16:44",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-23/10719822.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "研究显示欧洲今夏高温相关超额死亡人数创纪录",
+        "summary": "发表于《自然-健康》的研究估算，今夏欧洲854个城市高温相关超额死亡超5万人，其中逾3.2万可归因于气候变化，远高于2022年约2.9万人。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 19:22",
+        "url": "https://news.cri.cn/20261023/430cfda7-620c-8dfe-9824-dcc9eb42fb56.html"
+      },
+      {
+        "id": "international-08",
+        "title": "以色列大选冲刺 一场撕裂国家的“期末大考”",
+        "summary": "以色列27日举行议会选举，为2023年巴以冲突爆发后首次大选，也是近40年来首次按既定任期举行，安全与组阁难题成为选战核心议题。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 06:37",
+        "url": "https://news.cri.cn/20261024/61cadaa3-d5d3-89a8-1fc0-ad3e3d23db79.html"
+      },
+      {
+        "id": "international-09",
+        "title": "外媒：美国或于明年开始扩建格陵兰岛军事设施",
+        "summary": "据美媒援引美国国防部高级官员报道，五角大楼计划2027年启动在丹麦自治领地格陵兰岛上的军事设施扩建工程，规模与用途尚未公布。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 07:37",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-23/10719469.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "能源供给趋紧 英国批准开采北海争议气田",
+        "summary": "英国政府10月21日批准北海寒鸦天然气田项目，这一因环保争议搁置多年的项目有望尽快投产，按峰值产量估算可使英国天然气产量增加约6%。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 04:40",
+        "url": "https://news.gmw.cn/2026-10/25/content_39064119.htm"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "中国新一代医用重离子加速器首台示范装置建成",
+        "summary": "中科院近代物理研究所研发的新一代超紧凑旋转束重离子治疗系统首台示范装置在广东惠州建成，已进入设备检测阶段，预计2026年底开展临床试验。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 20:32",
+        "url": "https://www.chinanews.com.cn/sh/shipin/cns-d/2026/10-23/news1072814.shtml"
+      },
+      {
+        "id": "tech-02",
+        "title": "全球首堆“玲龙一号”迎投运前关键“体检”",
+        "summary": "全球首个陆上商用模块化小型核反应堆“玲龙一号”已完成冷态实验，正在海南昌江核电基地继续调试试验，为并网发电前做最后准备。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 09:56",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10719539.shtml"
+      },
+      {
+        "id": "tech-03",
+        "title": "我国科研人员破解柔性光伏“长不大”难题",
+        "summary": "苏州大学李耀文团队提出“解耦共沉积”策略，与企业合作量产商用规格大尺寸柔性光伏器件，光电转化效率稳定超过20%，成果发表于《科学》。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 10:19",
+        "url": "https://www.cnr.cn/tech/gstj/20261024/t20261024_527851728.shtml"
+      },
+      {
+        "id": "tech-04",
+        "title": "全球首座半潜式风电制氢平台成功下水",
+        "summary": "全球首座半潜式风电制氢平台“申海氢能1号”在广东江门下水，集成电解水制氢、制甲醇、储氢系统，即将赴海南儋州海域开展海上试验。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 10:21",
+        "url": "https://www.cnr.cn/tech/gstj/20261024/t20261024_527851730.shtml"
+      },
+      {
+        "id": "tech-05",
+        "title": "量子计算操作系统“穹希”发布",
+        "summary": "国光量超推出面向量子计算的智能化操作系统“穹希”（QuanSi 1.0），把大模型能力嵌入系统，可用自然语言串起程序编写、设备调试等流程。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 11:24",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39060968.htm"
+      },
+      {
+        "id": "tech-06",
+        "title": "拓扑量子器件领域获重要突破",
+        "summary": "北京大学王健课题组等合作，在几纳米厚磁性拓扑量子器件上划出贯穿深沟，发现拓扑手性边缘态电流仍能近无能耗单向传输，成果近日发表。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 04:20",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39062208.htm"
+      },
+      {
+        "id": "tech-07",
+        "title": "一箭六星 长四乙火箭成功发射",
+        "summary": "10月24日3时25分，长征四号乙运载火箭在酒泉成功发射遥感五十三号07-09星和遥感五十六号19-21星，任务取得圆满成功。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 10:53",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-24/10720228.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "中国雪豹种群数量实现恢复性增长",
+        "summary": "国家林草局表示，中国雪豹种群数量由2013年约2500只增至目前约5000只，栖息地总面积约208万平方公里，占全球总量60%以上。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 14:31",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-23/10719703.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "我国海洋能开发利用实现跨越式发展",
+        "summary": "自然资源部、国家能源局联合发布报告，“十四五”时期我国海洋能累计装机容量达12.3兆瓦，关键技术不断创新，规模化利用迈出坚实步伐。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 04:20",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39062134.htm"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国创新发展水平稳步提高",
+        "summary": "国家统计局发布2025年中国创新指数为185.5，比上年增长6.4%，增幅较上年提高1.1个百分点，创新投入与产出稳步增加。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 03:45",
+        "url": "https://news.gmw.cn/2026-10/24/content_39063381.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "3万亿级参数规模 全球最大开源AI大模型上新",
+        "summary": "月之暗面10月24日发布新一代开源大模型Kimi K3.1 Pro，参数规模达3万亿级，支持100万词元上下文，在代码、3D创作和长程智能体能力上提升明显。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 14:37",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-24/10720310.shtml"
+      },
+      {
+        "id": "ai-02",
+        "title": "AI智能体从概念走进场景",
+        "summary": "从深圳教育公益版到广东政务系统，AI智能体正加快落地；今年5月三部门印发实施意见，推动智能体典型场景应用和可复制推广模式。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 09:02",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-23/10719477.shtml"
+      },
+      {
+        "id": "ai-03",
+        "title": "2026国际具身智能技能大赛：机器人“开垦”真场景",
+        "summary": "2026全球开发者先锋大会暨国际具身智能技能大赛10月23日至25日在上海举行，多款机器人在真实场景中展示开垦、操作等技能。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 13:21",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10719632.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "算力成底座、AI进实验室——从第23届中国计算机大会看人工智能发展新动向",
+        "summary": "第23届中国计算机大会22日在成都开幕，注册人数超1.1万人，与会专家认为算力系统正走向集约化规模化，AI加速进入科学实验室。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 14:39",
+        "url": "https://www.news.cn/info/20261023/328776b5a0e44a839c8019fdf20ff150/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "“耕天·旱地农业大模型”发布 赋能旱地农业数字化转型",
+        "summary": "中国农科院梅旭荣团队研发的“耕天·旱地农业大模型”10月22日在山东东营面向全球发布，为破解旱地农业发展瓶颈提供数字化支撑。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 10:04",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39061972.htm"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "864.00元/克",
+      "note": "10月23日收盘 Au99.99",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "note": "福建最高零售价 2026年9月24日24时起执行 最近有效价格",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7180人民币",
+      "note": "10月23日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-23&endDate=2026-10-23&currency=USD/CNY",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5140人民币",
+      "note": "10月23日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-23&endDate=2026-10-23&currency=EUR/CNY",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2793人民币",
+      "note": "10月23日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-23&endDate=2026-10-23&currency=100JPY/CNY",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-int",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 103.27美元/桶",
+      "note": "10月23日收盘 WTI12月合约 布伦特12月合约116.72美元/桶 最近交易日",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261024/70291d6c1b3e442ca1903775f0d63794/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "observation": "城市更新与民生保障同步加力：六部门部署1500个老旧街区厂区改造，住房公积金提取扩围，秋粮收获过八成，医保缴费与托育服务向基层延伸。国际上，俄乌同意在赫尔松局部停火，美俄乌三方会谈提上日程，法国示威与欧洲高温纪录折射治理压力。科技领域，玲龙一号进入投运前调试，柔性光伏与半潜式风电制氢取得突破，国产开源大模型参数规模升至3万亿级。",
+  "sources": [
+    "新华网",
+    "央广网",
+    "中国新闻网",
+    "光明网",
+    "国际在线"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "中国外汇交易中心",
+    "新华网"
+  ]
+}

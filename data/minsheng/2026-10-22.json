@@ -1,0 +1,421 @@
+{
+  "date": "2026-10-22",
+  "issue": 62,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "九月十三",
+  "cutoff": "2026-10-22 05:39（北京时间）",
+  "productionTime": "2026-10-22 06:37（北京时间）",
+  "metricsCutoff": "2026-10-22 05:38（北京时间）",
+  "topStoryIds": ["domestic-01", "international-01", "tech-02"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "前三季度医保统筹基金支出超1.7万亿元",
+        "summary": "国家医保局10月21日公布，前三季度基本医疗保险统筹基金总收入23028.33亿元、总支出17515.19亿元，职工与居民医保基金运行总体平稳。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 18:19",
+        "url": "https://www.news.cn/fortune/20261021/23c0a985bfca45f7bc85397f36b9958e/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "台风“蔷琵”靠近 中国气象局启动四级应急响应",
+        "summary": "中央气象台21日预报台风“蔷琵”向台湾以东洋面靠近，中国气象局启动重大气象灾害（台风）四级应急响应，预计24日前后转向东北。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 18:54",
+        "url": "https://www.news.cn/politics/20261021/478f0a571d7e4c118219eb61b8baccac/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "电子行驶证国家标准发布 增设授权使用机制",
+        "summary": "市场监管总局批准发布机动车行驶证电子证照国家标准，2027年4月1日起实施，新增授权使用机制，全程留痕，可用交管12123扫码核验真伪。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 17:15",
+        "url": "https://www.news.cn/politics/20261021/8c7c9e7efc8c4098a15359d85893c127/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "数字人民币基础设施服务体系全面升级",
+        "summary": "数字人民币运营管理中心10月21日公布基础设施服务体系，推出央行端系统和智能合约生态框架；截至9月末累计交易43亿笔、约31万亿元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 20:08",
+        "url": "https://www.news.cn/fortune/20261021/6496759b7e9d471381f3aaa0a2082468/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "网联平台单日处理支付交易46.4亿笔 创历史新高",
+        "summary": "网联清算公司10月20日处理支付交易46.4亿笔，创单日历史新高，平稳保障“双十一”预售尾款支付高峰，并首次上线“AI员工”。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 18:57",
+        "url": "https://www.news.cn/fortune/20261021/243fbb9077cc41b98ad7b97b8a05c29b/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "特殊食品消费安全共治研讨 三类抽检合格率超99.4%",
+        "summary": "全国食品安全宣传周期间，监管部门通报已批准保健食品注册14930个、婴配配方1275个、特医食品374个，三类抽检合格率均超99.4%。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 09:39",
+        "url": "https://www.cnr.cn/food/gstj/20261021/t20261021_527848643.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "水利部出台母亲河复苏行动标准",
+        "summary": "水利部发布首部河湖复苏行业标准《河湖复苏技术导则》，2026年12月11日起实施，提出“三类四级”标准和12项可量化指标。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 10:15",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-21/10718252.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "工信部印发工业领域碳排放双控实施方案",
+        "summary": "工业和信息化部印发碳排放双控实施方案，提出到2030年建设零碳工厂和零碳算力设施500个左右，规模以上工业单位增加值能耗下降10%以上。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 19:58",
+        "url": "https://www.news.cn/politics/20261021/e72bfde2a7454fa8a2e685cd342c4f3f/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "上海建成“15分钟就业服务圈”社区站点506个",
+        "summary": "上海把就业服务站点嵌入社区，建成“15分钟就业服务圈”。截至2025年底全市累计建成站点506个，2026年进入提质升级阶段。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 00:06",
+        "url": "https://www.cnr.cn/shanghai/gstjshanghai/20261022/t20261022_527849301.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "湖南2027年度居民医保集中缴费启动",
+        "summary": "湖南启动2027年度居民医保集中缴费，个人缴费标准400元/人，集中缴费期至2027年1月31日，未在集中期参保提高至1124元/人。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 07:38",
+        "url": "https://www.cnr.cn/hunan/gstjhunan/20261021/t20261021_527848430.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "普京会见美总统特使 称将向美国发运首艘油轮",
+        "summary": "普京21日在圣彼得堡会见美国总统特使威特科夫，美方提交解决俄乌冲突构想文件；普京称两三天内首艘油轮将向美国运输4万吨柴油。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 19:49",
+        "url": "https://www.news.cn/world/20261021/d548a53761934c5db39d268dd54b6420/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "法国总统：坚决杜绝骚乱重演",
+        "summary": "马克龙21日在多哈表示将严惩骚乱滋事者，避免17日情况重演。法国政府估计17日约55万人示威，至少3000家商铺遭劫掠。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 00:01",
+        "url": "https://www.news.cn/world/20261022/27761fd55707468399a576a4837436b2/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "法国10年期国债收益率创24年来新高",
+        "summary": "法国10年期国债收益率21日盘中突破5%，为2002年以来首次；法德利差扩大至约157个基点，二季度末公共债务占GDP达119%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 21:05",
+        "url": "https://www.news.cn/world/20261021/4c4b8597340b4a15be1ca46ca6597e59/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "英国9月通胀率升至3.5%",
+        "summary": "英国国家统计局21日公布，9月CPI同比上涨3.5%，为2025年10月以来最高；核心CPI升至2.8%，服务价格涨幅升至3.7%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 20:58",
+        "url": "https://www.news.cn/world/20261021/84724d8cf5204a83b7f0106d0f7f884e/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "朝鲜称对韩心理战扩音器将在边境全线运行",
+        "summary": "据朝中社21日报道，朝鲜劳动党中央委员会部长金与正称，对韩心理战扩音器本月将在边境全线投入运行，并称韩方进行了警告射击。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 19:30",
+        "url": "https://www.news.cn/world/20261021/a397cda6336149eda42cc692e8356e8f/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "胡塞武装向也门东南一机场发射4枚弹道导弹",
+        "summary": "也门胡塞武装21日向哈德拉毛省赖扬国际机场发射4枚弹道导弹，现场剧烈爆炸；胡塞方面称目标是机场内军事装备，暂无人员伤亡报告。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 22:19",
+        "url": "https://www.news.cn/world/20261021/626e4fb1ba474cfe80caf3c71a92b7eb/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "以军宣布打死哈马斯安全机构高级成员",
+        "summary": "以色列国防军与辛贝特20日发表联合声明称，当天空袭加沙城地区，打死哈马斯安全机构高级成员亚辛，称行动旨在削弱该机构能力。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 06:59",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718228.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "日本新农相连曝丑闻 民众对高市政府不信任加剧",
+        "summary": "日本农林水产大臣武部新上任数日连曝丑闻，被指2024年众院选举期间收受企业30万日元捐款，涉嫌违反《公职选举法》，他已退还资金。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 21:57",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718434.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "伊朗外长：不相信美方诚意 几无理由期待进展",
+        "summary": "伊朗外长阿拉格齐21日在英国《金融时报》撰文称，伊方完全不相信美国对伊和平意愿具有诚意，目前几乎没有理由期待谈判取得进展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 21:59",
+        "url": "https://www.news.cn/world/20261021/36ceca05ce25491f86918cf03b2b5f94/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "美国食品进口商起诉 寻求推翻对加拿大关税",
+        "summary": "美国新泽西州一家食品进口商20日起诉，寻求推翻政府对部分加拿大商品加征50%关税的措施，并要求退还已征税款及利息。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 16:55",
+        "url": "https://world.chinadaily.com.cn/a/202610/21/WS6ad87e06e4b09a165c790af8.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "谷神星一号海射型遥八运载火箭发射成功",
+        "summary": "10月21日11时39分，太原卫星发射中心在山东日照附近海域成功发射谷神星一号海射型遥八运载火箭，西光肆号01星顺利进入预定轨道。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 12:05",
+        "url": "https://www.news.cn/tech/20261021/d2f97b783b5e44f4a580e7b9500f1bbd/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "能拍“分子电影” 世界顶尖大科学装置首次出光",
+        "summary": "上海科技大学硬X射线自由电子激光装置实现首次出光，采用4吉电子伏特加速器驱动18台波荡器，为2027年底建成投用迈出关键一步。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 15:06",
+        "url": "https://www.news.cn/tech/20261021/6fd43feca5174cafb283b417e49c4744/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "中国首个植入式听觉神经接口产品正式获批",
+        "summary": "国家药监局10月20日批准“听觉脑干植入体”注册，由上海九院团队与企业合作研发，是我国首个在颅内中枢进行电刺激和信号提取的产品。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 15:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600099.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "中办、国办发布科技创新和产业创新深度融合意见",
+        "summary": "中办、国办10月21日发布《关于推动科技创新和产业创新深度融合的意见》，要求构建企业主导、各主体协同的产学研融通创新体系。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 18:03",
+        "url": "https://www.news.cn/politics/20261021/a0b107f4625f417384f5b8ab492739a0/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "核能“充电宝”来了 微型反应堆产业平台成立",
+        "summary": "四川能源核产业有限公司10月20日揭牌，聚焦微型核反应堆产业化。微堆电功率不超过10兆瓦，整个发电系统可装入两三个集装箱。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 15:21",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600116.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "C919首次在银川执飞商业客运航班",
+        "summary": "10月20日17时57分，南航CZ3925航班由长沙飞抵银川河东国际机场，这是国产大飞机C919首次在银川执飞商业客运航班。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 07:58",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_599784.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "《中国基础研究发展报告（2026）》在京发布",
+        "summary": "《中国基础研究发展报告（2026）》20日在北京发布：2018至2023年国内基础研究经费近乎翻番，2024年我国基础研究论文全球份额达32.6%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-20 19:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/20/content_599661.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "国家能源局推动煤电与新能源融合发展",
+        "summary": "国家能源局印发推动煤电与新能源融合发展的实施意见，提出到“十五五”末融合场景模式成熟应用，并明确五类典型场景模式。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 22:03",
+        "url": "https://www.news.cn/politics/20261021/ba5f2f175b264d7b969d9df395adbfa5/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "海南商业航天产业加快成长",
+        "summary": "海南商业航天发射场一期两个工位已投用，二期工程争取年底具备发射能力，四个工位合计年发射能力约60发，园区入驻企业超700家。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 18:22",
+        "url": "https://www.news.cn/local/20261021/ffa95e31ee024dbfbf0103e6a57cd515/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "“十五五”我国地震监测能力将达1.0—2.5级",
+        "summary": "国务院新闻办21日介绍，“十五五”时期我国将完善立体化地震监测网络，建设深井、海洋等观测站，实现地震监测能力达到1.0—2.5级。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 17:40",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600250.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "没有人类教授语言 AI智能体自发形成词汇体系",
+        "summary": "研究发现，没有人类教授语言和预设规则，AI智能体仍能通过反复互动自发形成共享词汇体系，成果发表于《计算语言学学报》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 01:45",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/21/content_599590.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "AI开始“懂物理” 南京抢先落子世界模型新赛道",
+        "summary": "2026物理AI与世界模型大会10月20日在南京开幕，现场签约超60亿元，产业联盟和全国首个相关投资基金落地，国家标准预研启动。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 13:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600046.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "担心被AI取代 员工更易出现“道德脱钩”",
+        "summary": "一项覆盖18个行业的调查显示，担心被AI取代的员工更易出现“道德脱钩”和消极怠工等行为，金融和保险业受到的潜在冲击最大。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 01:45",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/21/content_599589.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "国标拟规定L2及以下禁用自动驾驶标志灯",
+        "summary": "工信部就强制性国家标准征求意见，拟规定不具备L3级及以上自动驾驶能力的车辆禁止安装ADS标志灯，并增加蓝绿色光色要求。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 08:41",
+        "url": "https://www.news.cn/tech/20261021/df65e05e3b034a90a85a676b7b1c2f43/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "会功夫的机器人来了 续航8小时",
+        "summary": "宇树科技10月21日发布“H2-X 功夫传奇 守护”机器人，完成前滚翻越汽车、4米高台跳下等动作，报道称其续航8小时。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 21:41",
+        "url": "https://www.news.cn/tech/20261021/153e270a9b0c44a78fe10fb0ed554193/c.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "887.50元/克",
+      "note": "10月21日收盘 Au99.99",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "note": "福建最高零售价 9月24日24时起执行 最近有效价格",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7192人民币",
+      "note": "10月21日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5197人民币",
+      "note": "10月21日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2354人民币",
+      "note": "10月21日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-int",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 97.15美元/桶",
+      "note": "10月21日收盘 WTI12月合约 布伦特12月合约108.82美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20261022/b86d433e7ad143d0aa433f08852f0c77/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "observation": "前三季度医保基金支出超1.7万亿元，电子行驶证国标与数字人民币服务升级便利群众办事；台风“蔷琵”逼近，东南沿海启动应急响应。国际上，法国骚乱与国债收益率破5%相互叠加，英国通胀回升，俄美围绕乌克兰问题重启接触。国内科技在自由电子激光、听觉脑机接口和商业航天上取得实质进展，人工智能加速进入制造与医疗场景。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "央广网",
+    "中国科技网",
+    "中国日报中文网",
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "中国外汇交易中心"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "中国外汇交易中心",
+    "新华网"
+  ]
+}

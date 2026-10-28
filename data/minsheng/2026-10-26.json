@@ -1,0 +1,418 @@
+{
+  "date": "2026-10-26",
+  "issue": 66,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "九月十七",
+  "cutoff": "2026-10-26 10:35（北京时间）",
+  "productionTime": "2026-10-26 10:40（北京时间）",
+  "metricsCutoff": "2026-10-26 10:35（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "ai-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "全国累计完工改造城镇老旧小区1.6万个",
+        "summary": "住房城乡建设部数据显示，今年前9个月全国累计完工改造城镇老旧小区1.6万个，惠及居民502万户，同步改造老化管线7200多公里、增设停车位8.6万个。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://paper.people.com.cn/rmrbhwb/pc/content/202610/26/content_30187653.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "多个“首部”“首次”布局“十五五”发展新方向",
+        "summary": "已公布的国家级专项规划中，首部国家级城市更新专项规划提出建设改造城市地下管网约77万公里，建立房屋全生命周期安全管理制度。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 22:29",
+        "url": "https://www.news.cn/politics/20261025/5ce666bf301a4c1d9abd060e5dea0cf9/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "全国一刻钟便民生活圈提质升级",
+        "summary": "今年全国超90%的地级以上城市推进一刻钟便民生活圈建设，截至9月已建成9500多个，服务社区居民超1.9亿人，社区养老托育服务短板加快补齐。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 21:08",
+        "url": "https://m.gmw.cn/2026-10/25/content_1304579223.htm"
+      },
+      {
+        "id": "domestic-04",
+        "title": "航线织密、通达升级——聚焦民航冬春航季运营",
+        "summary": "10月25日起全国民航执行2026/2027年冬春航季，216家航空公司每周安排约11.6万班，34家航司新开288条国内航线，航季持续至2027年3月27日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 20:22",
+        "url": "https://www.news.cn/fortune/20261025/0aa57b6cd51247a09c93b296164dfeb1/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "2027年度中央机关公开遴选和公开选调公务员报名即将开始",
+        "summary": "国家公务员局消息，2027年度中央机关公开遴选和公开选调公务员10月28日起报名，42个部门计划选拔213人，笔试11月28日举行。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 19:17",
+        "url": "https://news.cnr.cn/native/gd/20261024/t20261024_527852045.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "李强主持召开国务院常务会议 研究统筹人口与经济社会发展",
+        "summary": "国务院总理李强10月23日主持召开国务院常务会议，研究统筹人口与经济社会发展，部署完善婚育、教育、社保、住房等家庭支持政策，推进公共事业价格改革。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 20:24",
+        "url": "https://cpc.people.com.cn/n1/2026/1023/c64094-40820558.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "西藏巴青完成3轮逐户搜救摸排 正有序转移安置",
+        "summary": "西藏那曲市巴青县7.0级地震后，当地逐村逐户完成3轮搜寻，重灾区18个安置点搭建完毕，已转移群众12489人，板房、帐篷等四级救灾物资陆续到位。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 18:34",
+        "url": "https://www.news.cn/local/20261023/f198082bdab042399c8047944997a720/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "国务院办公厅印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》",
+        "summary": "国务院办公厅印发意见，部署6个方面18项任务，建立人工智能应用就业风险评估机制，实施人工智能专项培训计划，完善灵活就业和新就业形态劳动者社会保障。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 17:02",
+        "url": "https://www.news.cn/politics/20261023/f21a5777774749daa0eed451c81f4002/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "“小钱包”变“大钱包” 住房公积金更好用了",
+        "summary": "新修订的《住房公积金管理条例》9月20日起施行，提取情形由6种增至9种，多地放宽租房提取比例，并支持加装电梯、装修和物业费等支出。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 09:18",
+        "url": "https://www.news.cn/government/20261023/2f781388071e44f585152d526574316a/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "教育部等三部门部署防控儿童青少年高度近视",
+        "summary": "教育部、国家卫生健康委、国家疾控局联合印发通知，要求中小学生每天综合体育活动不低于2小时、推行“课间15分钟”，并每学期开展2次视力监测。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-20 15:20",
+        "url": "https://www.news.cn/edu/20261020/7002a3ac31c041cea55f8c82363fdf8f/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "因交通及天气原因巴西总统选举二轮投票时间延长",
+        "summary": "巴西总统选举第二轮投票10月25日举行，因多地公交停摆和强降雨，联邦最高法院裁定将投票截止时间延长两小时，卢拉与弗拉维奥·博索纳罗对决。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 05:10",
+        "url": "https://www.news.cn/world/20261026/a69a9696ca8e4b4baf823ac9bc590be3/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "武契奇承认前进党在塞议会选举中败选",
+        "summary": "塞尔维亚10月25日举行议会选举，前总统武契奇承认前进党主导的竞选联盟败选，由学生团体推动的“学生名单－学生获胜”宣布在选举中胜出。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 04:58",
+        "url": "https://www.news.cn/world/20261026/2bff6d54966c492781a4374140495297/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "特朗普：美俄乌三方会谈“很快”就会举行",
+        "summary": "美国总统特朗普10月25日称，涉及乌克兰问题的美俄乌三方会谈“很快”举行；俄乌已证实27日起在赫尔松地区阿列什基停火，美方称会谈或两周内举行。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 01:32",
+        "url": "https://news.cri.cn/20261026/e1db4583-8d4e-923e-d19e-8b52dc243ae0.html"
+      },
+      {
+        "id": "international-04",
+        "title": "蒙古国考虑就草原火灾向涉事日企索赔",
+        "summary": "蒙古国副总理诺木泰巴亚尔表示，日资企业凯迪迪爱“仅道歉是不够的”，将调查东方省草原火灾责任并考虑索赔，火灾明火已于10月16日扑灭。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 00:28",
+        "url": "https://www.news.cn/world/20261026/7533b43c83bb467e91a3de80465f0dd7/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "欧洲多国爆发大规模抗议活动 千余人被捕",
+        "summary": "10月24日以来法国、意大利、西班牙等多国爆发示威，民众抗议生活成本上升和公共服务不足；法国内政部称约41万人参加，1314人被捕。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 00:22",
+        "url": "https://www.news.cn/world/20261026/3c91395ab35644318a28e8f50bc12a90/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "加蓬近海一钻井平台沉没 5人失踪",
+        "summary": "加蓬石油与天然气部通报，10月24日晚马永巴附近海域“Prospector 5”钻井平台沉没，事发时平台上有115人，110人确认安全、5人失踪。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 00:13",
+        "url": "https://news.cri.cn/20261026/31c39aa3-75f5-3617-34e3-e1e0b40dccfb.html"
+      },
+      {
+        "id": "international-07",
+        "title": "以色列空袭加沙多地致至少7人死亡",
+        "summary": "巴勒斯坦通讯社称以军10月25日空袭加沙多地，造成至少7人死亡；加沙卫生部门称停火协议生效以来已有1551名巴勒斯坦人死亡、5573人受伤。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 22:10",
+        "url": "https://www.news.cn/world/20261025/e47aeb29b06746f39bfa08988f11a780/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "伊朗外长：霍尔木兹海峡“不会与过去相同”",
+        "summary": "伊朗外长阿拉格齐10月25日在德黑兰表示，美以对伊战事后地区格局发生根本变化，霍尔木兹海峡的管理方式和航线“不会再与过去相同”。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25",
+        "url": "https://www.news.cn/20261025/c0f1d98092ad400daa7cea6a93bdc5dd/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "肯尼亚一客车与货车迎面相撞 已致22人死亡",
+        "summary": "肯尼亚内罗毕至蒙巴萨公路10月25日发生交通事故，一辆客车与货车迎面相撞，造成至少22人死亡、多人受伤，事故原因仍在调查。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 17:51",
+        "url": "https://news.cri.cn/20261025/314e7fa1-f48d-e198-5edf-84a559aaa202.html"
+      },
+      {
+        "id": "international-10",
+        "title": "美国中期选举临近 奥巴马与特朗普隔空互怼",
+        "summary": "美国中期选举将于11月3日举行，前总统奥巴马10月24日为民主党站台，抨击特朗普政府造成“混乱”，特朗普同日在佐治亚州集会回击。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 17:35",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-25/10720710.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "“双重爆炸”新发现挑战传统伽马暴起源理论",
+        "summary": "宁波大学蔡荣根、李亮团队分析GRB 160425A，发现其在约4分钟内先后出现典型短暴与长暴，首次在单一物理系统观测到两类伽马暴，成果发表于《自然·天文学》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 21:42",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/25/content_602527.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "“蛟龙”号完成迭代升级 最大下潜7056.9米",
+        "summary": "“蛟龙”号完成第二次迭代升级和关键部件国产化替代后，在菲律宾海盆完成3个潜次试验，最大下潜7056.9米，国产7000米级锂电池与推进器首次海试。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 18:59",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/25/content_602480.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "野鸭湖湿地成为京津冀首个IUCN绿色名录保护地",
+        "summary": "北京野鸭湖湿地自然保护区10月24日列入世界自然保护联盟绿色名录，为京津冀首个、北京首处；该地累计修复湿地2万余亩，记录鸟类增至374种。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 14:07",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/25/content_602409.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "我国成功发射卫星互联网低轨28组卫星",
+        "summary": "10月25日10时03分，我国在海南商业航天发射场用长征八号甲运载火箭成功发射卫星互联网低轨28组卫星，卫星进入预定轨道，任务圆满成功。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 11:58",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/25/content_602376.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "1.63秒转一圈 我科研人员确认已知自转最快近地小行星",
+        "summary": "中科院云南天文台团队利用丽江2.4米望远镜捕捉小行星2024 XA1坠落前一小时图像，确认其自转周期仅1.63秒，刷新此前2.58秒的纪录。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 10:25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/25/content_602362.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "我科学家在量子声学领域取得重要进展",
+        "summary": "深圳国际量子研究院谭电课题组研制高泛音体声学波谐振器，在多个声学振动模式间制备多体量子真纠缠，并实现纠缠态在不同谐振器之间传输。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25 09:19",
+        "url": "https://edu.cnr.cn/sy/sytjB/20261025/t20261025_527852319.shtml"
+      },
+      {
+        "id": "tech-07",
+        "title": "拓扑量子器件领域获重要突破 有望用于低功耗量子芯片",
+        "summary": "北京大学王健团队与合作者在几纳米厚磁性拓扑材料器件上刻出贯穿深沟，拓扑手性边缘态电流仍近乎无能耗单向传输，为“拓扑保护”提供直接实验证据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 15:54",
+        "url": "https://www.news.cn/liangzi/20261023/4e264f144e6f4278bcd07a545687309c/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "中国首个植入式听觉神经接口产品正式获批",
+        "summary": "上海九院吴皓团队与诺尔康研发的听觉脑干植入体10月20日获国家药监局批准注册，电极阵列直接刺激脑干耳蜗核重建听觉，开机12个月治疗总有效率96.67%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 15:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/21/content_600099.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "全球规模最大绿色氢氨醇一体化项目二期开工",
+        "summary": "中国能建“青氢一号”松原氢能产业园二期10月20日开工，总投资108.28亿元，新能源装机增至1600兆瓦，一、二期合计年产绿氨60万吨。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-21 08:59",
+        "url": "https://www.news.cn/tech/20261021/961273ec843240baa16635e70d6c1553/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "中国科学家研制出世界最轻无线介观显微镜",
+        "summary": "清华大学与解放军总医院团队研制出重仅1克的无线介观显微镜Airscope，在6毫米视场实现单细胞分辨率成像，单只小鼠可同时记录8500多个神经元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-20 08:36",
+        "url": "https://www.news.cn/tech/20261020/5eafd14bb6814e6c81c6008ce62b9b60/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "月之暗面发布新一代大模型Kimi K3.1 Pro",
+        "summary": "月之暗面10月24日发布Kimi K3.1 Pro，参数规模3万亿级、上下文窗口100万词元，称仍为全球参数规模最大的开源模型，完整权重将于11月4日前发布。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 20:22",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/24/content_602239.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "科大讯飞发布端云一体星火X2.6及系列产品",
+        "summary": "科大讯飞发布端云一体星火X2.6、语音基座SparkAudio 1.0等产品，首次基于全国产算力实现代码与智能体能力突破，超长上下文训练效率提升约4倍。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 16:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601627.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "“天府·慧研”人工智能赋能科技创新一体化平台上线",
+        "summary": "四川“天府·慧研”一体化平台10月22日在CNCC2026上线，以激活参数约350亿的科学基础大模型为核心，任务完成率提升20%、算力消耗降低约70%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 15:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601578.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI模型只需一句话就能生成蛋白质",
+        "summary": "西湖大学联合港科大（广州）、中科院深圳先进院构建Pinal模型，输入一句自然语言即可生成有别于天然序列并经实验验证具备功能的候选蛋白，成果发表于《自然》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-22 20:00",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/22/content_601054.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "中国团队实现大模型记忆架构创新",
+        "summary": "记忆张量发布并开源记忆原生模型MemT 1.0，含288B的Flash与36B的Nano两版，把可持续更新的内部记忆纳入模型前向计算，11项记忆基准居前两位。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-20 20:56",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/20/content_599717.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "864.00元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "10月23日收盘 Au99.99"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china",
+      "note": "福建最高零售价 2026年9月24日24时起执行 最近有效价格"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 103.27美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261024/70291d6c1b3e442ca1903775f0d63794/c.html",
+      "sourceOrigin": "china",
+      "note": "10月23日收盘 WTI12月合约 布伦特12月合约116.72美元/桶 最近交易日"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7162人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-26&endDate=2026-10-26&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "10月26日人民币汇率中间价"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5047人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-26&endDate=2026-10-26&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "10月26日人民币汇率中间价"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2662人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-26&endDate=2026-10-26&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "10月26日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生聚焦城市更新与就业保障：老旧小区改造惠及502万户，一刻钟便民生活圈服务超1.9亿人，国办出台人工智能就业友好型发展意见。国际上，巴西、塞尔维亚同日举行选举，欧洲多国因生活成本上升爆发抗议。国内科技在量子、深海、航天与医学领域多点突破，AI模型与平台加速落地。",
+  "sources": [
+    "人民网",
+    "新华网",
+    "光明网",
+    "央广网",
+    "国际在线",
+    "中国新闻网",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}

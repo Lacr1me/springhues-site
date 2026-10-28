@@ -1,0 +1,416 @@
+{
+  "date": "2026-10-28",
+  "issue": 68,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "九月十九",
+  "cutoff": "2026-10-28 06:35（北京时间）",
+  "productionTime": "2026-10-28 06:42（北京时间）",
+  "metricsCutoff": "2026-10-28 06:40（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "1.6万个城镇老旧小区，完工改造！",
+        "summary": "住房城乡建设部23日发布数据，前三季度全国累计完工改造城镇老旧小区1.6万个，正在实施改造1.3万个，惠及居民502万户。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:16",
+        "url": "https://www.cnr.cn/rdjj/house/kcb/20261027/t20261027_527854018.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "推行现房销售定金制 成都出台楼市新政",
+        "summary": "成都住建、规自与金融监管部门出台实施意见，8月28日后新出让土地项目申请预售须主体结构封顶，现房销售定金不超总价5%。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 10:56",
+        "url": "https://www.cnr.cn/newscenter/kuaixun/20261027/t20261027_527854135.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "广电总局发布新规：有线电视不得播放开机广告，11月27日起施行",
+        "summary": "广电总局发布《有线广播电视运营服务管理规定》，明确开机看全屏直播、不得播放开机广告、首页设免费专区，11月27日起施行。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 14:52",
+        "url": "https://news.china.com.cn/2026-10/27/content_118750986.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "西渝高铁樊哙站2号六线特大桥顺利合龙",
+        "summary": "10月27日西渝高铁康渝段樊哙站2号六线特大桥合龙，桥长1207.3米，为全线如期通车奠定基础。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 23:28",
+        "url": "https://pic.people.com.cn/n1/2026/1027/c1016-40822730.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "一张处方背后的远程把关",
+        "summary": "银川推行零售药店远程审方，执业药师不在岗时由总部集中审核，每张处方全程留痕；已核验597家药店，查实挂证药师53名。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:23",
+        "url": "https://nx.people.com.cn/n2/2026/1027/c192493-41733610.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "首饰金大幅回落 投资金条重返“8”字头",
+        "summary": "受国际金价回调影响，国内投资金条每克价格重回“8”字头，首饰金回落至千元左右，线下门店客流明显增多。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:42",
+        "url": "https://www.cnr.cn/food/gstj/20261027/t20261027_527854076.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "铁路12306上线新功能 买团体票更方便",
+        "summary": "10月26日起铁路12306新增团体票业务联系方式查询，可检索办理车站、电话和营业时间，20人及以上团体可电话咨询办理。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 08:53",
+        "url": "https://www.news.cn/government/20261027/e46d432ca33840efb055ac64dc3adf1b/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "致敬“城市美容师” 天津2.3万名环卫工人迎来第三十届环卫工人节",
+        "summary": "天津2.3万名环卫工人迎来第三十届环卫工人节，全市机械化清扫覆盖率超93%，环卫工人权益保障办法拟于年底出台。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 10:04",
+        "url": "https://tj.people.com.cn/n2/2026/1027/c375366-41733708.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "央地密集部署推进服务业扩能提质",
+        "summary": "国务院常务会议加力部署服务业扩能提质；前三季度服务业增加值同比增长5.2%，占GDP比重58.7%，贡献率66.3%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:56",
+        "url": "https://www.news.cn/20261027/ba2ab563aafe45b4b51c9fa88bdb3d41/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "前9个月批发和零售业增加值同比增长4.4%",
+        "summary": "国家统计局数据显示，1至9月批发和零售业增加值11.1万亿元，同比增长4.4%；乡村消费品零售额5.01万亿元，增长2.3%。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 02:40",
+        "url": "https://news.gmw.cn/2026-10/27/content_39067216.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "出口民调：以议会两大阵营均未获过半数席位",
+        "summary": "以色列第26届议会选举投票结束，出口民调显示内塔尼亚胡阵营与反对派阵营均未过半数，阿拉伯裔政党预计获17席创新高。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 05:45",
+        "url": "https://www.news.cn/20261028/4b112634571f420dbc3bbd62b9b29292/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "乌克兰外长：乌方已准备好参加乌美俄三方会谈",
+        "summary": "乌克兰外长瑟比加27日表示，乌方已准备好参加在阿联酋举行的乌美俄三方会谈，愿接受部分停火，但方案必须公平公正。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 03:31",
+        "url": "https://www.news.cn/20261028/64169d68a8f04786bd43e1315d8c1a78/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "刚果（金）本轮埃博拉疫情确诊超万例",
+        "summary": "刚果（金）卫生部报告，截至10月25日本轮埃博拉疫情累计确诊10060例、死亡4887例，波及8个省，病死率约48.6%。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 22:19",
+        "url": "https://www.cnr.cn/newscenter/sq/20261027/t20261027_527854722.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "国际可再生能源署：中国为全球能源转型作出重要贡献",
+        "summary": "国际可再生能源署总干事拉卡梅拉表示，中国通过推动技术进步、降低清洁能源设备成本，为全球能源转型和减排作出重要贡献。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 18:37",
+        "url": "https://www.cnr.cn/newscenter/sq/20261027/t20261027_527854579.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "保加利亚总统选举将进入第二轮投票",
+        "summary": "保加利亚中央选举委员会公布结果，现任总统约托娃与前看守政府总理古罗夫得票均未过半，两人将于11月1日第二轮对决。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 02:15",
+        "url": "https://www.news.cn/20261028/73705e8f290b4460bcbc9636ff223bbe/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "也门胡塞武装称袭击沙特国防部和机场等目标",
+        "summary": "胡塞武装称使用弹道导弹和无人机袭击沙特国防部与艾卜哈国际机场；沙特主导的多国联军称已拦截并摧毁多枚导弹和无人机。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 23:51",
+        "url": "https://www.news.cn/20261027/8c0e481d86d64d47b7d54a17bcdf3a70/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "美军称在东太平洋打击“贩毒船”致5人死亡",
+        "summary": "美军南方司令部称27日在东太平洋打击一艘“贩毒船”，打死船上5人；报道指出美方一直未公布目标涉毒的证据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 01:48",
+        "url": "https://www.news.cn/20261028/2d181e76bdb941db9265fa16e6a9cbf3/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "伊拉克首都多地传出爆炸声 “绿区”附近无人机被拦截",
+        "summary": "巴格达多拉区和鲁萨法区传出多次爆炸声，巴格达“绿区”附近出现来源不明无人机并触发防空系统，安全部门称拦截2架侦察无人机。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 22:19",
+        "url": "https://www.cnr.cn/newscenter/sq/20261027/t20261027_527854720.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "天然气出口国论坛第八次峰会发表《莫斯科宣言》",
+        "summary": "天然气出口国论坛第八次峰会在莫斯科闭幕并发表《莫斯科宣言》，重申成员国对本国自然资源拥有主权权利，反对单边制裁。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 04:39",
+        "url": "https://www.news.cn/20261028/29ca7aece2674799b561c02ef401e36d/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "日本政府开出标准 大阪等四地争当“副首都”",
+        "summary": "日本政府批准政令列明“副首都”条件，包括经济规模占GDP 2.1%以上等；北海道、爱知、大阪、福冈四地可能符合并计划争取。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 23:34",
+        "url": "https://www.news.cn/20261027/51d8cef46ff2425e96f78f2437272353/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "“蛟龙”号实现迭代升级 顺利完成7000米级海试",
+        "summary": "完成第二次迭代升级的“蛟龙”号在菲律宾海盆开展3个潜次试验，其中2个超过7000米，最大下潜深度达7056.9米。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 10:39",
+        "url": "https://politics.gmw.cn/2026-10/27/content_39068082.htm"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国风光装机容量突破20亿千瓦 约占全球新能源总装机一半",
+        "summary": "国家能源局数据显示，截至9月底风电和太阳能发电累计装机20.1亿千瓦，占全国总装机48.7%，约占全球新能源装机一半。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:32",
+        "url": "https://www.news.cn/tech/20261027/a1eba617729044d990130494d7984946/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "我国拟新增34家领航级智能工厂",
+        "summary": "工业和信息化部公示2026年度领航级智能工厂培育名单，34家工厂入选；截至9月底已累计建成500余家卓越级智能工厂。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:32",
+        "url": "https://www.news.cn/tech/20261027/5687f24b2523402e9671546ef47d3e43/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "到2030年全面建成新一代通信网、适时启动6G商用",
+        "summary": "《国家信息化“十五五”规划》提出，到2030年新一代通信网全面建成，适时启动6G商用，并部署10个方面具体任务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:09",
+        "url": "https://www.news.cn/tech/20261027/f5a1725b6666471096b19a25e4d3c78f/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "全国最大海上光伏项目并网发电突破百万千瓦",
+        "summary": "中核田湾200万千瓦滩涂光伏示范项目并网容量突破百万千瓦，与田湾核电站构建总装机超1000万千瓦清洁能源基地。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 16:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/27/content_603479.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "DREAMS巡梦计划首批巡天数据向全球开放",
+        "summary": "西湖大学DREAMS巡天团队联合国家天文科学数据中心发布首批数据，覆盖银河系中心近6000万颗恒星，约2.5TB向全球免费开放。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 17:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/27/content_603577.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "我国科研人员揭示青藏高原生命演化新线索",
+        "summary": "中科院成都生物研究所分析527种高原特有陆生动物，统计出367次原地分化、103次迁入，成果发表于《美国国家科学院院刊》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 20:06",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/27/content_603657.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "科学家发现远古两栖动物新物种",
+        "summary": "中美团队依据贵州关岭两件化石发现约2.37亿年前两栖动物新物种海异螈，为已知首个完全生活在海洋中的基干两栖动物。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 15:21",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/27/content_603445.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "新研究揭示“理论禁区”幸存系外行星",
+        "summary": "云南大学团队研究发现，三颗近距离系外行星在宿主恒星经历红巨星膨胀后仍然幸存，成果发表于《美国国家科学院院刊》。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:09",
+        "url": "https://www.news.cn/tech/20261027/7a0945681a1249df9cf7a5d197e79c27/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "“连芯一号”问世 拥有全部自主知识产权",
+        "summary": "大连市农科院等联合研发甜樱桃分子育种固相基因芯片“连芯一号”，位点平均检出率与基因型判读准确率均不低于99%。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 07:48",
+        "url": "https://www.cnr.cn/dlfw/gstjdl/20261027/t20261027_527853876.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "患者“不用额外付费” 北京“AI医疗产品”临床用量增多",
+        "summary": "北京市医保局表示，AI辅助技术列为扩展项、不额外加价，今年北京实现AI医疗产品收费全覆盖，患者不用额外付费。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:32",
+        "url": "https://www.news.cn/tech/20261027/c7055ec68867405c866a41752010b8d4/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "浙江：鼓励更多民企在人工智能等赛道上“揭榜挂帅”",
+        "summary": "浙江省科技厅副厅长曾肖芃表示，浙江将把创新的“出题权”“牵头权”“评价权”更多交给企业，让民企在人工智能等赛道揭榜挂帅。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 20:08",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/27/content_603658.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "银行秋招释放信号：“AI+金融”复合型人才需求升温",
+        "summary": "多家银行秋招设置科技菁英、数智金融培训生等岗位，既懂AI大模型又熟悉金融业务场景的复合型人才需求明显升温。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:56",
+        "url": "https://www.news.cn/20261027/b87e0252b731439b87f1e1feb1ff4ece/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "探访南京AI智能体集散中心",
+        "summary": "南京AI智能体集散中心的AI智能终端消费中心设15个沉浸式主题体验分区，汇聚200余款前沿AI智能终端产品。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 08:35",
+        "url": "https://www.news.cn/tech/20261027/aa4ec70f51e248fdbb5523a91f9064b0/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "从“工具”跃升为“生产力”，AI重构电影生产逻辑",
+        "summary": "2026长三角国际青年电影周设“电影+科技”板块，4D高斯泼溅、坐观式XR影院等技术推动电影生产逻辑重构。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:41",
+        "url": "https://www.cnr.cn/lvyou/sygd/20261027/t20261027_527854066.shtml"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "860.31元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "10月27日收盘 Au99.99"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china",
+      "note": "福建最高零售价 2026年9月24日24时起执行 最近有效价格"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢",
+      "name": "国际油价",
+      "value": "WTI 99.90美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20261028/d87cbcaad925463eacd27791a4ddc4f1/c.html",
+      "sourceOrigin": "china",
+      "note": "10月27日收盘 WTI12月合约 布伦特12月合约113.88美元/桶"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7171人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-27&endDate=2026-10-27&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "10月27日人民币汇率中间价"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.4804人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-27&endDate=2026-10-27&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "10月27日人民币汇率中间价"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2518人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-27&endDate=2026-10-27&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "10月27日人民币汇率中间价"
+    }
+  ],
+  "observation": "今天的民生线索集中在“规则落地”。老旧小区改造惠及502万户，成都收紧预售、电视开机广告被明文禁止，银川把处方审核搬到线上，政策正从表态走向可执行条款。另一头是饭碗与钱包：天津2.3万名环卫工人过节，铁路团体票、服务业扩能提质持续加码；金价回调让投资金条回到“8”字头。国际上，以色列选举悬而未决、乌美俄会谈待启；科技侧，20亿千瓦风光装机、7000米深潜与巡天数据开放，说明自主能力正被规模检验。",
+  "sources": [
+    "央广网",
+    "中国网",
+    "人民网",
+    "新华网",
+    "光明网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}

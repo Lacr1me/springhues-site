@@ -1,4 +1,5 @@
 import { verifySoftwareUpdates } from "./test-software-updates.mjs";
+import { verifyAndroidUpdates } from "./test-android-updates.mjs";
 import { access, readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
@@ -12,10 +13,11 @@ await import("../portal-data.js");
 const root = process.cwd();
 const output = path.join(root, "dist");
 await verifySoftwareUpdates(output, { sourceRoot: root });
+await verifyAndroidUpdates(output, { sourceRoot: root });
 for (const file of ["brand.css", "portal.css", "site-shell.js"]) await access(path.join(output, file));
 const adminIndex = path.join(output, "admin", "messages", "index.html");
 const hasAdmin = await access(adminIndex).then(() => true, () => false);
-const required = ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/app.js", "privacy/index.html", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"];
+const required = ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/app.js", "privacy/index.html", "works/slice-shop/index.html", "works/springhues-bookstore/index.html", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"];
 if (hasAdmin) required.push("admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js");
 for (const file of required) {
   await access(path.join(output, file));
@@ -109,6 +111,12 @@ for (const rel of ["brand.css", "styles.css", "site-shell.js", "app.js", "minshe
 }
 const builtWorks = parseWorks(await readJson(path.join(output, "site", "works.json")));
 if (!builtWorks.works.length) throw new Error("作品清单不能为空");
+const principles = await readFile(path.join(output, "works/simple-download/index.html"), "utf8");
+if (!principles.includes("site/js/shell/shell.js") || !principles.includes("site/css/shard-theme.css")) throw new Error("简单下载原理页缺少共享外壳");
+for (const platform of ["windows", "android"]) {
+  const work = builtWorks.works.find(item => item.slug === `simple-download-${platform}`);
+  if (!work?.links.some(link => link.href === `works/simple-download/?platform=${platform}` && link.label === "工作原理")) throw new Error(`${platform} 原理入口缺失`);
+}
 console.log("构建产物验证通过：公开文件完整，草稿已排除，双频道入口与留言回复有效" + (hasAdmin ? "，管理后台有效。" : "。"));
 
 async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }

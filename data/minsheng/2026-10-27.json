@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-27",
+  "issue": 67,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "九月十八",
+  "cutoff": "2026-10-27 05:35（北京时间）",
+  "productionTime": "2026-10-27 08:40（北京时间）",
+  "metricsCutoff": "2026-10-27 05:35（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-02"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "民生为大 更好满足人民群众对美好生活的向往",
+        "summary": "新华社梳理“十五五”专项规划民生导向：职业伤害保障试点参保3727万人，基本养老保险参保率保持95%以上，医保服务可及性继续提升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/politics/20261026/f090f340423242c6a856d3a3748afb8e/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "铁路12306上线新功能 买团体票更方便",
+        "summary": "10月26日起铁路12306新增团体票业务联系方式查询，可检索办理车站、电话和营业时间；开车前3天及以上、20人以上同车次可电话办理。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/politics/20261026/58fe6385466043f0bd2c9490956231fb/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "助餐助浴、康复机器人 老人最期盼的居家养老这样落地",
+        "summary": "沈阳等地推进社区嵌入式养老，失能老人每月享上门照护四折、最高500元补贴；陪护机器人识别跌倒后自动预警并联动后台救援。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://news.cnr.cn/native/gd/20261026/t20261026_527852959.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "四川成都：商品房预售门槛提高 购房款全部纳入监管账户",
+        "summary": "成都出台商品住房销售新规：8月28日后新出让地块预售须主体结构封顶，首付款和房贷直接进入监管账户，并有序推行现房销售。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-26/10721409.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "前三季度全国PM2.5平均浓度同比下降3.9%",
+        "summary": "生态环境部数据显示，前三季度全国339个地级及以上城市PM2.5平均浓度24.9微克/立方米，同比下降3.9%，优良天数比例86.6%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/politics/20261026/bcff82478e6649809d9feed881a02e11/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "2026年前三季度国内居民出游人次53.07亿",
+        "summary": "文化和旅游部数据显示，前三季度国内居民出游53.07亿人次，同比增长6.2%；出游总花费4.95万亿元，同比增长2.2%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/fortune/20261026/1861739aac2e46f79a56619e02308550/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "2027年度国考网上报名与资格审查工作结束",
+        "summary": "国家公务员局表示，2027年度国考网上报名与资格审查结束，345万人通过资格审查，与录用计划数之比约97:1，11月1日起报名确认缴费。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/politics/20261026/c575c933d0ab41d5882d38de4e95b219/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "中消协等三部门联合发布“双十一”消费提示",
+        "summary": "中消协等三部门提示“双十一”促销风险，提醒警惕先涨后降、定金不退、卡券规则复杂和直播测评失真，把“看清楚”放在“抢得快”前面。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/fortune/20261026/a9649f9a1f224a5795177644f921e39a/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "我和医生“对个表” 错峰就医更便捷",
+        "summary": "多地医院开设午间、夜间门诊满足上班上学人群需求；昆明市延安医院17个临床科室开晚间门诊，17时30分挂号、20时30分截止。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/politics/20261026/e18ebcdd8e324db9aeb52e71e3ca8f44/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "郑州二七区：旧城新貌、老区新业推进城市更新",
+        "summary": "郑州二七区梳理5305亩闲置低效用地和105处低效楼宇，“十五五”期间计划建成270万平方米安置房、132个社区日间照料中心。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-26/10721423.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "卢拉第四次当选巴西总统 对手拒绝承认败选",
+        "summary": "巴西总统选举第二轮结果揭晓，卢拉以51.79%得票率战胜弗拉维奥·博索纳罗，将于2027年1月5日就职，开启第四个总统任期。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/6469f782a07d4980a7d413cabed0b2ea/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "德国总统施泰因迈尔抵达安徽开始访华",
+        "summary": "德国总统施泰因迈尔10月27日抵达安徽合肥，开始为期5天的国事访问；这是德国总统时隔近8年再次访华。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27",
+        "url": "https://www.news.cn/politics/20261027/0e7cb4e091e743c48a7c3c5a59ec08b4/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "泽连斯基提议再延长国家战时状态90天",
+        "summary": "泽连斯基向乌克兰最高拉达递交法令草案，提议将国家战时状态从10月31日延长至2027年1月29日；此前已先后20次延长。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/d6fbf685581f46a8be96733639561979/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "沙特主导的联军与胡塞武装相互发动军事打击",
+        "summary": "沙特主导的多国联军称打击也门胡塞武装控制区目标，摧毁5条导弹隧道、4座发射平台和一处导弹仓库；胡塞武装称袭击利雅得机场。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/239d5d0ae5364de195d96f3d6c0228fd/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "伊朗官员说沙土巴伊四国将讨论地区安全问题",
+        "summary": "伊朗官员表示，沙特国防大臣、巴基斯坦陆军参谋长和土耳其情报局长将赴德黑兰参加联合会议，重点讨论地区安全问题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/1a70a54b58a2495b824c86b3bc7cfb04/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "风暴袭击欧洲 影响多国电力供应和交通",
+        "summary": "两场风暴接连侵袭欧洲，英国逾40万户、法国约28.8万户家庭停电，苏格兰局地阵风达135公里/小时，多国航班取消。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/cf82461a6375466582e5da8e20a1d561/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "日本开始第25轮核污染水排海",
+        "summary": "东京电力公司26日开始福岛第一核电站第25轮核污染水排海，计划持续至11月13日，预计排放约7800吨，含氚约1.4万亿贝克勒尔。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/371554a3346c4275996d253fde6a489a/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "勒庞开启2027年法国总统选举竞选活动",
+        "summary": "法国国民联盟候选人勒庞在奥尔良举行首场竞选集会，约8500名支持者到场；民调显示其支持率为32%至33.5%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/20261026/979a3c982eec4b72ab445d99f07b86c5/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "美官员透露称美军已准备好再次大规模打击伊朗",
+        "summary": "美媒援引官员称，中东美军兵力足以执行新的对伊打击任务，特朗普下令后可在96小时内发起行动，时机或在11月中期选举后。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-26/10721428.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "尼泊尔公布水文气象白皮书 拟加强洪水预警和冰湖风险治理",
+        "summary": "尼泊尔水文气象部门公布白皮书，提出加强六个流域洪水预警、降低四座高风险冰湖水位，冰湖治理项目规划实施期至2033年。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-26/10721424.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "《国家信息化“十五五”规划》印发 到2030年新一代通信网全面建成",
+        "summary": "中央网信委印发《国家信息化“十五五”规划》，提出到2030年新一代通信网全面建成、适时启动6G商用，并部署10个方面任务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/tech/20261026/217b25e865da44e4b32f3310adfbbaba/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "又一里程碑！我国风光累计装机容量突破20亿千瓦",
+        "summary": "国家能源局数据显示，截至9月底风电和太阳能发电累计装机20.1亿千瓦，其中光伏13.1亿千瓦、风电7.0亿千瓦。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/26/content_602833.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "力箭二号遥二运载火箭转运至发射区",
+        "summary": "力箭二号遥二运载火箭在东风商业航天创新试验区转运至发射工位，最大运载能力12吨，后续将执行低轨星座组网发射。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/26/content_602804.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "全球最大热区规格热等静压设备完成耐压试验",
+        "summary": "我国自主研制的全球最大热区规格热等静压设备完成耐压试验，热区直径2400毫米、高度3500毫米，试验压力达205兆帕。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/26/content_602975.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国团队创造世界最大单纤双向实时光传输容量纪录",
+        "summary": "中国信科等团队完成3.2Pb/s多芯光纤实时双向传输试验，创世界纪录；单纤容量较商用单芯光纤提升32倍。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/26/content_602721.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "国家药监局批准全球首个XI因子抑制剂在中国上市",
+        "summary": "国家药监局批准全球首个XI因子抑制剂在华上市，用于非心源性缺血性卒中和高风险短暂性脑缺血发作的二级预防，出血风险更低。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/26/content_602886.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "中国新发现或完全海生两栖动物化石 距今逾2.3亿年命名海异螈",
+        "summary": "中美学者在贵州约2.37亿至2.35亿年前地层发现两具两栖动物化石，命名海异螈，可能是首个完全海生的两栖动物。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-27/10721431.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "海洋磷脂纯度提升至95% 打开神经退行性疾病治疗新路径",
+        "summary": "在深圳举行的海洋经济博览会上，科研团队发布海洋磷脂定向富集技术，将纯度从行业40%至56%提升到95%，为药物穿透血脑屏障提供新材料。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-26/10721391.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "超级“积木”智能造 张靖皋长江大桥2284榀节段梁预制完成",
+        "summary": "世界最大跨度悬索桥张靖皋长江大桥2284榀节段梁全部预制完成，主跨2300米，实现我国桥梁从千米级迈向两千米级。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/25/content_602539.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "瞭望｜脑机接口：手术成功还要闯几关",
+        "summary": "山东第一医科大学第一附属医院等完成多台脑机接口植入手术，用256通道超柔性电极采集脑信号，帮助脊髓损伤患者重建功能。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/tech/20261026/0bd0e85878074e22a667a211e0059ae8/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "AI赋能 基层医疗数字化提速",
+        "summary": "深圳、海南、北京丰台等地推出数字家医应用，用大模型承接慢病随访、报告解读和异常预警，目前多数仍处试点示范阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/tech/20261026/515cb1b1001a40c59e54e7da5d10caa3/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "外交部：欢迎更多国家探讨人工智能能力建设合作路径",
+        "summary": "外交部表示，中方欢迎更多国家加入世界人工智能合作组织，探讨人工智能能力建设国际合作路径，促进全球人工智能向善普惠发展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.news.cn/tech/20261026/ef7ee6620bb546e396f5749e0f7b46a0/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI驱动·创新孵化未来 2026顶尖孵化器大会举行",
+        "summary": "2026顶尖孵化器大会在上海举行，以“AI驱动·创新孵化未来”为主题，推动“科学发现—技术转化—产业孵化”全链条联动。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-26/10721378.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "东盟留学生人工智能+创业孵化训练营在广西南宁开营",
+        "summary": "训练营在南宁开营，越南、泰国、老挝30名学员参加为期一周的AI实训与创业孵化，课程含智能体搭建和多语种音视频生成。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.chinanews.com.cn/aseaninfo/2026/10-26/10721393.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "创新谈丨AI时代稳就业要做好两个“加法”",
+        "summary": "针对国办人工智能就业友好型发展意见，评论提出做好新岗位与技能两道“加法”，推动人工智能训练师等新工种持续扩容。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26",
+        "url": "https://www.stdaily.com/web/2026-10/26/content_602561.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "861.41元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "10月26日收盘 Au99.99"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china",
+      "note": "福建最高零售价 2026年9月24日24时起执行 最近有效价格"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 101.76美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://english.news.cn/20261027/1e884f5093224daabf8cd7c6c11c3340/c.html",
+      "sourceOrigin": "china",
+      "note": "10月26日收盘 WTI12月合约 布伦特12月合约115.81美元/桶"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7162人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-26&endDate=2026-10-26&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "10月26日人民币汇率中间价"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5047人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-26&endDate=2026-10-26&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "10月26日人民币汇率中间价"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2662人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-26&endDate=2026-10-26&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "10月26日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生聚焦“十五五”规划落地与公共服务细节：就业优先、社保扩面和错峰门诊同步推进，成都收紧预售资金监管，郑州以城市更新补齐养老与停车设施。国际上，卢拉连任巴西总统，德国总统时隔近八年访华，中东局势与欧洲风暴牵动能源和交通。国内科技在风电光伏、运载火箭、光通信、脑机接口与深海药物递送多点突破。",
+  "sources": [
+    "新华网",
+    "央广网",
+    "中国新闻网",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}

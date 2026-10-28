@@ -1,0 +1,423 @@
+{
+  "date": "2026-10-24",
+  "issue": 64,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "九月十五",
+  "cutoff": "2026-10-24 05:42（北京时间）",
+  "productionTime": "2026-10-24 06:33（北京时间）",
+  "metricsCutoff": "2026-10-23 15:00（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-03",
+    "tech-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "国务院常务会议部署生育支持与人口发展",
+        "summary": "李强10月23日主持召开国务院常务会议，研究统筹人口与经济社会发展，提出加快建设生育友好型社会，优化面向家庭的财税、社保、住房等支持举措，努力稳定新出生人口规模。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 19:44",
+        "url": "https://www.news.cn/politics/leaders/20261023/82bf557cfb5c4ef9be4a6cc76b7322a1/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "六部门发文推进老旧街区厂区改造提升",
+        "summary": "住房城乡建设部、工业和信息化部等六部门近日联合印发指导意见，要求结合城市体检确定改造提升范围和时序，健全全生命周期实施机制，并建立可持续的投融资模式。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 10:53",
+        "url": "https://news.cnr.cn/native/gd/kx/20261023/t20261023_527850732.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "全国秋粮收获过八成 冬小麦播种过三成",
+        "summary": "农业农村部最新农情调度显示，全国秋粮收获过八成，东北、西北、黄淮海过八成，长江中下游过六成；冬小麦播种过三成，黄淮海过两成，西北近九成。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 20:31",
+        "url": "https://news.cnr.cn/native/gd/kx/20261023/t20261023_527851413.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "最高法：完善人民陪审员参审机制 强化实质参审",
+        "summary": "最高人民法院10月23日发布人民陪审员工作最新情况，推动选任由“方便好用”转向“广泛随机”，推行随机抽选为主，并设置年度参审数量上限和超限预警熔断机制。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 10:51",
+        "url": "https://news.cnr.cn/native/gd/20261023/t20261023_527850728.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "机票“病退”频频碰壁 旅客如何维权",
+        "summary": "有旅客因病申请免费退票时屡屡碰壁，有的被扣手续费，有的迟迟未退款。现行规定未专门规定因病退票，各航司材料要求和手续费标准不一，专家建议统一人性化标准。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 10:25",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-23/10719567.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "昆明地铁一乘客充电宝自燃 官方通报无伤亡",
+        "summary": "10月23日8时38分，昆明地铁1、2号线首期列车内一名乘客随身携带的充电宝自燃。工作人员迅速扑灭明火并疏散乘客，未造成运营延误、人员受伤和设备损坏。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 14:59",
+        "url": "https://www.cnr.cn/yn/gstjyn/20261023/t20261023_527850938.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "“百万英才汇南粤”秋季招聘走进河南",
+        "summary": "10月23日，“百万英才汇南粤”秋季招聘河南大学专场举行，广东442家企事业单位线上线下提供9964个岗位，现场设直播带岗专区，并提供简历修改和面试模拟服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 22:52",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-23/10720129.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "“塞上护苗”困境幼儿帮扶项目在银川启动",
+        "summary": "10月23日，“塞上护苗”困境幼儿养育帮扶项目在宁夏银川启动，总价值109.1万元物资已发放至1108名儿童，还将遴选30名困境幼儿，每人每年发放3600元帮扶资金。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 22:14",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-23/10720108.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "今年秋冬途经广东候鸟预计超30万只",
+        "summary": "广东省林业局10月23日介绍，近期沿海湿地将迎来候鸟迁徙高峰，今年秋冬途经广东的候鸟预计超30万只。勺嘴鹬、黑脸琵鹭、彩鹮等珍稀鸟类已陆续现身。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 17:47",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-23/10719883.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "长春环卫工高茹获评全国“十佳环卫人”",
+        "summary": "长春市绿园区环卫管理中心迎宾大队大队长高茹获评2026年全国“十佳环卫人”。她在一线工作32年，负责54路有轨电车沿线精细化捡拾保洁，是吉林省唯一获此称号者。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 23:17",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-23/10720142.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "泽连斯基确认乌美俄三方会谈11月上半月举行",
+        "summary": "泽连斯基23日表示，已与美国总统特使威特科夫和库什纳通话，与俄美会晤安排在11月上半月。佩斯科夫称三方将在阿布扎比开始磋商安全保障问题。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 00:19",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720158.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "以军称已在所有战线进入最高戒备状态",
+        "summary": "以军总参谋长扎米尔23日在约旦河西岸枪击事件现场表示，以军已在所有战线进入最高戒备状态，并宣布25日和26日在北部和中部举行大规模军事演习。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 00:20",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720159.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "约旦内政大臣：教堂枪击事件为恐怖袭击",
+        "summary": "约旦内政大臣法拉亚23日说，南部卡拉克省一教堂内发生的枪击事件是由极端组织实施的恐怖袭击。事件造成7人死亡、34人受伤，安全部门正全力追捕涉案人员。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23",
+        "url": "https://www.news.cn/world/20261024/b365228234a849b78b5ef51c16e76351/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "法债收益率破5% 法国财政面临信任危机",
+        "summary": "法国10年期国债收益率盘中一度触及5.1415%，创2002年7月以来新高。截至今年第二季度末，法国公共债务占GDP比例已达119%，远高于欧盟60%的参考值。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 18:01",
+        "url": "https://news.cri.cn/20261023/fa4328d5-1db5-4b14-b0d9-95f6788a767c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "研究显示欧洲今夏高温相关超额死亡人数创纪录",
+        "summary": "一项发表于《自然·健康》的研究估算，今年夏季欧洲854个城市高温相关超额死亡人数超过5万人，其中逾3.2万可归因于气候变化导致的气温升高，创下纪录。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 19:22",
+        "url": "https://news.cri.cn/20261023/430cfda7-620c-8dfe-9824-dcc9eb42fb56.html"
+      },
+      {
+        "id": "international-06",
+        "title": "土耳其召开七国外长会 讨论地区热点",
+        "summary": "土耳其外长费丹23日在伊斯坦布尔主持七国外长会，与会方包括土耳其、埃及、巴基斯坦、沙特阿拉伯以及英国、法国、德国，议题涉及巴以问题、霍尔木兹海峡和俄乌冲突。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 21:06",
+        "url": "https://news.cri.cn/20261023/29f8ceb1-d3f5-b496-6653-97c4f409317d.html"
+      },
+      {
+        "id": "international-07",
+        "title": "美国能源部将氦气认定为关键材料",
+        "summary": "美国能源部23日宣布将氦气认定为关键材料，以加强制造业和供应链安全。氦气是半导体生产的重要原料，也是该部门认定的第20种关键材料。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720163.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "两名日本登山者遗体在尼泊尔被找到",
+        "summary": "尼泊尔救援人员23日在西北部山区找到两名失联日本登山者遗体。两人15日在马楠县攀登甘加普尔纳西峰时于海拔7000米以上失联，遗体在海拔6210米处被发现。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 00:20",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720160.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "韩国首尔市长吴世勋二审被判无罪",
+        "summary": "首尔高等法院23日就首尔市长吴世勋涉嫌违反《政治资金法》案作出二审判决，判处其无罪，推翻一审判处罚金1000万韩元的结果，认定核心指控未获充分证明。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 22:00",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-23/10720141.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "日媒：日本政府有意在宫崎县设核废料填埋场",
+        "summary": "据日本媒体23日报道，日本经济产业省有意在宫崎县串间市设立核废料填埋场。经产省官员当天前往串间市说明，市长表示仅听取说明，并未主动表态愿意接受调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23",
+        "url": "https://www.news.cn/world/20261023/b055879b811d426ebd2dbacf151c9cb1/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "遥感五十号03星发射成功",
+        "summary": "10月23日18时15分，我国在太原卫星发射中心使用长征六号改运载火箭，成功将遥感五十号03星送入预定轨道。该卫星主要用于国土普查、农作物估产和防灾减灾。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 19:08",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601777.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "新一代医用重离子加速器首台示范装置建成",
+        "summary": "中科院23日宣布，国产新一代医用重离子加速器首台示范装置在广东惠州建成。新装置周长由56米缩短至36米，年治疗能力提高到2000至5000例。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 15:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601575.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "量子计算操作系统“穹希”发布",
+        "summary": "国光量超近日推出面向量子计算的智能化操作系统“穹希”，把大模型能力嵌入系统，让研究者用自然语言串起程序编写、设备调试，并保留作业记录与权限审核。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 11:24",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39060968.htm"
+      },
+      {
+        "id": "tech-04",
+        "title": "拓扑量子器件领域获重要突破",
+        "summary": "北京大学王健课题组与合作者在几纳米厚磁性拓扑量子器件上划出贯穿深沟，发现拓扑手性边缘态电流仍能近乎无能耗单向传输，为拓扑保护提供直接实验证据。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 04:20",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39062208.htm"
+      },
+      {
+        "id": "tech-05",
+        "title": "全国主干天然气管网全面应用在线仿真系统",
+        "summary": "国家管网集团23日表示，超大规模长输天然气管网在线仿真系统完成工业化测试，首次实现全国主干管网工业化应用，不到45秒可完成一次全要素仿真计算。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 16:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601624.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "2025年中国创新指数较上年增长6.4%",
+        "summary": "国家统计局社科文司课题组测算，2025年中国创新指数为185.5，以2015年为100，比上年增长6.4%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 21:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601854.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "我国海洋能开发利用实现跨越式发展",
+        "summary": "自然资源部、国家能源局22日联合发布报告，我国海洋能累计装机容量达12.3兆瓦；2021年以来新增装机超3.3兆瓦，占全球新增装机容量30%以上。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 04:20",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39062134.htm"
+      },
+      {
+        "id": "tech-08",
+        "title": "《产业基础能力提升“十五五”规划》发布",
+        "summary": "工业和信息化部、国家发展改革委等八部门22日发布规划，提出到2030年产业基础薄弱问题明显缓解，围绕提升自主可控能力等7个方面部署22项重点任务。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 04:40",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39062116.htm"
+      },
+      {
+        "id": "tech-09",
+        "title": "中国自动驾驶驶入中亚 首个试点选哈萨克斯坦",
+        "summary": "小马智行23日宣布与inDrive、英伟达签署合作备忘录，推动自动驾驶出行落地，哈萨克斯坦成为首个试点市场，将率先在首都阿斯塔纳试点Robotaxi服务。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 18:10",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39063081.htm"
+      },
+      {
+        "id": "tech-10",
+        "title": "新研究首次阐述“平均”人类基因组预期特征",
+        "summary": "英国埃克塞特大学主导的研究首次表征“平均”人类基因组，分析近100万个个体，发现每人平均约500万个变异、1至3种致严重遗传病的罕见变异，多数人约3种疾病属高遗传风险。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 01:45",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/23/content_600970.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "国办印发意见构建就业友好型发展方式",
+        "summary": "国务院办公厅日前印发意见，部署6个方面18项任务，强化人工智能就业创造效应，减缓就业替代影响，健全劳动者权益保障和社会保障制度。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 17:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/23/content_601719.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "上海推动人工智能赋能工业服务业",
+        "summary": "上海印发行动方案，提出到2028年工业服务业人工智能应用普及率达85%以上，培育10个数智原生独角兽企业，建设5个行业级协同设计平台。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 23:24",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10720144.shtml"
+      },
+      {
+        "id": "ai-03",
+        "title": "港交所推出人工智能及半导体指数",
+        "summary": "港交所23日宣布推出人工智能指数及半导体指数，人工智能指数追踪40家与人工智能产业链高度相关的香港上市公司，覆盖芯片设计、数据中心和模型等领域。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 23:03",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10720140.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "00后与AI联手造出载人飞行滑板",
+        "summary": "青年创作者“神奇阿宇”借助手机端个人智能体排查发动机爆燃原因并改用电动方案，造出可载人的飞行滑板并飞越长江，展示智能体辅助硬件开发的新方式。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 13:29",
+        "url": "https://tech.gmw.cn/2026-10/23/content_39060473.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "黄仁勋在哈萨克斯坦谈AI发展 能源与人才成关键词",
+        "summary": "英伟达首席执行官黄仁勋23日在阿斯塔纳表示，能源是发展人工智能的重要基础，还需在算力基础设施、人才培养和技术应用上持续发力，人工智能正在形成新的产业。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-23 23:44",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-23/10720155.shtml"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "864.00元/克",
+      "note": "10月23日收盘 Au99.99",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "note": "福建最高零售价 2026年9月24日24时起执行 最近有效价格",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7180人民币",
+      "note": "10月23日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5140人民币",
+      "note": "10月23日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2793人民币",
+      "note": "10月23日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-int",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 103.27美元/桶",
+      "note": "10月23日收盘 WTI12月合约 布伦特12月合约116.72美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261024/70291d6c1b3e442ca1903775f0d63794/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "observation": "国务院常务会议部署生育支持与人口发展，老旧街区改造、秋粮收购和就业帮扶同步推进，民生政策持续加力。国际上，约旦教堂枪击被定性为恐怖袭击，乌美俄三方会谈定档11月上半月，欧洲高温超额死亡创纪录。科技领域，遥感五十号03星入轨，新一代医用重离子加速器建成，量子计算操作系统发布。",
+  "sources": [
+    "新华网",
+    "央广网",
+    "中国科技网",
+    "中国新闻网",
+    "国际在线",
+    "光明网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "中国外汇交易中心",
+    "新华网"
+  ]
+}
